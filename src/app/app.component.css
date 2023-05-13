@@ -1,0 +1,13 @@
+.section_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-left: 32px;
+}
+
+.section_1_1{
+display: flex;
+width: 200px;
+justify-content: space-evenly;
+}
