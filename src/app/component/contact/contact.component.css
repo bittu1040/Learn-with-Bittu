@@ -1,0 +1,37 @@
+.contact-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.submitBtn {
+    margin-left: 200px;
+    margin-bottom: 16px;
+}
+
+.backIcon {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+}

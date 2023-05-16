@@ -1,0 +1,29 @@
+<div class="contact-page">
+
+    <mat-icon (click)="goToHome()" class="backIcon">arrow_back</mat-icon>
+    <mat-card style="width:700px" class="contact-form">
+        <mat-card-header>
+            <mat-card-title>Contact Form</mat-card-title>
+            <mat-card-subtitle>Please submit your details</mat-card-subtitle>
+        </mat-card-header>
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Your Name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Your Email Id">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+
+            <button class="submitBtn" mat-raised-button color="primary">Submit</button>
+        </form>
+    </mat-card>
+</div>

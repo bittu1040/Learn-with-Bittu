@@ -1,0 +1,17 @@
+.backIcon {
+    /* position: fixed;
+    top: 40px; 
+    left: 40px; */
+    cursor: pointer;
+}
+
+.project-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
+}
