@@ -16,7 +16,7 @@ justify-content: space-evenly;
     display: flex;
     justify-content: space-around;
     height: 400px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .section_2_1{
@@ -29,7 +29,7 @@ justify-content: space-evenly;
 }
 
 .section_2_2{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 50%;
 }
 
@@ -60,6 +60,10 @@ mat-card{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 380px;
+}
+
+.blog_button{
     width: 380px;
 }
 
