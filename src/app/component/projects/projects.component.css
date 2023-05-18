@@ -31,4 +31,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    font-size: 1.25rem;
+    text-decoration: none;
 }
+/*
+.project-details{
+ width: calc(33.33% - 96px); 
+height: 100px; 
+margin: 10px;
+background-color: #f1f1f1;
+display: flex;
+    justify-content: center;
+    align-items: center;
+} */

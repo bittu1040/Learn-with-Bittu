@@ -16,17 +16,19 @@ export class ProjectsComponent {
 
 
   cardDetails=[
-   {name: "counter"},
-   {name: "css shapes"}, 
-   {name: "telephone formatter"},
-   {name: "counter"}, 
-   {name: "css shapes"}, 
-   {name: "telephone formatter"},
-   {name: "counter"},
-   {name: "css shapes"}, 
-   {name: "telephone formatter"},
-   {name: "counter"}, 
-   {name: "css shapes"}, 
-   {name: "telephone formatter"}
+   {name: "Counter"},
+   {name: "CSS shapes"}, 
+   {name: "Telephone Formatter"},
+   {name: "Guess the Number"}, 
+   {name: "To Do List"},
+   {name: "Star Rating"},
+   {name: "Color Spotter"},
+   {name: "Chess Board"},
+   {name: "Light and Dark Mode"},
+   {name: "Basic Calculator"},
+   {name: "Countdown Timer"},
+   {name: "Progress Bar"},
+   {name: "Digital Clock"},
+   {name: "OTP Input"}
    ]
 }
