@@ -13,4 +13,20 @@ export class ProjectsComponent {
   goToHome(){
     this.router.navigateByUrl('/');
   }
+
+
+  cardDetails=[
+   {name: "counter"},
+   {name: "css shapes"}, 
+   {name: "telephone formatter"},
+   {name: "counter"}, 
+   {name: "css shapes"}, 
+   {name: "telephone formatter"},
+   {name: "counter"},
+   {name: "css shapes"}, 
+   {name: "telephone formatter"},
+   {name: "counter"}, 
+   {name: "css shapes"}, 
+   {name: "telephone formatter"}
+   ]
 }

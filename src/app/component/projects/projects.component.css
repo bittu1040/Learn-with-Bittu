@@ -15,3 +15,20 @@
     justify-content: space-evenly;
     margin-top: 16px;
 }
+
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.project-details {
+    width: 250px;
+    height: 100px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,11 +1,16 @@
 <div class="project-page">
-
     <div class="top-section">
         <div>
             <mat-icon (click)="goToHome()" class="backIcon">arrow_back</mat-icon>
         </div>
-
         <div>Frontend HTML, CSS and Javascript mini project</div>
+    </div>
 
+    <div class="project-card">
+        <mat-card class="project-details" *ngFor="let project of cardDetails">
+            <mat-card-content>
+                {{project.name}}
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
