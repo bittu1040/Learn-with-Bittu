@@ -30,6 +30,7 @@ export class ProjectsComponent {
    {name: "Countdown Timer"},
    {name: "Progress Bar"},
    {name: "Digital Clock"},
-   {name: "OTP Input"}
+   {name: "OTP Input"},
+   {name: "CRUD App"}
    ]
 }
