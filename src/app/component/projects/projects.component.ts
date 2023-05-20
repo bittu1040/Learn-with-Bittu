@@ -20,6 +20,7 @@ export class ProjectsComponent {
    {name: "CSS shapes"}, 
    {name: "Telephone Formatter"},
    {name: "Guess the Number"}, 
+   {name: "Show/Hide Password"},
    {name: "To Do List"},
    {name: "Star Rating"},
    {name: "Color Spotter"},
