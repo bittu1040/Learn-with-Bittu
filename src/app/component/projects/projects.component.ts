@@ -31,6 +31,7 @@ export class ProjectsComponent {
    {name: "Progress Bar"},
    {name: "Digital Clock"},
    {name: "OTP Input"},
-   {name: "CRUD App"}
+   {name: "CRUD App in Angular"},
+   {name: "javascript concepts"},
    ]
 }
