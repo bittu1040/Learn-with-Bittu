@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     <div class="section_1">
         <h2>Frontend Developer</h2>
         <div class="section_1_1">
@@ -26,4 +26,38 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+
+
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+
+    <div class="tabs">
+    <button mat-raised-button>
+        <a href="https://bittukumar-web.medium.com/" target="_blank"> Blog </a>
+    </button>
+
+    <button (click)="navigateToProjects()" mat-raised-button>Projects</button>
+
+    <button mat-raised-button>
+         <a href="https://github.com/bittu1040" target="_blank"> Github </a>
+    </button>
+
+    <button (click)="navigateToContact()" mat-raised-button>Contact</button>
+    </div>
+</mat-toolbar>
+ 
+<div class="center-body">
+<mat-card class="main-body">
+    <div style="border: 2px solid red; width: 400px; height: 400px;">
+ 
+    </div>
+    <div style="border: 2px solid yellow; width: 400px; height: 400px;">
+
+    </div>
+</mat-card>
+</div>
+
