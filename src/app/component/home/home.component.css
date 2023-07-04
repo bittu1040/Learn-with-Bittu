@@ -75,9 +75,46 @@ mat-card{
 .main-body{
     width: 80vw;
     height: 80vh;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 100%;
 }
+
+.left-section{
+  padding:1rem;
+  border: 1px solid red;
+  display:grid;
+  grid-template-rows: 50% 50%;
+  gap:0.5rem;
+}
+
+.details-section{
+  border: 1px solid yellow;
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+
+.img{
+  justify-self: center;
+}
+
+.details{
+  justify-self: center;
+}
+
+.skills-section{
+  border: 1px solid blue;
+  display:grid;
+ justify-content: center;
+}
+
+.right-section{
+  border:1px solid green;
+  display:grid;
+  justify-content: center;
+}
+
+
 
 .center-body{
     margin-top: 1rem;
