@@ -28,27 +28,25 @@
     </div>
 </section> -->
 
-
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-
-    <div class="tabs">
-    <button mat-raised-button>
-        <a href="https://bittukumar-web.medium.com/" target="_blank"> Blog </a>
-    </button>
-
-    <button (click)="navigateToProjects()" mat-raised-button>Projects</button>
-
-    <button mat-raised-button>
-         <a href="https://github.com/bittu1040" target="_blank"> Github </a>
-    </button>
-
-    <button (click)="navigateToContact()" mat-raised-button>Contact</button>
-    </div>
-</mat-toolbar>
+<div style="display: flex; justify-content: center;">
+    <mat-toolbar style="    display: flex; justify-content: space-between; gap: 3rem; width: 80vw;">
+        <span>Bittu Portfolio</span>
+    
+        <div class="tabs">
+            <button mat-raised-button>
+                <a href="https://bittukumar-web.medium.com/" target="_blank"> Blog </a>
+            </button>
+    
+            <button (click)="navigateToProjects()" mat-raised-button>Projects</button>
+    
+            <button mat-raised-button>
+                <a href="https://github.com/bittu1040" target="_blank"> Github </a>
+            </button>
+    
+            <button (click)="navigateToContact()" mat-raised-button>Contact</button>
+        </div>
+    </mat-toolbar>
+</div>
 
 <div class="center-body">
     <mat-card class="main-body">
@@ -67,23 +65,33 @@
             </div>
             <div class="skills-section">
                 <div style="margin-bottom: 10px;"> <b> Skills </b></div>
-               <div class="skill-name"> HTML 80% </div>
-               <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="80"></mat-progress-bar></div>
-               <div class="skill-name"> CSS 70% </div>
-               <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="70"></mat-progress-bar></div>
-               <div class="skill-name"> JAVASCRIPT 80% </div>
-               <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="80"></mat-progress-bar></div>
-               <div class="skill-name"> Angular 75% </div>
-               <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="75"></mat-progress-bar></div>
+                <div class="skill-name"> HTML 80% </div>
+                <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                </div>
+                <div class="skill-name"> CSS 70% </div>
+                <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                </div>
+                <div class="skill-name"> JAVASCRIPT 80% </div>
+                <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                </div>
+                <div class="skill-name"> Angular 75% </div>
+                <div class="progress-bar-section"> <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+                </div>
             </div>
         </div>
 
         <div class="right-section">
             <h3>About me !!</h3>
             <hr style="width: 18rem;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ad iste nam voluptatem ratione, reprehenderit laborum aliquid. Dolore, fugit libero. At facere totam id reprehenderit, exercitationem aspernatur labore ex laudantium rerum quaerat!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, qui, quidem, distinctio officiis dolor a mollitia corporis sit nihil accusamus magni est suscipit! Corporis rem dolorum doloremque eius pariatur, cumque vero incidunt blanditiis. Sapiente, quidem dolorum quasi quae, sequi ab commodi veniam optio velit omnis aspernatur fuga veritatis!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita commodi provident in magnam id corrupti et.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ad iste nam voluptatem ratione,
+                reprehenderit laborum aliquid. Dolore, fugit libero. At facere totam id reprehenderit, exercitationem
+                aspernatur labore ex laudantium rerum quaerat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, qui, quidem, distinctio officiis dolor a
+                mollitia corporis sit nihil accusamus magni est suscipit! Corporis rem dolorum doloremque eius pariatur,
+                cumque vero incidunt blanditiis. Sapiente, quidem dolorum quasi quae, sequi ab commodi veniam optio
+                velit omnis aspernatur fuga veritatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita commodi provident in magnam id
+                corrupti et.</p>
         </div>
     </mat-card>
 </div>
