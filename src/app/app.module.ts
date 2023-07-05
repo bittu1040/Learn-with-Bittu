@@ -16,6 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { MyLearningPathComponent } from './component/my-learning-path/my-learning-path.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
