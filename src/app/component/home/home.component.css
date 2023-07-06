@@ -93,24 +93,24 @@ mat-card{
 .details-section{
   /* border: 1px solid yellow; */
   display:grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   margin-top: 1rem;
   height: 80%;
 }
 
 .img{
   justify-self: center;
-}
-
-img{
-    width: 100%;
-    height: 60%;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin-left: 1rem;
 }
 
 .details{
   justify-self: center;
   height: 60%;
   margin-top: 1rem;
+  line-height: 2;
 }
 
 .details div:not(:last-child) {
@@ -125,15 +125,16 @@ padding: 1rem;
 .right-section{
   /* border:1px solid green; */
   padding: 2rem;
-  overflow: auto;
+  display: grid;
+  grid-template-rows: 60% 40%;
 }
 
 
 
 .center-body{
     margin-top: 0.5rem;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .skill-name{
@@ -143,3 +144,46 @@ padding: 1rem;
 .progress-bar-section{
     margin-bottom: 0.7rem;
 }
+
+.noDecoration{
+    text-decoration: none;
+    color: #000000;
+}
+
+.aboutMe{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.web-images{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.web-image-size{
+    height: 5rem;
+    width: 5rem;
+}
+
+.social-media-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+
+.social-media-icon-size{
+   font-size: 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .details-section{
+    grid-template-columns: 50% 50%;
+    }
+}
+
