@@ -28,7 +28,7 @@
     </div>
 </section> -->
 
-<div style="width: 80vw; margin-left: 10vw;">
+<!-- <div style="width: 80vw; margin-left: 10vw;">
 <div >
     <mat-toolbar style="    display: flex; justify-content: space-between; gap: 3rem; width: 80vw;">
         <span>Bittu Portfolio</span>
@@ -129,5 +129,113 @@
     </mat-card>
 </div>
 
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <mat-toolbar class="d-flex justify-content-between align-items-center">
+        <span>Bittu Portfolio</span>
+      
+        <div class="tabs">
+          <button mat-button>
+            <a class="noDecoration" href="https://bittukumar-web.medium.com/" target="_blank"> Blog </a>
+          </button>
+      
+          <button (click)="navigateToProjects()" mat-button>Projects</button>
+      
+          <button mat-button>
+            <a class="noDecoration" href="https://github.com/bittu1040" target="_blank"> Github </a>
+          </button>
+      
+          <button (click)="navigateToContact()" mat-button>Contact</button>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="main-body">
+            <div class="left-section">
+              <div class="details-section">
+                <div>
+                  <img class="img-fluid" src="../assets/myphoto.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div><b>Name</b>: Bittu Kumar</div>
+                  <div><b>Profile</b>: Software Developer</div>
+                  <div><b>Email</b>: bittu@gmail.com</div>
+                  <div><b>Phone</b>: 747 3748 383</div>
+                </div>
+              </div>
+              <div class="skills-section">
+                <div style="margin-bottom: 10px;"><b>Skills</b></div>
+                <div class="skill-name">HTML 80%</div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <div class="skill-name">CSS 70%</div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <div class="skill-name">JavaScript 80%</div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <div class="skill-name">Angular 75%</div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="aboutMe">
+            <h3>About me!!</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ad iste nam voluptatem ratione,
+              reprehenderit laborum aliquid. Dolore, fugit libero. At facere totam id reprehenderit, exercitationem
+              aspernatur labore ex laudantium rerum quaerat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, qui, quidem, distinctio officiis dolor a
+              mollitia corporis sit nihil accusamus magni est suscipit! Corporis rem dolorum doloremque eius pariatur,
+              cumque vero incidunt blanditiis. Sapiente, quidem dolorum quasi quae, sequi ab commodi veniam optio velit
+              omnis aspernatur fuga veritatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita commodi provident in magnam id
+              corrupti et.</p>
+          </div>
+
+          <div class="web-images">
+            <img class="img-fluid" src="../../../assets/html.png" alt="">
+            <img class="img-fluid" src="../../../assets/css.png" alt="">
+            <img class="img-fluid" src="../../../assets/JavaScript-logo.png" alt="">
+            <img class="img-fluid" src="../../../assets/AngularJS-Shield.svg" alt="">
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="social-media-details">
+            <a href="www.google.com"><i class="fab fa-facebook social-media-icon-size"></i></a>
+            <a href="www.google.com"><i class="fab fa-twitter social-media-icon-size"></i></a>
+            <a href="www.google.com"><i class="fab fa-instagram social-media-icon-size"></i></a>
+            <a href="www.google.com"><i class="fab fa-linkedin social-media-icon-size"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 
