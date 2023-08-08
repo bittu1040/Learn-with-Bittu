@@ -3,10 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* body{
-    background: rgb(168,166,214);
-    background: linear-gradient(90deg, rgba(168,166,214,1) 19%, rgba(147,198,167,1) 33%, rgba(220,151,230,1) 100%);
-    } */
+
 
 
     body{
