@@ -1,3 +1,5 @@
+You can access the deployed link: https://bittu-portfolio.vercel.app/
+
 # FirstVercalAngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
