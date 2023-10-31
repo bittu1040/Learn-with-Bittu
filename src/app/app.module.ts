@@ -17,6 +17,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { MyLearningPathComponent } from './component/my-learning-path/my-learning-path.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -40,7 +43,11 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatInputModule,
     MatIconModule,
     MatToolbarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

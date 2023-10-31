@@ -1,2 +1,39 @@
+<mat-toolbar color="primary" style="justify-content: space-between;">
+    <div style="display: flex; align-items: center;">
+        <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" id="menu-button">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div>Bittu Portfolio</div>
 
-<router-outlet></router-outlet>
+    </div>
+    <div style="display: flex;">
+        <div class="toolbar-buttons">
+            <button mat-button id="blog-button"> Blog </button>
+            <button mat-button id="project-button">Projects</button>
+            <button mat-button id="github-button"> Github </button>
+            <button mat-button id="contact-button">Contact</button>
+        </div>
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: 92vh;">
+    <mat-sidenav #sidenav mode="over">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button id="blog-button"> Blog </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button id="project-button" routerLink="/project">Projects</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button id="github-button"> Github </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button id="contact-button">Contact</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

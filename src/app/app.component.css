@@ -1,2 +1,36 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
 
+@media (max-width: 460px) {
+    mat-toolbar {
+        font-size: 1rem;
+    }
+}
 
+@media only screen and (max-width: 600px) {
+    .toolbar-buttons {
+        display: none;
+    }
+
+    .mat-sidenav {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .toolbar-buttons {
+        display: block;
+    }
+
+    .mat-sidenav {
+        width: 200px;
+    }
+}
+
+/* uncomment this code to hide the menu button in bigger screen */
+/* @media only screen and (min-width: 601px) {
+    #menu-button {
+      display: none;
+    }
+  } */
