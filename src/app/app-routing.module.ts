@@ -7,9 +7,10 @@ import { MyLearningPathComponent } from './component/my-learning-path/my-learnin
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
+  {path: 'home', component: HomeComponent, pathMatch: 'full'},
   {path: 'contact', component: ContactComponent},
   {path: 'project', component: ProjectsComponent},
-  {path: 'my-learning-path', component: MyLearningPathComponent}
+  {path: 'todo', component: MyLearningPathComponent}
 ];
 
 @NgModule({

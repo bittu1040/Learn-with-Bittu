@@ -3,15 +3,16 @@
         <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" id="menu-button">
             <mat-icon>menu</mat-icon>
         </button>
-        <div>Bittu Portfolio</div>
+        <div routerLink="/home">Bittu Portfolio</div>
 
     </div>
     <div style="display: flex; align-items: center;">
         <div class="toolbar-buttons">
-            <button mat-button id="blog-button"> Blog </button>
-            <button mat-button id="project-button">Projects</button>
-            <button mat-button id="github-button"> Github </button>
-            <button mat-button id="contact-button">Contact</button>
+            <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank">Blog</a>
+
+            <a mat-button id="project-button" routerLink="/project">Projects</a>
+            <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
+            <button mat-button id="contact-button" routerLink="/contact">Contact</button>
         </div>
        <div style="height: 24px;"> <mat-icon>light_mode</mat-icon> </div>
     </div>
@@ -21,20 +22,25 @@
     <mat-sidenav #sidenav mode="over">
         <mat-nav-list>
             <mat-list-item>
-                <button mat-button id="blog-button"> Blog </button>
+                <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
             </mat-list-item>
             <mat-list-item>
                 <button mat-button id="project-button" routerLink="/project">Projects</button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button id="github-button"> Github </button>
+                <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button id="contact-button">Contact</button>
+                <button mat-button id="contact-button" routerLink="/contact">Contact</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button id="resume-button" >Resume</button>
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
+        <div class="container" >
         <router-outlet></router-outlet>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
