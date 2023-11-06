@@ -20,6 +20,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     ContactComponent,
     ProjectsComponent,
-    MyLearningPathComponent
+    MyLearningPathComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
