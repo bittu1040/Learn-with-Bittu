@@ -20,7 +20,7 @@
 
 <mat-sidenav-container style="height: 92vh;">
     <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'">
-        <mat-nav-list>
+        <mat-nav-list (click)="sidenav.close()">
             <mat-list-item>
                 <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
             </mat-list-item>
