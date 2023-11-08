@@ -39,3 +39,16 @@
     color: #fff;
     text-decoration: none;
   }
+
+
+  footer {
+    background-color: #978ef2; /* Change the background color to your preference */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Style the copyright text */
+  .copyright {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
