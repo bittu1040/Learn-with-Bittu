@@ -10,6 +10,15 @@
   
 }
 
+.icon-box{
+  border: 2px solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.skill-image{
+  width: 50px;
+}
 
 
 
