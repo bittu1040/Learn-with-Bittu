@@ -8,4 +8,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     body{
         background-color: rgb(239, 234, 234);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1.6;
     }
+
+
+    /* body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
