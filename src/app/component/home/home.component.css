@@ -11,10 +11,14 @@
 }
 
 .icon-box{
-  border: 1px solid;
+  border: 1px solid rgb(159, 183, 236);
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
+}
+
+.icon-box:hover{
+  background-color: rgb(164, 237, 244);
 }
 
 .skill-image{
