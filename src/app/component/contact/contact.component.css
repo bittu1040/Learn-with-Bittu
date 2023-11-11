@@ -1,16 +1,16 @@
 
 
 .contact-form {
-    width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .example-form {
     min-width: 150px;
     max-width: 500px;
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
 }
 
@@ -19,7 +19,6 @@
 }
 
 .submitBtn {
-    margin-left: 200px;
     margin-bottom: 16px;
 }
 
