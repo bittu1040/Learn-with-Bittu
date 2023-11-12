@@ -26,6 +26,39 @@
 }
 
 
+.profile-summary h2 {
+  color: #3498db;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 13px;
+  position: relative;
+  padding-left: 30px;
+}
+
+li::before {
+  content: '🔹';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+.interactive-text {
+  cursor: pointer;
+  color: #e74c3c;
+  transition: color 0.3s ease;
+}
+
+.interactive-text:hover {
+  color: #c0392b;
+}
+
+
 
 
 
