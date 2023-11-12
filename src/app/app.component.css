@@ -42,10 +42,13 @@
 
 
   footer {
-    background-color: #978ef2; /* Change the background color to your preference */
-    color: #fff; /* Text color */
+    background-color: #978ef2;
+    color: #fff;
     text-align: center;
     padding: 10px;
+    /* position: relative;
+    bottom: 0;
+    width: 100%; */
   }
   
   /* Style the copyright text */
