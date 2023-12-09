@@ -25,13 +25,13 @@
         <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button id="project-button" routerLink="/learn" (click)="toggleTreeVisibility()">Learn</button>
+        <button mat-button id="project-button" routerLink="/learn/overview" (click)="toggleTreeVisibility()">Learn</button>
       </mat-list-item>
       
       <mat-list *ngIf="showTree" class="learn-section">
-          <mat-list-item class="listitem">Common Web Topic</mat-list-item>
-          <mat-list-item class="listitem">Angular</mat-list-item>
-          <mat-list-item class="listitem">JavaScript</mat-list-item>
+          <mat-list-item class="listitem" routerLink="/learn/overview">Common Web Topic</mat-list-item>
+          <mat-list-item class="listitem" routerLink="/learn/learn-Angular">Angular</mat-list-item>
+          <mat-list-item class="listitem" routerLink="/learn/learn-JS">JavaScript</mat-list-item>
       </mat-list>
   
       <mat-list-item (click)="sidenav.close()">
