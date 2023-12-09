@@ -21,7 +21,7 @@
     }
 
     .mat-sidenav {
-        width: 200px;
+        width: 250px;
     }
 }
 
@@ -54,4 +54,12 @@
   /* Style the copyright text */
   .copyright {
     font-size: 14px; /* Adjust the font size as needed */
+  }
+
+  .learn-section{
+    padding-left: 40px;
+  }
+
+  .listitem{
+    height: 30px !important;
   }

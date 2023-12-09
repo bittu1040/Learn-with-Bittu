@@ -21,6 +21,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import {MatTreeModule} from '@angular/material/tree';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
     MatProgressBarModule,
     MatSidenavModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatTreeModule,
 
   ],
   providers: [],

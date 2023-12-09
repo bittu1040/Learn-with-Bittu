@@ -1,53 +1,60 @@
 <mat-toolbar color="primary" style="justify-content: space-between;">
-    <div style="display: flex; align-items: center;">
-        <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" id="menu-button">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <div routerLink="/home">Bittu Portfolio</div>
+  <div style="display: flex; align-items: center;">
+    <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" id="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div routerLink="/home">Bittu Portfolio</div>
 
-    </div>
-    <div style="display: flex; align-items: center;">
-        <div class="toolbar-buttons">
-            <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank">Blog</a>
+  </div>
+  <div style="display: flex; align-items: center;">
+    <div class="toolbar-buttons">
+      <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank">Blog</a>
 
-            <a mat-button id="project-button" routerLink="/learn">Learn</a>
-            <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
-            <button mat-button id="contact-button" routerLink="/contact">Contact</button>
-        </div>
-       <div style="height: 24px;"> <mat-icon>light_mode</mat-icon> </div>
+      <a mat-button id="project-button" routerLink="/learn">Learn</a>
+      <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
+      <button mat-button id="contact-button" routerLink="/contact">Contact</button>
     </div>
+    <div style="height: 24px;"> <mat-icon>light_mode</mat-icon> </div>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'">
-        <mat-nav-list (click)="sidenav.close()">
-            <mat-list-item>
-                <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
-            </mat-list-item>
-            <mat-list-item>
-                <button mat-button id="project-button" routerLink="/learn">Learn</button>
-            </mat-list-item>
-            <mat-list-item>
-                <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
-            </mat-list-item>
-            <mat-list-item>
-                <button mat-button id="contact-button" routerLink="/contact">Contact</button>
-            </mat-list-item>
-            <mat-list-item>
-                <button mat-button id="resume-button" >Resume</button>
-            </mat-list-item>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="container">
-        <router-outlet></router-outlet>
-        </div>
-        <footer class="footer">
-            <div class="copyright">
-                &copy; 2023 Bittu Kumar. All rights reserved.
-            </div>
-        </footer>
-    </mat-sidenav-content>
+  <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'">
+    <mat-nav-list>
+      <mat-list-item (click)="sidenav.close()">
+        <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button id="project-button" routerLink="/learn" (click)="toggleTreeVisibility()">Learn</button>
+      </mat-list-item>
+      
+      <mat-list *ngIf="showTree" class="learn-section">
+          <mat-list-item class="listitem">Common Web Topic</mat-list-item>
+          <mat-list-item class="listitem">Angular</mat-list-item>
+          <mat-list-item class="listitem">JavaScript</mat-list-item>
+      </mat-list>
+  
+      <mat-list-item (click)="sidenav.close()">
+        <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
+      </mat-list-item>
+      <mat-list-item (click)="sidenav.close()">
+        <button mat-button id="contact-button" routerLink="/contact">Contact</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button id="resume-button">Resume</button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      <div class="copyright">
+        &copy; 2023 Bittu Kumar. All rights reserved.
+      </div>
+    </footer>
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 
