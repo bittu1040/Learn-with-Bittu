@@ -1,18 +1,63 @@
 <mat-icon (click)="goToHome()" class="backIcon">home</mat-icon>
 
+<!-- <div class="interview-topics-container">
+    <div class="topic-section">
+      <h2 class="header">Essential Topics to understand for web developers</h2>
+      <hr>
+      <div class="topic-list">
+        <ul>
+          <li *ngFor="let jsTopic of javascriptTopics">{{ jsTopic }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="topic-section">
+      <h2 class="header">Angular Interview Topics</h2>
+      <hr>
+      <div class="topic-list">
+        <ul>
+          <li *ngFor="let ngTopic of angularTopics">{{ ngTopic }}</li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
 
-<div style="height: 100vh;">
-
-    <ul>Overview of frontend development
-        <li>Async and defer</li>
-        <li>debounce </li>
-    </ul>
-
-    <ul>Angular learn by implementation
-        <li>Dark/light theme</li>
-        <li>Responsive nav bar</li>
-        <li>Lazy loading</li>
-        <li>Route and Auth gaurd</li>
-    </ul>
-
+<div class="container mt-4">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6">
+            <div class="mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Common Interview Topics</h2>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let commonTopic of commonInterviewTopics" class="list-group-item list-group-item-action">{{ commonTopic }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6">
+            <div class="mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">JavaScript Interview Topics</h2>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let jsTopic of javascriptTopics" class="list-group-item list-group-item-action">{{ jsTopic }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6">
+            <div class="mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Angular Interview Topics</h2>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let ngTopic of angularTopics" class="list-group-item list-group-item-action">{{ ngTopic }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -6,6 +6,8 @@ import { LearnOverviewComponent } from './learn-overview/learn-overview.componen
 import { LearnJSComponent } from './learn-js/learn-js.component';
 import { LearnAngularComponent } from './learn-angular/learn-angular.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     MatIconModule,
+    MatListModule,
+    MatCardModule,
     LearnRoutingModule],
 })
 export class LearnModule { }

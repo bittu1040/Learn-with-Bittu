@@ -9,7 +9,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 export class AppComponent {
   title = 'first-vercal-angular-app';
   isMobile: boolean = false;
-  showTree = false;
+  showTree = true;
   
   constructor(private breakpointObserver: BreakpointObserver) {
     this.isMobile = this.breakpointObserver.isMatched(Breakpoints.Handset);

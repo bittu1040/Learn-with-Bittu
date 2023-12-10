@@ -25,7 +25,7 @@
         <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button id="project-button" routerLink="/learn/overview" (click)="toggleTreeVisibility()">Learn</button>
+        <button mat-button id="project-button" (click)="toggleTreeVisibility()">Learn</button>
       </mat-list-item>
       
       <mat-list *ngIf="showTree" class="learn-section">

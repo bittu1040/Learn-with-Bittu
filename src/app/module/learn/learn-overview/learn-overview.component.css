@@ -1,0 +1,33 @@
+.interview-topics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .topic-section {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .topic-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .topic-list ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  
