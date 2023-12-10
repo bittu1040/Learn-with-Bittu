@@ -8,19 +8,22 @@ import { LearnAngularComponent } from './learn-angular/learn-angular.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { DialogContentComponent } from 'app/components/dialog-content/dialog-content.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
     LearnOverviewComponent,
     LearnJSComponent,
-    LearnAngularComponent
+    LearnAngularComponent,DialogContentComponent
   ],
   imports: [
     CommonModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
-    LearnRoutingModule],
+    LearnRoutingModule,MatDialogModule],
+    providers:[MatDialog]
 })
 export class LearnModule { }

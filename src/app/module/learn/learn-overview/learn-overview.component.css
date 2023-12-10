@@ -31,3 +31,12 @@
     margin-bottom: 8px;
   }
   
+.list-group-item {
+  font-size: 0.9rem;
+  padding: 10px 15px; 
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0; 
+  cursor: pointer; 
+}

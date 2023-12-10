@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { DialogContentComponent } from 'app/components/dialog-content/dialog-content.component';
 
 @Component({
   selector: 'app-learn-overview',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class LearnOverviewComponent {
 
 
-  commonInterviewTopics:string[]= [
+  commonInterviewTopics: string[] = [
     'Debounce and Throttle',
     'Pure and impure pipe/function',
     'Mutability and immutability',
@@ -67,9 +69,16 @@ export class LearnOverviewComponent {
   ];
 
 
-  constructor(private router: Router){}
+  constructor(private router: Router, public dialog: MatDialog) { }
 
-  goToHome(){
+  goToHome() {
     this.router.navigateByUrl('/');
+  }
+
+  openDialog(title: string): void {
+    this.dialog.open(DialogContentComponent, {
+      // width: '400px',
+      data: title 
+    });
   }
 }
