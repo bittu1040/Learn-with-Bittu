@@ -5,7 +5,7 @@ import { LearnJSComponent } from './learn-js/learn-js.component';
 import { LearnAngularComponent } from './learn-angular/learn-angular.component';
 
 const routes: Routes = [
-  {path:"", component: LearnOverviewComponent},
+  {path:"overview", component: LearnOverviewComponent},
   {path:"learn-JS", component: LearnJSComponent},
   {path:"learn-Angular", component: LearnAngularComponent}
 ];

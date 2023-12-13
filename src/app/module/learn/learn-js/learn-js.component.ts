@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class LearnJSComponent {
 
+  TopicList= ["topic 1", "topic2", "topic3"];
+
+  Submit(data:string){
+    console.log(data)
+  }
+
 }

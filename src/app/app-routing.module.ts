@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent, pathMatch: 'full'},
   {path: 'contact', component: ContactComponent},
   {path: 'project', component: ProjectsComponent},
-  {path: 'learn/overview', loadChildren: () => import('./module/learn/learn.module').then(m => m.LearnModule)},
+  {path: 'learn', loadChildren: () => import('./module/learn/learn.module').then(m => m.LearnModule)},
   {path: 'todo', component: MyLearningPathComponent},
   {path: '**', component:PageNotFoundComponent}
 ];
