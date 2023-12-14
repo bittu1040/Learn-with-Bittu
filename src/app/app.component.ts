@@ -10,9 +10,12 @@ export class AppComponent {
   title = 'first-vercal-angular-app';
   isMobile: boolean = false;
   showTree = true;
-  
+  isSideNavOpened= true
   constructor(private breakpointObserver: BreakpointObserver) {
     this.isMobile = this.breakpointObserver.isMatched(Breakpoints.Handset);
+    if(this.isMobile){
+      this.isSideNavOpened= false;
+    }
   }
 
   toggleTreeVisibility() {

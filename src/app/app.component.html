@@ -19,7 +19,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'">
+  <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isSideNavOpened">
     <mat-nav-list>
       <mat-list-item (click)="sidenav.close()">
         <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank"> Blog </a>
@@ -56,7 +56,6 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
 
 
 <!--
