@@ -27,7 +27,8 @@ export class LearnOverviewComponent {
     'How to debug your frontend application',
     'OOPs concepts',
     'Design Patterns',
-    'What you know about unit testing'
+    'What you know about unit testing',
+    'understand different usecase of the Promises with respect to API handling (retry API, combine 2-3 api )'
 
 
   ]
