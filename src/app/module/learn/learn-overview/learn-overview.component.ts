@@ -45,7 +45,7 @@ export class LearnOverviewComponent {
     'call, apply and bind',
     'Explain "this" in JavaScript',
     'Document Object Model (DOM)',
-    'Template literals, Destructuring, Spread Operator',
+    'Template literals, Destructuring, Spread Operator, rest operator',
     ''
   ];
 
