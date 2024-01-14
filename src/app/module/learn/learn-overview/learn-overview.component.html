@@ -7,7 +7,9 @@
                 <div class="card-body">
                     <h2 class="card-title">Common Interview Topics</h2>
                     <ul class="list-group list-group-flush">
-                        <li *ngFor="let commonTopic of commonInterviewTopics" class="list-group-item list-group-item-action" (click)="openDialog(commonTopic)">{{ commonTopic }}
+                        <li *ngFor="let commonTopic of commonInterviewTopics"
+                            class="list-group-item list-group-item-action" (click)="openDialog(commonTopic)">
+                            {{commonTopic }}
                         </li>
                     </ul>
                 </div>
@@ -20,7 +22,8 @@
                 <div class="card-body">
                     <h2 class="card-title">JavaScript Interview Topics</h2>
                     <ul class="list-group list-group-flush">
-                        <li *ngFor="let jsTopic of javascriptTopics" class="list-group-item list-group-item-action" (click)="openDialog(jsTopic)">{{ jsTopic }}</li>
+                        <li *ngFor="let jsTopic of javascriptTopics" class="list-group-item list-group-item-action"
+                            (click)="openDialog(jsTopic)">{{ jsTopic }}</li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +35,8 @@
                 <div class="card-body">
                     <h2 class="card-title">Angular Interview Topics</h2>
                     <ul class="list-group list-group-flush">
-                        <li *ngFor="let ngTopic of angularTopics" class="list-group-item list-group-item-action" (click)="openDialog(ngTopic)">{{ ngTopic }}</li>
+                        <li *ngFor="let ngTopic of angularTopics" class="list-group-item list-group-item-action"
+                            (click)="openDialog(ngTopic)">{{ ngTopic }}</li>
                     </ul>
                 </div>
             </div>
