@@ -24,6 +24,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import {MatTreeModule} from '@angular/material/tree';
 import { LearnModule } from './module/learn/learn.module';
 import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
+import { TopicDescriptionComponent } from './components/topic-description/topic-description.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DialogContentComponent } from './components/dialog-content/dialog-conte
     ContactComponent,
     ProjectsComponent,
     MyLearningPathComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TopicDescriptionComponent
   ],
   imports: [
     BrowserModule,
