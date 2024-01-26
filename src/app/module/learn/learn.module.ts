@@ -10,6 +10,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { DialogContentComponent } from 'app/components/dialog-content/dialog-content.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    LearnRoutingModule,MatDialogModule],
+    MatSelectModule,
+    MatFormFieldModule,
+    LearnRoutingModule,
+    MatDialogModule],
     providers:[MatDialog]
 })
 export class LearnModule { }

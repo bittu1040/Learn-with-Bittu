@@ -10,6 +10,9 @@ import { DialogContentComponent } from 'app/components/dialog-content/dialog-con
 })
 export class LearnOverviewComponent {
 
+  Topic="Angular";
+  TopicDifficulty= "ALL"
+
 
   commonInterviewTopics: string[] = [
     'Debounce and Throttle',
