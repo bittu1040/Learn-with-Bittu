@@ -9,7 +9,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -24,7 +23,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import {MatTreeModule} from '@angular/material/tree';
 import { LearnModule } from './module/learn/learn.module';
 import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
-import { TopicDescriptionComponent } from './components/topic-description/topic-description.component';
 
 
 @NgModule({
@@ -32,10 +30,8 @@ import { TopicDescriptionComponent } from './components/topic-description/topic-
     AppComponent,
     HomeComponent,
     ContactComponent,
-    ProjectsComponent,
     MyLearningPathComponent,
-    PageNotFoundComponent,
-    TopicDescriptionComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
