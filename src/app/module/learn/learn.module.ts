@@ -12,13 +12,14 @@ import { DialogContentComponent } from 'app/components/dialog-content/dialog-con
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { InterviewTopicsComponent } from './interview-topics/interview-topics.component';
 
 
 @NgModule({
   declarations: [
     LearnOverviewComponent,
     LearnJSComponent,
-    LearnAngularComponent,DialogContentComponent
+    LearnAngularComponent,DialogContentComponent, InterviewTopicsComponent
   ],
   imports: [
     CommonModule,

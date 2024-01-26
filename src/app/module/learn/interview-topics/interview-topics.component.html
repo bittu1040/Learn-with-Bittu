@@ -1,0 +1,14 @@
+<div class="row align-items-center justify-content-center">
+    <div class="col-md-8">
+      <div class="mb-4">
+        <div class="card-body">
+          <h2 class="card-title">{{ title }}</h2>
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let topic of category" class="list-group-item list-group-item-action" role="button">
+              {{ topic.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

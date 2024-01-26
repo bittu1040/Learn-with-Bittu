@@ -53,6 +53,7 @@ import { DialogContentComponent } from './components/dialog-content/dialog-conte
     MatTreeModule,
     LearnModule ],
   providers: [],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

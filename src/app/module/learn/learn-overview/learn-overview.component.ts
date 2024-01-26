@@ -1,35 +1,40 @@
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
-import { DialogContentComponent } from 'app/components/dialog-content/dialog-content.component';
-import { angularTopics, commonInterviewTopics, javascriptTopics } from 'app/shared/topics';
+import { Component, OnInit } from '@angular/core';
+import { InterviewTopic, listOfQuestions} from 'app/shared/topics';
 
 @Component({
   selector: 'app-learn-overview',
   templateUrl: './learn-overview.component.html',
   styleUrls: ['./learn-overview.component.css']
 })
-export class LearnOverviewComponent {
+export class LearnOverviewComponent implements OnInit {
+  title1 = 'Common Interview Topics';
+  title2 = 'JavaScript Interview Topics';
+  title3 = 'Angular Interview Topics';
+  listOfQuestions: InterviewTopic[] | undefined
+  commonInterviewTopics:any;
+  javascriptTopics:any;
+  angularTopics:any
 
-  Topic="Angular";
-  TopicDifficulty= "ALL"
+  constructor() {}
 
 
-  commonInterviewTopics= commonInterviewTopics;
-  javascriptTopics= javascriptTopics;
-  angularTopics= angularTopics;
+  ngOnInit(): void {
 
+    this.listOfQuestions= listOfQuestions;
+    console.log(this.listOfQuestions)
+    this.commonInterviewTopics= this.listOfQuestions.filter((data)=>{
+      return data.category==="basicwebquestion"
+    })
 
-  constructor(private router: Router, public dialog: MatDialog) { }
+    this.javascriptTopics= this.listOfQuestions.filter((data)=>{
+      return data.category==="javascript"
+    })
 
-  goToHome() {
-    this.router.navigateByUrl('/');
+    this.angularTopics= this.listOfQuestions.filter((data)=>{
+      return data.category==="angular"
+    })
+
   }
 
-  openDialog(title: string): void {
-    this.dialog.open(DialogContentComponent, {
-      // width: '400px',
-      data: title 
-    });
-  }
+  updateTopics() {}
 }
