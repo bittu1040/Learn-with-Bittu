@@ -19,8 +19,10 @@ export class LearnOverviewComponent implements OnInit {
 
   basicwebquestion: boolean = false;
   jsquestion: boolean = false;
-  angularquestion: boolean = false;
+  angularquestion: boolean = true;
 
+  selectedTopic: string ="Angular";
+  
   constructor() {}
 
   ngOnInit(): void {

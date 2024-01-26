@@ -6,7 +6,7 @@
         <select
           class="form-select"
           id="topicSelect"
-          (change)="updateTopics($event)"
+          (change)="updateTopics($event)" [(ngModel)]="selectedTopic"
         >
           <option value="ALL">All</option>
           <option value="Angular">Angular</option>
