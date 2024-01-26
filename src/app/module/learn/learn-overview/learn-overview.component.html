@@ -1,21 +1,24 @@
-
 <div class="container mt-4">
   <div class="row d-flex justify-content-center">
     <div class="col-md-4">
       <div class="mb-3">
         <label for="topicSelect" class="form-label">Select Topic</label>
-        <select class="form-select" id="topicSelect" (change)="updateTopics()" >
+        <select
+          class="form-select"
+          id="topicSelect"
+          (change)="updateTopics($event)"
+        >
           <option value="ALL">All</option>
           <option value="Angular">Angular</option>
           <option value="JavaScript">JavaScript</option>
-          <option value="WebTopics">Web Topics</option>
+          <option value="basicwebquestion">Web Topics</option>
         </select>
       </div>
     </div>
     <div class="col-md-4">
       <div class="mb-3">
         <label for="difficultySelect" class="form-label">Difficulty</label>
-        <select class="form-select" id="difficultySelect" >
+        <select class="form-select" id="difficultySelect">
           <option value="ALL">ALL</option>
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -25,11 +28,22 @@
   </div>
 </div>
 
-
-
-
 <div class="container mt-4">
-  <app-interview-topics  [title]="title1" [category]="commonInterviewTopics"></app-interview-topics>
-  <app-interview-topics  [title]="title2" [category]="javascriptTopics"></app-interview-topics>
-  <app-interview-topics  [title]="title3" [category]="angularTopics"></app-interview-topics>
+  <app-interview-topics
+    *ngIf="basicwebquestion "
+    [title]="title1"
+    [category]="basicwebTopics"
+  ></app-interview-topics>
+
+  <app-interview-topics
+    *ngIf="jsquestion "
+    [title]="title2"
+    [category]="javascriptTopics"
+  ></app-interview-topics>
+
+  <app-interview-topics
+    *ngIf="angularquestion "
+    [title]="title3"
+    [category]="angularTopics"
+  ></app-interview-topics>
 </div>
