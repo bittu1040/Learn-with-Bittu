@@ -1,14 +1,81 @@
 <div class="row align-items-center justify-content-center">
-    <div class="col-md-8">
-      <div class="mb-4">
-        <div class="card-body">
-          <h2 class="card-title">{{ title }}</h2>
-          <ul class="list-group list-group-flush">
-            <li *ngFor="let topic of category" class="list-group-item list-group-item-action" role="button">
-              {{ topic.name }}
-            </li>
-          </ul>
-        </div>
+  <div class="col-md-8">
+    <div class="mb-4">
+      <div class="card-body">
+        <h2 class="card-title">{{ title }}</h2>
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let topic of category" class="list-group-item list-group-item-action" role="button">
+            {{ topic.name }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+
+<!-- <div class="row align-items-center justify-content-center">
+  <div class="col-md-8">
+    <div class="mb-4">
+      <div class="card-body">
+        <h2 class="card-title">{{ title }}</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Angular Life Cycle Hooks')">
+            Angular Life Cycle Hooks
+          </li>
+          <div *ngIf="selectedTopic === 'Angular Life Cycle Hooks'">
+            Angular provides a set of lifecycle hooks that allow you to
+            perform actions at specific points in the component lifecycle.
+            <br />
+            Example: Using <code>ngOnInit</code> to initialize data when the
+            component is created.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Component Communication')">
+            Component Communication
+          </li>
+          <div *ngIf="selectedTopic === 'Component Communication'">
+            Components in Angular can communicate with each other through
+            various methods, including Input, Output, and services.
+            <br />
+            Example: Parent component passing data to a child component using
+            Input.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name" 
+           (click)="showDetails('Directives')">
+            Directives (Structural, Attribute, and Custom)
+          </li>
+          <div *ngIf="selectedTopic === 'Directives'">
+            Directives are instructions in the DOM that Angular transforms or
+            manipulates.
+            <br />
+            Structural Directive Example: <code>*ngIf</code> to conditionally
+            render an element. Custom Directive Example: Creating a custom
+            directive to highlight text.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Injectable and Singleton Services')">
+            Injectable and Singleton Services
+          </li>
+          <div *ngIf="selectedTopic === 'Injectable and Singleton Services'">
+            Services are used to organize and share code across components.
+            Injectable services can be injected into components and other
+            services.
+            <br />
+            Example: Creating a service with a method to fetch data.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button"  class="topic-name"
+          (click)="showDetails('Route/Auth Guards')">
+            Route/Auth Guards
+          </li>
+          <div *ngIf="selectedTopic === 'Route/Auth Guards'">
+            Route guards are used to control navigation access in Angular.
+            Auth guards protect routes based on user authentication.
+            <br />
+            Example: Implementing a route guard for authentication.
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->

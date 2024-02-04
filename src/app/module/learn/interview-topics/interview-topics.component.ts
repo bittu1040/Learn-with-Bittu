@@ -9,4 +9,15 @@ import { InterviewTopic } from 'app/shared/topics';
 export class InterviewTopicsComponent {
   @Input() title: string | undefined;
   @Input() category: InterviewTopic[] | undefined;
+
+
+  selectedTopic: any;
+
+  showDetails(topic: string) {
+    if (this.selectedTopic === topic) {
+      this.selectedTopic = null;
+    } else {
+      this.selectedTopic = topic;
+    }
+  }
 }
