@@ -30,20 +30,5 @@
 
 <div class="container mt-4">
   <app-interview-topics
-    *ngIf="basicwebquestion "
-    [title]="title1"
-    [category]="basicwebTopics"
+    [category]="selectedTopic"
   ></app-interview-topics>
-
-  <app-interview-topics
-    *ngIf="jsquestion "
-    [title]="title2"
-    [category]="javascriptTopics"
-  ></app-interview-topics>
-
-  <app-interview-topics
-    *ngIf="angularquestion "
-    [title]="title3"
-    [category]="angularTopics"
-  ></app-interview-topics>
-</div>

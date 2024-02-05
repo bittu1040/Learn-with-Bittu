@@ -1,4 +1,4 @@
-<div class="row align-items-center justify-content-center">
+<!-- <div class="row align-items-center justify-content-center">
   <div class="col-md-8">
     <div class="mb-4">
       <div class="card-body">
@@ -11,71 +11,344 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<!-- <div class="row align-items-center justify-content-center">
+<div class="row align-items-center justify-content-center" *ngIf="category === 'Angular' || category === 'ALL'">
   <div class="col-md-8">
     <div class="mb-4">
       <div class="card-body">
         <h2 class="card-title">{{ title }}</h2>
         <ul class="list-group list-group-flush">
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-            (click)="showDetails('Angular Life Cycle Hooks')">
-            Angular Life Cycle Hooks
+            (click)="showDetails('Angular workflow')">
+            Angular workflow
           </li>
-          <div *ngIf="selectedTopic === 'Angular Life Cycle Hooks'">
-            Angular provides a set of lifecycle hooks that allow you to
-            perform actions at specific points in the component lifecycle.
-            <br />
-            Example: Using <code>ngOnInit</code> to initialize data when the
-            component is created.
+          <div *ngIf="selectedTopic === 'Angular workflow'">
+            Angular workflow description: Custom description for Angular workflow.
           </div>
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-            (click)="showDetails('Component Communication')">
-            Component Communication
+            (click)="showDetails('Lifecycle hooks')">
+            Lifecycle hooks
           </li>
-          <div *ngIf="selectedTopic === 'Component Communication'">
-            Components in Angular can communicate with each other through
-            various methods, including Input, Output, and services.
-            <br />
-            Example: Parent component passing data to a child component using
-            Input.
+          <div *ngIf="selectedTopic === 'Lifecycle hooks'">
+            Lifecycle hooks description: Custom description for Lifecycle hooks.
           </div>
-          <li class="list-group-item list-group-item-action" role="button" class="topic-name" 
-           (click)="showDetails('Directives')">
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Component communication')">
+            Component communication
+          </li>
+          <div *ngIf="selectedTopic === 'Component communication'">
+            Component communication description: Custom description for Component communication.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Directives (Structural, Attribute and Custom)')">
             Directives (Structural, Attribute, and Custom)
           </li>
-          <div *ngIf="selectedTopic === 'Directives'">
-            Directives are instructions in the DOM that Angular transforms or
-            manipulates.
-            <br />
-            Structural Directive Example: <code>*ngIf</code> to conditionally
-            render an element. Custom Directive Example: Creating a custom
-            directive to highlight text.
+          <div *ngIf="selectedTopic === 'Directives (Structural, Attribute and Custom)'">
+            Directives description: Custom description for Directives (Structural, Attribute, and Custom).
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Pipes (Pure, Impure, Built-in)')">
+            Pipes (Pure, Impure, Built-in)
+          </li>
+          <div *ngIf="selectedTopic === 'Pipes (Pure, Impure, Built-in)'">
+            Pipes description: Custom description for Pipes (Pure, Impure, Built-in).
           </div>
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
             (click)="showDetails('Injectable and Singleton Services')">
             Injectable and Singleton Services
           </li>
           <div *ngIf="selectedTopic === 'Injectable and Singleton Services'">
-            Services are used to organize and share code across components.
-            Injectable services can be injected into components and other
-            services.
-            <br />
-            Example: Creating a service with a method to fetch data.
+            Injectable and Singleton Services description: Custom description for Injectable and Singleton Services.
           </div>
-          <li class="list-group-item list-group-item-action" role="button"  class="topic-name"
-          (click)="showDetails('Route/Auth Guards')">
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Dependency Injection')">
+            Dependency Injection
+          </li>
+          <div *ngIf="selectedTopic === 'Dependency Injection'">
+            Dependency Injection description: Custom description for Dependency Injection.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('One way and two-way Data Binding')">
+            One way and two-way Data Binding
+          </li>
+          <div *ngIf="selectedTopic === 'One way and two-way Data Binding'">
+            Data Binding description: Custom description for One way and two-way Data Binding.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Route/Auth Guards')">
             Route/Auth Guards
           </li>
           <div *ngIf="selectedTopic === 'Route/Auth Guards'">
-            Route guards are used to control navigation access in Angular.
-            Auth guards protect routes based on user authentication.
-            <br />
-            Example: Implementing a route guard for authentication.
+            Route/Auth Guards description: Custom description for Route/Auth Guards.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Lazy loading')">
+            Lazy loading
+          </li>
+          <div *ngIf="selectedTopic === 'Lazy loading'">
+            Lazy loading description: Custom description for Lazy loading.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Template/Reactive Forms and Validations')">
+            Template/Reactive Forms and Validations
+          </li>
+          <div *ngIf="selectedTopic === 'Template/Reactive Forms and Validations'">
+            Forms description: Custom description for Template/Reactive Forms and Validations.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Observable and Promises')">
+            Observable and Promises
+          </li>
+          <div *ngIf="selectedTopic === 'Observable and Promises'">
+            Observable and Promises description: Custom description for Observable and Promises.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('RXJS Operators')">
+            RXJS Operators
+          </li>
+          <div *ngIf="selectedTopic === 'RXJS Operators'">
+            RXJS Operators description: Custom description for RXJS Operators.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Subject and behavior subject')">
+            Subject and behavior subject
+          </li>
+          <div *ngIf="selectedTopic === 'Subject and behavior subject'">
+            Subject and behavior subject description: Custom description for Subject and behavior subject.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('HTTP (Req/Res) Interceptor')">
+            HTTP (Req/Res) Interceptor
+          </li>
+          <div *ngIf="selectedTopic === 'HTTP (Req/Res) Interceptor'">
+            HTTP Interceptor description: Custom description for HTTP (Req/Res) Interceptor.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Change Detection and OnPush')">
+            Change Detection and OnPush
+          </li>
+          <div *ngIf="selectedTopic === 'Change Detection and OnPush'">
+            Change Detection description: Custom description for Change Detection and OnPush.
           </div>
         </ul>
       </div>
     </div>
   </div>
-</div> -->
+</div>
+
+
+<div class="row align-items-center justify-content-center" *ngIf="category === 'JavaScript' || category === 'ALL'">
+  <div class="col-md-8">
+    <div class="mb-4">
+      <div class="card-body">
+        <h2 class="card-title">{{ title }}</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Variable Declarations (var, let, const)')">
+            Variable Declarations (var, let, const)
+          </li>
+          <div *ngIf="selectedTopic === 'Variable Declarations (var, let, const)'">
+            Variable Declarations description: Custom description for Variable Declarations (var, let, const).
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Functions and Scope')">
+            Functions and Scope
+          </li>
+          <div *ngIf="selectedTopic === 'Functions and Scope'">
+            Functions and Scope description: Custom description for Functions and Scope.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Closures')">
+            Closures
+          </li>
+          <div *ngIf="selectedTopic === 'Closures'">
+            Closures description: Custom description for Closures.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Hoisting')">
+            Hoisting
+          </li>
+          <div *ngIf="selectedTopic === 'Hoisting'">
+            Hoisting description: Custom description for Hoisting.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Event loop (callstack, microtask, macrotask)')">
+            Event loop (callstack, microtask, macrotask)
+          </li>
+          <div *ngIf="selectedTopic === 'Event loop (callstack, microtask, macrotask)'">
+            Event loop description: Custom description for Event loop (callstack, microtask, macrotask).
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Prototypes, prototype chain, Prototypal Inheritance')">
+            Prototypes, prototype chain, Prototypal Inheritance
+          </li>
+          <div *ngIf="selectedTopic === 'Prototypes, prototype chain, Prototypal Inheritance'">
+            Prototypes description: Custom description for Prototypes, prototype chain, Prototypal Inheritance.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Callback in JavaScript')">
+            Callback in JavaScript
+          </li>
+          <div *ngIf="selectedTopic === 'Callback in JavaScript'">
+            Callback description: Custom description for Callback in JavaScript.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Asynchronous JavaScript (Promises, async/await)')">
+            Asynchronous JavaScript (Promises, async/await)
+          </li>
+          <div *ngIf="selectedTopic === 'Asynchronous JavaScript (Promises, async/await)'">
+            Asynchronous JavaScript description: Custom description for Asynchronous JavaScript (Promises, async/await).
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('call, apply and bind')">
+            call, apply and bind
+          </li>
+          <div *ngIf="selectedTopic === 'call, apply and bind'">
+            Call, apply, bind description: Custom description for call, apply and bind.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Template literals, Destructuring, Spread Operator, rest operator')">
+            Template literals, Destructuring, Spread Operator, rest operator
+          </li>
+          <div *ngIf="selectedTopic === 'Template literals, Destructuring, Spread Operator, rest operator'">
+            Template literals description: Custom description for Template literals, Destructuring, Spread Operator, rest operator.
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row align-items-center justify-content-center"
+  *ngIf="category === 'basicwebquestion' || category === 'ALL'">
+  <div class="col-md-8">
+    <div class="mb-4">
+      <div class="card-body">
+        <h2 class="card-title">{{ title }}</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Debounce and Throttle')">
+            Debounce and Throttle
+          </li>
+          <div *ngIf="selectedTopic === 'Debounce and Throttle'">
+            Debounce and Throttle description: Custom description for Debounce and Throttle.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Pure and impure pipe/function')">
+            Pure and impure pipe/function
+          </li>
+          <div *ngIf="selectedTopic === 'Pure and impure pipe/function'">
+            Pure and impure pipe/function description: Custom description for Pure and impure pipe/function.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Mutability and immutability')">
+            Mutability and immutability
+          </li>
+          <div *ngIf="selectedTopic === 'Mutability and immutability'">
+            Mutability and immutability description: Custom description for Mutability and immutability.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Async and defer')">
+            Async and defer
+          </li>
+          <div *ngIf="selectedTopic === 'Async and defer'">
+            Async and defer description: Custom description for Async and defer.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('CORS')">
+            CORS
+          </li>
+          <div *ngIf="selectedTopic === 'CORS'">
+            CORS description: Custom description for CORS.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Web Performance Optimization')">
+            Web Performance Optimization
+          </li>
+          <div *ngIf="selectedTopic === 'Web Performance Optimization'">
+            Web Performance Optimization description: Custom description for Web Performance Optimization.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Responsive Web Design')">
+            Responsive Web Design
+          </li>
+          <div *ngIf="selectedTopic === 'Responsive Web Design'">
+            Responsive Web Design description: Custom description for Responsive Web Design.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('What is microfrontend')">
+            What is microfrontend
+          </li>
+          <div *ngIf="selectedTopic === 'What is microfrontend'">
+            Microfrontend description: Custom description for What is microfrontend.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Explain PWA and SPA')">
+            Explain PWA and SPA
+          </li>
+          <div *ngIf="selectedTopic === 'Explain PWA and SPA'">
+            PWA and SPA description: Custom description for Explain PWA and SPA.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Pre-processors - SCSS or LESS')">
+            Pre-processors - SCSS or LESS
+          </li>
+          <div *ngIf="selectedTopic === 'Pre-processors - SCSS or LESS'">
+            Pre-processors description: Custom description for Pre-processors - SCSS or LESS.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('JWT')">
+            JWT
+          </li>
+          <div *ngIf="selectedTopic === 'JWT'">
+            JWT description: Custom description for JWT.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('localStorage/sessionStorage')">
+            localStorage/sessionStorage
+          </li>
+          <div *ngIf="selectedTopic === 'localStorage/sessionStorage'">
+            localStorage/sessionStorage description: Custom description for localStorage/sessionStorage.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('How to debug your frontend application')">
+            How to debug your frontend application
+          </li>
+          <div *ngIf="selectedTopic === 'How to debug your frontend application'">
+            Debugging description: Custom description for How to debug your frontend application.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('OOPs concepts')">
+            OOPs concepts
+          </li>
+          <div *ngIf="selectedTopic === 'OOPs concepts'">
+            OOPs concepts description: Custom description for OOPs concepts.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Design Patterns')">
+            Design Patterns
+          </li>
+          <div *ngIf="selectedTopic === 'Design Patterns'">
+            Design Patterns description: Custom description for Design Patterns.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('What you know about unit testing')">
+            What you know about unit testing
+          </li>
+          <div *ngIf="selectedTopic === 'What you know about unit testing'">
+            Unit Testing description: Custom description for What you know about unit testing.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)')">
+            Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)
+          </li>
+          <div *ngIf="selectedTopic === 'Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)'">
+            Promises use cases description: Custom description for Promises use cases.
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
