@@ -12,11 +12,6 @@ export class LearnOverviewComponent implements OnInit {
   title3 = 'Angular Interview Topics';
 
 
-  listOfQuestions: InterviewTopic[] | undefined;
-  basicwebTopics: InterviewTopic[] | undefined;
-  javascriptTopics: InterviewTopic[] | undefined;
-  angularTopics: InterviewTopic[] | undefined;
-
   basicwebquestion: boolean = false;
   jsquestion: boolean = false;
   angularquestion: boolean = true;

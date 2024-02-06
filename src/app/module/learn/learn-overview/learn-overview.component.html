@@ -3,11 +3,7 @@
     <div class="col-md-4">
       <div class="mb-3">
         <label for="topicSelect" class="form-label">Select Topic</label>
-        <select
-          class="form-select"
-          id="topicSelect"
-          (change)="updateTopics($event)" [(ngModel)]="selectedTopic"
-        >
+        <select class="form-select" id="topicSelect" (change)="updateTopics($event)" [(ngModel)]="selectedTopic">
           <option value="ALL">All</option>
           <option value="Angular">Angular</option>
           <option value="JavaScript">JavaScript</option>
@@ -29,6 +25,5 @@
 </div>
 
 <div class="container mt-4">
-  <app-interview-topics
-    [category]="selectedTopic"
-  ></app-interview-topics>
+  <app-interview-topics [category]="selectedTopic"></app-interview-topics>
+</div>

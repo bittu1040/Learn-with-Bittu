@@ -208,11 +208,33 @@
             Call, apply, bind description: Custom description for call, apply and bind.
           </div>
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('call, apply and bind')">
+            call, apply and bind
+          </li>
+          <div *ngIf="selectedTopic === 'call, apply and bind'">
+            Call, apply, bind description: Custom description for call, apply and bind.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('call, apply and bind')">
+            call, apply and bind
+          </li>
+          <div *ngIf="selectedTopic === 'call, apply and bind'">
+            Call, apply, bind description: Custom description for call, apply and bind.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('call, apply and bind')">
+            call, apply and bind
+          </li>
+          <div *ngIf="selectedTopic === 'call, apply and bind'">
+            Call, apply, bind description: Custom description for call, apply and bind.
+          </div>
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
             (click)="showDetails('Template literals, Destructuring, Spread Operator, rest operator')">
             Template literals, Destructuring, Spread Operator, rest operator
           </li>
           <div *ngIf="selectedTopic === 'Template literals, Destructuring, Spread Operator, rest operator'">
-            Template literals description: Custom description for Template literals, Destructuring, Spread Operator, rest operator.
+            Template literals description: Custom description for Template literals, Destructuring, Spread Operator,
+            rest operator.
           </div>
         </ul>
       </div>
@@ -221,8 +243,7 @@
 </div>
 
 
-<div class="row align-items-center justify-content-center"
-  *ngIf="category === 'basicwebquestion' || category === 'ALL'">
+<div class="row align-items-center justify-content-center" *ngIf="category === 'basicwebquestion' || category === 'ALL'">
   <div class="col-md-8">
     <div class="mb-4">
       <div class="card-body">
@@ -344,7 +365,8 @@
             (click)="showDetails('Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)')">
             Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)
           </li>
-          <div *ngIf="selectedTopic === 'Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)'">
+          <div
+            *ngIf="selectedTopic === 'Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)'">
             Promises use cases description: Custom description for Promises use cases.
           </div>
         </ul>
