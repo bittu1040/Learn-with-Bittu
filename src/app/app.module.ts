@@ -22,8 +22,6 @@ import { MatListModule } from '@angular/material/list';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {MatTreeModule} from '@angular/material/tree';
 import { LearnModule } from './module/learn/learn.module';
-import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
-
 
 @NgModule({
   declarations: [

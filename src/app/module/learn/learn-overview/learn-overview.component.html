@@ -25,5 +25,7 @@
 </div>
 
 <div class="container mt-4">
-  <app-interview-topics [category]="selectedTopic"></app-interview-topics>
+  <app-angular-interview-questions *ngIf="selectedTopic === 'ALL' || selectedTopic === 'Angular'"></app-angular-interview-questions>
+  <app-javascript-interview-questions *ngIf="selectedTopic === 'ALL' || selectedTopic === 'JavaScript'"></app-javascript-interview-questions>
+  <app-common-web-interview-questions *ngIf="selectedTopic === 'ALL' || selectedTopic === 'basicwebquestion'"></app-common-web-interview-questions>
 </div>

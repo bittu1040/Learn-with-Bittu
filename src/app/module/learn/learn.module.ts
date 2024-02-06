@@ -12,15 +12,21 @@ import { DialogContentComponent } from 'app/components/dialog-content/dialog-con
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { InterviewTopicsComponent } from './interview-topics/interview-topics.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularInterviewQuestionsComponent } from './angular-interview-questions/angular-interview-questions.component';
+import { JavascriptInterviewQuestionsComponent } from './javascript-interview-questions/javascript-interview-questions.component';
+import { CommonWebInterviewQuestionsComponent } from './common-web-interview-questions/common-web-interview-questions.component';
 
 
 @NgModule({
   declarations: [
     LearnOverviewComponent,
     LearnJSComponent,
-    LearnAngularComponent,DialogContentComponent, InterviewTopicsComponent
+    LearnAngularComponent,
+    DialogContentComponent,
+    AngularInterviewQuestionsComponent,
+    JavascriptInterviewQuestionsComponent,
+    CommonWebInterviewQuestionsComponent
   ],
   imports: [
     CommonModule,
