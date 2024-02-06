@@ -8,7 +8,7 @@ import { InterviewTopic } from 'app/shared/topics';
 })
 export class InterviewTopicsComponent {
   @Input() title: string | undefined;
-  @Input() category: InterviewTopic[] | undefined;
+  @Input() category: string | undefined;
 
 
   selectedTopic: any;
@@ -19,5 +19,9 @@ export class InterviewTopicsComponent {
     } else {
       this.selectedTopic = topic;
     }
+  }
+
+  ngOnChanges(): void {
+    console.log(this.category);
   }
 }

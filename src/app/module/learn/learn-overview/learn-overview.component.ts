@@ -12,11 +12,6 @@ export class LearnOverviewComponent implements OnInit {
   title3 = 'Angular Interview Topics';
 
 
-  listOfQuestions: InterviewTopic[] | undefined;
-  basicwebTopics: InterviewTopic[] | undefined;
-  javascriptTopics: InterviewTopic[] | undefined;
-  angularTopics: InterviewTopic[] | undefined;
-
   basicwebquestion: boolean = false;
   jsquestion: boolean = false;
   angularquestion: boolean = true;
@@ -26,38 +21,10 @@ export class LearnOverviewComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.listOfQuestions = listOfQuestions;
-    this.basicwebTopics = this.listOfQuestions.filter((data) => {
-      return data.category === 'basicwebquestion';
-    });
-
-    this.javascriptTopics = this.listOfQuestions.filter((data) => {
-      return data.category === 'javascript';
-    });
-
-    this.angularTopics = this.listOfQuestions.filter((data) => {
-      return data.category === 'angular';
-    });
   }
 
   updateTopics(event: Event) {
-    const selectedTopic = (event.target as HTMLSelectElement).value;
-    if (selectedTopic === 'ALL') {
-      this.basicwebquestion = true;
-      this.jsquestion = true;
-      this.angularquestion = true;
-    } else if (selectedTopic === 'Angular') {
-      this.angularquestion = true;
-      this.jsquestion = false;
-      this.basicwebquestion = false;
-    } else if (selectedTopic === 'JavaScript') {
-      this.jsquestion = true;
-      this.angularquestion = false;
-      this.basicwebquestion = false;
-    } else if (selectedTopic === 'basicwebquestion') {
-      this.basicwebquestion = true;
-      this.jsquestion = false;
-      this.angularquestion = false;
-    }
+    this.selectedTopic = (event.target as HTMLSelectElement).value;
+    console.log(this.selectedTopic)
   }
 }
