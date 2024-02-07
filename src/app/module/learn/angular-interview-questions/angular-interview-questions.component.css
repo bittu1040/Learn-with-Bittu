@@ -6,3 +6,44 @@
     margin-top: 5px;
     list-style: none;
 }
+
+.topic-description{
+    padding: 8px;
+    border: 1px solid #c2c2c2;
+}
+
+
+h1 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  }
+
+  code {
+    background-color: #f4f4f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .description h2 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .description p {
+    margin-bottom: 10px;
+  }
+
+  .description .code {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+  }
