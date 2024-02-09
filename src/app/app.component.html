@@ -9,8 +9,8 @@
   <div style="display: flex; align-items: center;">
     <div class="toolbar-buttons">
       <a mat-button id="blog-button" href="https://medium.com/@bittukumar-web" target="_blank">Blog</a>
-
-      <a mat-button id="project-button" routerLink="/learn/overview">Learn</a>
+      <a mat-button id="blog-button" routerLink="/learn/learn-JS">JavaScript</a>
+      <a mat-button id="project-button" routerLink="/learn/overview">Interview Prep</a>
       <a mat-button id="github-button" href="https://github.com/bittu1040" target="_blank"> Github </a>
       <button mat-button id="contact-button" routerLink="/contact">Contact</button>
     </div>
@@ -29,8 +29,7 @@
       </mat-list-item>
       
       <mat-list *ngIf="showTree" class="learn-section">
-          <mat-list-item class="listitem" routerLink="/learn/overview">Common Web Topic</mat-list-item>
-          <mat-list-item class="listitem" routerLink="/learn/learn-Angular">Angular</mat-list-item>
+          <mat-list-item class="listitem" routerLink="/learn/overview">Interview Prep</mat-list-item>
           <mat-list-item class="listitem" routerLink="/learn/learn-JS">JavaScript</mat-list-item>
       </mat-list>
   

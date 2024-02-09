@@ -4,90 +4,162 @@
         <div class="card-body">
           <h2 class="card-title">{{ title }}</h2>
           <ul class="list-group list-group-flush">
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Variable Declarations (var, let, const)')">
               Variable Declarations (var, let, const)
             </li>
             <div *ngIf="selectedTopic === 'Variable Declarations (var, let, const)'">
-              Variable Declarations description: Custom description for Variable Declarations (var, let, const).
+              <ul>
+                <li>Hoisting</li>
+                <li>Temporal dead zone</li>
+                <li>Scoping and scope chain</li>
+              </ul>
             </div>
+
+
+            <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('ES6')">
+            ES6 features
+          </li>
+          <div *ngIf="selectedTopic === 'ES6'">
+           <ul>
+            <li>arrow function</li>
+            <li>Destructuring</li>
+            <li>rest/spread operator</li>
+            <li>template literals</li>
+            <li>shortCircuiting</li>
+            <li>Optional Chaining</li>    
+           </ul>
+          </div>
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Functions and Scope')">
-              Functions and Scope
+              Functions in Javascript
             </li>
             <div *ngIf="selectedTopic === 'Functions and Scope'">
-              Functions and Scope description: Custom description for Functions and Scope.
+              <ul>
+                <li>Arrow function and normal function difference</li>
+                <li>functional and block scope</li>
+                <li>functional hoisting</li>
+                <li>IIFE (immediately invoked function expression)</li>
+              </ul>
             </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Closures')">
               Closures
             </li>
             <div *ngIf="selectedTopic === 'Closures'">
-              Closures description: Custom description for Closures.
+              <ul>
+                <li>What is closure</li>
+                <li>practical usecase of closure</li>
+                <li>closure in function</li>
+              </ul>
             </div>
-            <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-              (click)="showDetails('Hoisting')">
-              Hoisting
-            </li>
-            <div *ngIf="selectedTopic === 'Hoisting'">
-              Hoisting description: Custom description for Hoisting.
-            </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Event loop (callstack, microtask, macrotask)')">
               Event loop (callstack, microtask, macrotask)
             </li>
             <div *ngIf="selectedTopic === 'Event loop (callstack, microtask, macrotask)'">
-              Event loop description: Custom description for Event loop (callstack, microtask, macrotask).
+              <ul>
+                <li>browser API</li>
+                <li>Explain with example event loop</li>
+              </ul>
             </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Prototypes, prototype chain, Prototypal Inheritance')">
               Prototypes, prototype chain, Prototypal Inheritance
             </li>
             <div *ngIf="selectedTopic === 'Prototypes, prototype chain, Prototypal Inheritance'">
-              Prototypes description: Custom description for Prototypes, prototype chain, Prototypal Inheritance.
+              <ul>
+                <li>What is prototype</li>
+                <li>difference between __proto__ and prototype</li>
+                <li>prototype chain</li>
+                <li>prototypal inheritance</li>
+                <li>Object.create()</li>
+                <li>Object.assign()</li>
+                <li>Prototype with normal function and arrow function</li>
+                <li>prototype with class</li>
+              </ul>
             </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Callback in JavaScript')">
               Callback in JavaScript
             </li>
             <div *ngIf="selectedTopic === 'Callback in JavaScript'">
-              Callback description: Custom description for Callback in JavaScript.
+              <ul>
+                <li>what is callback in javascript</li>
+                <li>callback hell</li>
+                <li>how to get rid of it</li>
+              </ul>
             </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Asynchronous JavaScript (Promises, async/await)')">
               Asynchronous JavaScript (Promises, async/await)
             </li>
             <div *ngIf="selectedTopic === 'Asynchronous JavaScript (Promises, async/await)'">
-              Asynchronous JavaScript description: Custom description for Asynchronous JavaScript (Promises, async/await).
+              <ul>
+                <li>what is promise and explain with example</li>
+                <li>what is async-await and explain with example</li>
+                <li>all method of promise (race, all )</li>
+              </ul>
             </div>
+
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('call, apply and bind')">
               call, apply and bind
             </li>
             <div *ngIf="selectedTopic === 'call, apply and bind'">
-              Call, apply, bind description: Custom description for call, apply and bind.
+              <ul>
+                <li>what is call, apply and bind (explain with example)</li>
+              </ul>
             </div>
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-              (click)="showDetails('call, apply and bind')">
-              call, apply and bind
+              (click)="showDetails('this keyword')">
+              this keyword
             </li>
-            <div *ngIf="selectedTopic === 'call, apply and bind'">
-              Call, apply, bind description: Custom description for call, apply and bind.
+            <div *ngIf="selectedTopic === 'this keyword'">
+              <ul>
+                <li>what is this keyword</li>
+                <li>this keyword in function (arrow and normal)</li>
+                <li>this keyword in class</li>
+                <li>this keyword in object</li> 
+              </ul>
             </div>
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-              (click)="showDetails('call, apply and bind')">
-              call, apply and bind
+              (click)="showDetails('deep copy and shallow copy')">
+              deep copy and shallow copy
             </li>
-            <div *ngIf="selectedTopic === 'call, apply and bind'">
-              Call, apply, bind description: Custom description for call, apply and bind.
+            <div *ngIf="selectedTopic === 'deep copy and shallow copy'">
+              <ul>
+                <li>deep copy and shallow copy example</li>
+              </ul>
             </div>
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
-              (click)="showDetails('call, apply and bind')">
-              call, apply and bind
+              (click)="showDetails('function Currying')">
+              function Currying
             </li>
-            <div *ngIf="selectedTopic === 'call, apply and bind'">
-              Call, apply, bind description: Custom description for call, apply and bind.
+            <div *ngIf="selectedTopic === 'function Currying'">
+              <ul>
+                <li>function Currying</li>
+              </ul>
             </div>
+
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Template literals, Destructuring, Spread Operator, rest operator')">
               Template literals, Destructuring, Spread Operator, rest operator
