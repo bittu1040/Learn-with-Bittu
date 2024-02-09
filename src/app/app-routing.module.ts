@@ -6,8 +6,8 @@ import { MyLearningPathComponent } from './components/my-learning-path/my-learni
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-  {path: 'home', component: HomeComponent, pathMatch: 'full'},
+  { path: '', redirectTo: '/learn/overview', pathMatch: 'full' },
+  {path: 'aboutme', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'learn', loadChildren: () => import('./module/learn/learn.module').then(m => m.LearnModule)},
   {path: 'todo', component: MyLearningPathComponent},
