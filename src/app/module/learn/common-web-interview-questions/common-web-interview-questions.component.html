@@ -11,6 +11,14 @@
             <div *ngIf="selectedTopic === 'Debounce and Throttle'">
               Debounce and Throttle description: Custom description for Debounce and Throttle.
             </div>
+
+            <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('web workers')">
+            web workers
+          </li>
+          <div *ngIf="selectedTopic === 'web workers'">
+            web workers
+          </div>
             <li class="list-group-item list-group-item-action" role="button" class="topic-name"
               (click)="showDetails('Pure and impure pipe/function')">
               Pure and impure pipe/function
