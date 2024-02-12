@@ -135,6 +135,17 @@
             </ul>
           </div>
 
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+          (click)="showDetails('SetTimeOut')">
+          SetTimeOut and setinterval
+        </li>
+        <div *ngIf="selectedTopic === 'SetTimeOut'">
+          <ul>
+            <li>SetTimeout</li>
+            <li>SetInterval</li>
+          </ul>
+        </div>
+
           <li class="list-group-item list-group-item-action" role="button" class="topic-name" (click)="
               showDetails('Event loop (callstack, microtask, macrotask)') ">
             Event loop (callstack, microtask, macrotask)
@@ -166,7 +177,7 @@
           <li class="list-group-item list-group-item-action" role="button" class="topic-name" (click)="
               showDetails('Asynchronous JavaScript (Promises, async/await)')
             ">
-            Asynchronous JavaScript (Callnack, Promises, async/await)
+            Asynchronous JavaScript (Callback, Promises, async/await)
           </li>
           <div *ngIf="selectedTopic ==='Asynchronous JavaScript (Promises, async/await)'">
             <ul>

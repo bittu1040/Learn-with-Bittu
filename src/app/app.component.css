@@ -55,6 +55,9 @@ mat-sidenav-container {
   
   .copyright {
     font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .learn-section{
