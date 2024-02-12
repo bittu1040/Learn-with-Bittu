@@ -1,33 +1,32 @@
-
 mat-sidenav-container {
   height: calc(100vh - 64px);
 }
 
 
 @media (max-width: 460px) {
-    mat-toolbar {
-        font-size: 1rem;
-    }
+  mat-toolbar {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .toolbar-buttons {
-        display: none;
-    }
+  .toolbar-buttons {
+    display: none;
+  }
 
-    .mat-sidenav {
-        width: 60%;
-    }
+  .mat-sidenav {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 601px) {
-    .toolbar-buttons {
-        display: block;
-    }
+  .toolbar-buttons {
+    display: block;
+  }
 
-    .mat-sidenav {
-        width: 250px;
-    }
+  .mat-sidenav {
+    width: 250px;
+  }
 }
 
 /* uncomment this code to hide the menu button in bigger screen */
@@ -38,32 +37,39 @@ mat-sidenav-container {
   } */
 
 
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-  }
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
 
 
-  footer {
-    background-color: #978ef2;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-  
+footer {
+  background-color: #978ef2;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
   .copyright {
-    font-size: 14px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
   }
+}
 
-  .learn-section{
-    padding-left: 40px;
-  }
+.learn-section {
+  padding-left: 40px;
+}
 
-  .listitem{
-    height: 30px !important;
-  }
+.listitem {
+  height: 30px !important;
+}
