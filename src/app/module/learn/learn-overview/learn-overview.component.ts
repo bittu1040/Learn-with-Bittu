@@ -16,7 +16,7 @@ export class LearnOverviewComponent implements OnInit {
   jsquestion: boolean = false;
   angularquestion: boolean = true;
 
-  selectedTopic: string ="JavaScript";
+  selectedTopic: string ="Angular";
   
   constructor() {}
 
