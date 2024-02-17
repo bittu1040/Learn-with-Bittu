@@ -56,17 +56,104 @@
             (click)="showDetails('Lifecycle hooks')">
             Lifecycle hooks
           </li>
-          <div *ngIf="selectedTopic === 'Lifecycle hooks'" class="container topic-description">
-            Lifecycle hooks description: Custom description for Lifecycle hooks.
+          <div *ngIf="selectedTopic === 'Lifecycle hooks'" class="container topic-description-container">
+            <h2>Angular Lifecycle Hooks</h2>
+            <p>
+              Lifecycle hooks description: Angular provides a complete set of lifecycle hooks that allow developers to
+              tap into key moments in the lifecycle of a component or directive. These hooks enable developers to
+              execute custom logic at specific points in the component's lifecycle, such as initialization, change
+              detection, and destruction.
+            </p>
+            <h3>OnChanges</h3>
+            <p>
+              The OnChanges hook is called whenever Angular detects changes to input properties of a component. It
+              provides access to the previous and current values of input properties and is commonly used to respond to
+              changes in component input.
+            </p>
+            <h3>OnInit</h3>
+            <p>
+              The OnInit hook is called after Angular has initialized all data-bound properties of a directive or
+              component. It is commonly used to perform initialization tasks, such as fetching initial data from a
+              server or initializing component state.
+            </p>
+            <h3>DoCheck</h3>
+            <p>
+              The DoCheck hook is called during every change detection cycle, allowing developers to implement custom
+              change detection logic. It is commonly used to perform optimizations or detect changes in component state
+              not captured by Angular's default change detection mechanism.
+            </p>
+            <h3>AfterContentInit</h3>
+            <p>
+              The AfterContentInit hook is called after Angular has projected external content into the component's
+              view. It is commonly used to perform initialization tasks related to projected content.
+            </p>
+            <h3>AfterContentChecked</h3>
+            <p>
+              The AfterContentChecked hook is called after Angular has checked the projected content for changes. It is
+              commonly used to perform additional processing after change detection in projected content.
+            </p>
+            <h3>AfterViewInit</h3>
+            <p>
+              The AfterViewInit hook is called after Angular has initialized the component's view and child views. It is
+              commonly used to perform tasks that require access to the component's rendered view, such as initializing
+              third-party libraries or interacting with the DOM.
+            </p>
+            <h3>AfterViewChecked</h3>
+            <p>
+              The AfterViewChecked hook is called after Angular has checked the component's view and child views for
+              changes. It is commonly used to perform additional processing after change detection, such as updating
+              component properties based on changes in the view.
+            </p>
+            <h3>OnDestroy</h3>
+            <p>
+              The OnDestroy hook is called when Angular destroys a directive or component. It is commonly used to
+              perform cleanup tasks, such as unsubscribing from observables or releasing allocated resources, to prevent
+              memory leaks.
+            </p>
           </div>
+
 
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
             (click)="showDetails('Component communication')">
             Component communication
           </li>
-          <div *ngIf="selectedTopic === 'Component communication'" class="container topic-description">
-            Component communication description: Custom description for
-            Component communication.
+          <div *ngIf="selectedTopic === 'Component communication'" class="container topic-description-container">
+            <h2>Component Communication</h2>
+            <p>
+              Component communication description: Component communication refers to the ways in which Angular
+              components interact with each other, share data, and coordinate actions. Effective component communication
+              is essential for building complex applications with reusable and maintainable components.
+            </p>
+            <h3>Parent-to-Child Communication (Input Properties)</h3>
+            <p>
+              Parent components can pass data to child components using input properties. Input properties allow parents
+              to bind data to child component properties, enabling the child component to receive data from its parent
+              and react accordingly.
+            </p>
+            <h3>Child-to-Parent Communication (Event Emitters)</h3>
+            <p>
+              Child components can communicate with parent components by emitting events. Child components define custom
+              events using EventEmitters and emit these events when certain actions occur. Parent components can listen
+              for these events and respond accordingly.
+            </p>
+            <h3>ViewChild and ContentChild</h3>
+            <p>
+              Angular provides ViewChild and ContentChild decorators to access child components or elements from parent
+              components. ViewChild allows parent components to query child components directly, while ContentChild
+              allows parent components to query content projected into child component templates.
+            </p>
+            <h3>Services for Cross-Component Communication</h3>
+            <p>
+              Angular services can be used to facilitate communication between components that are not directly related
+              through their component tree. Services act as intermediaries, providing a common platform for components
+              to share data and coordinate actions.
+            </p>
+            <h3>Observables and Subject</h3>
+            <p>
+              Observables and Subjects are powerful tools for implementing reactive programming patterns in Angular
+              applications. They enable components to subscribe to asynchronous data streams and receive updates in
+              real-time, allowing for efficient and flexible component communication.
+            </p>
           </div>
 
           <li class="list-group-item list-group-item-action" role="button" class="topic-name"
@@ -126,7 +213,7 @@
             (click)="showDetails('Pipes (Pure, Impure, Built-in)')">
             Pipes (Pure, Impure, Built-in)
           </li>
-          <div *ngIf="selectedTopic === 'Pipes (Pure, Impure, Built-in)'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Pipes (Pure, Impure, Built-in)'" class="container topic-description-container">
             Pipes description: Custom description for Pipes (Pure, Impure,
             Built-in).
           </div>
@@ -135,7 +222,7 @@
             (click)="showDetails('host listener')">
             host listener and host binding
           </li>
-          <div *ngIf="selectedTopic === 'host listener'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'host listener'" class="container topic-description-container">
             host listener and host binding description: Custom description for
             host listener and host binding.
           </div>
@@ -144,7 +231,7 @@
             (click)="showDetails('Injectable and Singleton Services')">
             Injectable and Singleton Services
           </li>
-          <div *ngIf="selectedTopic === 'Injectable and Singleton Services'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Injectable and Singleton Services'" class="container topic-description-container">
             Injectable and Singleton Services description: Custom description
             for Injectable and Singleton Services.
           </div>
@@ -153,7 +240,7 @@
             (click)="showDetails('Dependency Injection')">
             Dependency Injection
           </li>
-          <div *ngIf="selectedTopic === 'Dependency Injection'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Dependency Injection'" class="container topic-description-container">
             Dependency Injection description: Custom description for Dependency
             Injection.
           </div>
@@ -162,7 +249,7 @@
             (click)="showDetails('One way and two-way Data Binding')">
             One way and two-way Data Binding
           </li>
-          <div *ngIf="selectedTopic === 'One way and two-way Data Binding'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'One way and two-way Data Binding'" class="container topic-description-container">
             Data Binding description: Custom description for One way and two-way
             Data Binding.
           </div>
@@ -171,7 +258,7 @@
             (click)="showDetails('Route/Auth Guards')">
             Route/Auth Guards
           </li>
-          <div *ngIf="selectedTopic === 'Route/Auth Guards'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Route/Auth Guards'" class="container topic-description-container">
             Route/Auth Guards description: Custom description for Route/Auth
             Guards.
           </div>
@@ -180,7 +267,7 @@
             (click)="showDetails('Lazy loading')">
             Lazy loading
           </li>
-          <div *ngIf="selectedTopic === 'Lazy loading'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Lazy loading'" class="container topic-description-container">
             Lazy loading description: Custom description for Lazy loading.
           </div>
 
@@ -188,7 +275,7 @@
             (click)="showDetails('Template/Reactive Forms and Validations')">
             Template/Reactive Forms and Validations
           </li>
-          <div *ngIf="selectedTopic === 'Template/Reactive Forms and Validations'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Template/Reactive Forms and Validations'" class="container topic-description-container">
             Forms description: Custom description for Template/Reactive Forms
             and Validations.
           </div>
@@ -197,7 +284,7 @@
             (click)="showDetails('Observable and Promises')">
             Observable and Promises
           </li>
-          <div *ngIf="selectedTopic === 'Observable and Promises'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Observable and Promises'" class="container topic-description-container">
             Observable and Promises description: Custom description for
             Observable and Promises.
           </div>
@@ -206,7 +293,7 @@
             (click)="showDetails('RXJS Operators')">
             RXJS Operators
           </li>
-          <div *ngIf="selectedTopic === 'RXJS Operators'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'RXJS Operators'" class="container topic-description-container">
             RXJS Operators description: Custom description for RXJS Operators.
           </div>
 
@@ -214,7 +301,7 @@
             (click)="showDetails('Subject and behavior subject')">
             Subject and behavior subject
           </li>
-          <div *ngIf="selectedTopic === 'Subject and behavior subject'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Subject and behavior subject'" class="container topic-description-container">
             Subject and behavior subject description: Custom description for
             Subject and behavior subject.
           </div>
@@ -223,7 +310,7 @@
             (click)="showDetails('HTTP (Req/Res) Interceptor')">
             HTTP (Req/Res) Interceptor
           </li>
-          <div *ngIf="selectedTopic === 'HTTP (Req/Res) Interceptor'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'HTTP (Req/Res) Interceptor'" class="container topic-description-container">
             HTTP Interceptor description: Custom description for HTTP (Req/Res)
             Interceptor.
           </div>
@@ -232,7 +319,7 @@
             (click)="showDetails('Change Detection and OnPush')">
             Change Detection and OnPush
           </li>
-          <div *ngIf="selectedTopic === 'Change Detection and OnPush'" class="container topic-description">
+          <div *ngIf="selectedTopic === 'Change Detection and OnPush'" class="container topic-description-container">
             Change Detection description: Custom description for Change
             Detection and OnPush.
           </div>
