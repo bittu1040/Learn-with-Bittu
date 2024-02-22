@@ -231,7 +231,8 @@
             (click)="showDetails('Injectable and Singleton Services')">
             Injectable and Singleton Services
           </li>
-          <div *ngIf="selectedTopic === 'Injectable and Singleton Services'" class="container topic-description-container">
+          <div *ngIf="selectedTopic === 'Injectable and Singleton Services'"
+            class="container topic-description-container">
             Injectable and Singleton Services description: Custom description
             for Injectable and Singleton Services.
           </div>
@@ -249,7 +250,8 @@
             (click)="showDetails('One way and two-way Data Binding')">
             One way and two-way Data Binding
           </li>
-          <div *ngIf="selectedTopic === 'One way and two-way Data Binding'" class="container topic-description-container">
+          <div *ngIf="selectedTopic === 'One way and two-way Data Binding'"
+            class="container topic-description-container">
             Data Binding description: Custom description for One way and two-way
             Data Binding.
           </div>
@@ -275,7 +277,8 @@
             (click)="showDetails('Template/Reactive Forms and Validations')">
             Template/Reactive Forms and Validations
           </li>
-          <div *ngIf="selectedTopic === 'Template/Reactive Forms and Validations'" class="container topic-description-container">
+          <div *ngIf="selectedTopic === 'Template/Reactive Forms and Validations'"
+            class="container topic-description-container">
             Forms description: Custom description for Template/Reactive Forms
             and Validations.
           </div>
@@ -322,6 +325,14 @@
           <div *ngIf="selectedTopic === 'Change Detection and OnPush'" class="container topic-description-container">
             Change Detection description: Custom description for Change
             Detection and OnPush.
+          </div>
+
+          <li class="list-group-item list-group-item-action" role="button" class="topic-name"
+            (click)="showDetails('dist and bundle')">
+            dist and bundle
+          </li>
+          <div *ngIf="selectedTopic === 'dist and bundle'" class="container topic-description-container">
+            dist and bundle
           </div>
         </ul>
       </div>
