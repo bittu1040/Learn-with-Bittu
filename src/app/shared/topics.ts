@@ -5,7 +5,23 @@ export interface InterviewTopic {
   showDescription?: boolean;
 }
 
-export const listOfQuestions:InterviewTopic[] = [
+export interface InterviewTopic1 {
+  chapter: string;
+  listOfTopic: {
+    name: string;
+    showDescription: boolean;
+    details: {
+      mainHeading: string;
+      insideContent: {
+          miniHeading: string;
+          description: string;
+          code: string;
+        }[]
+    }
+  }[];
+}
+
+export const listOfQuestions: InterviewTopic[] = [
   { name: 'Debounce and Throttle', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
   { name: 'Pure and impure pipe/function', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
   { name: 'Mutability and immutability', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
@@ -23,9 +39,9 @@ export const listOfQuestions:InterviewTopic[] = [
   { name: 'Design Patterns', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
   { name: 'What you know about unit testing', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
   { name: 'Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)', category: 'basicwebquestion', difficulty: 'medium', showDescription: false },
-  
+
   { name: 'Variable Declarations (var, let, const)', category: 'javascript', difficulty: 'easy', showDescription: false },
-  { name: 'Functions and Scope', category: 'javascript', difficulty: 'easy' , showDescription: false},
+  { name: 'Functions and Scope', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Closures', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Hoisting', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Event loop (callstack, microtask, macrotask)', category: 'javascript', difficulty: 'easy', showDescription: false },
@@ -36,21 +52,702 @@ export const listOfQuestions:InterviewTopic[] = [
   { name: 'Explain "this" in JavaScript', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Document Object Model (DOM)', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Template literals, Destructuring, Spread Operator, rest operator', category: 'javascript', difficulty: 'easy', showDescription: false },
-  
+
   { name: 'Angular workflow', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Lifecycle hooks', category: 'angular', difficulty: 'medium', showDescription: false },
-  { name: 'Component communication', category: 'angular', difficulty: 'medium' , showDescription: false},
-  { name: 'Directives (Structural, Attribute and Custom)', category: 'angular', difficulty: 'medium' ,showDescription: false},
+  { name: 'Component communication', category: 'angular', difficulty: 'medium', showDescription: false },
+  { name: 'Directives (Structural, Attribute and Custom)', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Pipes (Pure, Impure, Built-in)', category: 'angular', difficulty: 'medium', showDescription: false },
-  { name: 'Injectable and Singleton Services', category: 'angular', difficulty: 'medium' , showDescription: false},
+  { name: 'Injectable and Singleton Services', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Dependency Injection', category: 'angular', difficulty: 'medium', showDescription: false },
+  { name: 'host listener and host binding', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'One way and two-way Data Binding', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Route/Auth Guards', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Lazy loading', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Template/Reactive Forms and Validations', category: 'angular', difficulty: 'medium', showDescription: false },
-  { name: 'Observable and Promises', category: 'angular', difficulty: 'medium' , showDescription: false},
-  { name: 'RXJS Operators', category: 'angular', difficulty: 'medium' , showDescription: false},
+  { name: 'Observable and Promises', category: 'angular', difficulty: 'medium', showDescription: false },
+  { name: 'RXJS Operators', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'Subject and behavior subject', category: 'angular', difficulty: 'medium', showDescription: false },
   { name: 'HTTP (Req/Res) Interceptor', category: 'angular', difficulty: 'medium', showDescription: false },
-  { name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false }
+  { name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
+  { name: "dist and bundle", category: 'angular', difficulty: 'medium', showDescription: false }
 ];
+
+
+export const listOfQuestions1: InterviewTopic1[] = [
+  {
+    "chapter": "basicwebquestion",
+    "listOfTopic": [
+      {
+        "name": "Debounce and Throttle",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Debounce and Throttle",
+          "insideContent": [
+            {
+              "miniHeading": "Debounce and Throttle",
+              "description": "Description for Debounce and Throttle.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pure and impure pipe/function",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Pure and impure pipe/function",
+          "insideContent": [
+            {
+              "miniHeading": "Pure and impure pipe/function",
+              "description": "Description for Pure and impure pipe/function.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mutability and immutability",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Mutability and immutability",
+          "insideContent": [
+            {
+              "miniHeading": "Mutability and immutability",
+              "description": "Description for Mutability and immutability.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Async and defer",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Async and defer",
+          "insideContent": [
+            {
+              "miniHeading": "Async and defer",
+              "description": "Description for Async and defer.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "CORS",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "CORS",
+          "insideContent": [
+            {
+              "miniHeading": "CORS",
+              "description": "Description for CORS.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Web Performance Optimization",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Web Performance Optimization",
+          "insideContent": [
+            {
+              "miniHeading": "Web Performance Optimization",
+              "description": "Description for Web Performance Optimization.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Responsive Web Design",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Responsive Web Design",
+          "insideContent": [
+            {
+              "miniHeading": "Responsive Web Design",
+              "description": "Description for Responsive Web Design.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "What is microfrontend",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "What is microfrontend",
+          "insideContent": [
+            {
+              "miniHeading": "What is microfrontend",
+              "description": "Description for What is microfrontend.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Explain PWA and SPA",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Explain PWA and SPA",
+          "insideContent": [
+            {
+              "miniHeading": "Explain PWA and SPA",
+              "description": "Description for Explain PWA and SPA.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pre-processors - SCSS or LESS",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Pre-processors - SCSS or LESS",
+          "insideContent": [
+            {
+              "miniHeading": "Pre-processors - SCSS or LESS",
+              "description": "Description for Pre-processors - SCSS or LESS.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "JWT",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "JWT",
+          "insideContent": [
+            {
+              "miniHeading": "JWT",
+              "description": "Description for JWT.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "localStorage/sessionStorage",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "localStorage/sessionStorage",
+          "insideContent": [
+            {
+              "miniHeading": "localStorage/sessionStorage",
+              "description": "Description for localStorage/sessionStorage.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "How to debug your frontend application",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "How to debug your frontend application",
+          "insideContent": [
+            {
+              "miniHeading": "How to debug your frontend application",
+              "description": "Description for How to debug your frontend application.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "OOPs concepts",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "OOPs concepts",
+          "insideContent": [
+            {
+              "miniHeading": "OOPs concepts",
+              "description": "Description for OOPs concepts.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Design Patterns",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Design Patterns",
+          "insideContent": [
+            {
+              "miniHeading": "Design Patterns",
+              "description": "Description for Design Patterns.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "What you know about unit testing",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "What you know about unit testing",
+          "insideContent": [
+            {
+              "miniHeading": "What you know about unit testing",
+              "description": "Description for What you know about unit testing.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+          "insideContent": [
+            {
+              "miniHeading": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+              "description": "Description for Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API).",
+              "code": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "chapter": "javascript",
+    "listOfTopic": [
+      {
+        "name": "Variable Declarations (var, let, const)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Variable Declarations (var, let, const)",
+          "insideContent": [
+            {
+              "miniHeading": "Variable Declarations",
+              "description": "Description for Variable Declarations.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Functions and Scope",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Functions and Scope",
+          "insideContent": [
+            {
+              "miniHeading": "Functions and Scope",
+              "description": "Description for Functions and Scope.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Closures",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Closures",
+          "insideContent": [
+            {
+              "miniHeading": "Closures",
+              "description": "Description for Closures.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hoisting",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Hoisting",
+          "insideContent": [
+            {
+              "miniHeading": "Hoisting",
+              "description": "Description for Hoisting.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event loop (callstack, microtask, macrotask)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Event loop (callstack, microtask, macrotask)",
+          "insideContent": [
+            {
+              "miniHeading": "Event loop (callstack, microtask, macrotask)",
+              "description": "Description for Event loop (callstack, microtask, macrotask).",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prototypes, prototype chain, Prototypal Inheritance",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Prototypes, prototype chain, Prototypal Inheritance",
+          "insideContent": [
+            {
+              "miniHeading": "Prototypes, prototype chain, Prototypal Inheritance",
+              "description": "Description for Prototypes, prototype chain, Prototypal Inheritance.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Callback in JavaScript",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Callback in JavaScript",
+          "insideContent": [
+            {
+              "miniHeading": "Callback in JavaScript",
+              "description": "Description for Callback in JavaScript.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Asynchronous JavaScript (Promises, async/await)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Asynchronous JavaScript (Promises, async/await)",
+          "insideContent": [
+            {
+              "miniHeading": "Asynchronous JavaScript (Promises, async/await)",
+              "description": "Description for Asynchronous JavaScript (Promises, async/await).",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "call, apply and bind",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "call, apply and bind",
+          "insideContent": [
+            {
+              "miniHeading": "call, apply and bind",
+              "description": "Description for call, apply and bind.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Explain \"this\" in JavaScript",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Explain \"this\" in JavaScript",
+          "insideContent": [
+            {
+              "miniHeading": "Explain \"this\" in JavaScript",
+              "description": "Description for Explain \"this\" in JavaScript.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Document Object Model (DOM)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Document Object Model (DOM)",
+          "insideContent": [
+            {
+              "miniHeading": "Document Object Model (DOM)",
+              "description": "Description for Document Object Model (DOM).",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Template literals, Destructuring, Spread Operator, rest operator",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Template literals, Destructuring, Spread Operator, rest operator",
+          "insideContent": [
+            {
+              "miniHeading": "Template literals, Destructuring, Spread Operator, rest operator",
+              "description": "Description for Template literals, Destructuring, Spread Operator, rest operator.",
+              "code": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "chapter": "angular",
+    "listOfTopic": [
+      {
+        "name": "Angular workflow",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Angular workflow",
+          "insideContent": [
+            {
+              "miniHeading": "Angular workflow",
+              "description": "Description for Angular workflow.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lifecycle hooks",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Lifecycle hooks",
+          "insideContent": [
+            {
+              "miniHeading": "Lifecycle hooks",
+              "description": "Description for Lifecycle hooks.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Component communication",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Component communication",
+          "insideContent": [
+            {
+              "miniHeading": "Component communication",
+              "description": "Description for Component communication.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Directives (Structural, Attribute and Custom)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Directives (Structural, Attribute and Custom)",
+          "insideContent": [
+            {
+              "miniHeading": "Directives (Structural, Attribute and Custom)",
+              "description": "Description for Directives (Structural, Attribute and Custom).",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pipes (Pure, Impure, Built-in)",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Pipes (Pure, Impure, Built-in)",
+          "insideContent": [
+            {
+              "miniHeading": "Pipes (Pure, Impure, Built-in)",
+              "description": "Description for Pipes (Pure, Impure, Built-in).",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Injectable and Singleton Services",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Injectable and Singleton Services",
+          "insideContent": [
+            {
+              "miniHeading": "Injectable and Singleton Services",
+              "description": "Description for Injectable and Singleton Services.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dependency Injection",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Dependency Injection",
+          "insideContent": [
+            {
+              "miniHeading": "Dependency Injection",
+              "description": "Description for Dependency Injection.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "host listener and host binding",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "host listener and host binding",
+          "insideContent": [
+            {
+              "miniHeading": "host listener and host binding",
+              "description": "Description for host listener and host binding.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "One way and two-way Data Binding",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "One way and two-way Data Binding",
+          "insideContent": [
+            {
+              "miniHeading": "One way and two-way Data Binding",
+              "description": "Description for One way and two-way Data Binding.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Route/Auth Guards",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Route/Auth Guards",
+          "insideContent": [
+            {
+              "miniHeading": "Route/Auth Guards",
+              "description": "Description for Route/Auth Guards.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lazy loading",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Lazy loading",
+          "insideContent": [
+            {
+              "miniHeading": "Lazy loading",
+              "description": "Description for Lazy loading.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Template/Reactive Forms and Validations",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Template/Reactive Forms and Validations",
+          "insideContent": [
+            {
+              "miniHeading": "Template/Reactive Forms and Validations",
+              "description": "Description for Template/Reactive Forms and Validations.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Observable and Promises",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Observable and Promises",
+          "insideContent": [
+            {
+              "miniHeading": "Observable and Promises",
+              "description": "Description for Observable and Promises.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "RXJS Operators",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "RXJS Operators",
+          "insideContent": [
+            {
+              "miniHeading": "RXJS Operators",
+              "description": "Description for RXJS Operators.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subject and behavior subject",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Subject and behavior subject",
+          "insideContent": [
+            {
+              "miniHeading": "Subject and behavior subject",
+              "description": "Description for Subject and behavior subject.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "HTTP (Req/Res) Interceptor",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "HTTP (Req/Res) Interceptor",
+          "insideContent": [
+            {
+              "miniHeading": "HTTP (Req/Res) Interceptor",
+              "description": "Description for HTTP (Req/Res) Interceptor.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "Change Detection and OnPush",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "Change Detection and OnPush",
+          "insideContent": [
+            {
+              "miniHeading": "Change Detection and OnPush",
+              "description": "Description for Change Detection and OnPush.",
+              "code": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "dist and bundle",
+        "showDescription": false,
+        "details": {
+          "mainHeading": "dist and bundle",
+          "insideContent": [
+            {
+              "miniHeading": "dist and bundle",
+              "description": "Description for dist and bundle.",
+              "code": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+];
+
+
