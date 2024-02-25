@@ -53,24 +53,28 @@
 
 
 
-  <div class="row align-items-center justify-content-center">
-    <div class="col-md-8">
-      <div class="mb-4">
-        <div class="card-body">
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-action topic-name topic-name" role="button"
-              *ngFor="let topic of listOfTopic" (click)="showDetails(topic.name)">
-              {{topic.name}}
-              <div *ngIf="showDescription && selectedTopic1 === topic.name" style="border: 1px solid gray;">
-                <pre>{{topic | json}} </pre>
-                <h3>{{topic.details.mainHeading}}</h3>
-                <div *ngFor="let content of topic.details.insideContent">
-                  <h4>{{content.miniHeading}}</h4>
-                  <p>{{content.description}}</p>
+
+
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-8">
+        <div class="mb-4">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action topic-name" *ngFor="let topic of listOfTopic">
+                <div (click)="toggleDescription(topic)" class="font-size">
+                  {{topic.name}}
+                  <div *ngIf="topic.showDescription" style="border: 1px solid gray;">
+                    <h3>{{topic.details.mainHeading}}</h3>
+                    <div *ngFor="let content of topic.details.insideContent">
+                      <pre>{{topic | json}} </pre>
+                      <h4>{{content.miniHeading}}</h4>
+                      <p>{{content.description}}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

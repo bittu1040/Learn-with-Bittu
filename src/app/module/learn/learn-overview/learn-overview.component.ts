@@ -69,14 +69,7 @@ export class LearnOverviewComponent implements OnInit {
     }
   }
 
-  showDetails(topic: string) {
-    if (this.selectedTopic1 === topic) {
-      // If the clicked topic is already selected, toggle the description visibility
-      this.showDescription = !this.showDescription;
-    } else {
-      // If a different topic is clicked, set it as the selected topic and show its description
-      this.selectedTopic1 = topic;
-      this.showDescription = true;
-    }
+  toggleDescription(topic: any) {
+    topic.showDescription = !topic.showDescription;
   }
 }

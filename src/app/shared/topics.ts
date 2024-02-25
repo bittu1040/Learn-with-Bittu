@@ -9,6 +9,7 @@ export interface InterviewTopic1 {
   chapter: string;
   listOfTopic: {
     name: string;
+    showDescription: boolean;
     details: {
       mainHeading: string;
       insideContent: {
@@ -79,6 +80,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
     "listOfTopic": [
       {
         "name": "Debounce and Throttle",
+        "showDescription": false,
         "details": {
           "mainHeading": "Debounce and Throttle",
           "insideContent": [
@@ -92,6 +94,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Pure and impure pipe/function",
+        "showDescription": false,
         "details": {
           "mainHeading": "Pure and impure pipe/function",
           "insideContent": [
@@ -105,6 +108,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Mutability and immutability",
+        "showDescription": false,
         "details": {
           "mainHeading": "Mutability and immutability",
           "insideContent": [
@@ -118,6 +122,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Async and defer",
+        "showDescription": false,
         "details": {
           "mainHeading": "Async and defer",
           "insideContent": [
@@ -131,6 +136,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "CORS",
+        "showDescription": false,
         "details": {
           "mainHeading": "CORS",
           "insideContent": [
@@ -144,6 +150,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Web Performance Optimization",
+        "showDescription": false,
         "details": {
           "mainHeading": "Web Performance Optimization",
           "insideContent": [
@@ -157,6 +164,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Responsive Web Design",
+        "showDescription": false,
         "details": {
           "mainHeading": "Responsive Web Design",
           "insideContent": [
@@ -170,6 +178,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "What is microfrontend",
+        "showDescription": false,
         "details": {
           "mainHeading": "What is microfrontend",
           "insideContent": [
@@ -183,6 +192,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Explain PWA and SPA",
+        "showDescription": false,
         "details": {
           "mainHeading": "Explain PWA and SPA",
           "insideContent": [
@@ -196,6 +206,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Pre-processors - SCSS or LESS",
+        "showDescription": false,
         "details": {
           "mainHeading": "Pre-processors - SCSS or LESS",
           "insideContent": [
@@ -209,6 +220,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "JWT",
+        "showDescription": false,
         "details": {
           "mainHeading": "JWT",
           "insideContent": [
@@ -222,6 +234,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "localStorage/sessionStorage",
+        "showDescription": false,
         "details": {
           "mainHeading": "localStorage/sessionStorage",
           "insideContent": [
@@ -235,6 +248,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "How to debug your frontend application",
+        "showDescription": false,
         "details": {
           "mainHeading": "How to debug your frontend application",
           "insideContent": [
@@ -248,6 +262,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "OOPs concepts",
+        "showDescription": false,
         "details": {
           "mainHeading": "OOPs concepts",
           "insideContent": [
@@ -261,6 +276,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Design Patterns",
+        "showDescription": false,
         "details": {
           "mainHeading": "Design Patterns",
           "insideContent": [
@@ -274,6 +290,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "What you know about unit testing",
+        "showDescription": false,
         "details": {
           "mainHeading": "What you know about unit testing",
           "insideContent": [
@@ -287,6 +304,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
           "insideContent": [
@@ -305,6 +323,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
     "listOfTopic": [
       {
         "name": "Variable Declarations (var, let, const)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Variable Declarations (var, let, const)",
           "insideContent": [
@@ -318,6 +337,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Functions and Scope",
+        "showDescription": false,
         "details": {
           "mainHeading": "Functions and Scope",
           "insideContent": [
@@ -331,6 +351,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Closures",
+        "showDescription": false,
         "details": {
           "mainHeading": "Closures",
           "insideContent": [
@@ -344,6 +365,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Hoisting",
+        "showDescription": false,
         "details": {
           "mainHeading": "Hoisting",
           "insideContent": [
@@ -357,6 +379,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Event loop (callstack, microtask, macrotask)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Event loop (callstack, microtask, macrotask)",
           "insideContent": [
@@ -370,6 +393,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Prototypes, prototype chain, Prototypal Inheritance",
+        "showDescription": false,
         "details": {
           "mainHeading": "Prototypes, prototype chain, Prototypal Inheritance",
           "insideContent": [
@@ -383,6 +407,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Callback in JavaScript",
+        "showDescription": false,
         "details": {
           "mainHeading": "Callback in JavaScript",
           "insideContent": [
@@ -396,6 +421,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Asynchronous JavaScript (Promises, async/await)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Asynchronous JavaScript (Promises, async/await)",
           "insideContent": [
@@ -409,6 +435,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "call, apply and bind",
+        "showDescription": false,
         "details": {
           "mainHeading": "call, apply and bind",
           "insideContent": [
@@ -422,6 +449,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Explain \"this\" in JavaScript",
+        "showDescription": false,
         "details": {
           "mainHeading": "Explain \"this\" in JavaScript",
           "insideContent": [
@@ -435,6 +463,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Document Object Model (DOM)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Document Object Model (DOM)",
           "insideContent": [
@@ -448,6 +477,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Template literals, Destructuring, Spread Operator, rest operator",
+        "showDescription": false,
         "details": {
           "mainHeading": "Template literals, Destructuring, Spread Operator, rest operator",
           "insideContent": [
@@ -466,6 +496,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
     "listOfTopic": [
       {
         "name": "Angular workflow",
+        "showDescription": false,
         "details": {
           "mainHeading": "Angular workflow",
           "insideContent": [
@@ -479,6 +510,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Lifecycle hooks",
+        "showDescription": false,
         "details": {
           "mainHeading": "Lifecycle hooks",
           "insideContent": [
@@ -492,6 +524,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Component communication",
+        "showDescription": false,
         "details": {
           "mainHeading": "Component communication",
           "insideContent": [
@@ -505,6 +538,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Directives (Structural, Attribute and Custom)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Directives (Structural, Attribute and Custom)",
           "insideContent": [
@@ -518,6 +552,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Pipes (Pure, Impure, Built-in)",
+        "showDescription": false,
         "details": {
           "mainHeading": "Pipes (Pure, Impure, Built-in)",
           "insideContent": [
@@ -531,6 +566,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Injectable and Singleton Services",
+        "showDescription": false,
         "details": {
           "mainHeading": "Injectable and Singleton Services",
           "insideContent": [
@@ -544,6 +580,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Dependency Injection",
+        "showDescription": false,
         "details": {
           "mainHeading": "Dependency Injection",
           "insideContent": [
@@ -557,6 +594,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "host listener and host binding",
+        "showDescription": false,
         "details": {
           "mainHeading": "host listener and host binding",
           "insideContent": [
@@ -570,6 +608,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "One way and two-way Data Binding",
+        "showDescription": false,
         "details": {
           "mainHeading": "One way and two-way Data Binding",
           "insideContent": [
@@ -583,6 +622,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Route/Auth Guards",
+        "showDescription": false,
         "details": {
           "mainHeading": "Route/Auth Guards",
           "insideContent": [
@@ -596,6 +636,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Lazy loading",
+        "showDescription": false,
         "details": {
           "mainHeading": "Lazy loading",
           "insideContent": [
@@ -609,6 +650,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Template/Reactive Forms and Validations",
+        "showDescription": false,
         "details": {
           "mainHeading": "Template/Reactive Forms and Validations",
           "insideContent": [
@@ -622,6 +664,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Observable and Promises",
+        "showDescription": false,
         "details": {
           "mainHeading": "Observable and Promises",
           "insideContent": [
@@ -635,6 +678,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "RXJS Operators",
+        "showDescription": false,
         "details": {
           "mainHeading": "RXJS Operators",
           "insideContent": [
@@ -648,6 +692,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Subject and behavior subject",
+        "showDescription": false,
         "details": {
           "mainHeading": "Subject and behavior subject",
           "insideContent": [
@@ -661,6 +706,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "HTTP (Req/Res) Interceptor",
+        "showDescription": false,
         "details": {
           "mainHeading": "HTTP (Req/Res) Interceptor",
           "insideContent": [
@@ -674,6 +720,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "Change Detection and OnPush",
+        "showDescription": false,
         "details": {
           "mainHeading": "Change Detection and OnPush",
           "insideContent": [
@@ -687,6 +734,7 @@ export const listOfQuestions1: InterviewTopic1[] = [
       },
       {
         "name": "dist and bundle",
+        "showDescription": false,
         "details": {
           "mainHeading": "dist and bundle",
           "insideContent": [
@@ -701,4 +749,5 @@ export const listOfQuestions1: InterviewTopic1[] = [
     ]
   }
 ];
+
 
