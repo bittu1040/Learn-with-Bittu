@@ -41,11 +41,11 @@
 
 <div class="container mt-4">
   <div class="row d-flex justify-content-center">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-8">
       <div class="mb-3">
         <label for="topicSelect" class="form-label">Select Topic</label>
-        <select class="form-select" id="topicSelect" (change)="updateTopics1($event)">
-          <option *ngFor="let chapter of allChapter" >{{chapter}}</option>
+        <select class="form-select" id="topicSelect" (change)="updateTopics1($event)" style="padding: 10px;">
+          <option *ngFor="let chapter of allChapter">{{chapter}}</option>
         </select>
       </div>
     </div>
@@ -54,28 +54,22 @@
 
 
 
-
-    <div class="row align-items-center justify-content-center">
-      <div class="col-md-8">
-        <div class="mb-4">
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-action topic-name" *ngFor="let topic of listOfTopic">
-                <div (click)="toggleDescription(topic)" class="font-size">
-                  {{topic.name}}
-                  <div *ngIf="topic.showDescription" style="border: 1px solid gray;">
-                    <h3>{{topic.details.mainHeading}}</h3>
-                    <div *ngFor="let content of topic.details.insideContent">
-                      <pre>{{topic | json}} </pre>
-                      <h4>{{content.miniHeading}}</h4>
-                      <p>{{content.description}}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item topic-name" *ngFor="let topic of listOfTopic">
+            <div (click)="toggleDescription(topic)" class="topic-header">
+              <span>{{topic.name}} </span><mat-icon>expand_more</mat-icon>
+            </div> 
+            <div class="topic-description" *ngIf="topic.showDescription">
+              <div *ngFor="let content of topic.details.insideContent">
+                <p [innerHTML]='content.description'></p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>

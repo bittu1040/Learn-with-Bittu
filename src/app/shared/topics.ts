@@ -86,7 +86,12 @@ export const listOfQuestions1: InterviewTopic1[] = [
           "insideContent": [
             {
               "miniHeading": "Debounce and Throttle",
-              "description": "Description for Debounce and Throttle.",
+              "description": "Lorem  <strong>bold</strong> ipsum, dolor sit amet consectetur adipisicing elit. Beatae quasi, reiciendis mollitia magnam similique temporibus dolorum eius sint, earum ad quidem error culpa sequi placeat itaque exercitationem maxime. Dicta natus et perferendis.",
+              "code": ""
+            },
+            {
+              "miniHeading": "Debounce and Throttle",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae quasi, reiciendis mollitia magnam similique temporibus dolorum eius sint, earum ad quidem error culpa sequi placeat itaque exercitationem maxime. Dicta natus et perferendis.",
               "code": ""
             }
           ]
@@ -303,10 +308,10 @@ export const listOfQuestions1: InterviewTopic1[] = [
         }
       },
       {
-        "name": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+        "name": "Promises with respect to API handling (retry API, combine 2-3 API)",
         "showDescription": false,
         "details": {
-          "mainHeading": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
+          "mainHeading": "Promises with respect to API handling (retry API, combine 2-3 API)",
           "insideContent": [
             {
               "miniHeading": "Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)",
