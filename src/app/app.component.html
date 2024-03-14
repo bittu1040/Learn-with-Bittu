@@ -40,21 +40,10 @@
       </div>
     </mat-expansion-panel>
 
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        Coding Questions
-      </mat-expansion-panel-header>
-      <div class="panel-content">
-        <ul>
-          <li>Array</li>
-          <li>String</li>
-          <li>Object</li>
-        </ul>
-      </div>
-    </mat-expansion-panel>
     <mat-nav-list>
-      <mat-list-item routerLink="/learn/overview" (click)="sidenav.close()"><button mat-button>Interview Prep </button></mat-list-item>
-      <mat-list-item routerLink="/learn/learn-JS" (click)="sidenav.close()"><button mat-button>JavaScript </button></mat-list-item>
+      <mat-list-item><button class="custom-button">Coding Questions </button></mat-list-item>
+      <mat-list-item routerLink="/learn/overview"  ><button class="custom-button">Interview Prep </button></mat-list-item>
+      <mat-list-item routerLink="/learn/learn-JS"  ><button class="custom-button" >JavaScript </button></mat-list-item>
       <mat-list-item (click)="sidenav.close()">
         <button mat-button routerLink="/aboutme">about me</button>
       </mat-list-item>
