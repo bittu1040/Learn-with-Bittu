@@ -74,3 +74,31 @@ footer {
 .listitem {
   height: 30px !important;
 }
+
+
+.panel-content {
+  padding: 10px;
+}
+
+.panel-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.panel-content li {
+  margin-bottom: 5px;
+  padding: 0 0 5px 5px; /* Top, Right, Bottom, Left */
+  transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.panel-content li:hover {
+  background-color: #f0f0f0; /* Light background color on hover */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.mat-expansion-panel {
+  box-shadow: none; /* Remove default box-shadow */
+}
+
