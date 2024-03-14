@@ -11,18 +11,11 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularInterviewQuestionsComponent } from './angular-interview-questions/angular-interview-questions.component';
-import { JavascriptInterviewQuestionsComponent } from './javascript-interview-questions/javascript-interview-questions.component';
-import { CommonWebInterviewQuestionsComponent } from './common-web-interview-questions/common-web-interview-questions.component';
-
 
 @NgModule({
   declarations: [
     LearnOverviewComponent,
     LearnJSComponent,
-    AngularInterviewQuestionsComponent,
-    JavascriptInterviewQuestionsComponent,
-    CommonWebInterviewQuestionsComponent
   ],
   imports: [
     CommonModule,
