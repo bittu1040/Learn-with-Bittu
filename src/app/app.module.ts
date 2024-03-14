@@ -13,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import { MyLearningPathComponent } from './components/my-learning-path/my-learning-path.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -28,7 +27,6 @@ import { LearnModule } from './module/learn/learn.module';
     AppComponent,
     HomeComponent,
     ContactComponent,
-    MyLearningPathComponent,
     PageNotFoundComponent
   ],
   imports: [
