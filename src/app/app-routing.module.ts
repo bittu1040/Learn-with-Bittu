@@ -12,7 +12,9 @@ const routes: Routes = [
   {path: 'aboutme', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'javascript-articles', component: JavascriptArticlesComponent},
+  {path: 'javascript-articles/:topic', component: JavascriptArticlesComponent},
   {path: 'angular-articles', component: AngularArticlesComponent},
+  {path: 'angular-articles/:topic', component: AngularArticlesComponent},
   {path: 'coding-questions', component: CodingQuestionsComponent},
   {path: 'learn', loadChildren: () => import('./module/learn/learn.module').then(m => m.LearnModule)},
   {path: '**', component:PageNotFoundComponent}

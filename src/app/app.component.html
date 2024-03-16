@@ -24,7 +24,7 @@
       </mat-expansion-panel-header>
       <div class="panel-content">
         <ul>
-          <li *ngFor="let data of JSTopics">{{data.name}}</li>
+          <li *ngFor="let data of JSTopics" (click)="navigateToJSTopic(data.name)">{{data.name}}</li>
         </ul>
       </div>
     </mat-expansion-panel>
@@ -35,7 +35,7 @@
       </mat-expansion-panel-header>
       <div class="panel-content">
         <ul>
-          <li *ngFor="let data of AngularTopics">{{data.name}}</li>
+          <li *ngFor="let data of AngularTopics" (click)="navigateToAngularTopic(data.name)">{{data.name}}</li>
         </ul>
       </div>
     </mat-expansion-panel>

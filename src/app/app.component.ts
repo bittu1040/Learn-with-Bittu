@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import { listOfQuestions } from './shared/topics';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit {
   JSTopics:any;
   AngularTopics:any;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.isMobile = this.breakpointObserver.isMatched(Breakpoints.Handset);
     if(this.isMobile){
       this.isSideNavOpened= false;
@@ -35,5 +36,17 @@ export class AppComponent implements OnInit {
       return data.category=="angular"
     })
 
+  }
+
+
+  navigateToJSTopic(topic: string): void {
+    const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+    this.router.navigate(['/javascript-articles', sanitizedTopic]);
+  }
+
+
+  navigateToAngularTopic(topic: string): void {
+    const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+    this.router.navigate(['/angular-articles', sanitizedTopic]);
   }
 }
