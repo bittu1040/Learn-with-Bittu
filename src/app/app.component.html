@@ -19,7 +19,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isSideNavOpened">
     <mat-expansion-panel>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header routerLink="javascript-articles">
         JavaScript
       </mat-expansion-panel-header>
       <div class="panel-content">
@@ -30,7 +30,7 @@
     </mat-expansion-panel>
 
     <mat-expansion-panel>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header routerLink="angular-articles">
         Angular
       </mat-expansion-panel-header>
       <div class="panel-content">
@@ -40,22 +40,33 @@
       </div>
     </mat-expansion-panel>
 
+    <mat-divider></mat-divider>
+
     <mat-nav-list>
-      <mat-list-item><button class="custom-button">Coding Questions </button></mat-list-item>
-      <mat-list-item routerLink="/learn/overview"  ><button class="custom-button">Interview Prep </button></mat-list-item>
-      <mat-list-item routerLink="/learn/learn-JS"  ><button class="custom-button" >JavaScript </button></mat-list-item>
-      <mat-list-item (click)="sidenav.close()">
-        <button mat-button routerLink="/aboutme">about me</button>
+      <mat-list-item routerLink="coding-questions"><button class="custom-button">Coding Questions
+        </button></mat-list-item>
+      <mat-list-item routerLink="/learn/overview"><button class="custom-button">Interview Prep </button></mat-list-item>
+      <mat-list-item routerLink="/learn/learn-JS"><button class="custom-button">JavaScript </button></mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item routerLink="/aboutme">
+        <!-- Add this in mat-list-item: to close side automatically once click (click)="sidenav.close()" -->
+        <button mat-button>about me</button>
       </mat-list-item>
-      <mat-list-item (click)="sidenav.close()">
-        <button mat-button id="contact-button" routerLink="/contact">Contact</button>
+      <mat-list-item routerLink="/contact">
+        <button mat-button id="contact-button">Contact</button>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
+
     <div class="container">
       <router-outlet></router-outlet>
     </div>
+
+
     <footer class="footer">
       <div class="copyright">
         &copy; 2023 Bittu Kumar.
@@ -71,6 +82,61 @@
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--

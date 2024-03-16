@@ -21,13 +21,19 @@ import { MatListModule } from '@angular/material/list';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {MatTreeModule} from '@angular/material/tree';
 import { LearnModule } from './module/learn/learn.module';
+import { AngularArticlesComponent } from './components/angular-articles/angular-articles.component';
+import { JavascriptArticlesComponent } from './components/javascript-articles/javascript-articles.component';
+import { CodingQuestionsComponent } from './components/coding-questions/coding-questions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AngularArticlesComponent,
+    JavascriptArticlesComponent,
+    CodingQuestionsComponent
   ],
   imports: [
     BrowserModule,
