@@ -1,6 +1,55 @@
-<div class="d-flex align-items-center justify-content-center vh-100">
-    <div class="text-center">
-        <h1 class="display-1 fw-bold">Javascript</h1>
-        <a href="index.html" class="btn btn-primary">Go Home</a>
+<div class="container">
+    <div class="row mt-2">
+        <div class="column">
+            <div class="d-flex align-items-center mt-2">
+                <div>Topics</div>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+                <div>JavaScript</div>
+            </div>
+        </div>
     </div>
+
+
+    <div class="row mt-2 mb-3">
+        <div class="col">
+            <div class="d-flex flex-wrap gap-2">
+                <div *ngFor="let topic of JSTopics" class="custom-box">{{topic.name}}</div>
+            </div>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="row mt-3">
+        <div class="col">
+            <h2>1. What is a closure in JavaScript?</h2>
+            <p>A closure is a combination of a function and the lexical environment within which that function was declared. This allows the function to retain access to variables from its parent scope even after the parent function has finished executing.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+        <div class="col">
+            <h2>2. Explain the difference between == and === operators in JavaScript.</h2>
+            <p>The == operator checks for equality, but it performs type coercion if the operands are of different types. On the other hand, the === operator checks for equality without performing type coercion, meaning both value and type must be the same for it to return true.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+        <div class="col">
+            <h2>3. List down some built-in array methods in JavaScript.</h2>
+            <p>JavaScript provides several built-in methods for manipulating arrays. Some of these methods include:</p>
+            <ul>
+                <li>push()</li>
+                <li>pop()</li>
+                <li>shift()</li>
+                <li>unshift()</li>
+                <li>splice()</li>
+                <li>slice()</li>
+                <li>concat()</li>
+                <li>forEach()</li>
+            </ul>
+        </div>
+    </div>
+    
+    
 </div>

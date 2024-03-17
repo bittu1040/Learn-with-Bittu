@@ -1,0 +1,10 @@
+.custom-box {
+    background-color: rgb(230, 230, 230); 
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+.custom-box:hover {
+    border: 1px solid #ffc107;
+}
