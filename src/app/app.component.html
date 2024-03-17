@@ -3,14 +3,13 @@
     <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" id="menu-button">
       <mat-icon>menu</mat-icon>
     </button>
-    <div routerLink="/learn/overview">Learn with Bittu</div>
+    <div routerLink="/javascript-articles">Learn with Bittu</div>
 
   </div>
   <div style="display: flex; align-items: center;">
     <div class="toolbar-buttons">
-      <button mat-button id="snippet-button" routerLink="/">Snippets</button>
-      <a mat-button id="blog-button" routerLink="/learn/learn-JS">JavaScript</a>
-      <a mat-button id="project-button" routerLink="/learn/overview">Interview Prep</a>
+      <button mat-button id="snippet-button" routerLink="/snippets-image">Snippets</button>
+      <a mat-button id="project-button" routerLink="/interview-preparation">Interview Prep</a>
       <a mat-button routerLink="/aboutme"> About me </a>
     </div>
   </div>
@@ -45,8 +44,7 @@
     <mat-nav-list>
       <mat-list-item routerLink="coding-questions"><button class="custom-button">Coding Questions
         </button></mat-list-item>
-      <mat-list-item routerLink="/learn/overview"><button class="custom-button">Interview Prep </button></mat-list-item>
-      <mat-list-item routerLink="/learn/learn-JS"><button class="custom-button">JavaScript </button></mat-list-item>
+      <mat-list-item routerLink="/interview-preparation"><button class="custom-button">Interview Prep </button></mat-list-item>
 
       <mat-divider></mat-divider>
 
@@ -54,6 +52,11 @@
         <!-- Add this in mat-list-item: to close side automatically once click (click)="sidenav.close()" -->
         <button mat-button>about me</button>
       </mat-list-item>
+
+      <mat-list-item routerLink="/snippets-image">
+        <button mat-button id="contact-button">Snippets</button>
+      </mat-list-item>
+
       <mat-list-item routerLink="/contact">
         <button mat-button id="contact-button">Contact</button>
       </mat-list-item>

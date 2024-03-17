@@ -24,6 +24,7 @@ import { LearnModule } from './module/learn/learn.module';
 import { AngularArticlesComponent } from './components/angular-articles/angular-articles.component';
 import { JavascriptArticlesComponent } from './components/javascript-articles/javascript-articles.component';
 import { CodingQuestionsComponent } from './components/coding-questions/coding-questions.component';
+import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CodingQuestionsComponent } from './components/coding-questions/coding-q
     PageNotFoundComponent,
     AngularArticlesComponent,
     JavascriptArticlesComponent,
-    CodingQuestionsComponent
+    CodingQuestionsComponent,
+    SnippetsImageComponent
   ],
   imports: [
     BrowserModule,
