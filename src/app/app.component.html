@@ -18,7 +18,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isSideNavOpened">
     <mat-expansion-panel>
-      <mat-expansion-panel-header routerLink="javascript-articles">
+      <mat-expansion-panel-header routerLink="javascript-articles" class="custom-button">
         JavaScript
       </mat-expansion-panel-header>
       <div class="panel-content">
@@ -29,7 +29,7 @@
     </mat-expansion-panel>
 
     <mat-expansion-panel>
-      <mat-expansion-panel-header routerLink="angular-articles">
+      <mat-expansion-panel-header routerLink="angular-articles" class="custom-button">
         Angular
       </mat-expansion-panel-header>
       <div class="panel-content">
@@ -42,23 +42,28 @@
     <mat-divider></mat-divider>
 
     <mat-nav-list>
-      <mat-list-item routerLink="coding-questions"><button class="custom-button">Coding Questions
-        </button></mat-list-item>
-      <mat-list-item routerLink="/interview-preparation"><button class="custom-button">Interview Prep </button></mat-list-item>
+
+      <mat-list-item routerLink="coding-questions">
+        <button class="custom-button">Coding Questions </button>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/interview-preparation">
+        <button class="custom-button">Interview Prep </button>
+      </mat-list-item>
 
       <mat-divider></mat-divider>
 
       <mat-list-item routerLink="/aboutme">
         <!-- Add this in mat-list-item: to close side automatically once click (click)="sidenav.close()" -->
-        <button mat-button>about me</button>
+        <button class="custom-button">about me</button>
       </mat-list-item>
 
       <mat-list-item routerLink="/snippets-image">
-        <button mat-button id="contact-button">Snippets</button>
+        <button class="custom-button" id="contact-button">Snippets</button>
       </mat-list-item>
 
       <mat-list-item routerLink="/contact">
-        <button mat-button id="contact-button">Contact</button>
+        <button class="custom-button" id="contact-button">Contact</button>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>

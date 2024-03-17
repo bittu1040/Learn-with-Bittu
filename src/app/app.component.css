@@ -111,6 +111,10 @@ footer {
   border: none;
 }
 
+.mat-expansion-panel-header {
+  font-weight: normal;
+}
+
 .mat-drawer{
   background-color: white;
 }
