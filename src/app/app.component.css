@@ -2,6 +2,11 @@ mat-sidenav-container {
   height: calc(100vh - 64px);
 }
 
+.mat-toolbar.mat-primary {
+  background: #FFB74D;
+  color: #fff;
+}
+
 
 @media (max-width: 460px) {
   mat-toolbar {
@@ -46,7 +51,7 @@ mat-sidenav-container {
 
 
 footer {
-  background-color: #978ef2;
+  background-color: #FFB74D;
   color: #fff;
   text-align: center;
   padding: 6px;

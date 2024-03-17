@@ -25,7 +25,7 @@
             <h2>1. What is a currying in JavaScript?</h2>
             <p>A currying is a function that takes a function as an argument and returns a new function. The new function takes the arguments of the original function and returns the result.</p>
             <div class="code-snippet-container">
-                <button (click)="copyToClipboard()" class="copy-button">Copy</button>
+                <button (click)="copyToClipboard(curryingCodeSnippet)" class="copy-button">Copy</button>
                 <pre class="code-snippet">{{ curryingCodeSnippet }}</pre>
               </div>
         </div>
@@ -35,6 +35,10 @@
         <div class="col">
             <h2>2. What is a closure in JavaScript?</h2>
             <p>A closure is a combination of a function and the lexical environment within which that function was declared. This allows the function to retain access to variables from its parent scope even after the parent function has finished executing.</p>
+            <div class="code-snippet-container">
+                <button (click)="copyToClipboard(closureCodeSnippet)" class="copy-button">Copy</button>
+                <pre class="code-snippet">{{ closureCodeSnippet }}</pre>
+              </div>
         </div>
     </div>
     

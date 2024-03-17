@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { closureCodeSnippet, curryingCodeSnippet } from 'app/shared/code-snippets';
 import { listOfQuestions } from 'app/shared/topics';
 @Component({
   selector: 'app-javascript-articles',
@@ -8,28 +9,17 @@ import { listOfQuestions } from 'app/shared/topics';
 export class JavascriptArticlesComponent implements OnInit {
 
   JSTopics: any;
-  curryingCodeSnippet: string = `
-function SumOfThee(a){
-    return function(b){
-        return function(c){
-            return a + b + c;
-        }
-     }
-}
-
-console.log(SumOfThee(2)(3)(4));  // 9
-`;
-
-
+  curryingCodeSnippet: string = curryingCodeSnippet;
+  closureCodeSnippet: string = closureCodeSnippet;
   ngOnInit(): void {
     this.JSTopics = listOfQuestions.filter((data) => {
       return data.category == "javascript"
     })
   }
 
-  copyToClipboard() {
+  copyToClipboard(codeSnippet: string) { // Accept the code snippet as a parameter
     const el = document.createElement('textarea');
-    el.value = this.curryingCodeSnippet;
+    el.value = codeSnippet;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
