@@ -54,6 +54,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { name: 'call, apply and bind', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Explain "this" in JavaScript', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Document Object Model (DOM)', category: 'javascript', difficulty: 'easy', showDescription: false },
+  { name: 'Performance (tree shaking, webworkers)', category: 'javascript', difficulty: 'easy', showDescription: false },
   { name: 'Template literals, Destructuring, Spread Operator, rest operator', category: 'javascript', difficulty: 'easy', showDescription: false },
 
   { name: 'Angular workflow', category: 'angular', difficulty: 'medium', showDescription: false },
