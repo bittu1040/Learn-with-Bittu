@@ -1,12 +1,13 @@
 .custom-box {
-    background-color: rgb(230, 230, 230); 
+    background-color: rgb(247, 243, 243); 
     padding: 8px;
     border-radius: 8px;
+    border: 1px solid rgb(222, 221, 221);
 }
 
 
 .custom-box:hover {
-    border: 1px solid #ffc107;
+    background-color: #AF69EF;
 }
 
 .active-topic {
