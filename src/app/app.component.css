@@ -96,10 +96,10 @@ footer {
 }
 
 .panel-content li:hover {
-  background-color: #f0f0f0; /* Light background color on hover */
+  background-color: #AF69EF; /* Light background color on hover */
   border-radius: 4px;
   cursor: pointer;
-  border: 1px solid rgb(156, 156, 156);
+  color: rgb(255, 255, 255);
 }
 
 
