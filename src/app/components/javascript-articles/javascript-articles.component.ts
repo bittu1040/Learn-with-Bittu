@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { closureCodeSnippet, curryingCodeSnippet } from 'app/shared/code-snippets';
+import { closureCodeSnippet, curryingCodeSnippet, variableDeclarationSnippet } from 'app/shared/code-snippets';
 import { listOfQuestions } from 'app/shared/topics';
 @Component({
   selector: 'app-javascript-articles',
@@ -12,6 +12,7 @@ export class JavascriptArticlesComponent implements OnInit {
   JSTopics: any;
   curryingCodeSnippet: string = curryingCodeSnippet;
   closureCodeSnippet: string = closureCodeSnippet;
+  variableDeclarationSnippet: string=variableDeclarationSnippet;
 
   constructor(private router: Router, private el: ElementRef){}
 

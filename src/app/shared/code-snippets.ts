@@ -25,3 +25,13 @@ console.log(counter());  // 1
 console.log(counter());  // 2
 `;
 
+export const variableDeclarationSnippet: string=`
+// var example
+var x = 10;
+
+// let example
+let y = 20;
+
+// const example
+const z = 30;`;
+
