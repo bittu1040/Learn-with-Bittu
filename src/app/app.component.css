@@ -42,12 +42,17 @@ mat-sidenav-container {
   } */
 
 #nav-button{
-  border: 1px solid;
+  border: 1px solid rgb(239, 243, 241);
   margin-left: 8px;
   padding: 16px;
   font-size: 1rem;
+  border-radius: 8px;
 }
 
+#nav-button:hover{
+  background-color: rgb(240, 255, 218);
+  color: black;
+}
 
 
 
@@ -92,8 +97,9 @@ footer {
 
 .panel-content li:hover {
   background-color: #f0f0f0; /* Light background color on hover */
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  border: 1px solid rgb(156, 156, 156);
 }
 
 
