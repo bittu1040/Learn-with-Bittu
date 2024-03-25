@@ -41,6 +41,10 @@ mat-sidenav-container {
     }
   } */
 
+#nav-button{
+  border: 1px solid;
+  margin-left: 8px;
+}
 
 .button {
   display: inline-block;
