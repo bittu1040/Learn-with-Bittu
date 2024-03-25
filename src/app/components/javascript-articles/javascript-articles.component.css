@@ -8,6 +8,7 @@
 
 .custom-box:hover {
     background-color: #AF69EF;
+    color: white;
 }
 
 .active-topic {

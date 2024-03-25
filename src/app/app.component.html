@@ -34,7 +34,7 @@
       </mat-expansion-panel-header>
       <div class="panel-content">
         <ul>
-          <li *ngFor="let data of AngularTopics" (click)="navigateToAngularTopic(data.name)">{{data.name}}</li>
+          <li *ngFor="let data of AngularTopics" (click)="navigateToAngularTopic(data.id)">{{data.name}}</li>
         </ul>
       </div>
     </mat-expansion-panel>
@@ -61,6 +61,10 @@
       <mat-list-item routerLink="/snippets-image">
         <button class="custom-button" id="contact-button">Snippets</button>
       </mat-list-item>
+
+      <!-- <mat-list-item routerLink="/snippets-image">
+        <button class="custom-button" id="contact-button">Angular Table</button>
+      </mat-list-item> -->
 
       <mat-list-item routerLink="/contact">
         <button class="custom-button" id="contact-button">Contact</button>

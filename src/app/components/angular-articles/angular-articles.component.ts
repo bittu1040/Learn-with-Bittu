@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { listOfQuestions } from '../../shared/topics';
+import { Router } from '@angular/router';
+import { DataSharingService } from 'app/shared/data-sharing.service';
 
 @Component({
   selector: 'app-angular-articles',
@@ -8,13 +10,41 @@ import { listOfQuestions } from '../../shared/topics';
 })
 export class AngularArticlesComponent implements OnInit {
 
-  AngularTopics:any
-  constructor() { }
+  AngularTopics:any;
+  activeTopicId: string | null = null;
+
+
+  constructor(private router: Router, private el: ElementRef, private shared: DataSharingService) { }
 
   ngOnInit(): void {
     this.AngularTopics= listOfQuestions.filter((data)=>{
       return data.category=="angular"
     })
+
+    this.shared.activeTopicIdShared.subscribe((data)=>{
+      this.activeTopicId= data;
+    })
+  }
+
+
+  copyToClipboard(codeSnippet: string) { // Accept the code snippet as a parameter
+    const el = document.createElement('textarea');
+    el.value = codeSnippet;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('Code snippet copied to clipboard!');
+  }
+
+  navigateToAngularTopic(topic: string): void {
+    const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+    this.router.navigate(['/angular-articles', topic]);
+    this.shared.activeTopicIdShared.next(topic);
+    const element = this.el.nativeElement.querySelector(`#${topic}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    }
   }
 
 }

@@ -55,5 +55,10 @@ export class AppComponent implements OnInit {
   navigateToAngularTopic(topic: string): void {
     const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
     this.router.navigate(['/angular-articles', sanitizedTopic]);
+    this.shared.activeTopicIdShared.next(topic);
+    const element = this.el.nativeElement.querySelector(`#${topic}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    }
   }
 }
