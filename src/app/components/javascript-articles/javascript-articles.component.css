@@ -9,6 +9,10 @@
     border: 1px solid #ffc107;
 }
 
+.active-topic {
+  background-color: #e6dede;
+}
+
 p{
     font-size: 1rem;
     line-height: 1.5;

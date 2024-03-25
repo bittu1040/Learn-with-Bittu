@@ -25,7 +25,7 @@
 
     <div class="row mt-3" id="variable-declarations">
         <div class="col">
-            <h2>1. Variable Declarations in JavaScript</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'variable-declarations' }">1. Variable Declarations in JavaScript</h2>
             <p>JavaScript has three types of variable declarations:</p>
             <ul>
                 <li>var: Function-scoped, traditionally used.</li>
@@ -43,14 +43,14 @@
 
     <div class="row mt-3" id="functions-and-scope">
         <div class="col">
-            <h2>2. What are functions and scope?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'functions-and-scope' }">2. What are functions and scope?</h2>
             <p>Explanation about functions and scope.</p>
         </div>
     </div>
 
     <div class="row mt-3" id="closures">
         <div class="col">
-            <h2>3. What is a closure in JavaScript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'closures' }">3. What is a closure in JavaScript?</h2>
             <p>A closure is a combination of a function and the lexical environment within which that function was
                 declared. This allows the function to retain access to variables from its parent scope even after the
                 parent function has finished executing.</p>
@@ -63,14 +63,14 @@
 
     <div class="row mt-3" id="hoisting">
         <div class="col">
-            <h2>4. What is hoisting?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'closures' }" >4. What is hoisting?</h2>
             <p>Explanation about hoisting.</p>
         </div>
     </div>
 
     <div class="row mt-3" id="currying">
         <div class="col">
-            <h2>5. What is a currying in JavaScript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'currying' }">5. What is a currying in JavaScript?</h2>
             <p>A currying is a function that takes a function as an argument and returns a new function. The new
                 function takes the arguments of the original function and returns the result.</p>
             <div class="code-snippet-container">
@@ -82,7 +82,7 @@
 
     <div class="row mt-3" id="comparison-operators">
         <div class="col">
-            <h2>6. Explain the difference between == and === operators in JavaScript.</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'comparison-operators' }">6. Explain the difference between == and === operators in JavaScript.</h2>
             <p>The == operator checks for equality, but it performs type coercion if the operands are of different
                 types. On the other hand, the === operator checks for equality without performing type coercion, meaning
                 both value and type must be the same for it to return true.</p>
@@ -91,7 +91,7 @@
 
     <div class="row mt-3" id="array-methods">
         <div class="col">
-            <h2>7. List down some built-in array methods in JavaScript.</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'array-methods' }">7. List down some built-in array methods in JavaScript.</h2>
             <p>JavaScript provides several built-in methods for manipulating arrays. Some of these methods include:</p>
             <ul>
                 <li>push()</li>
@@ -108,51 +108,51 @@
 
     <div class="row mt-3" id="event-loop-callstack-microtask-macrotask">
         <div class="col">
-            <h2>8. What is the event loop (callstack, microtask, macrotask)?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'event-loop-callstack-microtask-macrotask' }">8. What is the event loop (callstack, microtask, macrotask)?</h2>
             <p>Explanation about the event loop.</p>
         </div>
     </div>
 
     <div class="row mt-3" id="prototypes-prototype-chain-prototypal-inheritance">
         <div class="col">
-            <h2>9. What are prototypes, prototype chain, and prototypal inheritance?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'prototypes-prototype-chain-prototypal-inheritance' }">9. What are prototypes, prototype chain, and prototypal inheritance?</h2>
             <p>Explanation about prototypes, prototype chain, and prototypal inheritance.</p>
         </div>
     </div>
 
     <div class="row mt-3" id="callback-in-javascript">
         <div class="col">
-            <h2>10. What is a callback in JavaScript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'callback-in-javascript' }">10. What is a callback in JavaScript?</h2>
             <p>Explanation about callbacks in JavaScript.</p>
         </div>
     </div>
     <div class="row mt-3" id="asynchronous-javascript-promises-async-await">
         <div class="col">
-            <h2>11. What is asynchronous JavaScript (Promises, async/await)?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'asynchronous-javascript-promises-async-await' }">11. What is asynchronous JavaScript (Promises, async/await)?</h2>
             <p>Explanation about asynchronous JavaScript using Promises and async/await.</p>
         </div>
     </div>
     <div class="row mt-3" id="call-apply-and-bind">
         <div class="col">
-            <h2>12. What are call, apply, and bind?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'call-apply-and-bind' }">12. What are call, apply, and bind?</h2>
             <p>Explanation about call, apply, and bind methods in JavaScript.</p>
         </div>
     </div>
     <div class="row mt-3" id="explain-this-in-javascript">
         <div class="col">
-            <h2>12. Explain "this" in JavaScript.</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">12. Explain "this" in JavaScript.</h2>
             <p>Explanation about the "this" keyword in JavaScript.</p>
         </div>
     </div>
     <div class="row mt-3" id="document-object-model-dom">
         <div class="col">
-            <h2>14. What is the Document Object Model (DOM)?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'document-object-model-dom' }">14. What is the Document Object Model (DOM)?</h2>
             <p>Explanation about the Document Object Model (DOM).</p>
         </div>
     </div>
     <div class="row mt-3" id="template-literals-destructuring-spread-operator-rest-operator">
         <div class="col">
-            <h2>15. What are template literals, destructuring, spread operator, and rest operator?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'template-literals-destructuring-spread-operator-rest-operator' }">15. What are template literals, destructuring, spread operator, and rest operator?</h2>
             <p>Explanation about template literals, destructuring, spread operator, and rest operator.</p>
         </div>
     </div>
