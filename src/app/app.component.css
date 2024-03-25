@@ -3,7 +3,7 @@ mat-sidenav-container {
 }
 
 .mat-toolbar.mat-primary {
-  background: #FFB74D;
+  background: #AF69EF;
   color: #fff;
 }
 
@@ -44,18 +44,15 @@ mat-sidenav-container {
 #nav-button{
   border: 1px solid;
   margin-left: 8px;
+  padding: 16px;
+  font-size: 1rem;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  text-decoration: none;
-}
+
 
 
 footer {
-  background-color: #FFB74D;
+  background-color: #AF69EF;
   color: #fff;
   text-align: center;
   padding: 6px;
@@ -76,13 +73,6 @@ footer {
   }
 }
 
-.learn-section {
-  padding-left: 40px;
-}
-
-.listitem {
-  height: 30px !important;
-}
 
 
 .panel-content {
