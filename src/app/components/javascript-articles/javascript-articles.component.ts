@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { closureCodeSnippet, curryingCodeSnippet, variableDeclarationSnippet } from 'app/shared/code-snippets';
+import { DataSharingService } from 'app/shared/data-sharing.service';
 import { listOfQuestions } from 'app/shared/topics';
 @Component({
   selector: 'app-javascript-articles',
@@ -16,12 +17,18 @@ export class JavascriptArticlesComponent implements OnInit {
   closureCodeSnippet: string = closureCodeSnippet;
   variableDeclarationSnippet: string=variableDeclarationSnippet;
 
-  constructor(private router: Router, private el: ElementRef){}
+  constructor(private router: Router, private el: ElementRef, private shared: DataSharingService){}
 
   ngOnInit(): void {
     this.JSTopics = listOfQuestions.filter((data) => {
       return data.category == "javascript"
     })
+
+    this.shared.activeTopicIdShared.subscribe((data)=>{
+      this.activeTopicId= data;
+    })
+
+
   }
 
   copyToClipboard(codeSnippet: string) { // Accept the code snippet as a parameter

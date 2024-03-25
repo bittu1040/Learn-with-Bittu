@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import { listOfQuestions } from './shared/topics';
 import { Router } from '@angular/router';
+import { DataSharingService } from './shared/data-sharing.service';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +17,9 @@ export class AppComponent implements OnInit {
 
   JSTopics:any;
   AngularTopics:any;
+  activeTopicId: string | null = null;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private el: ElementRef, private shared: DataSharingService) {
     this.isMobile = this.breakpointObserver.isMatched(Breakpoints.Handset);
     if(this.isMobile){
       this.isSideNavOpened= false;
@@ -41,7 +43,12 @@ export class AppComponent implements OnInit {
 
   navigateToJSTopic(topic: string): void {
     const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
-    this.router.navigate(['/javascript-articles', sanitizedTopic]);
+    this.router.navigate(['/javascript-articles', topic]);
+    this.shared.activeTopicIdShared.next(topic);
+    const element = this.el.nativeElement.querySelector(`#${topic}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    }
   }
 
 

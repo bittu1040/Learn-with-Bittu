@@ -9,5 +9,6 @@ export class DataSharingService {
   constructor() { }
 
   topicName: Subject<any> = new BehaviorSubject("");
+  activeTopicIdShared: Subject<string> = new BehaviorSubject("");
 
 }
