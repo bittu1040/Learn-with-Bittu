@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { closureCodeSnippet, curryingCodeSnippet } from 'app/shared/code-snippets';
 import { listOfQuestions } from 'app/shared/topics';
 @Component({
@@ -11,6 +12,9 @@ export class JavascriptArticlesComponent implements OnInit {
   JSTopics: any;
   curryingCodeSnippet: string = curryingCodeSnippet;
   closureCodeSnippet: string = closureCodeSnippet;
+
+  constructor(private router: Router, private el: ElementRef){}
+
   ngOnInit(): void {
     this.JSTopics = listOfQuestions.filter((data) => {
       return data.category == "javascript"
@@ -25,5 +29,14 @@ export class JavascriptArticlesComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(el);
     alert('Code snippet copied to clipboard!');
+  }
+
+  navigateToJSTopic(topic: string): void {
+    const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+    this.router.navigate(['/javascript-articles', topic]);
+    const element = this.el.nativeElement.querySelector(`#${topic}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    }
   }
 }

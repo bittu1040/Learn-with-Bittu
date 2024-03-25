@@ -13,42 +13,49 @@
     <div class="row mt-2 mb-3">
         <div class="col">
             <div class="d-flex flex-wrap gap-2">
-                <div *ngFor="let topic of JSTopics" class="custom-box">{{topic.name}}</div>
+                <div *ngFor="let topic of JSTopics" class="custom-box" (click)="navigateToJSTopic(topic.id)">{{topic.name}}</div>
             </div>
         </div>
     </div>
 
+
+
     <mat-divider></mat-divider>
 
-    <div class="row mt-3">
+    <div class="row mt-3" id="currying">
         <div class="col">
             <h2>1. What is a currying in JavaScript?</h2>
-            <p>A currying is a function that takes a function as an argument and returns a new function. The new function takes the arguments of the original function and returns the result.</p>
+            <p>A currying is a function that takes a function as an argument and returns a new function. The new
+                function takes the arguments of the original function and returns the result.</p>
             <div class="code-snippet-container">
                 <button (click)="copyToClipboard(curryingCodeSnippet)" class="copy-button">Copy</button>
                 <pre class="code-snippet">{{ curryingCodeSnippet }}</pre>
-              </div>
+            </div>
         </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3" id="closures">
         <div class="col">
             <h2>2. What is a closure in JavaScript?</h2>
-            <p>A closure is a combination of a function and the lexical environment within which that function was declared. This allows the function to retain access to variables from its parent scope even after the parent function has finished executing.</p>
+            <p>A closure is a combination of a function and the lexical environment within which that function was
+                declared. This allows the function to retain access to variables from its parent scope even after the
+                parent function has finished executing.</p>
             <div class="code-snippet-container">
                 <button (click)="copyToClipboard(closureCodeSnippet)" class="copy-button">Copy</button>
                 <pre class="code-snippet">{{ closureCodeSnippet }}</pre>
-              </div>
+            </div>
         </div>
     </div>
-    
-    <div class="row mt-3">
+
+    <div class="row mt-3" id="comparison-operators">
         <div class="col">
             <h2>3. Explain the difference between == and === operators in JavaScript.</h2>
-            <p>The == operator checks for equality, but it performs type coercion if the operands are of different types. On the other hand, the === operator checks for equality without performing type coercion, meaning both value and type must be the same for it to return true.</p>
+            <p>The == operator checks for equality, but it performs type coercion if the operands are of different
+                types. On the other hand, the === operator checks for equality without performing type coercion, meaning
+                both value and type must be the same for it to return true.</p>
         </div>
     </div>
-    
+
     <div class="row mt-3">
         <div class="col">
             <h2>4. List down some built-in array methods in JavaScript.</h2>
