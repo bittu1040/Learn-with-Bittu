@@ -1,0 +1,32 @@
+.code-snippet-container {
+    position: relative;
+  }
+  
+
+  .code-snippet {
+    background-color: #000000;
+    color: #ff9900;;
+    border-radius: 5px;
+    padding:16px ;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto; /* Enable horizontal scroll for long lines */
+    font-size: 1rem;
+    white-space: pre-wrap;
+
+  }
+  
+  .copy-button {
+    position: absolute; 
+    top: 5px; 
+    right: 5px; 
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #616161;;
+  }
+  
+  .copy-button:hover {
+    background-color: #0056b3;
+  }

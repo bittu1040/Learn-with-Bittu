@@ -33,10 +33,7 @@
                 <li>const: Block-scoped constant, introduced in ES6.</li>
             </ul>
             <p>Example:</p>
-            <div class="code-snippet-container">
-                <button (click)="copyToClipboard(variableDeclarationSnippet)" class="copy-button">Copy</button>
-                <pre class="code-snippet">{{ variableDeclarationSnippet }}</pre>
-            </div>
+            <app-code-snippet [codeSnippet]="variableDeclarationSnippet" [copyButton]="copyButton"></app-code-snippet>
         </div>
     </div>
     
@@ -54,10 +51,9 @@
             <p>A closure is a combination of a function and the lexical environment within which that function was
                 declared. This allows the function to retain access to variables from its parent scope even after the
                 parent function has finished executing.</p>
-            <div class="code-snippet-container">
-                <button (click)="copyToClipboard(closureCodeSnippet)" class="copy-button">Copy</button>
-                <pre class="code-snippet">{{ closureCodeSnippet }}</pre>
-            </div>
+
+            <app-code-snippet [codeSnippet]="closureCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
+
         </div>
     </div>
 
@@ -73,10 +69,9 @@
             <h2 [ngClass]="{ 'active-topic':activeTopicId === 'currying' }">5. What is a currying in JavaScript?</h2>
             <p>A currying is a function that takes a function as an argument and returns a new function. The new
                 function takes the arguments of the original function and returns the result.</p>
-            <div class="code-snippet-container">
-                <button (click)="copyToClipboard(curryingCodeSnippet)" class="copy-button">Copy</button>
-                <pre class="code-snippet">{{ curryingCodeSnippet }}</pre>
-            </div>
+                
+            <app-code-snippet [codeSnippet]="curryingCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
+
         </div>
     </div>
 

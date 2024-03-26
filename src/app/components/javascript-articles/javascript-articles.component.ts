@@ -13,6 +13,8 @@ export class JavascriptArticlesComponent implements OnInit {
   JSTopics: any;
   activeTopicId: string | null = null;
 
+  copyButton:boolean= true;
+
   curryingCodeSnippet: string = curryingCodeSnippet;
   closureCodeSnippet: string = closureCodeSnippet;
   variableDeclarationSnippet: string=variableDeclarationSnippet;
