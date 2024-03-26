@@ -1,0 +1,17 @@
+.blog{
+  background-color: rgb(245, 245, 245);
+}
+.article-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  
+    /* Define the initial state of the image */
+    transform: scale(1);
+  }
+
+  
+  .article-image:hover {
+    /* Define the zoomed-in state of the image when hovered */
+    transform: scale(0.98);
+  }

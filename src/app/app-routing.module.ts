@@ -9,6 +9,7 @@ import { CodingQuestionsComponent } from './components/coding-questions/coding-q
 import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
 import { LearnOverviewComponent } from './module/learn/learn-overview/learn-overview.component';
 import { LearnJSComponent } from './module/learn/learn-js/learn-js.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/javascript-articles', pathMatch: 'full' },
@@ -18,9 +19,13 @@ const routes: Routes = [
   {path: 'javascript-articles/:topic', component: JavascriptArticlesComponent},
   {path: 'angular-articles', component: AngularArticlesComponent},
   {path: 'angular-articles/:topic', component: AngularArticlesComponent},
+  {path: 'blogs', component: BlogsComponent},
   {path: 'coding-questions', component: CodingQuestionsComponent},
   {path: 'snippets-image', component: SnippetsImageComponent},
 
+
+
+  
   {path: 'overview', component: LearnOverviewComponent},
   {path: 'interview-preparation', component: LearnJSComponent},
 

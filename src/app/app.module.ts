@@ -25,6 +25,7 @@ import { AngularArticlesComponent } from './components/angular-articles/angular-
 import { JavascriptArticlesComponent } from './components/javascript-articles/javascript-articles.component';
 import { CodingQuestionsComponent } from './components/coding-questions/coding-questions.component';
 import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SnippetsImageComponent } from './components/snippets-image/snippets-ima
     AngularArticlesComponent,
     JavascriptArticlesComponent,
     CodingQuestionsComponent,
-    SnippetsImageComponent
+    SnippetsImageComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
