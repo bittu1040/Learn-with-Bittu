@@ -1,24 +1,33 @@
 <div class="container mt-4 blog">
+  <div class="row">
+    <h2>Welcome to JavaScript Blog</h2>
+
+    <div class="col-md-4 mb-4">
+      <select class="form-select" [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        <option value="all">All</option>
+        <option value="javascript">JavaScript</option>
+        <option value="angular">Angular</option>
+      </select>
+    </div>
+    </div>
+
     <div class="row">
-        <h2>Welcome to JavaScript Blog</h2>
-      <div class="col-md-4 mb-4" *ngFor="let article of articles">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{ article.title }}</mat-card-title>
-          </mat-card-header>
-          <a href="{{ article.articleLink }}" target="_blank">
-            <img mat-card-image class="article-image" src="{{ article.imageURL }}" alt="Article Image">
-          </a>
-          <mat-card-content>
-            <p>{{ article.description }}</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <a href="{{ article.articleLink }}" target="_blank" mat-button>Read More</a>
-          </mat-card-actions>
-        </mat-card>
-      </div>
+    <div class="col-md-4 mb-4" *ngFor="let article of filteredArticles">
+      <mat-card *ngIf="selectedCategory === 'all' || article.category === selectedCategory">
+        <a href="{{ article.articleLink }}" target="_blank">
+          <img mat-card-image class="article-image" src="{{ article.imageURL }}" alt="Article Image">
+        </a>
+        <mat-card-content>
+          <p>{{ article.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="{{ article.articleLink }}" target="_blank" mat-button>Read More</a>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
+</div>
+
   
   
   

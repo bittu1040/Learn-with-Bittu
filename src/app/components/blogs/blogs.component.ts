@@ -9,10 +9,40 @@ import { blogList } from 'app/shared/blogs';
 export class BlogsComponent implements OnInit {
 
   articles=blogList;
-  constructor(){}
+  filteredArticles: any[] = [];
+
+  constructor() {
+    this.filterArticles();
+  }
+
 
   ngOnInit(): void {
     
   }
+
+  selectedCategory: string = 'all';
+
+  filterArticles() {
+    if (this.selectedCategory === 'all') {
+      this.filteredArticles = this.articles; 
+    } else {
+      this.filteredArticles = this.articles.filter(article => article.category === this.selectedCategory); 
+    }
+  }
+
+  onCategoryChange() {
+    this.filterArticles();
+  }
+
+
+  // get filteredArticles() {
+  //   return this.articles.filter(article => {
+  //     if (this.selectedCategory === 'all') {
+  //       return true; 
+  //     } else {
+  //       return article.category === this.selectedCategory;
+  //     }
+  //   });
+  // }
   
 }
