@@ -27,6 +27,9 @@ import { CodingQuestionsComponent } from './components/coding-questions/coding-q
 import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snippet.component';
+import { TableComponent } from './reuse-components/table/table.component';
+import { TableExampleComponent } from './components/table-example/table-example.component';
+import { MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snipp
     CodingQuestionsComponent,
     SnippetsImageComponent,
     BlogsComponent,
-    CodeSnippetComponent
+    CodeSnippetComponent,
+    TableComponent,
+    TableExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snipp
     MatExpansionModule,
     MatListModule,
     MatTreeModule,
+    MatTableModule,
     LearnModule ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

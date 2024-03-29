@@ -10,6 +10,7 @@ import { SnippetsImageComponent } from './components/snippets-image/snippets-ima
 import { LearnOverviewComponent } from './module/learn/learn-overview/learn-overview.component';
 import { LearnJSComponent } from './module/learn/learn-js/learn-js.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { TableExampleComponent } from './components/table-example/table-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/javascript-articles', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'blogs', component: BlogsComponent},
   {path: 'coding-questions', component: CodingQuestionsComponent},
   {path: 'snippets-image', component: SnippetsImageComponent},
+  {path: 'table', component: TableExampleComponent},
 
 
 
