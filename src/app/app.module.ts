@@ -30,6 +30,9 @@ import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snipp
 import { TableComponent } from './reuse-components/table/table.component';
 import { TableExampleComponent } from './components/table-example/table-example.component';
 import { MatTableModule} from '@angular/material/table';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,7 @@ import { MatTableModule} from '@angular/material/table';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule, 
     MatSlideToggleModule,
     MatCardModule,
@@ -65,6 +69,8 @@ import { MatTableModule} from '@angular/material/table';
     MatListModule,
     MatTreeModule,
     MatTableModule,
+    MatAutocompleteModule,
+    MatSelectModule,
     LearnModule ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
