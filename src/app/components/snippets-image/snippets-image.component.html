@@ -17,14 +17,21 @@
     <div class="row">
         <h2>Auto completion example</h2>
         <div class="col">
-            <form [formGroup]="exampleForm">
+            <form [formGroup]="cityFormGroup">
                 <mat-form-field>
-                    <mat-label>City</mat-label>
-                    <mat-select formControlName="city">
-                      <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-            </form>
+                  <mat-label>City</mat-label>
+                  <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let city of filteredCities | async" [value]="city">
+                        {{ city }}
+                    </mat-option>
+                    <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0" [value]="'not-found'">
+                        No matching cities found
+                    </mat-option>
+                </mat-autocomplete>
+                </mat-form-field>
+              </form>
         </div>
     </div>
 </div>
+
