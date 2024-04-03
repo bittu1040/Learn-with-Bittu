@@ -7,7 +7,7 @@
 
 
 <div class="container mt-4">
-    <h2 style="text-align: center;">Experience Web application mini features</h2>
+    <h2 style="text-align: center;">Experience Web application mini features in Angular</h2>
     <mat-divider></mat-divider>
     <div class="row">
         <h2>1. Auto completion example</h2>
@@ -32,15 +32,23 @@
     <div class="row mt-4">
         <h2>2. Product search example</h2>
         <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)"> </div>
-        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+        <ng-container *ngIf="products?.length > 0; else noProducts">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
             <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
-                    <p class="card-text">Category: {{ product.category }}</p>
-                </div>
+              <div class="card-body">
+                <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
+                <p class="card-text">Category: {{ product.category }}</p>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
+        </ng-container>
+        <ng-template #noProducts>
+          <div class="col">
+            <p>No products found.</p>
+          </div>
+        </ng-template>
+      </div>
+      
 
     <div class="row">
         
