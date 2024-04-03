@@ -16,4 +16,8 @@ export class DataSharingService {
     return this.http.get('https://restcountries.com/v3.1/all')
   }
 
+  getProductList(){
+    return this.http.get('https://fakestoreapi.com/products')
+  }
+
 }

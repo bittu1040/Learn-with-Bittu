@@ -6,25 +6,43 @@
  -->
 
 
-<div class="container vh-100 mt-4">
+<div class="container mt-4">
+    <h2 style="text-align: center;">Experience Web application mini features</h2>
+    <mat-divider></mat-divider>
     <div class="row">
-        <h2>Auto completion example</h2>
+        <h2>1. Auto completion example</h2>
         <div class="col">
             <form [formGroup]="cityFormGroup">
                 <mat-form-field>
-                  <mat-label>City</mat-label>
-                  <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
-                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                    <mat-option *ngFor="let city of filteredCities | async" [value]="city">
-                        {{ city }}
-                    </mat-option>
-                    <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0" [value]="'not-found'">
-                        No matching cities found
-                    </mat-option>
-                </mat-autocomplete>
+                    <mat-label>City</mat-label>
+                    <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let city of filteredCities | async" [value]="city">
+                            {{ city }}
+                        </mat-option>
+                        <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0"
+                            [value]="'not-found'">
+                            No matching cities found
+                        </mat-option>
+                    </mat-autocomplete>
                 </mat-form-field>
-              </form>
+            </form>
         </div>
     </div>
-</div>
+    <div class="row mt-4">
+        <h2>2. Product search example</h2>
+        <div><input type="text" class="form-control mb-3" placeholder="Search Products" [(ngModel)]="searchQuery"> </div>
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of filteredProductsDynamic">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
+                    <p class="card-text">Category: {{ product.category }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        
+    </div>
+</div>
