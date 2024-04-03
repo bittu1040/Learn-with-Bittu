@@ -14,6 +14,7 @@ export class JavascriptArticlesComponent implements OnInit {
   activeTopicId: string | null = null;
 
   copyButton:boolean= true;
+  searchQuery: string = '';
 
   curryingCodeSnippet: string = curryingCodeSnippet;
   closureCodeSnippet: string = closureCodeSnippet;
@@ -52,4 +53,8 @@ export class JavascriptArticlesComponent implements OnInit {
       element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
   }
+
+  get filteredTopics() {
+    return this.JSTopics.filter((topic:any) => topic.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+}
 }

@@ -1,19 +1,25 @@
 <div class="container">
-    <div class="row mt-2">
-        <div class="column">
+    <div class="row mt-2 mb-3">
+        <div class="col-lg-6">
             <div class="d-flex align-items-center mt-2">
                 <div>Topics</div>
                 <mat-icon>keyboard_arrow_right</mat-icon>
                 <div>JavaScript</div>
             </div>
         </div>
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery">
+        </div>
     </div>
+    
+    
+    
 
 
     <div class="row mt-2 mb-3">
         <div class="col">
             <div class="d-flex flex-wrap gap-2">
-                <div *ngFor="let topic of JSTopics" class="custom-box" (click)="navigateToJSTopic(topic.id)">
+                <div *ngFor="let topic of filteredTopics" class="custom-box" (click)="navigateToJSTopic(topic.id)">
                     {{topic.name}}</div>
             </div>
         </div>
