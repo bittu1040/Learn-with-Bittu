@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DataSharingService } from 'app/shared/data-sharing.service';
-import { Observable } from 'rxjs';
-import { map, startWith, take } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import { debounceTime, map, startWith, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-snippets-image',
@@ -17,6 +17,8 @@ export class SnippetsImageComponent implements OnInit {
 
   products: any;
   searchQuery: string = '';
+  private searchSubject = new Subject<string>();
+
 
 
   constructor(private formBuilder: FormBuilder, private data: DataSharingService) { }
@@ -28,6 +30,12 @@ export class SnippetsImageComponent implements OnInit {
 
     this.getCountryList();
     this.getProducts();
+
+    this.searchSubject.pipe(
+      debounceTime(600) 
+    ).subscribe(searchQuery => {
+      this.getFilteredProducts(searchQuery);
+    });
   }
 
   getCountryList() {
@@ -59,11 +67,14 @@ export class SnippetsImageComponent implements OnInit {
 
 
   onInputChange(event: any) {
-    this.searchQuery = event.target.value;
+    const searchQuery = event.target.value.toLowerCase();
+    this.searchSubject.next(searchQuery);
+  }
+
+  getFilteredProducts(searchQuery: string) {
     this.data.getProductList().subscribe((data: any) => {
-      this.products = data.filter((product: any) => {
-        return product.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-      }
+      this.products = data.filter((product: any) =>
+        product.title.toLowerCase().includes(searchQuery)
       );
     });
   }
