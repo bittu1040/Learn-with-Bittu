@@ -52,17 +52,20 @@ export class SnippetsImageComponent implements OnInit {
 
 
   getProducts() {
-    this.data.getProductList().pipe(
-      take(5)
-    ).subscribe((data:any) => {
-      this.products = data.slice(0, 8);
+    this.data.getProductList().subscribe((data: any) => {
+      this.products = data;
     });
   }
 
-  get filteredProductsDynamic() {
-    return this.products?.filter((product: any) =>
-      product.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-    );
+
+  onInputChange(event: any) {
+    this.searchQuery = event.target.value;
+    this.data.getProductList().subscribe((data: any) => {
+      this.products = data.filter((product: any) => {
+        return product.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+      }
+      );
+    });
   }
 
 }
