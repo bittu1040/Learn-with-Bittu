@@ -20,9 +20,17 @@
 
     <mat-divider></mat-divider>
 
+    <div class="row mt-3" id="angular-workflow">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-workflow' }">1. Explain the Angular workflow.</h2>
+            <p>The Angular workflow describes the process of creating, building, and deploying Angular applications.</p>
+            <p>It typically involves steps such as setting up the development environment, creating components and services, writing code, testing, and optimizing for production.</p>
+        </div>
+    </div>
+
     <div class="row mt-3" id="lifecycle-hooks">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'lifecycle-hooks' }">1. List down all Life Cycle Hooks in Angular</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'lifecycle-hooks' }">2. List down all Life Cycle Hooks in Angular</h2>
             <p>Angular provides 8 life cycle hooks. These are:</p>
             <ul style="display: flex; flex-direction: column; gap: 4px;">
                 <li>ngOnChanges</li>
@@ -37,21 +45,134 @@
         </div>
     </div>
     
-    <div class="row mt-3" id="one-way-and-two-way-data-binding">
+    <div class="row mt-3" id="component-communication">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'one-way-and-two-way-data-binding' }">2. What is Two-Way Data Binding in Angular?</h2>
-            <p>Two-way data binding in Angular means that the data flow happens in both directions: from the component class to the template and from the template to the component class. This is typically achieved using the [(ngModel)] syntax in Angular.</p>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'component-communication' }">3. Explain component communication in Angular.</h2>
+            <p>Component communication in Angular involves sharing data between Angular components.</p>
+            <p>There are several methods for component communication, including Input and Output properties, ViewChild and ContentChild decorators, and shared services.</p>
         </div>
     </div>
     
     <div class="row mt-3" id="directives">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'directives' }">3. Explain the difference between ngIf and ngShow in Angular.</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'directives' }">4. Explain the difference between ngIf and ngShow in Angular.</h2>
             <p>ngIf and ngShow are both Angular directives used for conditionally displaying elements in the DOM.</p>
             <ul style="display: flex; flex-direction: column; gap: 4px;">
                 <li><strong>ngIf:</strong> Removes or recreates the element in the DOM based on a condition. When the condition is false, the element is removed from the DOM. When the condition is true, the element is added to the DOM.</li>
                 <li><strong>ngShow:</strong> Hides or shows the element based on a condition using CSS display property. When the condition is false, the element is hidden by setting its display property to none. When the condition is true, the element is shown by setting its display property to its original value.</li>
             </ul>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="pipes">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'pipes' }">5. Explain Angular pipes.</h2>
+            <p>Angular pipes are used for data transformation within templates.</p>
+            <p>They allow developers to transform data before displaying it in the view. Angular provides several built-in pipes for common tasks such as formatting dates, numbers, and currency.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="injectable-and-singleton-services">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'injectable-and-singleton-services' }">6. Explain Injectable and Singleton Services in Angular.</h2>
+            <p>Injectable services in Angular are classes that are decorated with the Injectable() decorator.</p>
+            <p>Singleton services are services that are instantiated only once per application and are shared across the entire application.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="dependency-injection">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection' }">7. Explain Dependency Injection in Angular.</h2>
+            <p>Dependency Injection (DI) is a design pattern in which a class receives its dependencies from external sources rather than creating them itself.</p>
+            <p>In Angular, DI is used to provide instances of services to components, directives, pipes, and other services.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="host-listener-and-host-binding">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'host-listener-and-host-binding' }">8. Explain host listener and host binding in Angular.</h2>
+            <p>Host listener and host binding are Angular decorators used to listen to events and bind properties on the host element of a directive.</p>
+            <p>Host listener is used to listen to events such as mouse clicks, keyboard events, etc., while host binding is used to bind properties of the host element.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="one-way-and-two-way-data-binding">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'one-way-and-two-way-data-binding' }">9. Explain one-way and two-way data binding in Angular.</h2>
+            <p>One-way data binding refers to the flow of data from the component class to the template (view).</p>
+            <p>Two-way data binding refers to the synchronization of data between the component class and the template. Changes in the template update the component class and vice versa.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="route-auth-guards">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-auth-guards' }">10. Explain Route/Auth Guards in Angular.</h2>
+            <p>Route guards in Angular are used to control access to routes in an Angular application.</p>
+            <p>Auth guards specifically ensure that only authenticated users are allowed to access certain routes. They can be used to redirect unauthorized users to a login page or display a forbidden message.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="lazy-loading">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'lazy-loading' }">11. Explain Lazy Loading in Angular.</h2>
+            <p>Lazy loading is a technique in Angular where modules are loaded asynchronously, on-demand, rather than upfront when the application starts.</p>
+            <p>It helps improve the initial loading time of the application by only loading the necessary modules when they are required.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="template-reactive-forms-and-validations">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'template-reactive-forms-and-validations' }">12. Explain Template/Reactive Forms and Validations in Angular.</h2>
+            <p>Template-driven forms and reactive forms are two approaches for handling forms in Angular.</p>
+            <p>Template-driven forms rely on directives in the template, while reactive forms use reactive programming with FormControl, FormGroup, and FormBuilder classes.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="observable-and-promises">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'observable-and-promises' }">13. Explain Observable and Promises in Angular.</h2>
+            <p>Observable and Promises are both used for handling asynchronous operations in Angular.</p>
+            <p>Observables are streams of data that can be subscribed to, while Promises represent a single future value or error that will be resolved asynchronously.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="rxjs-operators">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'rxjs-operators' }">14. Explain RXJS Operators in Angular.</h2>
+            <p>RXJS Operators are functions used to manipulate the data emitted by Observables.</p>
+            <p>They allow developers to perform operations such as filtering, mapping, merging, and combining Observables to create new streams of data.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="subject-and-behavior-subject">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'subject-and-behavior-subject' }">15. Explain Subject and Behavior Subject in Angular.</h2>
+            <p>Subject and Behavior Subject are types of Observables used for multicasting.</p>
+            <p>Subject is a special type of Observable that allows values to be multicast to multiple Observers, while Behavior Subject is a type of Subject that stores the latest value and emits it to new subscribers.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="http-interceptor">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'http-interceptor' }">16. Explain HTTP (Req/Res) Interceptor in Angular.</h2>
+            <p>HTTP Interceptors in Angular are middleware that intercept HTTP requests and responses.</p>
+            <p>They are used to modify or transform requests or responses globally in an Angular application.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="change-detection-and-onpush">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'change-detection-and-onpush' }">17. Explain Change Detection and OnPush in Angular.</h2>
+            <p>Change Detection in Angular is the process of detecting changes to the application state and updating the view accordingly.</p>
+            <p>OnPush is a change detection strategy in Angular that triggers change detection only when input properties of a component change or when an event is emitted from the component.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-3" id="dist-and-bundle">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dist-and-bundle' }">18. Explain dist and bundle in Angular.</h2>
+            <p>Dist and bundle refer to the distribution and bundling of Angular applications.</p>
+            <p>When an Angular application is built for production, it is compiled, minified, and bundled into one or more JavaScript files that are ready for deployment.</p>
         </div>
     </div>
     
