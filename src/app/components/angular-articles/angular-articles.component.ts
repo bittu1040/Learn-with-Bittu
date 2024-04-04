@@ -27,16 +27,6 @@ export class AngularArticlesComponent implements OnInit {
   }
 
 
-  copyToClipboard(codeSnippet: string) { // Accept the code snippet as a parameter
-    const el = document.createElement('textarea');
-    el.value = codeSnippet;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    alert('Code snippet copied to clipboard!');
-  }
-
   navigateToAngularTopic(topic: string): void {
     const sanitizedTopic = topic.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
     this.router.navigate(['/angular-articles', topic]);
