@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DataSharingService } from 'app/shared/data-sharing.service';
-import { Observable, Subject } from 'rxjs';
-import { debounceTime, map, startWith, take } from 'rxjs/operators';
+import { Observable, Subject, of } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map, startWith, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-snippets-image',
@@ -32,10 +32,12 @@ export class SnippetsImageComponent implements OnInit {
     this.getProducts();
 
     this.searchSubject.pipe(
-      debounceTime(600) 
+      debounceTime(600)
     ).subscribe(searchQuery => {
       this.getFilteredProducts(searchQuery);
     });
+
+    this.RxjSOperator();
   }
 
   getCountryList() {
@@ -77,6 +79,29 @@ export class SnippetsImageComponent implements OnInit {
         product.title.toLowerCase().includes(searchQuery)
       );
     });
+  }
+
+
+
+  RxjSOperator() {
+    // distinctUntilChanged
+    // Examples for premitives values
+    of(1, 1, 2, 2, 3, 4, 2, 5, 6).pipe(
+      distinctUntilChanged()
+    ).subscribe((data) => {
+      console.log(data);  // 1,2,3,4,2,5,6
+    })
+
+
+    // Examples for object values
+    let obj1 = { name: "Bittu" };
+    let obj2 = { name: "Bittu" };
+    let obj3 = { name: "Bittu" };
+    of(obj1, obj2, obj3).pipe(
+      distinctUntilChanged((prev, curr) => prev.name === curr.name)
+    ).subscribe((data) => {
+      console.log(data);   // {name: 'Bittu'}
+    })
   }
 
 }
