@@ -37,7 +37,6 @@ export class SnippetsImageComponent implements OnInit {
       this.getFilteredProducts(searchQuery);
     });
 
-    this.RxjSOperator();
   }
 
   getCountryList() {
@@ -82,26 +81,5 @@ export class SnippetsImageComponent implements OnInit {
   }
 
 
-
-  RxjSOperator() {
-    // distinctUntilChanged
-    // Examples for premitives values
-    of(1, 1, 2, 2, 3, 4, 2, 5, 6).pipe(
-      distinctUntilChanged()
-    ).subscribe((data) => {
-      console.log(data);  // 1,2,3,4,2,5,6
-    })
-
-
-    // Examples for object values
-    let obj1 = { name: "Bittu" };
-    let obj2 = { name: "Bittu" };
-    let obj3 = { name: "Bittu" };
-    of(obj1, obj2, obj3).pipe(
-      distinctUntilChanged((prev, curr) => prev.name === curr.name)
-    ).subscribe((data) => {
-      console.log(data);   // {name: 'Bittu'}
-    })
-  }
 
 }
