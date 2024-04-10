@@ -141,7 +141,7 @@
     </div>
     <div class="row mt-3" id="explain-this-in-javascript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">12. Explain "this" in JavaScript.</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">13. Explain "this" in JavaScript.</h2>
             <p>Explanation about the "this" keyword in JavaScript.</p>
         </div>
     </div>
@@ -158,15 +158,53 @@
         </div>
     </div>
 
+    <div class="row mt-3" id="async-and-defer">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">16. async-and-defer ?</h2>
+            <p>The attributes `async` and `defer` are used in HTML script tags to control the loading and execution of external JavaScript files.</p>
+            <p><strong>async:</strong> When the `async` attribute is present, the script will be fetched asynchronously, meaning it will not block the parsing of the HTML document. The script will be executed as soon as it is downloaded, regardless of the order it appears in the document.</p>
+            <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
+            <p>Using `async` and `defer` attributes can help improve page loading performance by allowing scripts to be loaded in parallel with other resources without blocking rendering or delaying the document's interactive state.</p>
+        </div>
+    </div>
+
+    <div class="row mt-3" id="oops-in-javascript">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">17. OOPS in JavaScript</h2>
+            <p>4 Pillar of OOPS in JavaScript</p>
+            <ol>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Abstraction</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row mt-3" id="design-pattern-in-javscript">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">18. design-pattern-in-javscript?</h2>
+            <p>List down commonly used design-pattern-in-javscript.</p>
+            <ol>
+               <li> Constructor pattern</li>
+               <li> Factory pattern</li>
+               <li> Module pattern</li>
+               <li> Observer pattern</li>
+               <li> Prototype pattern</li>
+               <li> Proxy pattern</li>
+               <li> Singleton pattern</li>
+            </ol>
+        </div>
+    </div>
+
     <div class="row mt-3" id="frequently-asked-questions">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">16. frequently-asked-questions for frontend developers?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">19. frequently-asked-questions for frontend developers?</h2>
             <p>frequently-asked-questions for frontend developers and need to know topics</p>
             <ol>
                 <li>Debounce and Throttle</li>
                 <li>Pure and impure pipe/function</li>
                 <li>Mutability and immutability</li>
-                <li>Async and defer</li>
                 <li>CORS</li>
                 <li>Web Performance Optimization</li>
                 <li>Responsive Web Design</li>
@@ -176,9 +214,6 @@
                 <li>JWT</li>
                 <li>localStorage/sessionStorage</li>
                 <li>How to debug your frontend application</li>
-                <li>OOPs concepts</li>
-                <li>Design Patterns</li>
-                <li>What you know about unit testing</li>
                 <li>Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)</li>
             </ol>
         </div>

@@ -56,6 +56,9 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'explain-this-in-javascript', name: 'Explain "this" in JavaScript', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'document-object-model-dom', name: 'Document Object Model (DOM)', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'template-literals-destructuring-spread-operator-rest-operator', name: 'Template literals, Destructuring, Spread Operator, rest operator', category: 'javascript', difficulty: 'easy', showDescription: false },
+  { id: 'async-and-defer', name: 'Async and defer', category: 'javascript', difficulty: 'medium', showDescription: false },
+  { id: 'oops-in-javascript', name: 'OOPS in JavaScript', category: 'javascript', difficulty: 'medium', showDescription: false },
+  { id: 'design-pattern-in-javscript', name: "Design Pattern in JavaScript", category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'frequently-asked-questions', name: 'Frequently Asked Questions', category: 'javascript', difficulty: 'easy', showDescription: false },
 
   { id: 'angular-workflow', name: 'Angular workflow', category: 'angular', difficulty: 'medium', showDescription: false },
@@ -75,7 +78,8 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'subject-and-behavior-subject', name: 'Subject and behavior subject', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'http-interceptor', name: 'HTTP (Req/Res) Interceptor', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'change-detection-and-onpush', name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
-  { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false }
+  { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'unit-testing', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },
 ];
 
 
