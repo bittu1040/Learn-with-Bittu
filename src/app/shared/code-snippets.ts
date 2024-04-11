@@ -10,7 +10,8 @@ function SumOfThee(a:number){
 }
 console.log(SumOfThee(2)(3)(4));  // 9 `; 
                                      
-export const closure = 
+
+export const closureCodeSnippet = `
 function makeCounter() {
   let count = 0;
   return function() {
@@ -18,9 +19,6 @@ function makeCounter() {
     return count;
   };
 }
-
-export const closureCodeSnippet = `
-${closure.toString()}
 let counter = makeCounter();
 console.log(counter());  // 1
 console.log(counter());  // 2`;
