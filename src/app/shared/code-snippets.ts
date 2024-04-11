@@ -1,17 +1,19 @@
 
-export const curryingCodeSnippet: string = `
-function SumOfThee(a){
-    return function(b){
-        return function(c){
+export const currying = 
+function SumOfThee(a:number){
+    return function(b:number){
+        return function(c:number){
             return a + b + c;
         }
     }
 }
 
-console.log(SumOfThee(2)(3)(4));  // 9
-`;
 
-export const closureCodeSnippet: string = `
+
+export const curryingCodeSnippet = `${currying.toString()}
+console.log(SumOfThee(2)(3)(4));  // 9 `; 
+                                     
+export const closure = 
 function makeCounter() {
   let count = 0;
   return function() {
@@ -20,10 +22,11 @@ function makeCounter() {
   };
 }
 
+
+export const closureCodeSnippet = `${closure.toString()}
 let counter = makeCounter();
 console.log(counter());  // 1
-console.log(counter());  // 2
-`;
+console.log(counter());  // 2`;
 
 export const variableDeclarationSnippet: string=`
 // var example
