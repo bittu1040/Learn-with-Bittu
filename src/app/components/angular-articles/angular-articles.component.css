@@ -5,6 +5,11 @@
     border: 1px solid rgb(222, 221, 221);
 }
 
+.row:nth-child(n+3){
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    padding: 1rem;
+    border-radius: 6px;
+  }
 
 .custom-box:hover {
     background-color: #AF69EF;

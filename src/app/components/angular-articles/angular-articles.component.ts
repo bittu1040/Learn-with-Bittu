@@ -12,6 +12,7 @@ export class AngularArticlesComponent implements OnInit {
 
   AngularTopics:any;
   activeTopicId: string | null = null;
+  searchQuery: string = '';
 
 
   constructor(private router: Router, private el: ElementRef, private shared: DataSharingService) { }
@@ -36,5 +37,9 @@ export class AngularArticlesComponent implements OnInit {
       element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
   }
+
+  get filteredTopics() {
+    return this.AngularTopics.filter((topic:any) => topic.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+}
 
 }
