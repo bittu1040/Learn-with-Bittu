@@ -8,7 +8,8 @@ function SumOfThee(a:number){
     }
 }
 
-export const curryingCodeSnippet = `${currying.toString()}
+export const curryingCodeSnippet = `
+${currying.toString()}
 console.log(SumOfThee(2)(3)(4));  // 9 `; 
                                      
 export const closure = 
@@ -20,7 +21,8 @@ function makeCounter() {
   };
 }
 
-export const closureCodeSnippet = `${closure.toString()}
+export const closureCodeSnippet = `
+${closure.toString()}
 let counter = makeCounter();
 console.log(counter());  // 1
 console.log(counter());  // 2`;
@@ -39,7 +41,6 @@ const z = 30;`;
 
 
 export const RestAndDestructuringSnippet: string=`
-
 // Destructuring arrays
 const numbers = [1, 2, 3];
 const [a, b, c] = numbers;
