@@ -1,15 +1,13 @@
 
-export const currying = 
-function SumOfThee(a:number){
-    return function(b:number){
-        return function(c:number){
-            return a + b + c;
-        }
-    }
-}
 
 export const curryingCodeSnippet = `
-${currying.toString()}
+function SumOfThee(a:number){
+  return function(b:number){
+      return function(c:number){
+          return a + b + c;
+      }
+  }
+}
 console.log(SumOfThee(2)(3)(4));  // 9 `; 
                                      
 export const closure = 
