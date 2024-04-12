@@ -133,27 +133,40 @@
             <p>Explanation about asynchronous JavaScript using Promises and async/await.</p>
         </div>
     </div>
+
+    <div class="row mt-3" id="promise-methods">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'promise-methods' }">12. Promise Methods ?</h2>
+            <p>Promise methods are fundamental to asynchronous JavaScript programming, providing a way to handle asynchronous operations and their results.</p>
+            <p><strong>Promise.resolve():</strong> This method returns a Promise object that is resolved with a given value. It is commonly used to convert non-Promise values into Promise objects, allowing consistent handling of asynchronous operations.</p>
+            <p><strong>Promise.reject():</strong> Conversely, Promise.reject() returns a Promise object that is rejected with a given reason (typically an Error object). It is useful for signaling that an asynchronous operation has failed or encountered an error condition.</p>
+            <p><strong>Promise.all():</strong> Promise.all() takes an iterable of Promises as input and returns a single Promise that resolves when all of the input Promises have resolved, or rejects if any of the input Promises reject. It is commonly used when you need to perform multiple asynchronous operations concurrently and wait for all of them to complete before proceeding.</p>
+            <p><strong>Promise.race():</strong> In contrast, Promise.race() takes an iterable of Promises and returns a Promise that resolves or rejects as soon as one of the input Promises resolves or rejects, with the value or reason from that Promise. It is useful for scenarios where you want to respond as soon as any one of multiple asynchronous operations completes.</p>
+            <p>Understanding and effectively using these Promise methods is crucial for writing robust and efficient asynchronous JavaScript code, enabling developers to handle asynchronous operations gracefully.</p>
+        </div>
+    </div>
+    
     <div class="row mt-3" id="call-apply-and-bind">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'call-apply-and-bind' }">12. What are call, apply, and bind?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'call-apply-and-bind' }">13. What are call, apply, and bind?</h2>
             <p>Explanation about call, apply, and bind methods in JavaScript.</p>
         </div>
     </div>
     <div class="row mt-3" id="explain-this-in-javascript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">13. Explain "this" in JavaScript.</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">14. Explain "this" in JavaScript.</h2>
             <p>Explanation about the "this" keyword in JavaScript.</p>
         </div>
     </div>
     <div class="row mt-3" id="document-object-model-dom">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'document-object-model-dom' }">14. What is the Document Object Model (DOM)?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'document-object-model-dom' }">15. What is the Document Object Model (DOM)?</h2>
             <p>Explanation about the Document Object Model (DOM).</p>
         </div>
     </div>
     <div class="row mt-3" id="template-literals-destructuring-spread-operator-rest-operator">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'template-literals-destructuring-spread-operator-rest-operator' }">15. What are template literals, destructuring, spread operator, and rest operator?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'template-literals-destructuring-spread-operator-rest-operator' }">16. What are template literals, destructuring, spread operator, and rest operator?</h2>
             <p>Explanation about template literals, destructuring, spread operator, and rest operator.</p>
             <app-code-snippet [codeSnippet]="RestAndDestructuringSnippet" [copyButton]="copyButton"></app-code-snippet>
         </div>
@@ -161,7 +174,7 @@
 
     <div class="row mt-3" id="async-and-defer">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">16. async-and-defer ?</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">17. async-and-defer ?</h2>
             <p>The attributes `async` and `defer` are used in HTML script tags to control the loading and execution of external JavaScript files.</p>
             <p><strong>async:</strong> When the `async` attribute is present, the script will be fetched asynchronously, meaning it will not block the parsing of the HTML document. The script will be executed as soon as it is downloaded, regardless of the order it appears in the document.</p>
             <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
@@ -169,9 +182,20 @@
         </div>
     </div>
 
+    <div class="row mt-3" id="debounce-and-throttle">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'debounce-and-throttle' }">18. Debounce and Throttle ?</h2>
+            <p>The techniques of 'debounce' and 'throttle' are used in web development to control the frequency of execution of a function, typically used in event handling scenarios.</p>
+            <p><strong>Debounce:</strong> When using debounce, the execution of a function is delayed until after a certain amount of time has passed since the last invocation of the function. This is particularly useful when dealing with events such as user input, where you want to wait for a pause before triggering an action to avoid excessive calls, such as search suggestions in a search bar.</p>
+            <p><strong>Throttle:</strong> Throttle, on the other hand, limits the rate at which a function can be called. It ensures that the function is executed at most once per specified time interval. This is beneficial for scenarios like scroll events, where you want to ensure that a function is not called too frequently, preventing performance issues.</p>
+            <p>Implementing debounce and throttle techniques can optimize performance and improve the user experience by controlling the frequency of function execution, especially in situations with high event triggers.</p>
+        </div>
+    </div>
+    
+
     <div class="row mt-3" id="oops-in-javascript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">17. OOPS in JavaScript</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">19. OOPS in JavaScript</h2>
             <p>4 Pillar of OOPS in JavaScript</p>
             <ol>
                 <li>Encapsulation</li>
@@ -184,7 +208,7 @@
 
     <div class="row mt-3" id="design-pattern-in-javscript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">18. design-pattern-in-javscript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">20. design-pattern-in-javscript?</h2>
             <p>List down commonly used design-pattern-in-javscript.</p>
             <ol>
                <li> Constructor pattern</li>
@@ -200,10 +224,9 @@
 
     <div class="row mt-3" id="frequently-asked-questions">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">19. frequently-asked-questions for frontend developers?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">21. frequently-asked-questions for frontend developers?</h2>
             <p>frequently-asked-questions for frontend developers and need to know topics</p>
             <ol>
-                <li>Debounce and Throttle</li>
                 <li>Pure and impure pipe/function</li>
                 <li>Mutability and immutability</li>
                 <li>CORS</li>
