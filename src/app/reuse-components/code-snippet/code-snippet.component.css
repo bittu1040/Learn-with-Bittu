@@ -5,8 +5,6 @@
     border: 1px solid #ced4da;
     border-radius: 5px;
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
     background-color: #000000;
     color: #ff9900;
   }
@@ -19,6 +17,7 @@
   .code-body {
     flex: 1; 
     overflow-x: auto;
+
   }
   
   .copy-button {
@@ -34,5 +33,7 @@
   .code-snippet {
     margin: 0;
     padding: 0 10px 10px 10px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
   }
   
