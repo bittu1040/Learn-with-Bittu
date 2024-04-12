@@ -1,7 +1,7 @@
 
 
-export const curryingCodeSnippet = `
-function SumOfThee(a:number){
+export const curryingCodeSnippet =
+`function SumOfThee(a:number){
   return function(b:number){
       return function(c:number){
           return a + b + c;
@@ -11,8 +11,8 @@ function SumOfThee(a:number){
 console.log(SumOfThee(2)(3)(4));  // 9 `; 
                                      
 
-export const closureCodeSnippet = `
-function makeCounter() {
+export const closureCodeSnippet = 
+`function makeCounter() {
   let count = 0;
   return function() {
     count++;
@@ -25,8 +25,8 @@ console.log(counter());  // 2`;
 
 
 
-export const variableDeclarationSnippet: string=`
-// var example
+export const variableDeclarationSnippet: string=
+`// var example
 var x = 10;
 
 // let example
@@ -36,8 +36,8 @@ let y = 20;
 const z = 30;`;
 
 
-export const RestAndDestructuringSnippet: string=`
-// Destructuring arrays
+export const RestAndDestructuringSnippet: string=
+`// Destructuring arrays
 const numbers = [1, 2, 3];
 const [a, b, c] = numbers;
 console.log(a, b, c); // Output: 1 2 3

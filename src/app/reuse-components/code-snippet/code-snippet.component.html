@@ -1,6 +1,10 @@
 <div class="code-snippet-container">
+  <div class="code-header">
     <button *ngIf="copyButton" (click)="copyToClipboard(codeSnippet)" class="copy-button">Copy</button>
+  </div>
+  <div class="code-body">
     <pre class="code-snippet">{{ codeSnippet }}</pre>
+  </div>
 </div>
 
 
