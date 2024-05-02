@@ -58,6 +58,8 @@ export class JavascriptArticlesComponent implements OnInit {
   }
 
   get filteredTopics() {
-    return this.JSTopics.filter((topic:any) => topic.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
-}
+    return this.JSTopics
+      .filter((topic: any) => topic.name.toLowerCase().includes(this.searchQuery.toLowerCase()))
+      .sort(((a:any, b:any) => a.name.localeCompare(b.name)))
+  }
 }
