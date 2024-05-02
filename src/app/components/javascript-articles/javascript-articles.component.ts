@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, variableDeclarationSnippet } from 'app/shared/code-snippets';
+import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, deepCopySnippet, shallowCopySnippet, variableDeclarationSnippet } from 'app/shared/code-snippets';
 import { DataSharingService } from 'app/shared/data-sharing.service';
 import { listOfQuestions } from 'app/shared/topics';
 @Component({
@@ -19,7 +19,9 @@ export class JavascriptArticlesComponent implements OnInit {
   curryingCodeSnippet: string = curryingCodeSnippet;
   closureCodeSnippet: string = closureCodeSnippet;
   variableDeclarationSnippet: string=variableDeclarationSnippet;
-  RestAndDestructuringSnippet: string= RestAndDestructuringSnippet
+  RestAndDestructuringSnippet: string= RestAndDestructuringSnippet;
+  shallowCopySnippet: string= shallowCopySnippet;
+  deepCopySnippet: string= deepCopySnippet;
 
   constructor(private router: Router, private el: ElementRef, private shared: DataSharingService){}
 

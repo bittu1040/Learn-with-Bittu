@@ -64,3 +64,32 @@ const sum = (...numbers) => {
 console.log(sum(1, 2, 3)); // Output: 6
 
 `
+
+
+
+export const shallowCopySnippet: string=`
+// Original array with nested values
+    let arr1 = [10, 20, { nestedKey: 30 }, 40];
+    
+    // Shallow copy of 'arr1'
+    let arr2 = Object.assign([], arr1);
+    
+    // Modify 'arr2', 'arr1' affected
+    arr2[2].nestedKey = 11;
+`
+
+export const deepCopySnippet: string=`
+// Original array of objects with nested values
+    let students = [
+      { id: 1, name: 'abc', details: { age: 23 } },
+      { id: 2, name: 'def', details: { age: 24 } },
+      { id: 3, name: 'ghi', details: { age: 25 } }
+    ];
+    
+    // Deep copy of 'students'
+    let studentsCopy = JSON.parse(JSON.stringify(students));
+    
+    // Modify 'studentsCopy', 'students' remains unaffected
+    studentsCopy[1].details.age = 30;
+    
+`

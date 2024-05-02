@@ -227,7 +227,7 @@
 
     <div class="row mt-3" id="design-pattern-in-javscript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">21. design-pattern-in-javscript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">21. Design Pattern in JavaScript</h2>
             <p>List down commonly used design-pattern-in-javscript.</p>
             <ol>
                <li> Constructor pattern</li>
@@ -241,9 +241,27 @@
         </div>
     </div>
 
+    <div class="row mt-3" id="deep-copy-shallow-copy">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'deep-copy-shallow-copy' }">Deep Copy and Shallow Copy in JavaScript</h2>
+            <p>Deep copy and shallow copy are essential concepts in JavaScript, particularly when dealing with nested data structures like arrays of objects or objects containing other objects.</p>
+            <b>Shallow Copy </b>
+            <p>A shallow copy creates a new object but only copies references to the nested structures. This means that modifications made to the nested structures in the copied object will also affect the original object, and vice versa.</p>
+            <app-code-snippet [codeSnippet]="shallowCopySnippet" [copyButton]="copyButton"></app-code-snippet>
+            <p>In this example, modifying <code>arr2</code> affects <code>arr1</code> as well.</p>
+            
+            <b>Deep Copy</b>
+            <p>A deep copy, on the other hand, creates a new object with its own values, completely independent of the original object, including all nested structures. Changes made to the copied object will not affect the original object, and vice versa.</p>
+            <app-code-snippet [codeSnippet]="deepCopySnippet" [copyButton]="copyButton"></app-code-snippet>
+            <p>In this example, modifying <code>studentsCopy</code> does not affect <code>students</code>.</p>
+            <p>Understanding the difference between deep copy and shallow copy is crucial for managing data effectively in JavaScript applications.</p>
+        </div>
+    </div>
+    
+
     <div class="row mt-3" id="frequently-asked-questions">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">22. frequently-asked-questions for frontend developers?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">23. frequently-asked-questions for frontend developers?</h2>
             <p>frequently-asked-questions for frontend developers and need to know topics</p>
             <ol>
                 <li>Pure and impure pipe/function</li>
