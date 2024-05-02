@@ -59,6 +59,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'template-literals-destructuring-spread-operator-rest-operator', name: 'Template literals, Destructuring, Spread Operator, rest operator', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'ES6-feature', name: 'ES6 feature', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'async-and-defer', name: 'Async and defer', category: 'javascript', difficulty: 'medium', showDescription: false },
+  { id: 'event-delegation-and-event-propagation', name: 'Event delegation and event propagation ', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'debounce-and-throttle', name: 'Debounce and Throttle', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'oops-in-javascript', name: 'OOPS in JavaScript', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'design-pattern-in-javscript', name: "Design Pattern in JavaScript", category: 'javascript', difficulty: 'easy', showDescription: false },
