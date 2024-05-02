@@ -172,9 +172,28 @@
         </div>
     </div>
 
+    <div class="row mt-3" id="ES6-feature">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'ES6-feature' }">17. ES6 new feature ?</h2>
+            <ol>
+                <li>Template literals</li>
+                <li>Destructuring</li>
+                <li>Arrow functions</li>
+                <li>let and const</li>
+                <li>Classes</li>
+                <li>Default parameters</li>
+                <li>Spread syntax</li>
+                <li>Rest parameters</li>
+                <li>Object shorthand</li>
+                <li>Array methods like map(), filter(), and reduce()</li>
+            </ol>
+        </div>
+    </div>
+
+
     <div class="row mt-3" id="async-and-defer">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">17. async-and-defer ?</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">18. async-and-defer ?</h2>
             <p>The attributes `async` and `defer` are used in HTML script tags to control the loading and execution of external JavaScript files.</p>
             <p><strong>async:</strong> When the `async` attribute is present, the script will be fetched asynchronously, meaning it will not block the parsing of the HTML document. The script will be executed as soon as it is downloaded, regardless of the order it appears in the document.</p>
             <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
@@ -184,7 +203,7 @@
 
     <div class="row mt-3" id="debounce-and-throttle">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'debounce-and-throttle' }">18. Debounce and Throttle ?</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'debounce-and-throttle' }">19. Debounce and Throttle ?</h2>
             <p>The techniques of 'debounce' and 'throttle' are used in web development to control the frequency of execution of a function, typically used in event handling scenarios.</p>
             <p><strong>Debounce:</strong> When using debounce, the execution of a function is delayed until after a certain amount of time has passed since the last invocation of the function. This is particularly useful when dealing with events such as user input, where you want to wait for a pause before triggering an action to avoid excessive calls, such as search suggestions in a search bar.</p>
             <p><strong>Throttle:</strong> Throttle, on the other hand, limits the rate at which a function can be called. It ensures that the function is executed at most once per specified time interval. This is beneficial for scenarios like scroll events, where you want to ensure that a function is not called too frequently, preventing performance issues.</p>
@@ -195,7 +214,7 @@
 
     <div class="row mt-3" id="oops-in-javascript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">19. OOPS in JavaScript</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">20. OOPS in JavaScript</h2>
             <p>4 Pillar of OOPS in JavaScript</p>
             <ol>
                 <li>Encapsulation</li>
@@ -208,7 +227,7 @@
 
     <div class="row mt-3" id="design-pattern-in-javscript">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">20. design-pattern-in-javscript?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">21. design-pattern-in-javscript?</h2>
             <p>List down commonly used design-pattern-in-javscript.</p>
             <ol>
                <li> Constructor pattern</li>
@@ -224,7 +243,7 @@
 
     <div class="row mt-3" id="frequently-asked-questions">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">21. frequently-asked-questions for frontend developers?</h2>
+            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">22. frequently-asked-questions for frontend developers?</h2>
             <p>frequently-asked-questions for frontend developers and need to know topics</p>
             <ol>
                 <li>Pure and impure pipe/function</li>

@@ -57,6 +57,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'explain-this-in-javascript', name: 'Explain "this" in JavaScript', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'document-object-model-dom', name: 'Document Object Model (DOM)', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'template-literals-destructuring-spread-operator-rest-operator', name: 'Template literals, Destructuring, Spread Operator, rest operator', category: 'javascript', difficulty: 'easy', showDescription: false },
+  { id: 'ES6-feature', name: 'ES6 feature', category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'async-and-defer', name: 'Async and defer', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'debounce-and-throttle', name: 'Debounce and Throttle', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'oops-in-javascript', name: 'OOPS in JavaScript', category: 'javascript', difficulty: 'medium', showDescription: false },
