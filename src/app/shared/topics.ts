@@ -63,6 +63,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'debounce-and-throttle', name: 'Debounce and Throttle', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'oops-in-javascript', name: 'OOPS in JavaScript', category: 'javascript', difficulty: 'medium', showDescription: false },
   { id: 'design-pattern-in-javscript', name: "Design Pattern in JavaScript", category: 'javascript', difficulty: 'easy', showDescription: false },
+  { id: 'webpack', name: "webpack", category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'deep-copy-shallow-copy', name: "Deep Copy and Shallow Copy", category: 'javascript', difficulty: 'easy', showDescription: false },
   { id: 'frequently-asked-questions', name: 'Frequently Asked Questions', category: 'javascript', difficulty: 'easy', showDescription: false },
 

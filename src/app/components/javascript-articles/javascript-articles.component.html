@@ -199,7 +199,9 @@
             <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
             <p>Using `async` and `defer` attributes can help improve page loading performance by allowing scripts to be loaded in parallel with other resources without blocking rendering or delaying the document's interactive state.</p>
         </div>
-    </div><div class="row mt-3" id="event-delegation-and-event-propagation">
+    </div>
+    
+    <div class="row mt-3" id="event-delegation-and-event-propagation">
         <div class="col">
             <h2 [ngClass]="{ 'active-topic': activeTopicId === 'event-delegation-and-event-propagation' }">19. Event Delegation and Event Propagation ?</h2>
             <p>Event delegation and event propagation are related concepts in web development, but they address different aspects of handling events in the DOM.</p>
@@ -272,6 +274,14 @@
             <p>Understanding the difference between deep copy and shallow copy is crucial for managing data effectively in JavaScript applications.</p>
         </div>
     </div>
+
+    <div class="row mt-3" id="webpack">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'webpack' }">25. Webpack Basics</h2>
+            <p>Webpack is a popular module bundler for JavaScript applications, widely used in modern web development workflows. It provides a powerful set of features for managing and optimizing assets, including JavaScript files, CSS stylesheets, images, and more.</p>
+        </div>
+    </div>
+    
     
 
     <div class="row mt-3" id="frequently-asked-questions">
