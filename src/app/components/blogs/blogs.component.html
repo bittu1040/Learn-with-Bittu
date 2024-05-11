@@ -9,9 +9,9 @@
         <option value="angular">Angular</option>
       </select>
     </div>
-    </div>
+  </div>
 
-    <div class="row">
+  <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let article of filteredArticles">
       <mat-card *ngIf="selectedCategory === 'all' || article.category === selectedCategory">
         <a href="{{ article.articleLink }}" target="_blank">
@@ -27,7 +27,3 @@
     </div>
   </div>
 </div>
-
-  
-  
-  
