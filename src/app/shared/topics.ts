@@ -83,6 +83,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'rxjs-operators', name: 'RXJS Operators', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'subject-and-behavior-subject', name: 'Subject and behavior subject', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'http-interceptor', name: 'HTTP (Req/Res) Interceptor', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'optimization-technique-in-angular', name: 'Optimization technique in Angular', category: 'angular', difficulty: 'medium', showDescription: false},
   { id: 'change-detection-and-onpush', name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'unit-testing', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },

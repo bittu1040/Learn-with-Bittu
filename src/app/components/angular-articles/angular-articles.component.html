@@ -175,7 +175,7 @@
             <p>They are used to modify or transform requests or responses globally in an Angular application.</p>
         </div>
     </div>
-    
+
     <div class="row mt-3" id="change-detection-and-onpush">
         <div class="col">
             <h2 [ngClass]="{ 'active-topic': activeTopicId === 'change-detection-and-onpush' }">17. Explain Change Detection and OnPush in Angular.</h2>
@@ -183,10 +183,31 @@
             <p>OnPush is a change detection strategy in Angular that triggers change detection only when input properties of a component change or when an event is emitted from the component.</p>
         </div>
     </div>
+
+    <div class="row mt-3" id="optimization-technique-in-angular">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'optimization-technique-in-angular' }">18. Optimization Techniques in Angular</h2>
+            <p>Optimization techniques are crucial for enhancing the performance and efficiency of Angular applications. Below are ten optimization techniques:</p>
+            <ol>
+                <li><strong>Lazy Loading:</strong> Lazy loading is a technique that loads only the required modules and their associated components when navigating to a specific route. This helps reduce the initial bundle size and improves loading times.</li>
+                <li><strong>Tree Shaking:</strong> Tree shaking is a process of eliminating dead code or unused modules from the final bundle. By removing unnecessary code, tree shaking reduces the bundle size and improves application performance.</li>
+                <li><strong>Minification:</strong> Minification is the process of reducing the size of JavaScript, CSS, and HTML files by removing unnecessary characters such as white spaces, comments, and line breaks. Smaller file sizes result in faster downloads and improved loading times.</li>
+                <li><strong>OnPush Change Detection:</strong> Using the OnPush change detection strategy in Angular components helps optimize change detection by triggering it only when the component's input properties change or when events are emitted. This reduces unnecessary change detection cycles and improves application performance.</li>
+                <li><strong>Optimized Asset Loading:</strong> Optimizing asset loading involves techniques such as bundling assets, using content delivery networks (CDNs), and leveraging browser caching. These optimizations reduce the time it takes to load assets such as images, fonts, and stylesheets, resulting in faster page rendering.</li>
+                <li><strong>Ahead-of-Time (AOT) Compilation:</strong> AOT compilation converts Angular HTML and TypeScript code into efficient JavaScript code during the build process. This reduces runtime compilation overhead and improves startup performance.</li>
+                <li><strong>Code Splitting:</strong> Code splitting involves breaking down the application code into smaller chunks and loading them asynchronously. This allows for faster initial page loads and improves resource utilization.</li>
+                <li><strong>Service Worker and Progressive Web App (PWA) Support:</strong> Implementing service workers and building Progressive Web Apps (PWAs) enable features like offline support, background syncing, and caching, which can significantly improve the user experience, especially on slower networks.</li>
+                <li><strong>Bundle Optimization:</strong> Techniques such as code minification, compression, and dead code elimination can further optimize the size of JavaScript bundles, reducing load times and improving overall performance.</li>
+                <li><strong>Optimizing Angular Modules:</strong> Organizing Angular modules efficiently, avoiding circular dependencies, and lazy loading modules where appropriate can streamline the application architecture and improve performance.</li>
+            </ol>
+            <p>By implementing these optimization techniques, Angular developers can create high-performing and efficient applications that deliver a superior user experience.</p>
+        </div>
+    </div>
+
     
     <div class="row mt-3" id="dist-and-bundle">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dist-and-bundle' }">18. Explain dist and bundle in Angular.</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dist-and-bundle' }">19. Explain dist and bundle in Angular.</h2>
             <p>Dist and bundle refer to the distribution and bundling of Angular applications.</p>
             <p>When an Angular application is built for production, it is compiled, minified, and bundled into one or more JavaScript files that are ready for deployment.</p>
         </div>
@@ -194,7 +215,7 @@
 
     <div class="row mt-3" id="unit-testing-in-angular">
         <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'unit-testing-in-angular' }">Unit Testing in Angular</h2>
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'unit-testing-in-angular' }">20. Unit Testing in Angular</h2>
             <p>Unit testing in Angular involves testing individual units or components of an Angular application to ensure their functionality works as expected.</p>
             <p>Angular provides tools and libraries such as Jasmine and Karma to facilitate unit testing.</p>
         </div>
