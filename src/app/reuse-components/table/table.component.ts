@@ -26,10 +26,23 @@ export class TableComponent {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(this.ELEMENT_DATA);
+  uniqueNames: string[] = this.ELEMENT_DATA.map(element => element.name);
+
+  nameFilter: string = '';
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  applyNameFilter() {
+    this.dataSource.filterPredicate = (data, filter) => {
+      return !filter || data.name.toLowerCase().includes(filter);
+    };
+    this.dataSource.filter = this.nameFilter.trim().toLowerCase();
+
+    // Print the filtered data
+    console.log(this.dataSource.filteredData);
   }
 
 }

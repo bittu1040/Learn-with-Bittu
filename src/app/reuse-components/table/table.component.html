@@ -3,6 +3,14 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
 </mat-form-field>
 
+<mat-form-field>
+    <mat-label>Filter by Name</mat-label>
+    <mat-select [(ngModel)]="nameFilter" (selectionChange)="applyNameFilter()">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let name of uniqueNames" [value]="name">{{ name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
 <div class="table-container">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!-- Position Column -->
