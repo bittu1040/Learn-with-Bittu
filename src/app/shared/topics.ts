@@ -87,6 +87,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'change-detection-and-onpush', name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'unit-testing', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'shadow-dom', name: 'Shadow DOM', category: 'angular', difficulty: 'medium', showDescription: false },
 ];
 
 
