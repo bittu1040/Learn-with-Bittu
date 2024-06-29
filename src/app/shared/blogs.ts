@@ -58,6 +58,13 @@ export const blogList: Blog[] = [
     category: 'angular'
   },
   {
+    title: 'HTTP interceptors in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/http-interceptor-guide-angular-17-9e83bc51d525',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*rORHajoo1b7FvcnkXNfoTg.png',
+    description: "",
+    category: 'angular'
+  },
+  {
     title: 'Router guards in angular',
     articleLink: 'https://bittukumar-web.medium.com/router-guards-in-angular-canactivate-canactivatechild-candeactivate-canload-resolve-8cc2519e70c',
     imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*Qn-0NA52Yfy5rvBX1YpYfA.png',
