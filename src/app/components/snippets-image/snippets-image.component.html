@@ -9,45 +9,65 @@
 <div class="container mt-4">
   <h2 style="text-align: center;">Experience Web application mini features in Angular</h2>
   <mat-divider></mat-divider>
-  <div class="row">
-    <h2>1. Auto completion example</h2>
-    <div class="col">
-      <form [formGroup]="cityFormGroup">
-        <mat-form-field>
-          <mat-label>City</mat-label>
-          <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            <mat-option *ngFor="let city of filteredCities | async" [value]="city">
-              {{ city }}
-            </mat-option>
-            <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0"
-              [value]="'not-found'">
-              No matching cities found
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </form>
+  <mat-card class="m-4 p-3">
+    <div class="row">
+      <h2>1. Auto completion example</h2>
+      <div class="col">
+        <form [formGroup]="cityFormGroup">
+          <mat-form-field>
+            <mat-label>City</mat-label>
+            <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let city of filteredCities | async" [value]="city">
+                {{ city }}
+              </mat-option>
+              <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0"
+                [value]="'not-found'">
+                No matching cities found
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
     </div>
-  </div>
-  <div class="row mt-4">
-    <h2>2. Product search example</h2>
-    <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
-    </div>
-    <ng-container *ngIf="products?.length > 0; else noProducts">
-      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
-            <p class="card-text">Category: {{ product.category }}</p>
+  </mat-card>
+
+  <mat-card class="m-4 p-3">
+    <mat-card-header> <h2>2. Product search example </h2></mat-card-header>
+    <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
+      <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
+      </div>
+      <ng-container *ngIf="products?.length > 0; else noProducts">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
+              <p class="card-text">Category: {{ product.category }}</p>
+            </div>
           </div>
         </div>
+      </ng-container>
+      <ng-template #noProducts>
+        <div class="col">
+          <p>No products found.</p>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+
+  <mat-card class="m-4 p-3">
+    <div class="row mt-4">
+      <h2>Form example with Date and time input</h2>
+        <form [formGroup]="dateAndTimeInputForm">
+          <mat-form-field>
+            <mat-label>Start date</mat-label>
+            <input type="text" matInput formControlName="startDate">
+            <input type="text" matInput formControlName="endDate">
+            <input type="text" matInput formControlName="Time">
+
+          </mat-form-field>
+        </form>
       </div>
-    </ng-container>
-    <ng-template #noProducts>
-      <div class="col">
-        <p>No products found.</p>
-      </div>
-    </ng-template>
-  </div>
+  </mat-card>
 
 </div>

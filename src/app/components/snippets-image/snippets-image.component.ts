@@ -15,6 +15,8 @@ export class SnippetsImageComponent implements OnInit {
   filteredCities!: Observable<string[]>;
   cityFormGroup!: FormGroup;
 
+  dateAndTimeInputForm!: FormGroup;
+
   products: any;
   searchQuery: string = '';
   private searchSubject = new Subject<string>();
@@ -26,6 +28,12 @@ export class SnippetsImageComponent implements OnInit {
   ngOnInit() {
     this.cityFormGroup = this.formBuilder.group({
       city: ['']
+    });
+
+    this.dateAndTimeInputForm = this.formBuilder.group({
+      startDate: [''],
+      endDate: [''],
+      Time: [''],
     });
 
     this.getCountryList();
