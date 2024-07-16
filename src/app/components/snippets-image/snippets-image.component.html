@@ -33,7 +33,50 @@
   </mat-card>
 
   <mat-card class="m-4 p-3">
-    <mat-card-header> <h2>2. Product search example </h2></mat-card-header>
+    <div class="row mt-4">
+      <h2>Form example with Date and time input</h2>
+      <form [formGroup]="dateAndTimeInputForm" (ngSubmit)="dateFormSubmit()">
+        <mat-form-field class="dateFormInput" appearance="fill">
+          <mat-label>Start Date</mat-label>
+          <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
+          <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #startDatePicker></mat-datepicker>
+          <mat-error *ngIf="dateAndTimeInputForm.controls['startDate'].hasError('required')">
+            Start date is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="dateFormInput" appearance="fill">
+          <mat-label>End Date</mat-label>
+          <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+          <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #endDatePicker></mat-datepicker>
+          <mat-error *ngIf="dateAndTimeInputForm.controls['endDate'].hasError('required')">
+            End date is required
+          </mat-error>
+          <mat-error *ngIf="dateAndTimeInputForm.hasError('dates')">
+            End date should be later than start date
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="dateFormInput" appearance="fill">
+          <mat-label>Time</mat-label>
+          <input matInput type="time" formControlName="time">
+          <mat-error *ngIf="dateAndTimeInputForm.controls['time'].hasError('required')">
+            Time is required
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="dateAndTimeInputForm.invalid">Submit</button>
+      </form>
+
+    </div>
+  </mat-card>
+
+  <mat-card class="m-4 p-3">
+    <mat-card-header>
+      <h2>2. Product search example </h2>
+    </mat-card-header>
     <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
       <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
       </div>
@@ -53,21 +96,6 @@
         </div>
       </ng-template>
     </div>
-  </mat-card>
-
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
-      <h2>Form example with Date and time input</h2>
-        <form [formGroup]="dateAndTimeInputForm">
-          <mat-form-field>
-            <mat-label>Start date</mat-label>
-            <input type="text" matInput formControlName="startDate">
-            <input type="text" matInput formControlName="endDate">
-            <input type="text" matInput formControlName="Time">
-
-          </mat-form-field>
-        </form>
-      </div>
   </mat-card>
 
 </div>

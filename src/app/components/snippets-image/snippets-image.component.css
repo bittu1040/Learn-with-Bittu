@@ -7,3 +7,9 @@
   .example-full-width {
     width: 100%;
   }
+
+  .dateFormInput {
+    display: block;
+    margin-bottom: 16px;
+  }
+  

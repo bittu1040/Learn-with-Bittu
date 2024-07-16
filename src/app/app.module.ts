@@ -32,7 +32,9 @@ import { TableExampleComponent } from './components/table-example/table-example.
 import { MatTableModule} from '@angular/material/table';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatExpansionModule,
     MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatTreeModule,
     MatTableModule,
     MatAutocompleteModule,

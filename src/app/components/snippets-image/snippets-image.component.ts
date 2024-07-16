@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { DataSharingService } from 'app/shared/data-sharing.service';
 import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith, take } from 'rxjs/operators';
@@ -31,10 +31,10 @@ export class SnippetsImageComponent implements OnInit {
     });
 
     this.dateAndTimeInputForm = this.formBuilder.group({
-      startDate: [''],
-      endDate: [''],
-      Time: [''],
-    });
+      startDate: ['', [Validators.required]],
+      endDate: ['', [Validators.required]],
+      time: ['', Validators.required],
+    }, { validator: this.dateLessThan('startDate', 'endDate') });
 
     this.getCountryList();
     this.getProducts();
@@ -45,6 +45,35 @@ export class SnippetsImageComponent implements OnInit {
       this.getFilteredProducts(searchQuery);
     });
 
+  }
+
+  dateLessThan(startDate: string, endDate: string) {
+    return (group: FormGroup): { [key: string]: any } | null => {
+      const sDate = group.controls[startDate];
+      const eDate = group.controls[endDate];
+      if (sDate.value && eDate.value && sDate.value >= eDate.value) {
+        eDate?.setErrors({ dates: true});
+        return {  dates: 'End date should be later than start date' };
+      }
+      eDate?.setErrors(null);
+      return null;
+    };
+  }
+
+  dateFormatValidator(control: AbstractControl): ValidationErrors | null {
+    const datePattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/;
+    if (control.value && !datePattern.test(control.value)) {
+      return { invalidDateFormat: 'Date format should be MM/DD/YYYY' };
+    }
+    return null;
+  }
+
+  dateFormSubmit(){
+    if (this.dateAndTimeInputForm.valid) {
+      console.log(this.dateAndTimeInputForm.value);
+    } else {
+      console.log('Form is invalid');
+    }
   }
 
   getCountryList() {
