@@ -1,8 +1,21 @@
 <!-- 
-    image file upload 
-    Search files
-    display all image files
-    image edit/update
+                image file upload 
+                Search files
+                display all image files
+                image edit/update
+ -->
+
+ <!-- 
+ 
+                Create a form with start date, end date and time with basic validation. 
+
+                input type Date and time
+                custom validator for date match (end date should be more than start date)
+                Date format matcher : validator (Date format should be in this format DD/MM/YYYY  )
+
+                Submit and get data in console 
+                { startDate:12/01/2024, endDate: 12/04/2024, time: 04:00 AM }
+
  -->
 
 
@@ -54,7 +67,7 @@
           <mat-error *ngIf="dateAndTimeInputForm.controls['endDate'].hasError('required')">
             End date is required
           </mat-error>
-          <mat-error *ngIf="dateAndTimeInputForm.hasError('dates')">
+          <mat-error *ngIf="dateAndTimeInputForm.hasError('datesComparision')">
             End date should be later than start date
           </mat-error>
         </mat-form-field>

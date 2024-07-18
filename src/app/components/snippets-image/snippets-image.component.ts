@@ -31,10 +31,10 @@ export class SnippetsImageComponent implements OnInit {
     });
 
     this.dateAndTimeInputForm = this.formBuilder.group({
-      startDate: ['', [Validators.required]],
-      endDate: ['', [Validators.required]],
-      time: ['', Validators.required],
-    }, { validator: this.dateLessThan('startDate', 'endDate') });
+      startDate: ['', Validators.required],
+      endDate: ['', Validators.required],
+      time: ['', Validators.required]
+    }, { validators: this.compareDates });
 
     this.getCountryList();
     this.getProducts();
@@ -58,6 +58,18 @@ export class SnippetsImageComponent implements OnInit {
       eDate?.setErrors(null);
       return null;
     };
+  }
+
+  compareDates(group: FormGroup): { [key: string]: any } | null {
+    const startDate = group.controls['startDate'].value;
+    const endDate = group.controls['endDate'].value;
+    console.log({startDate: startDate, endDate: endDate})
+
+    if (startDate && endDate && startDate >= endDate) {
+      group.controls['endDate'].setErrors({ datesComparision: true });
+      return {datesComparision: true};
+    }
+    return null;
   }
 
   dateFormatValidator(control: AbstractControl): ValidationErrors | null {
