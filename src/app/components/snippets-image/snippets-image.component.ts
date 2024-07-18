@@ -47,18 +47,6 @@ export class SnippetsImageComponent implements OnInit {
 
   }
 
-  dateLessThan(startDate: string, endDate: string) {
-    return (group: FormGroup): { [key: string]: any } | null => {
-      const sDate = group.controls[startDate];
-      const eDate = group.controls[endDate];
-      if (sDate.value && eDate.value && sDate.value >= eDate.value) {
-        eDate?.setErrors({ dates: true});
-        return {  dates: 'End date should be later than start date' };
-      }
-      eDate?.setErrors(null);
-      return null;
-    };
-  }
 
   compareDates(group: FormGroup): { [key: string]: any } | null {
     const startDate = group.controls['startDate'].value;
