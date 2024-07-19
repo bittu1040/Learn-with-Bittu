@@ -17,7 +17,7 @@ export class DataSharingService {
   }
 
   getProductList(){
-    return this.http.get('https://fakestoreapi.com/products')
+    return this.http.get('https://fakestoreapi.com/products?limit=9')
   }
 
 }
