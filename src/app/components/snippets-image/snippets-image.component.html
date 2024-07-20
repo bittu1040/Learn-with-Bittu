@@ -41,10 +41,19 @@
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
-          <mat-label>DOB</mat-label>
-          <input matInput  formControlName="DOB">
+          <mat-label>Choose DOB</mat-label>
+          <input matInput  [matDatepicker]="picker" formControlName="DOB">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
           <mat-error *ngIf="simpleForm1.controls['DOB'].hasError('required')">DOB is required</mat-error>
         </mat-form-field>
+
+
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput  formControlName="Age">
+        </mat-form-field>          
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Unique Id</mat-label>
@@ -56,6 +65,7 @@
           <mat-label>Confirm Unique Id</mat-label>
           <input matInput  formControlName="confirmUniqueId">
           <mat-error *ngIf="simpleForm1.controls['confirmUniqueId'].hasError('required')">Unique ID is required</mat-error>
+          <mat-error *ngIf="simpleForm1.hasError('uniqueIdMatch')">Unique ID does not match</mat-error>
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit" [disabled]="simpleForm1.invalid">Submit</button>

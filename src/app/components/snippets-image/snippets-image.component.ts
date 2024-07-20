@@ -38,12 +38,13 @@ export class SnippetsImageComponent implements OnInit {
     }, { validators: this.compareDates });
 
     this.simpleForm1 = this.formBuilder.group({
-      fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
-      city: ['', Validators.required],
+      fullName: ['ab', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
+      city: ['ab', Validators.required],
       DOB: ['', Validators.required],
-      uniqueId: ['', Validators.required],
-      confirmUniqueId: ['', Validators.required]
-    })
+      Age: ['23'],
+      uniqueId: ['ab', Validators.required],
+      confirmUniqueId: ['abnj', [Validators.required]], 
+    }, {validators: this.compareUniqueID} );
 
     this.getCountryList();
     this.getProducts();
@@ -56,6 +57,16 @@ export class SnippetsImageComponent implements OnInit {
 
   }
 
+  compareUniqueID(group: FormGroup): { [key: string]: any } | null {
+    const uniqueId = group.controls['uniqueId'].value;
+    const confirmUniqueId = group.controls['confirmUniqueId'].value;
+    console.log({uniqueId: uniqueId, confirmUniqueId: confirmUniqueId});
+    if(uniqueId !== confirmUniqueId) {
+      group.controls['confirmUniqueId'].setErrors({ uniqueIdMatch: true });
+      return {uniqueIdMatch: true};
+    }
+    return null;
+  }
 
   compareDates(group: FormGroup): { [key: string]: any } | null {
     const startDate = group.controls['startDate'].value;
@@ -87,6 +98,7 @@ export class SnippetsImageComponent implements OnInit {
 
   simpleForm1Submit(){
     if (this.simpleForm1.valid) {
+      this.simpleForm1.value.DOB = `${this.simpleForm1.value.DOB.getDate()}/${this.simpleForm1.value.DOB.getMonth() + 1}/${this.simpleForm1.value.DOB.getFullYear()}`;
       console.log(this.simpleForm1.value);
     } else {
       console.log('Form is invalid');
