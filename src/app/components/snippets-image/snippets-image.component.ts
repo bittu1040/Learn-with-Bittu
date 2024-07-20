@@ -14,6 +14,7 @@ export class SnippetsImageComponent implements OnInit {
   cities: string[] = [];
   filteredCities!: Observable<string[]>;
   cityFormGroup!: FormGroup;
+  simpleForm1!: FormGroup;
 
   dateAndTimeInputForm!: FormGroup;
 
@@ -35,6 +36,14 @@ export class SnippetsImageComponent implements OnInit {
       endDate: ['', Validators.required],
       time: ['', Validators.required]
     }, { validators: this.compareDates });
+
+    this.simpleForm1 = this.formBuilder.group({
+      fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
+      city: ['', Validators.required],
+      DOB: ['', Validators.required],
+      uniqueId: ['', Validators.required],
+      confirmUniqueId: ['', Validators.required]
+    })
 
     this.getCountryList();
     this.getProducts();
@@ -71,6 +80,14 @@ export class SnippetsImageComponent implements OnInit {
   dateFormSubmit(){
     if (this.dateAndTimeInputForm.valid) {
       console.log(this.dateAndTimeInputForm.value);
+    } else {
+      console.log('Form is invalid');
+    }
+  }
+
+  simpleForm1Submit(){
+    if (this.simpleForm1.valid) {
+      console.log(this.simpleForm1.value);
     } else {
       console.log('Form is invalid');
     }

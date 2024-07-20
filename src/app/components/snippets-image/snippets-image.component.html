@@ -22,6 +22,47 @@
 <div class="container mt-4">
   <h2 style="text-align: center;">Experience Web application mini features in Angular</h2>
   <mat-divider></mat-divider>
+
+  <mat-card class="m-4 p-3">
+    <div class="row mt-4">
+      <h2> 2. Reactive Form example with validation</h2>
+      <form [formGroup]="simpleForm1" (ngSubmit)="simpleForm1Submit()">
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput  formControlName="fullName">
+          <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('required')">Name is required</mat-error>
+          <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('pattern')">Only alphabets are allowed</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>City</mat-label>
+          <input matInput  formControlName="city">
+          <mat-error *ngIf="simpleForm1.controls['city'].hasError('required')">City is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>DOB</mat-label>
+          <input matInput  formControlName="DOB">
+          <mat-error *ngIf="simpleForm1.controls['DOB'].hasError('required')">DOB is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>Unique Id</mat-label>
+          <input matInput  formControlName="uniqueId">
+          <mat-error *ngIf="simpleForm1.controls['uniqueId'].hasError('required')">Unique ID is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="simpleFormInput" appearance="fill">
+          <mat-label>Confirm Unique Id</mat-label>
+          <input matInput  formControlName="confirmUniqueId">
+          <mat-error *ngIf="simpleForm1.controls['confirmUniqueId'].hasError('required')">Unique ID is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="simpleForm1.invalid">Submit</button>
+      </form>
+
+    </div>
+  </mat-card>
   <mat-card class="m-4 p-3">
     <div class="row">
       <h2>1. Auto completion example</h2>
