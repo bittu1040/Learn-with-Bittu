@@ -1,0 +1,33 @@
+<div class="code-snippet-container">
+  <div class="code-header">
+    <button *ngIf="copyButton" (click)="copyToClipboard(codeSnippet)" class="copy-button">Copy</button>
+  </div>
+  <div class="code-body">
+    <pre class="code-snippet">{{ codeSnippet }}</pre>
+  </div>
+</div>
+
+
+
+<!-- 
+    use like this in other component where you want to implement
+
+
+// html
+<app-code-snippet [codeSnippet]="closureCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
+
+// ts
+closureCodeSnippet: string = `
+   function makeCounter() {
+     let count = 0;
+       return function() {
+       count++;
+         return count;
+       };
+   }
+
+  copyButton:boolean= true;
+
+
+
+ -->

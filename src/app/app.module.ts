@@ -35,6 +35,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CodeSnippetModule } from 'angular-code-snippet';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     CodingQuestionsComponent,
     SnippetsImageComponent,
     BlogsComponent,
-    CodeSnippetComponent,
     TableComponent,
     TableExampleComponent
   ],
@@ -75,7 +75,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatAutocompleteModule,
     MatSelectModule,
-    LearnModule ],
+    LearnModule,
+    CodeSnippetModule
+  ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

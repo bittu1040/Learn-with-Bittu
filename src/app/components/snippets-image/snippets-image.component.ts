@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { DataSharingService } from 'app/shared/data-sharing.service';
+import { DataSharingService } from '@shared/data-sharing.service';
 import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith, take } from 'rxjs/operators';
 

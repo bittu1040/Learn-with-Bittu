@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, deepCopySnippet, shallowCopySnippet, variableDeclarationSnippet } from 'app/shared/code-snippets';
-import { DataSharingService } from 'app/shared/data-sharing.service';
-import { listOfQuestions } from 'app/shared/topics';
+import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, deepCopySnippet, shallowCopySnippet, variableDeclarationSnippet } from '@app/shared/code-snippets';
+import { DataSharingService } from '@shared/data-sharing.service';
+import { listOfQuestions } from '@app/shared/topics';
 @Component({
   selector: 'app-javascript-articles',
   templateUrl: './javascript-articles.component.html',

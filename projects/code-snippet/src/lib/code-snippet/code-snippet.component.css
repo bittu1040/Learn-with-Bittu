@@ -1,0 +1,39 @@
+
+  .code-snippet-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #000000;
+    color: #ff9900;
+  }
+  
+  .code-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .code-body {
+    flex: 1; 
+    overflow-x: auto;
+
+  }
+  
+  .copy-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .code-snippet {
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
