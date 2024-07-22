@@ -35,7 +35,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
-import { CodeSnippetModule } from 'angular-code-snippet';
+import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
+// import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
 @NgModule({
   declarations: [
