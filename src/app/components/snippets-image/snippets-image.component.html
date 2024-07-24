@@ -25,7 +25,7 @@
 
   <mat-card class="m-4 p-3">
     <div class="row mt-4">
-      <h2> 2. Reactive Form example with validation</h2>
+      <h2> 1. Reactive Form example with validation</h2>
       <form [formGroup]="simpleForm1" (ngSubmit)="simpleForm1Submit()">
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Name</mat-label>
@@ -75,7 +75,7 @@
   </mat-card>
   <mat-card class="m-4 p-3">
     <div class="row">
-      <h2>1. Auto completion example</h2>
+      <h2>2. Auto completion example</h2>
       <div class="col">
         <form [formGroup]="cityFormGroup">
           <mat-form-field>
@@ -98,7 +98,7 @@
 
   <mat-card class="m-4 p-3">
     <div class="row mt-4">
-      <h2> 2. Reactive Form example with Date and time input in Angular</h2>
+      <h2> 3. Reactive Form example with Date and time input in Angular</h2>
       <form [formGroup]="dateAndTimeInputForm" (ngSubmit)="dateFormSubmit()">
         <mat-form-field class="dateFormInput" appearance="fill">
           <mat-label>Start Date</mat-label>
@@ -139,7 +139,7 @@
 
   <mat-card class="m-4 p-3">
     <mat-card-header>
-      <h2>3. Product search example </h2>
+      <h2>4. Product search example </h2>
     </mat-card-header>
     <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
       <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
@@ -159,6 +159,21 @@
           <p>No products found.</p>
         </div>
       </ng-template>
+    </div>
+  </mat-card>
+
+  
+  <mat-card class="m-4 p-3">
+    <div class="row mt-4">
+      <h2>5. Client side pagination</h2>
+
+    </div>
+  </mat-card>
+
+  <mat-card class="m-4 p-3">
+    <div class="row mt-4">
+      <h2>6. Server side pagination</h2>
+
     </div>
   </mat-card>
 
