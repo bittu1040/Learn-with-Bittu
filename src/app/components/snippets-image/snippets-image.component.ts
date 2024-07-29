@@ -16,6 +16,8 @@ export class SnippetsImageComponent implements OnInit {
   cityFormGroup!: FormGroup;
   simpleForm1!: FormGroup;
 
+  post:any;
+
   dateAndTimeInputForm!: FormGroup;
 
   products: any;
@@ -145,6 +147,14 @@ export class SnippetsImageComponent implements OnInit {
       );
     });
   }
+
+
+  fetchPost(): void {
+    this.data.getPost().subscribe((data) => {
+      this.post = data;
+    });
+  }
+
 
 
 

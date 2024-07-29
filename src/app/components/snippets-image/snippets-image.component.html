@@ -184,4 +184,16 @@
     </div>
   </mat-card>
 
+  <mat-card class="m-4 p-3">
+    <h2>8. Unit test example in Angular</h2>
+    <p>Create one button and after clicking on button there should one API call and then response should be printed in UI. We need to write unit test for this.  </p>
+    <button mat-raised-button color="primary" style="max-width: 120px;" (click)="fetchPost()">Fetch Post</button>
+  
+    <div *ngIf="post" class="row mt-4">
+      <h2>Data from API</h2>
+      <h3>Title: {{ post.title }}</h3>
+      <p>Body: {{ post.body }}</p>
+    </div>
+  </mat-card>
+
 </div>
