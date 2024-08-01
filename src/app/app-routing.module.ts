@@ -25,9 +25,6 @@ const routes: Routes = [
   {path: 'snippets-image', component: SnippetsImageComponent},
   {path: 'table', component: TableExampleComponent},
 
-
-
-  
   {path: 'overview', component: LearnOverviewComponent},
   {path: 'interview-preparation', component: LearnJSComponent},
 
