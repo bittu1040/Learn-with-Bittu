@@ -1,16 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-learn-js',
   templateUrl: './learn-js.component.html',
   styleUrls: ['./learn-js.component.css']
 })
-export class LearnJSComponent {
+export class LearnJSComponent implements OnInit {
 
-  TopicList= ["topic 1", "topic2", "topic3"];
+  searchQuery: string = '';
 
-  Submit(data:string){
-    console.log(data)
+  ngOnInit(): void {
+    
+  }
+  filterQuestions(): void {
+    const query = this.searchQuery.toLowerCase();
+    const lists = ['frontend-questions', 'javascript-questions', 'angular-questions', 'html-css-questions'];
+
+    lists.forEach(listId => {
+      const list = document.getElementById(listId);
+      if (list) {
+        const items = list.getElementsByTagName('li');
+        Array.from(items).forEach(item => {
+          const text = item.textContent?.toLowerCase() || '';
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+      }
+    });
   }
 
 }

@@ -1,8 +1,13 @@
 <div class="container mt-4">
-  <h1 class="mb-4" style="font-size: 1.5rem;">Expected Angular/JavaScript Questions for Frontend Developers</h1>
-  <div class="row">
+  <div class="row mt-2 mb-3">
+    <div class="col-lg-12 mt-2">
+      <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery" (input)="filterQuestions()">
+    </div>
+  </div>
+  <div class="row mt-4">
     <div class="col-lg-12">
-      <ol style="font-size: 1rem; line-height: 1.8;">
+      <h1 class="mb-4" style="font-size: 1.5rem;">Expected Angular/JavaScript Questions for Frontend Developers</h1>
+      <ol id="frontend-questions" style="font-size: 1rem; line-height: 1.8;">
         <li>Best Practices for API Integration with Error Handling in Angular Application?</li>
         <li>What Have You Done to Improve the Performance of Your Angular Application?</li>
         <li>How Would You Write Unit Tests for This Scenario in Angular?
@@ -19,27 +24,20 @@
       </ol>
     </div>
   </div>
-</div>
-
-
-<div class="container mt-4">
-  <h1>JavaScript Practise question </h1>
-  <div class="row">
+  <div class="row mt-4">
     <div class="col-lg-12">
-      <ol style="font-size: 1rem; line-height: 1.8;">
-        <li> Flatten an array</li>
-        <li> memoise example for sum of numbers:   Memoize the add function. Implement cache in JavaScript.</li>
-        <li> Implement a promise that executes after 3 secs</li>
+      <h1>JavaScript Practise question</h1>
+      <ol id="javascript-questions" style="font-size: 1rem; line-height: 1.8;">
+        <li>Flatten an array</li>
+        <li>memoise example for sum of numbers: Memoize the add function. Implement cache in JavaScript.</li>
+        <li>Implement a promise that executes after 3 secs</li>
       </ol>
     </div>
   </div>
-</div>
-
-<div class="container mt-4">
-  <h1>Angular frequently asked question </h1>
-  <div class="row">
+  <div class="row mt-4">
     <div class="col-lg-12">
-      <ol style="font-size: 1rem; line-height: 1.8;">
+      <h1>Angular frequently asked question</h1>
+      <ol id="angular-questions" style="font-size: 1rem; line-height: 1.8;">
         <li>Difference between observable and promise</li>
         <li>pure pipe, impure pipe, custom pipe--with respect to change detection</li>
         <li>custom directive, host listener, host binding</li>
@@ -48,36 +46,33 @@
         <li>
           <ul>
             <li>Angular lifecycle hooks</li>
-            <li>Change detection strategies</li> 
-            <li>How signal will help us to remove zone js dependency </li>
-            <li>Rendering process in angular (DOM in angular )</li>
-            <li>What is content projection in angular</li> 
+            <li>Change detection strategies</li>
+            <li>How signal will help us to remove zone js dependency</li>
+            <li>Rendering process in angular (DOM in angular)</li>
+            <li>What is content projection in angular</li>
           </ul>
-          </li>
-          <li>Common RxJS Operators Related to map
-            <ul>
-              <li>map</li>
-              <li>switchMap</li>
-              <li>mergeMap</li>
-              <li>concatMap</li>
-              <li>exhaustMap</li>
-            </ul>
-          </li>
-          <li>Practical usecase with example of switchMap, mergeMap, concatMap and exhaustMap in Seacrh feature (use debounceTime in this)</li>
-          <li>resolver in angular</li>
-          <li>app initializer in angular</li>
+        </li>
+        <li>Common RxJS Operators Related to map
+          <ul>
+            <li>map</li>
+            <li>switchMap</li>
+            <li>mergeMap</li>
+            <li>concatMap</li>
+            <li>exhaustMap</li>
+          </ul>
+        </li>
+        <li>Practical usecase with example of switchMap, mergeMap, concatMap and exhaustMap in Search feature (use debounceTime in this)</li>
+        <li>resolver in angular</li>
+        <li>app initializer in angular</li>
       </ol>
     </div>
   </div>
-</div>
-
-<div class="container mt-4">
-  <h1>HTML/CSS frequently asked question </h1>
-  <div class="row">
+  <div class="row mt-4">
     <div class="col-lg-12">
-      <ol style="font-size: 1rem; line-height: 1.8;">
-        <li>What is semantic HTML and what happens if I dont use semantic element properly ?</li>
-        <li>What is the DOCTYPE Declaration in HTML? </li>
+      <h1>HTML/CSS frequently asked question</h1>
+      <ol id="html-css-questions" style="font-size: 1rem; line-height: 1.8;">
+        <li>What is semantic HTML and what happens if I don't use semantic elements properly?</li>
+        <li>What is the DOCTYPE Declaration in HTML?</li>
       </ol>
     </div>
   </div>
