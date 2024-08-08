@@ -86,8 +86,11 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'optimization-technique-in-angular', name: 'Optimization technique in Angular', category: 'angular', difficulty: 'medium', showDescription: false},
   { id: 'change-detection-and-onpush', name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false },
-  { id: 'unit-testing', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'unit-testing-in-angular', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'shadow-dom', name: 'Shadow DOM', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'content-projection', name: 'Content projection', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'view-encapsulation', name: 'View Encapsulation', category: 'angular', difficulty: 'medium', showDescription: false },
+  { id: 'ng-deep-and-ng-host', name: 'ng-deep and ng-host', category: 'angular', difficulty: 'medium', showDescription: false },
 ];
 
 
