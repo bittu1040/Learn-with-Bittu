@@ -5,7 +5,7 @@
                 image edit/update
  -->
 
- <!-- 
+<!-- 
  
                 Create a form with start date, end date and time with basic validation. 
 
@@ -23,26 +23,26 @@
   <h2 style="text-align: center;">Experience Web application mini features in Angular</h2>
   <mat-divider></mat-divider>
 
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2> 1. Reactive Form example with validation</h2>
       <form [formGroup]="simpleForm1" (ngSubmit)="simpleForm1Submit()">
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Name</mat-label>
-          <input matInput  formControlName="fullName">
+          <input matInput formControlName="fullName">
           <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('required')">Name is required</mat-error>
           <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('pattern')">Only alphabets are allowed</mat-error>
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>City</mat-label>
-          <input matInput  formControlName="city">
+          <input matInput formControlName="city">
           <mat-error *ngIf="simpleForm1.controls['city'].hasError('required')">City is required</mat-error>
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Choose DOB</mat-label>
-          <input matInput  [matDatepicker]="picker" formControlName="DOB">
+          <input matInput [matDatepicker]="picker" formControlName="DOB">
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
@@ -52,28 +52,28 @@
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Age</mat-label>
-          <input matInput  formControlName="Age">
-        </mat-form-field>          
+          <input matInput formControlName="Age">
+        </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Unique Id</mat-label>
-          <input matInput  formControlName="uniqueId">
+          <input matInput formControlName="uniqueId">
           <mat-error *ngIf="simpleForm1.controls['uniqueId'].hasError('required')">Unique ID is required</mat-error>
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Confirm Unique Id</mat-label>
-          <input matInput  formControlName="confirmUniqueId">
-          <mat-error *ngIf="simpleForm1.controls['confirmUniqueId'].hasError('required')">Unique ID is required</mat-error>
+          <input matInput formControlName="confirmUniqueId">
+          <mat-error *ngIf="simpleForm1.controls['confirmUniqueId'].hasError('required')">Unique ID is
+            required</mat-error>
           <mat-error *ngIf="simpleForm1.hasError('uniqueIdMatch')">Unique ID does not match</mat-error>
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit" [disabled]="simpleForm1.invalid">Submit</button>
       </form>
-
     </div>
   </mat-card>
-  <mat-card class="m-4 p-3">
+  <mat-card class="mt-4 p-3">
     <div class="row">
       <h2>2. Auto completion example</h2>
       <div class="col">
@@ -96,8 +96,8 @@
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2> 3. Reactive Form example with Date and time input in Angular</h2>
       <form [formGroup]="dateAndTimeInputForm" (ngSubmit)="dateFormSubmit()">
         <mat-form-field class="dateFormInput" appearance="fill">
@@ -131,75 +131,83 @@
           </mat-error>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="dateAndTimeInputForm.invalid">Submit</button>
+        <button mat-raised-button color="primary" type="submit"
+          [disabled]="dateAndTimeInputForm.invalid">Submit</button>
       </form>
 
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <mat-card-header>
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2>4. Product search example </h2>
-    </mat-card-header>
-    <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
-      <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
-      </div>
-      <ng-container *ngIf="products?.length > 0; else noProducts">
-        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
-              <p class="card-text">Category: {{ product.category }}</p>
+      <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
+        <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
+        </div>
+        <ng-container *ngIf="products?.length > 0; else noProducts">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
+                <p class="card-text">Category: {{ product.category }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </ng-container>
-      <ng-template #noProducts>
-        <div class="col">
-          <p>No products found.</p>
-        </div>
-      </ng-template>
+        </ng-container>
+        <ng-template #noProducts>
+          <div class="col">
+            <p>No products found.</p>
+          </div>
+        </ng-template>
+      </div>
     </div>
   </mat-card>
 
-  
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
+
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2>5. Client side pagination</h2>
-
+      <p>Implement client side pagination in table data or on multiple cards.</p>
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2>6. Server side pagination</h2>
-
+      <p>Implement server side pagination in table data or on multiple cards.</p>
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <div class="row mt-4">
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2>7. Highlight data if modified in table </h2>
-      <p> Create a table with column: name, city and age. create a edit form with name, city and age, what ever data is modified should be highlighted and it should show previous data in tooltip</p>
+      <p> Create a table with column: name, city and age. create a edit form with name, city and age, what ever data is
+        modified should be highlighted and it should show previous data in tooltip</p>
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <h2>8. Unit test example in Angular</h2>
-    <p>Create one button and after clicking on button there should one API call and then response should be printed in UI. We need to write unit test for this.  </p>
-    <button mat-raised-button color="primary" style="max-width: 120px;" (click)="fetchPost()">Fetch Post</button>
-  
-    <div *ngIf="post" class="row mt-4">
-      <h2>Data from API</h2>
-      <h3>Title: {{ post.title }}</h3>
-      <p>Body: {{ post.body }}</p>
+  <mat-card class="mt-4 p-3">
+    <div class="row">
+      <h2>8. Unit test example in Angular</h2>
+      <p>Create one button and after clicking on button there should one API call and then response should be printed in
+        UI. We need to write unit test for this. </p>
+      <div> <button mat-raised-button color="primary" style="max-width: 120px;" (click)="fetchPost()">Fetch
+          Post</button>
+      </div>
+      <div *ngIf="post" class="row mt-4">
+        <h2>Data from API</h2>
+        <h3>Title: {{ post.title }}</h3>
+        <p>Body: {{ post.body }}</p>
+      </div>
     </div>
   </mat-card>
 
-  <mat-card class="m-4 p-3">
-    <h2>8. Content projection in angular (ng-content)</h2>
-    <p>Content projection allows you to insert, content from a parent component into a child component. This is done using the ng-content directive</p>
-  
+  <mat-card class="mt-4 p-3">
+    <div class="row">
+      <h2>8. Content projection in angular (ng-content)</h2>
+      <p>Content projection allows you to insert, content from a parent component into a child component. This is done
+        using the ng-content directive</p>
+    </div>
   </mat-card>
 
 </div>
