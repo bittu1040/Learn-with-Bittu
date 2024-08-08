@@ -25,6 +25,45 @@
 
   <mat-card class="mt-4 p-3">
     <div class="row">
+      <h2>10. Implement a search functionality in list of Data</h2>
+      <div>
+        <div>
+          <input type="text" class="form-control mb-3" placeholder="Search Text" (input)="filterTexts($event)">
+        </div>
+        <div #introductionToAngular id="introduction-to-angular">
+           <h3>Introduction to Angular</h3>
+            <ul>
+              <li>Angular is a platform and framework for building single-page client applications using HTML and
+                TypeScript.</li>
+              <li>It is developed and maintained by Google.</li>
+              <li>Angular provides a robust set of tools and features for building complex web applications, including
+                dependency injection, routing, and forms handling.</li>
+              <li>It uses a component-based architecture, allowing for reusable and modular code.</li>
+              <li>Angular has a strong ecosystem with extensive documentation, community support, and a wide range of
+                third-party libraries.</li>
+            </ul>
+        </div>
+        <div #advancedFeaturesOfAngular id="advanced-features-of-angular">
+          <h3> Advanced Features of Angular </h3>
+            <ul>
+              <li>Angular CLI is a powerful command-line tool that simplifies the development process by automating
+                tasks.</li>
+              <li>Angular supports reactive programming with RxJS, making it easier to manage asynchronous data streams.
+              </li>
+              <li>It includes a built-in HTTP client to interact with backend services and APIs.</li>
+              <li>Angular Universal allows for server-side rendering, improving SEO and performance for Angular
+                applications.</li>
+              <li>It also supports progressive web apps (PWAs), enabling offline capabilities and better user
+                experiences.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+
+  <mat-card class="mt-4 p-3">
+    <div class="row">
       <h2> 1. Reactive Form example with validation</h2>
       <form [formGroup]="simpleForm1" (ngSubmit)="simpleForm1Submit()">
         <mat-form-field class="simpleFormInput" appearance="fill">
@@ -73,6 +112,7 @@
       </form>
     </div>
   </mat-card>
+
   <mat-card class="mt-4 p-3">
     <div class="row">
       <h2>2. Auto completion example</h2>
@@ -163,7 +203,6 @@
     </div>
   </mat-card>
 
-
   <mat-card class="mt-4 p-3">
     <div class="row">
       <h2>5. Client side pagination</h2>
@@ -204,7 +243,7 @@
 
   <mat-card class="mt-4 p-3">
     <div class="row">
-      <h2>8. Content projection in angular (ng-content)</h2>
+      <h2>9. Content projection in angular (ng-content)</h2>
       <p>Content projection allows you to insert, content from a parent component into a child component. This is done
         using the ng-content directive</p>
     </div>

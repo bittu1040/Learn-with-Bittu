@@ -27,5 +27,9 @@ export class DataSharingService {
     return this.http.get<any>(this.apiUrl);
   }
 
+  get5Post(): Observable<any> {
+    return this.http.get("https://jsonplaceholder.typicode.com/posts?_limit=5");
+  }
+
 
 }

@@ -155,7 +155,27 @@ export class SnippetsImageComponent implements OnInit {
     });
   }
 
+  filterTexts(event: Event) {
+    const query = (event.target as HTMLInputElement).value.toLowerCase();
+    const listOfId = ['introduction-to-angular', 'advanced-features-of-angular'];
 
-
+    listOfId.forEach(listId => {
+      const list = document.getElementById(listId);
+      if (list) {
+        const items = list.getElementsByTagName('li');
+        Array.from(items).forEach(item => {
+          const text = item.textContent?.toLowerCase() || '';
+          if(text.includes(query)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+    })
+    }
 
 }
+
+
+
