@@ -1,0 +1,11 @@
+version: '1'
+services:
+    webui:
+        build:
+            context: .
+            dockerfile: angular16.dockerfile
+        ports:
+            - "4200:4200"
+        volumes:
+            - .:/usr/src/app
+        command: tail -F angular16.dockerfile
