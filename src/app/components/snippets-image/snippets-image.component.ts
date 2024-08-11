@@ -22,7 +22,7 @@ export class SnippetsImageComponent implements OnInit {
 
   products: any;
   searchQuery: string = '';
-  private searchSubject = new Subject<string>();
+  searchSubject = new Subject<string>();
 
 
 
@@ -122,7 +122,7 @@ export class SnippetsImageComponent implements OnInit {
       });
   }
 
-  private _filter(value: string): string[] {
+  _filter(value: string): string[] {
     const searchValue = value.toLowerCase();
     return this.cities.filter(city => city.toLowerCase().includes(searchValue));
   }
