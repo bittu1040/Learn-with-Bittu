@@ -10,6 +10,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [SnippetsImageComponent],
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     MatOptionModule,
     MatAutocompleteModule,
     MatDividerModule,MatInputModule,
+    MatButtonModule,
     RouterModule.forChild([{ path: '', component: SnippetsImageComponent }]),
   ],
   exports: [],
