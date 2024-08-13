@@ -5,7 +5,8 @@ import { LearnJSComponent } from './learn-js/learn-js.component';
 
 const routes: Routes = [
   {path:"overview", component: LearnOverviewComponent},
-  {path:"learn-JS", component: LearnJSComponent},
+  {path:"interview-preparation", component: LearnJSComponent},
+  {path: "", redirectTo: "/overview", pathMatch: "full"}
 ];
 
 @NgModule({

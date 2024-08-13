@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,15 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    LearnOverviewComponent,
-    LearnJSComponent,
-  ],
+  declarations: [LearnOverviewComponent, LearnJSComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -27,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     LearnRoutingModule,
-    MatDialogModule],
-    providers:[MatDialog]
+    MatDialogModule,
+  ],
+  providers: [MatDialog],
+  exports: [],
 })
-export class LearnModule { }
+export class LearnModule {}
