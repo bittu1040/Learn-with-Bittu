@@ -36,6 +36,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
+import { MatSortModule } from '@angular/material/sort';
 // import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
 @NgModule({
@@ -76,6 +77,7 @@ import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ 
     MatTableModule,
     MatAutocompleteModule,
     MatSelectModule,
+    MatSortModule,
     LearnModule,
     CodeSnippetModule
   ],

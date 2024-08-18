@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -6,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent {
+export class TableComponent implements AfterViewInit {
 
 
    ELEMENT_DATA=  [
@@ -21,6 +22,8 @@ export class TableComponent {
     {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
     {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'}
     ];
+  @ViewChild(MatSort) sort!: MatSort;
+
 
   @Input() enableFilter: boolean | undefined;
 
@@ -29,6 +32,13 @@ export class TableComponent {
   uniqueNames: string[] = this.ELEMENT_DATA.map(element => element.name);
 
   nameFilter: string = '';
+
+  constructor() {
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
