@@ -22,7 +22,7 @@ export class BlogsComponent implements OnInit {
 
   selectedCategory: string = 'all';
 
-  filterArticles() {
+  filterArticles(): void {
     if (this.selectedCategory === 'all') {
       this.filteredArticles = this.articles; 
     } else {
@@ -30,7 +30,7 @@ export class BlogsComponent implements OnInit {
     }
   }
 
-  onCategoryChange() {
+  onCategoryChange(): void {
     this.filterArticles();
   }
 
