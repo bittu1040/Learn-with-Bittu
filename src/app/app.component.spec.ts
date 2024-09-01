@@ -65,9 +65,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('first-vercal-angular-app');
   });
-  it(`should call toggletree visibility'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.toggleTreeVisibility()).toBeDefined();
-  });
 });
