@@ -58,6 +58,27 @@ export const blogList: Blog[] = [
     category: 'angular'
   },
   {
+    title: 'Content projection in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/content-projection-in-angular-ng-content-541d57b29b30',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*SbKDXnb4WOCxezxrxagpig.png',
+    description: "",
+    category: 'angular'
+  },
+  {
+    title: 'view encapsulation in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/view-encapsulation-in-angular-emulated-none-shadowdom-8dd4db95a00c',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*OSxRLW69q0OAUBDiAlgd1g.png',
+    description: "",
+    category: 'angular'
+  },
+  {
+    title: 'Life cycle hooks in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/life-cycle-hooks-in-angular-65c2d73b98d7',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*gv8_WQ5Uv4NvM8pkEjoPBw.png',
+    description: "",
+    category: 'angular'
+  },
+  {
     title: 'HTTP interceptors in Angular',
     articleLink: 'https://medium.com/@bittukumar-web/http-interceptor-guide-angular-17-9e83bc51d525',
     imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*rORHajoo1b7FvcnkXNfoTg.png',
