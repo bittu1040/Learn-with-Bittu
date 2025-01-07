@@ -37,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
 import { MatSortModule } from '@angular/material/sort';
+import { TodoComponent } from './components/todo/todo.component';
 // import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MatSortModule } from '@angular/material/sort';
     SnippetsImageComponent,
     BlogsComponent,
     TableComponent,
-    TableExampleComponent
+    TableExampleComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

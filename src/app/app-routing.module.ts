@@ -11,6 +11,7 @@ import { LearnOverviewComponent } from './module/learn/learn-overview/learn-over
 import { LearnJSComponent } from './module/learn/learn-js/learn-js.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { TableExampleComponent } from './components/table-example/table-example.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/javascript-articles', pathMatch: 'full' },
@@ -30,6 +31,7 @@ const routes: Routes = [
 
   // {path: 'learn', loadChildren: () => import('./module/learn/learn.module').then(m => m.LearnModule)},
 
+  {path: 'todo', component:  TodoComponent},
   {path: '**', component:PageNotFoundComponent}
 ];
 
