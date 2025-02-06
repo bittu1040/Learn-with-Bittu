@@ -65,14 +65,14 @@ export const blogList: Blog[] = [
     category: 'angular'
   },
   {
-    title: 'Understand JIT and AOT in Angular'
+    title: 'Understand JIT and AOT in Angular',
     articleLink: 'https://bittukumar-web.medium.com/understand-jit-and-aot-in-angular-c70dc2efcca3',
     imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*OizSv8CYc25SpeVjZnnFsA.png',
     description: "",
     category: 'angular'
   },
   {
-    title: 'BehaviorSubject, ReplaySubject and AsyncSubject in RxJS (Angular)'
+    title: 'BehaviorSubject, ReplaySubject and AsyncSubject in RxJS (Angular)',
     articleLink: 'https://bittukumar-web.medium.com/behaviorsubject-replaysubject-and-asyncsubject-in-rxjs-angular-76422751b372',
     imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*Ke9CdIFvZSWhTS9EQJuP_A.png',
     description: "",
