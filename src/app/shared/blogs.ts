@@ -58,9 +58,30 @@ export const blogList: Blog[] = [
     category: 'angular'
   },
   {
-    title: 'Content projection in Angular',
-    articleLink: 'https://medium.com/@bittukumar-web/content-projection-in-angular-ng-content-541d57b29b30',
-    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*SbKDXnb4WOCxezxrxagpig.png',
+    title: 'Zoneless change detection and Signal in Angular',
+    articleLink: 'https://bittukumar-web.medium.com/zoneless-change-detection-and-signal-in-angular-5279b004de1d',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*K3MkggMC2rggynlLJSHrJw.png',
+    description: "",
+    category: 'angular'
+  },
+  {
+    title: 'Understand JIT and AOT in Angular'
+    articleLink: 'https://bittukumar-web.medium.com/understand-jit-and-aot-in-angular-c70dc2efcca3',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*OizSv8CYc25SpeVjZnnFsA.png',
+    description: "",
+    category: 'angular'
+  },
+  {
+    title: 'BehaviorSubject, ReplaySubject and AsyncSubject in RxJS (Angular)'
+    articleLink: 'https://bittukumar-web.medium.com/behaviorsubject-replaysubject-and-asyncsubject-in-rxjs-angular-76422751b372',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*Ke9CdIFvZSWhTS9EQJuP_A.png',
+    description: "",
+    category: 'angular'
+  },
+  {
+    title: 'Life cycle hooks in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/life-cycle-hooks-in-angular-65c2d73b98d7',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*gv8_WQ5Uv4NvM8pkEjoPBw.png',
     description: "",
     category: 'angular'
   },
@@ -72,9 +93,9 @@ export const blogList: Blog[] = [
     category: 'angular'
   },
   {
-    title: 'Life cycle hooks in Angular',
-    articleLink: 'https://medium.com/@bittukumar-web/life-cycle-hooks-in-angular-65c2d73b98d7',
-    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*gv8_WQ5Uv4NvM8pkEjoPBw.png',
+    title: 'Content projection in Angular',
+    articleLink: 'https://medium.com/@bittukumar-web/content-projection-in-angular-ng-content-541d57b29b30',
+    imageURL: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*SbKDXnb4WOCxezxrxagpig.png',
     description: "",
     category: 'angular'
   },
