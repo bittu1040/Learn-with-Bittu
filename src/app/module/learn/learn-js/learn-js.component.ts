@@ -14,7 +14,7 @@ export class LearnJSComponent implements OnInit {
   }
   filterQuestions(): void {
     const query = this.searchQuery.toLowerCase();
-    const lists = ['frontend-questions', 'javascript-questions', 'angular-questions', 'html-css-questions'];
+    const lists = ['frontend-questions', 'javascript-questions', 'angular-questions', 'html-css-questions', 'typescript-questions', 'projects', 'recent-work-list'];
 
     lists.forEach(listId => {
       const list = document.getElementById(listId);
