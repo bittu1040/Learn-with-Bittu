@@ -251,5 +251,95 @@
         </div>
     </div>
 
+    <div class="row mt-3" id="angular-signals">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-signals' }">Angular Signals (new reactivity model)</h2>
+            <p>Angular Signals introduce a fine-grained reactivity system, allowing you to declare reactive values that automatically update the UI when changed. Signals provide a more predictable and efficient way to manage state and trigger change detection, reducing the need for manual subscriptions. They are especially useful for building highly interactive and performant applications, and represent a modern approach to reactivity in Angular.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="standalone-components">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'standalone-components' }">Standalone Components</h2>
+            <p>Standalone Components allow you to create Angular components that are not tied to any NgModule, simplifying structure and enabling easier reuse and lazy loading. This feature helps reduce boilerplate, makes codebases more modular, and allows for faster development and better tree-shaking during builds.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="angular-universal">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-universal' }">Angular Universal (Server Side Rendering)</h2>
+            <p>Angular Universal enables server-side rendering (SSR) for Angular apps, improving SEO and initial load performance by rendering HTML on the server. SSR is especially important for public-facing sites that need to be indexed by search engines and for improving perceived performance on slow networks.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="dynamic-component-loading">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dynamic-component-loading' }">Dynamic Component Loading</h2>
+            <p>Dynamic Component Loading lets you create and insert components at runtime, useful for modals, plugins, and highly dynamic UIs. This technique is essential for building applications where the UI needs to adapt to user input or external data, and for implementing plugin architectures.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="angular-animations">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-animations' }">Angular Animations</h2>
+            <p>Angular Animations provide a robust API for creating complex UI transitions and effects, built on top of the Web Animations API. You can animate component entry/exit, state changes, and even route transitions, enhancing user experience and making applications feel more dynamic and responsive.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="internationalization">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'internationalization' }">Internationalization (i18n)</h2>
+            <p>Internationalization (i18n) in Angular helps you build applications that support multiple languages and regional formats using built-in tools and libraries. It covers translation of static and dynamic content, formatting of dates, numbers, and currencies, and adapting layouts for different locales, making your app accessible to a global audience.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="angular-material-cdk">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-material-cdk' }">Angular Material/CDK</h2>
+            <p>Angular Material is a UI component library following Material Design, and the CDK provides low-level utilities for building custom UI components. Using Material and CDK, you can quickly build accessible, responsive, and visually appealing interfaces, or create your own advanced UI features with the CDK's utilities.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="custom-validators">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'custom-validators' }">Custom Validators</h2>
+            <p>Custom Validators allow you to implement your own validation logic for Angular forms, supporting both template-driven and reactive approaches. They are useful for enforcing business rules, validating complex input, and providing user feedback beyond the built-in validators.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="dependency-injection-hierarchy">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection-hierarchy' }">Dependency Injection Hierarchy</h2>
+            <p>Dependency Injection Hierarchy describes how Angular provides and shares services at different levels (root, module, component), affecting their scope and lifetime. Understanding this hierarchy is crucial for optimizing service usage, avoiding memory leaks, and controlling the visibility of dependencies in large applications.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="zonejs-ngzone">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'zonejs-ngzone' }">Zone.js and NgZone</h2>
+            <p>Zone.js is used by Angular to track async operations for change detection. NgZone allows you to control when change detection runs, helping with performance tuning. Advanced use of NgZone can help you optimize heavy computations, third-party integrations, and improve overall app responsiveness.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="state-management">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'state-management' }">State Management (NgRx, Akita, NGXS)</h2>
+            <p>State Management libraries like NgRx, Akita, and NGXS help manage application state in a predictable, scalable way, especially for large or complex apps. They provide tools for handling global and local state, time-travel debugging, and enforcing unidirectional data flow, making it easier to reason about and maintain your application.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="viewchild-contentchild">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'viewchild-contentchild' }">ViewChild, ContentChild, ViewChildren, ContentChildren</h2>
+            <p>These decorators let you access child components, directives, or DOM elements from a parent component, either in the view or projected content. They are essential for advanced component communication, dynamic content manipulation, and building reusable UI patterns.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="route-reuse-strategy">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-reuse-strategy' }">Route Reuse Strategy</h2>
+            <p>Route Reuse Strategy allows you to control when Angular reuses or destroys route components, enabling caching and improved navigation performance. Custom strategies can be implemented to preserve component state, speed up navigation, and provide a smoother user experience.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="angular-security">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-security' }">Angular Security (XSS, CSRF, DomSanitizer)</h2>
+            <p>Angular Security covers best practices and built-in tools (like DomSanitizer) to protect your app from XSS, CSRF, and other web vulnerabilities. It is important to sanitize user input, use Angular's security APIs, and follow secure coding practices to keep your application safe.</p>
+        </div>
+    </div>
+    <div class="row mt-3" id="accessibility">
+        <div class="col">
+            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'accessibility' }">Accessibility (a11y) in Angular</h2>
+            <p>Accessibility (a11y) ensures your Angular app is usable by everyone, including people with disabilities, using ARIA attributes, keyboard navigation, and best practices. Building accessible apps is not only a legal requirement in many regions but also improves usability for all users.</p>
+        </div>
+    </div>
 
 </div>
