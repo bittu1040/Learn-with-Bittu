@@ -173,11 +173,3 @@ A comprehensive Angular-based learning platform featuring **80+ real interview q
 ### 💻 **JavaScript Learning Repository**
 - **GitHub Repo**: [JavaScript-Coding-and-Notes](https://github.com/bittu1040/JavaScript-Coding-and-Notes) ⭐ **310+ Stars**
 
-### 🎯 **Other Resources**
-- **Angular Documentation**: [https://angular.io/](https://angular.io/)
-- **RxJS Guide**: [https://rxjs.dev/](https://rxjs.dev/)
-- **TypeScript Handbook**: [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/)
-
----
-
-*Built with ❤️ using Angular 18 for the developer community*
