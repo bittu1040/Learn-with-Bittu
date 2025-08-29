@@ -34,6 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
 import { MatSortModule } from '@angular/material/sort';
+import { QuestionsTabComponent } from './components/interview-preparation/questions-tab/questions-tab.component';
+import { InterviewSetsTabComponent } from './components/interview-preparation/interview-sets-tab/interview-sets-tab.component';
+import { JavascriptCodingTabComponent } from './components/interview-preparation/javascript-coding-tab/javascript-coding-tab.component';
+import { MediumArticlesTabComponent } from './components/interview-preparation/medium-articles-tab/medium-articles-tab.component';
 // import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
 @NgModule({
@@ -47,6 +51,10 @@ import { MatSortModule } from '@angular/material/sort';
     SnippetsImageComponent,
     InterviewPreparationComponent,
     BlogsComponent,
+    QuestionsTabComponent,
+    InterviewSetsTabComponent,
+    JavascriptCodingTabComponent,
+    MediumArticlesTabComponent,
   ],
   imports: [
     BrowserModule,

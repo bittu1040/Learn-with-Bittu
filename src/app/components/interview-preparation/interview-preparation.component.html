@@ -30,7 +30,7 @@
                     <button class="nav-link" id="sets-tab" data-bs-toggle="tab" data-bs-target="#sets" type="button"
                         role="tab" (click)="onTabChange()">
                         <i class="fas fa-layer-group me-2"></i>
-                        My Interview Sets
+                        My Angular Interview Sets
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -40,486 +40,45 @@
                         JavaScript & Coding Prep
                     </button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="medium-tab" data-bs-toggle="tab" data-bs-target="#medium"
+                        type="button" role="tab" (click)="onTabChange()">
+                        <i class="fab fa-medium me-2"></i>
+                        Medium Articles
+                    </button>
+                </li>
             </ul>
 
             <!-- Tab content -->
             <div class="tab-content" id="interviewTabsContent">
 
-                <!-- Questions Tab - Your Original Questions List -->
+                <!-- Questions Tab -->
                 <div class="tab-pane fade show active" id="questions" role="tabpanel">
-
-                    <!-- Frontend Questions -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-primary">
-                                    <i class="fas fa-code me-2"></i>
-                                    Expected Angular/JavaScript Questions for Frontend Developers
-                                </h3>
-                                <ol id="frontend-questions" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>Best Practices for API Integration with Error Handling in Angular Application?
-                                    </li>
-                                    <li>What Have You Done to Improve the Performance of Your Angular Application?</li>
-                                    <li>How Would You Write Unit Tests for This Scenario in Angular?
-                                        <p>For Example, Clicking on a Button to Call an API and Retrieve Data.</p>
-                                    </li>
-                                    <li>Have you implemented Authentication and authorization in Angular ? What is your
-                                        approach towards implementing it</li>
-                                    <li>You are getting list of strings in random order from an API, How would you
-                                        display it alphabetically in Angular UI</li>
-                                    <li>What is CORS issue and how did you resolve it </li>
-                                    <li>What is your approach towards handling large data set in frontend </li>
-                                    <li>What you know about RxJS ? Explain whatever you know about it</li>
-                                    <li>Explain the rendering process in Angular (change detection )</li>
-                                    <li>What do you understand by state management ? Say 1-2 scenario where you have
-                                        used this in your project </li>
-                                    <li>What do you understand by TDD and BDD approaches in Software development</li>
-                                    <li>Have you implemented dark/light theme in Angular application</li>
-                                    <li>Explain one usecase of cookies in Angular frontend application which you have
-                                        used before.</li>
-                                    <li>You have two radio buttons and two divs, based on radio button selection,
-                                        show/hide divs</li>
-                                    <li>You have one api call, based on that response you need to call another api, how
-                                        will you do it in angular</li>
-                                    <li>Just try one rxjs map operator to get name and city key value in response out of
-                                        an object in angular</li>
-                                    <li>Explain SOLID principle and how did you use it in your angular application</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- JavaScript Practice Questions -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-warning">
-                                    <i class="fab fa-js-square me-2"></i>
-                                    JavaScript Practice Questions
-                                </h3>
-                                <ol id="javascript-questions" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>Flatten an array</li>
-                                    <li>Memoize example for sum of numbers: Memoize the add function. Implement cache in
-                                        JavaScript.</li>
-                                    <li>Implement a promise that executes after 3 secs</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- Angular Frequently Asked Questions -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-danger">
-                                    <i class="fab fa-angular me-2"></i>
-                                    Angular Frequently Asked Questions
-                                </h3>
-                                <ol id="angular-questions" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>Difference between observable and promise</li>
-                                    <li>Pure pipe, impure pipe, custom pipe--with respect to change detection</li>
-                                    <li>Custom directive, host listener, host binding</li>
-                                    <li>Send headers through http request, manual way, interceptor way</li>
-                                    <li>JIT and AOT with practical use case</li>
-                                    <li>
-                                        <ul>
-                                            <li>Angular lifecycle hooks</li>
-                                            <li>Change detection strategies</li>
-                                            <li>How signal will help us to remove zone js dependency</li>
-                                            <li>Rendering process in angular (DOM in angular)</li>
-                                            <li>What is content projection in angular</li>
-                                        </ul>
-                                    </li>
-                                    <li>Explain the difference between unicast and multicast observables in Angular ?
-                                        How do you make an observable multicast ?
-                                        <ul>Use Subject, BehaviorSubject, or ReplaySubject.</ul>
-                                        <ul>Use operators like share() or shareReplay().</ul>
-                                    </li>
-                                    <li>Common RxJS Operators Related to map
-                                        <ul>
-                                            <li>map</li>
-                                            <li>switchMap</li>
-                                            <li>mergeMap</li>
-                                            <li>concatMap</li>
-                                            <li>exhaustMap</li>
-                                        </ul>
-                                    </li>
-                                    <li>Practical usecase with example of switchMap, mergeMap, concatMap and exhaustMap
-                                        in Search feature (use debounceTime in this)</li>
-                                    <li>Resolver in angular</li>
-                                    <li>App initializer in angular</li>
-                                    <li>Explain and demonstrate host listener and host binding using directive with one
-                                        example, ex- create a angular component that changes background color when hover
-                                        it.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- HTML/CSS Questions -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-info">
-                                    <i class="fab fa-html5 me-2"></i>
-                                    HTML/CSS Frequently Asked Questions
-                                </h3>
-                                <ol id="html-css-questions" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>What is semantic HTML and what happens if I don't use semantic elements
-                                        properly?</li>
-                                    <li>What is the DOCTYPE Declaration in HTML?</li>
-                                    <li>What is SCSS and how do we use in plain html/css project and in angular project
-                                    </li>
-                                    <li>CSS Position and display property</li>
-                                    <li>Can you apply width in span tag, take one div and span tag- apply width in both
-                                    </li>
-                                    <li>Difference between border-box and content-box</li>
-                                    <li>How to put background-color in first line of paragraph out of 4-5 lines
-                                        paragraph</li>
-                                    <li>Put background-color in second child of div</li>
-                                    <li>How many ways you know to center a div</li>
-                                    <li>Create a basic web layout using html and css
-                                        <ul>
-                                            <li>Flex</li>
-                                            <li>Grid</li>
-                                            <li>Float</li>
-                                            <li>Inline-block</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- TypeScript Questions -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-success">
-                                    <i class="fas fa-code me-2"></i>
-                                    TypeScript Frequently Asked Questions
-                                </h3>
-                                <ol id="typescript-questions" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>What is difference between interface and type</li>
-                                    <li>What do you understand by access modifier (public, private, protected)</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- Recent Work -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-secondary">
-                                    <i class="fas fa-briefcase me-2"></i>
-                                    Your Recent Work List
-                                </h3>
-                                <ol id="recent-work-list" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>Angular migration (12 - 18)</li>
-                                    <li>Audit log feature using ag grid</li>
-                                    <li>AI integration (Open AI api)</li>
-                                    <li>NPM package publish</li>
-                                    <li>Medium article</li>
-                                    <li>Multi language feature using ngx-translate</li>
-                                    <li>Moment js to solve time issue for different country</li>
-                                    <li>Chart library</li>
-                                    <li>Unit test</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
-
-                    <!-- Projects -->
-                    <mat-card class="p-3 mb-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3 class="mb-4 text-dark">
-                                    <i class="fas fa-project-diagram me-2"></i>
-                                    Practice Projects
-                                </h3>
-                                <ol id="projects" style="font-size: 1rem; line-height: 1.8;">
-                                    <li>Create your resume in HTML/CSS and then make this editable then save it and
-                                        download pdf format</li>
-                                    <li>Create CRUD application in JavaScript and then in Angular</li>
-                                    <li>Implement Route/Auth guard by implementing Authorization/Authentication project
-                                        using firebase or own node js application</li>
-                                    <li>Implement responsive navbar with top and side navbar (If you know Bootstrap, use
-                                        it)
-                                        <ul>
-                                            <li>Create top navbar using html/css and media query</li>
-                                            <li>Create side navbar using html/css</li>
-                                            <li>Take care of mobile responsiveness</li>
-                                            <li>Take care of hamburger menu</li>
-                                            <li>Take care of dropdown menu in side navbar</li>
-                                            <li>You can make by any way you are comfortable</li>
-                                            <li>Example: https://mdbootstrap.com/docs/angular/navigation/sidenav/</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </mat-card>
+                    <app-questions-tab></app-questions-tab>
                 </div>
 
                 <!-- My Interview Sets Tab -->
                 <div class="tab-pane fade" id="sets" role="tabpanel">
-
-                    <!-- List View -->
-                    <div *ngIf="currentView === 'list'">
-                        <div class="row">
-                            <div class="col-12 mb-4">
-                                <div class="alert alert-info">
-                                    <i class="fas fa-info-circle me-2"></i>
-                                    <strong>Real Interview Experience:</strong> These are actual question sets from my
-                                    recent interviews at various tech companies.
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-xl-4 mb-4" *ngFor="let set of interviewSets; let i = index">
-                                <mat-card class="h-100 interview-set-card-simple">
-                                    <mat-card-content class="p-4">
-                                        <div class="text-center mb-3">
-                                            <div class="set-icon-simple mb-2">
-                                                <i class="fas fa-clipboard-list"></i>
-                                            </div>
-                                            <h5 class="card-title-simple mb-2">Interview Question Set {{i + 1}}</h5>
-                                        </div>
-
-                                        <div class="set-info mb-3">
-                                            <div class="info-item">
-                                                <i class="fas fa-question-circle me-2"></i>
-                                                <span>{{set.totalQuestions}} Questions</span>
-                                            </div>
-                                            <div class="info-item" *ngIf="set.company">
-                                                <i class="fas fa-building me-2"></i>
-                                                <span>{{set.company}}</span>
-                                            </div>
-                                        </div>
-
-                                        <button class="btn btn-outline-primary w-100" (click)="viewInterviewSet(set)">
-                                            <i class="fas fa-eye me-2"></i>
-                                            View Questions
-                                        </button>
-                                    </mat-card-content>
-                                </mat-card>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Detail View -->
-                    <div *ngIf="currentView === 'detail' && selectedInterviewSet">
-                        <div class="row">
-                            <div class="col-12 mb-4 mt-4">
-                                <button class="btn btn-outline-secondary mb-3" (click)="backToList()">
-                                    <i class="fas fa-arrow-left me-2"></i>Back to Interview Sets
-                                </button>
-
-                                <mat-card class="p-4">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                                <h3 class="text-primary mb-0">{{selectedInterviewSet.title}}</h3>
-                                                <span
-                                                    class="badge bg-primary fs-6">{{selectedInterviewSet.totalQuestions}}
-                                                    Questions</span>
-                                            </div>
-
-                                            <div class="row mb-4"
-                                                *ngIf="selectedInterviewSet.company || selectedInterviewSet.date">
-                                                <div class="col-md-6" *ngIf="selectedInterviewSet.company">
-                                                    <p class="text-muted mb-1">
-                                                        <i class="fas fa-building me-2"></i>
-                                                        <strong>Company:</strong> {{selectedInterviewSet.company}}
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-6" *ngIf="selectedInterviewSet.date">
-                                                    <p class="text-muted mb-1">
-                                                        <i class="fas fa-calendar me-2"></i>
-                                                        <strong>Date:</strong> {{selectedInterviewSet.date}}
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <!-- Questions List -->
-                                            <div
-                                                *ngIf="selectedInterviewSet.questions && selectedInterviewSet.questions.length > 0; else noQuestions">
-                                                <h5 class="mb-3">Questions:</h5>
-                                                <div class="question-list">
-                                                    <div *ngFor="let question of selectedInterviewSet.questions"
-                                                        class="question-item mb-3 p-3 border rounded">
-                                                        <p class="mb-0">{{question.question}}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <ng-template #noQuestions>
-                                                <div class="alert alert-warning">
-                                                    <i class="fas fa-exclamation-triangle me-2"></i>
-                                                    <strong>Coming Soon!</strong> Detailed questions for this set will
-                                                    be added soon.
-                                                </div>
-                                            </ng-template>
-                                        </div>
-                                    </div>
-                                </mat-card>
-                            </div>
-                        </div>
-                    </div>
+                    <app-interview-sets-tab 
+                        [interviewSets]="interviewSets"
+                        [currentView]="currentView"
+                        [selectedInterviewSet]="selectedInterviewSet"
+                        (viewInterviewSet)="viewInterviewSet($event)"
+                        (backToList)="backToList()">
+                    </app-interview-sets-tab>
                 </div>
 
                 <!-- JavaScript & Coding Preparation Tab -->
                 <div class="tab-pane fade" id="resources" role="tabpanel">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- JavaScript Coding Repository -->
-                            <mat-card class="mb-4">
-                                <mat-card-content>
-                                    <div class="row align-items-center">
-                                        <div class="col-md-8">
-                                            <h3 class="mb-3">
-                                                <i class="fab fa-js-square me-2 text-warning"></i>
-                                                JavaScript Coding & Interview Preparation
-                                            </h3>
-                                            <p class="text-muted mb-3">{{githubRepository.description}}</p>
-                                            <div class="mb-3">
-                                                <span class="badge bg-success me-2">
-                                                    <i class="fas fa-star me-1"></i>310+ Stars
-                                                </span>
-                                                <span class="badge bg-info me-2">
-                                                    <i class="fas fa-code-branch me-1"></i>129 Forks
-                                                </span>
-                                                <span class="badge bg-warning">
-                                                    <i class="fas fa-eye me-1"></i>7 Watchers
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-end">
-                                            <button mat-raised-button color="primary" (click)="openGithubRepository()"
-                                                class="btn-lg">
-                                                <i class="fab fa-github me-2"></i>
-                                                View on GitHub
-                                            </button>
-                                        </div>
-                                    </div>
-                                </mat-card-content>
-                            </mat-card>
+                    <app-javascript-coding-tab 
+                        [githubRepository]="githubRepository"
+                        (openGithubRepository)="openGithubRepository()">
+                    </app-javascript-coding-tab>
+                </div>
 
-                            <!-- Coding Preparation Resources -->
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <mat-card class="h-100">
-                                        <mat-card-header>
-                                            <mat-card-title>
-                                                <i class="fas fa-code me-2 text-primary"></i>
-                                                JavaScript Core Topics
-                                            </mat-card-title>
-                                        </mat-card-header>
-                                        <mat-card-content>
-                                            <ul class="list-unstyled">
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Closures & Scope
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Promises & Async/Await
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Event Loop & Callbacks
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Prototypes & Inheritance
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    ES6+ Features
-                                                </li>
-                                            </ul>
-                                        </mat-card-content>
-                                    </mat-card>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-card class="h-100">
-                                        <mat-card-header>
-                                            <mat-card-title>
-                                                <i class="fas fa-puzzle-piece me-2 text-info"></i>
-                                                Coding Interview Patterns
-                                            </mat-card-title>
-                                        </mat-card-header>
-                                        <mat-card-content>
-                                            <ul class="list-unstyled">
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Array Manipulation
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    String Algorithms
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Object & Data Structures
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                                    Problem Solving Techniques
-                                                </li>
-                                            </ul>
-                                        </mat-card-content>
-                                    </mat-card>
-                                </div>
-                            </div>
-
-                            <!-- Practice Resources -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <mat-card>
-                                        <mat-card-header>
-                                            <mat-card-title>
-                                                <i class="fas fa-dumbbell me-2 text-warning"></i>
-                                                Practice & Study Resources
-                                            </mat-card-title>
-                                        </mat-card-header>
-                                        <mat-card-content>
-                                            <div class="row">
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="d-grid gap-2">
-                                                        <a href="https://github.com/bittu1040/JavaScript-Coding-and-Notes/blob/master/Coding_questions_for_practice.md"
-                                                            target="_blank" class="btn btn-outline-primary">
-                                                            <i class="fas fa-question-circle me-2"></i>
-                                                            Interview Questions for Practice
-                                                        </a>
-                                                        <a href="https://github.com/bittu1040/JavaScript-Coding-and-Notes/blob/master/Coding_question_and_solution.md"
-                                                            target="_blank" class="btn btn-outline-success">
-                                                            <i class="fas fa-code me-2"></i>
-                                                            Coding Questions & Solutions
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="d-grid gap-2">
-                                                        <a href="https://github.com/bittu1040/JavaScript-Coding-and-Notes/tree/master/JS-Topics"
-                                                            target="_blank" class="btn btn-outline-info">
-                                                            <i class="fas fa-book me-2"></i>
-                                                            JavaScript Core Topics
-                                                        </a>
-                                                        <a href="https://github.com/bittu1040/JavaScript-Coding-and-Notes/tree/master/JS-Code-Challenge"
-                                                            target="_blank" class="btn btn-outline-warning">
-                                                            <i class="fas fa-trophy me-2"></i>
-                                                            Code Challenges
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </mat-card-content>
-                                    </mat-card>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Medium Articles Tab -->
+                <div class="tab-pane fade" id="medium" role="tabpanel">
+                    <app-medium-articles-tab></app-medium-articles-tab>
                 </div>
             </div>
         </div>
