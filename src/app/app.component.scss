@@ -1,6 +1,17 @@
 mat-sidenav-container {
   height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
 
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  flex: 1; /* This makes the container grow to fill available space */
 }
 
 /*
@@ -91,7 +102,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 6px;
-  margin-top: 10px;
+  margin-top: auto; /* This pushes the footer to the bottom */
 }
 
 .copyright {

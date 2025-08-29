@@ -20,15 +20,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {MatTreeModule} from '@angular/material/tree';
-import { LearnModule } from './module/learn/learn.module';
 import { AngularArticlesComponent } from './components/angular-articles/angular-articles.component';
 import { JavascriptArticlesComponent } from './components/javascript-articles/javascript-articles.component';
-import { CodingQuestionsComponent } from './components/coding-questions/coding-questions.component';
 import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
+import { InterviewPreparationComponent } from './components/interview-preparation/interview-preparation.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snippet.component';
-import { TableComponent } from './reuse-components/table/table.component';
-import { TableExampleComponent } from './components/table-example/table-example.component';
 import { MatTableModule} from '@angular/material/table';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
@@ -37,7 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
 import { MatSortModule } from '@angular/material/sort';
-import { TodoComponent } from './components/todo/todo.component';
+import { QuestionsTabComponent } from './components/interview-preparation/questions-tab/questions-tab.component';
+import { InterviewSetsTabComponent } from './components/interview-preparation/interview-sets-tab/interview-sets-tab.component';
+import { JavascriptCodingTabComponent } from './components/interview-preparation/javascript-coding-tab/javascript-coding-tab.component';
+import { MediumArticlesTabComponent } from './components/interview-preparation/medium-articles-tab/medium-articles-tab.component';
 // import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
 @NgModule({
@@ -48,12 +48,13 @@ import { TodoComponent } from './components/todo/todo.component';
     PageNotFoundComponent,
     AngularArticlesComponent,
     JavascriptArticlesComponent,
-    CodingQuestionsComponent,
     SnippetsImageComponent,
+    InterviewPreparationComponent,
     BlogsComponent,
-    TableComponent,
-    TableExampleComponent,
-    TodoComponent
+    QuestionsTabComponent,
+    InterviewSetsTabComponent,
+    JavascriptCodingTabComponent,
+    MediumArticlesTabComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +81,6 @@ import { TodoComponent } from './components/todo/todo.component';
     MatAutocompleteModule,
     MatSelectModule,
     MatSortModule,
-    LearnModule,
     CodeSnippetModule
   ],
   providers: [],

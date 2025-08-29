@@ -6,7 +6,7 @@ import { listOfQuestions } from '@app/shared/topics';
 @Component({
   selector: 'app-javascript-articles',
   templateUrl: './javascript-articles.component.html',
-  styleUrls: ['./javascript-articles.component.css']
+  styleUrls: ['./javascript-articles.component.scss']
 })
 export class JavascriptArticlesComponent implements OnInit {
 

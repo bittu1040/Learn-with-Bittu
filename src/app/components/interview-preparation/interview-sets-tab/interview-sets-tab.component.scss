@@ -1,0 +1,118 @@
+// Simple and Clean Interview Set Cards
+.interview-set-card-simple {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.3s ease;
+  background: white;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: #007bff;
+  }
+  
+  .set-icon-simple {
+    width: 50px;
+    height: 50px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover .set-icon-simple {
+    background: #007bff;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .card-title-simple {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .set-info {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      i {
+        color: #007bff;
+        width: 16px;
+      }
+      
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .btn-outline-primary {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+  }
+}
+
+// Question list styling
+.question-list {
+  .question-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    
+    &:hover {
+      background-color: #e9ecef;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+  }
+}
+
+// Back button styling
+.btn-outline-secondary {
+  &:hover {
+    transform: translateX(-2px);
+    transition: transform 0.2s ease;
+  }
+}
+
+// Alert styling
+.alert-info {
+  border-left: 4px solid #17a2b8;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}

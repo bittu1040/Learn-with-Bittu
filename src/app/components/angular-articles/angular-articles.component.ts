@@ -6,7 +6,7 @@ import { DataSharingService } from 'app/shared/data-sharing.service';
 @Component({
   selector: 'app-angular-articles',
   templateUrl: './angular-articles.component.html',
-  styleUrls: ['./angular-articles.component.css']
+  styleUrls: ['./angular-articles.component.scss']
 })
 export class AngularArticlesComponent implements OnInit {
 

@@ -1,0 +1,365 @@
+// Simple and Clean Interview Set Cards
+.interview-set-card-simple {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.3s ease;
+  background: white;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: #007bff;
+  }
+  
+  .set-icon-simple {
+    width: 50px;
+    height: 50px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover .set-icon-simple {
+    background: #007bff;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .card-title-simple {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .set-info {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      i {
+        color: #007bff;
+        width: 16px;
+      }
+      
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .btn-outline-primary {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+  }
+}
+
+// Question list styling
+.question-list {
+  .question-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    
+    &:hover {
+      background-color: #e9ecef;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+  }
+}
+
+// Back button styling
+.btn-outline-secondary {
+  &:hover {
+    transform: translateX(-2px);
+    transition: transform 0.2s ease;
+  }
+}
+
+.question-list {
+    margin-bottom: 30px;
+}
+
+.description {
+    color: #666;
+}
+
+.box{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.question-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-left: 4px solid transparent;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left-color: #007bff;
+  }
+}
+
+.question-number {
+  min-width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.interview-set-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+}
+
+// GitHub Resources Section
+.topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: #495057;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    background: #e9ecef;
+    color: #007bff;
+    text-decoration: none;
+    transform: translateX(4px);
+  }
+}
+
+// Preparation Tips Timeline
+.preparation-timeline {
+  position: relative;
+  padding-left: 2rem;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #007bff, #28a745, #ffc107, #17a2b8);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid #dee2e6;
+  
+  h6 {
+    color: #495057;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  p {
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+  }
+  
+  ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+    
+    li {
+      color: #6c757d;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+// Stats Grid
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+  }
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+// Badge customizations
+.badge {
+  &.bg-outline-secondary {
+    background-color: transparent !important;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .question-number {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .preparation-timeline {
+    padding-left: 1.5rem;
+    
+    &::before {
+      left: 0.75rem;
+    }
+  }
+  
+  .timeline-marker {
+    left: -1.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Tab styling
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+  
+  .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: none;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      color: #007bff;
+      border-bottom-color: #007bff;
+      background: none;
+    }
+    
+    &.active {
+      color: #007bff;
+      border-bottom-color: #007bff;
+      background: none;
+    }
+    
+    i {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// Alert styling
+.alert-info {
+  border-left: 4px solid #17a2b8;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+// Progress bar styling
+.progress {
+  background-color: #e9ecef;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
