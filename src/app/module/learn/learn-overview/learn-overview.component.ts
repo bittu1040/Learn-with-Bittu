@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-learn-overview',
   templateUrl: './learn-overview.component.html',
-  styleUrls: ['./learn-overview.component.css'],
+  styleUrls: ['./learn-overview.component.scss'],
 })
 export class LearnOverviewComponent implements OnInit {
   title1 = 'Basic Web Question';

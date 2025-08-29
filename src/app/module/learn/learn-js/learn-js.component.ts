@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-learn-js',
   templateUrl: './learn-js.component.html',
-  styleUrls: ['./learn-js.component.css']
+  styleUrls: ['./learn-js.component.scss']
 })
 export class LearnJSComponent implements OnInit {
 

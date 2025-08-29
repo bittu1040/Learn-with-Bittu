@@ -7,7 +7,7 @@ import { debounceTime, distinctUntilChanged, map, startWith, take } from 'rxjs/o
 @Component({
   selector: 'app-snippets-image',
   templateUrl: './snippets-image.component.html',
-  styleUrls: ['./snippets-image.component.css']
+  styleUrls: ['./snippets-image.component.scss']
 })
 export class SnippetsImageComponent implements OnInit {
 

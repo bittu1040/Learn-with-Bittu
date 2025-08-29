@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-code-snippet',
+  selector: 'lib-code-snippet',
   templateUrl: './code-snippet.component.html',
-  styleUrls: ['./code-snippet.component.css']
+  styleUrls: ['./code-snippet.component.scss']
 })
 export class CodeSnippetComponent {
 
