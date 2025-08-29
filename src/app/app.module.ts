@@ -20,11 +20,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {MatTreeModule} from '@angular/material/tree';
-import { LearnModule } from './module/learn/learn.module';
 import { AngularArticlesComponent } from './components/angular-articles/angular-articles.component';
 import { JavascriptArticlesComponent } from './components/javascript-articles/javascript-articles.component';
 import { CodingQuestionsComponent } from './components/coding-questions/coding-questions.component';
 import { SnippetsImageComponent } from './components/snippets-image/snippets-image.component';
+import { InterviewPreparationComponent } from './components/interview-preparation/interview-preparation.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { CodeSnippetComponent } from './reuse-components/code-snippet/code-snippet.component';
 import { TableComponent } from './reuse-components/table/table.component';
@@ -50,6 +50,7 @@ import { TodoComponent } from './components/todo/todo.component';
     JavascriptArticlesComponent,
     CodingQuestionsComponent,
     SnippetsImageComponent,
+    InterviewPreparationComponent,
     BlogsComponent,
     TableComponent,
     TableExampleComponent,
@@ -80,7 +81,6 @@ import { TodoComponent } from './components/todo/todo.component';
     MatAutocompleteModule,
     MatSelectModule,
     MatSortModule,
-    LearnModule,
     CodeSnippetModule
   ],
   providers: [],

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LearnJSComponent } from './learn-js.component';
+import { InterviewPreparationComponent } from './interview-preparation.component';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,13 +20,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
 
-describe('LearnJSComponent', () => {
-  let component: LearnJSComponent;
-  let fixture: ComponentFixture<LearnJSComponent>;
+describe('InterviewPreparationComponent', () => {
+  let component: InterviewPreparationComponent;
+  let fixture: ComponentFixture<InterviewPreparationComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LearnJSComponent],
+      declarations: [InterviewPreparationComponent],
       imports: [        FormsModule,
         ReactiveFormsModule,
         MatFormFieldModule,
@@ -34,7 +34,7 @@ describe('LearnJSComponent', () => {
         MatIconModule,MatCardModule],
       providers:[DataSharingService],
     });
-    fixture = TestBed.createComponent(LearnJSComponent);
+    fixture = TestBed.createComponent(InterviewPreparationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

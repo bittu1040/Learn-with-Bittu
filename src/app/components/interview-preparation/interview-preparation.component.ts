@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-learn-js',
-  templateUrl: './learn-js.component.html',
-  styleUrls: ['./learn-js.component.scss']
+  selector: 'app-interview-preparation',
+  templateUrl: './interview-preparation.component.html',
+  styleUrls: ['./interview-preparation.component.scss']
 })
-export class LearnJSComponent implements OnInit {
+export class InterviewPreparationComponent implements OnInit {
 
   searchQuery: string = '';
 
