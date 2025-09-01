@@ -1,15 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
 import { DataSharingService } from './data-sharing.service';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('DataSharingService', () => {
   let service: DataSharingService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientModule]
-    });
+    imports: [],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+});
     service = TestBed.inject(DataSharingService);
   });
 

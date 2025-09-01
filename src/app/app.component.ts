@@ -5,9 +5,10 @@ import { Router } from '@angular/router';
 import { DataSharingService } from './shared/data-sharing.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   title = 'first-vercal-angular-app';

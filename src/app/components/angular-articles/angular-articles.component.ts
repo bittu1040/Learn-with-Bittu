@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { DataSharingService } from 'app/shared/data-sharing.service';
 
 @Component({
-  selector: 'app-angular-articles',
-  templateUrl: './angular-articles.component.html',
-  styleUrls: ['./angular-articles.component.scss']
+    selector: 'app-angular-articles',
+    templateUrl: './angular-articles.component.html',
+    styleUrls: ['./angular-articles.component.scss'],
+    standalone: false
 })
 export class AngularArticlesComponent implements OnInit {
 

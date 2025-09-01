@@ -4,9 +4,10 @@ import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, d
 import { DataSharingService } from '@shared/data-sharing.service';
 import { listOfQuestions } from '@app/shared/topics';
 @Component({
-  selector: 'app-javascript-articles',
-  templateUrl: './javascript-articles.component.html',
-  styleUrls: ['./javascript-articles.component.scss']
+    selector: 'app-javascript-articles',
+    templateUrl: './javascript-articles.component.html',
+    styleUrls: ['./javascript-articles.component.scss'],
+    standalone: false
 })
 export class JavascriptArticlesComponent implements OnInit {
 

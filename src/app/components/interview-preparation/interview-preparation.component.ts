@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { InterviewSet, INTERVIEW_SETS, GithubRepository, GITHUB_REPOSITORY } from '../../shared/interview-data';
 
 @Component({
-  selector: 'app-interview-preparation',
-  templateUrl: './interview-preparation.component.html',
-  styleUrls: ['./interview-preparation.component.scss']
+    selector: 'app-interview-preparation',
+    templateUrl: './interview-preparation.component.html',
+    styleUrls: ['./interview-preparation.component.scss'],
+    standalone: false
 })
 export class InterviewPreparationComponent implements OnInit {
   

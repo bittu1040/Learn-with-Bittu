@@ -5,9 +5,10 @@ import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith, take } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-snippets-image',
-  templateUrl: './snippets-image.component.html',
-  styleUrls: ['./snippets-image.component.scss']
+    selector: 'app-snippets-image',
+    templateUrl: './snippets-image.component.html',
+    styleUrls: ['./snippets-image.component.scss'],
+    standalone: false
 })
 export class SnippetsImageComponent implements OnInit {
 

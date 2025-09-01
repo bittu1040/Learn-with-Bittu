@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnippetsImageComponent } from './snippets-image.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -31,8 +31,8 @@ fdescribe('SnippetsImageComponent', () => {
   let service: DataSharingService;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule, HttpClientModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
+    declarations: [SnippetsImageComponent],
+    imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
         FormsModule,
@@ -50,11 +50,9 @@ fdescribe('SnippetsImageComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule
-      ],
-      providers:[DataSharingService],
-      declarations: [SnippetsImageComponent]
-    });
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+    providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
+});
     fixture = TestBed.createComponent(SnippetsImageComponent);
     component = fixture.componentInstance;
     service = TestBed.inject(DataSharingService);
