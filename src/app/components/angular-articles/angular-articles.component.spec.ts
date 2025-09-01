@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AngularArticlesComponent } from './angular-articles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { DataSharingService } from '@app/shared/data-sharing.service';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,8 +30,8 @@ describe('AngularArticlesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule, HttpClientModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
+    declarations: [AngularArticlesComponent],
+    imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
         FormsModule,
@@ -49,11 +49,9 @@ describe('AngularArticlesComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule
-      ],
-      providers:[DataSharingService],
-      declarations: [AngularArticlesComponent],
-    });
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+    providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
+});
     fixture = TestBed.createComponent(AngularArticlesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JavascriptArticlesComponent } from './javascript-articles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -31,8 +31,8 @@ describe('JavascriptArticlesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule, HttpClientModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
+    declarations: [JavascriptArticlesComponent, CodeSnippetComponent],
+    imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
         FormsModule,
@@ -50,11 +50,9 @@ describe('JavascriptArticlesComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule
-      ],
-      providers:[DataSharingService],
-      declarations: [JavascriptArticlesComponent, CodeSnippetComponent]
-    });
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+    providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
+});
     fixture = TestBed.createComponent(JavascriptArticlesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -30,7 +30,7 @@ import { MatTableModule} from '@angular/material/table';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CodeSnippetModule } from 'angular-code-snippet';  // from npm package/ node modules
 import { MatSortModule } from '@angular/material/sort';
@@ -40,51 +40,44 @@ import { JavascriptCodingTabComponent } from './components/interview-preparation
 import { MediumArticlesTabComponent } from './components/interview-preparation/medium-articles-tab/medium-articles-tab.component';
 // import { CodeSnippetModule } from 'code-snippet';          // from local package / project folder
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ContactComponent,
-    PageNotFoundComponent,
-    AngularArticlesComponent,
-    JavascriptArticlesComponent,
-    SnippetsImageComponent,
-    InterviewPreparationComponent,
-    BlogsComponent,
-    QuestionsTabComponent,
-    InterviewSetsTabComponent,
-    JavascriptCodingTabComponent,
-    MediumArticlesTabComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule, 
-    MatSlideToggleModule,
-    MatCardModule,
-    MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatProgressBarModule,
-    MatSidenavModule,
-    MatExpansionModule,
-    MatListModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatTreeModule,
-    MatTableModule,
-    MatAutocompleteModule,
-    MatSelectModule,
-    MatSortModule,
-    CodeSnippetModule
-  ],
-  providers: [],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        ContactComponent,
+        PageNotFoundComponent,
+        AngularArticlesComponent,
+        JavascriptArticlesComponent,
+        SnippetsImageComponent,
+        InterviewPreparationComponent,
+        BlogsComponent,
+        QuestionsTabComponent,
+        InterviewSetsTabComponent,
+        JavascriptCodingTabComponent,
+        MediumArticlesTabComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSlideToggleModule,
+        MatCardModule,
+        MatButtonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatProgressBarModule,
+        MatSidenavModule,
+        MatExpansionModule,
+        MatListModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatTreeModule,
+        MatTableModule,
+        MatAutocompleteModule,
+        MatSelectModule,
+        MatSortModule,
+        CodeSnippetModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
