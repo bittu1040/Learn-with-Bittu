@@ -2,9 +2,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { InterviewSet } from '../../../shared/interview-data';
 
 @Component({
-  selector: 'app-interview-sets-tab',
-  templateUrl: './interview-sets-tab.component.html',
-  styleUrls: ['./interview-sets-tab.component.scss']
+    selector: 'app-interview-sets-tab',
+    templateUrl: './interview-sets-tab.component.html',
+    styleUrls: ['./interview-sets-tab.component.scss'],
+    standalone: false
 })
 export class InterviewSetsTabComponent implements OnInit {
   @Input() interviewSets: InterviewSet[] = [];
