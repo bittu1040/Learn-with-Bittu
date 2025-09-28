@@ -189,7 +189,30 @@ export const INTERVIEW_SETS: InterviewSet[] = [
       { id: 13, question: "Flatten an array: Input [1,2,[3,4],5] Output [1,2,3,4,5]", category: "JavaScript" },
       { id: 14, question: "Group by Property: Given an array of objects, group them by a specified property.", category: "JavaScript" }
     ]
+  },
+  {
+    id: 7,
+    title: "Senior Angular Developer - Managerial Round",
+    company: "MNC Company",
+    date: "March 2025",
+    totalQuestions: 10,
+    questions: [
+      // Section 1: Software Design Concepts
+      { id: 1, question: "Explain SOLID principles in the context of Angular UI components. How would you keep components focused, testable, and extendable?", category: "Software Design" },
+      { id: 2, question: "What does Separation of Concerns mean in Angular projects? How do you organize logic, templates, and services cleanly?", category: "Software Design" },
+      { id: 3, question: "How does Angular use Dependency Injection and why is it important for clean, testable architecture?", category: "Angular" },
+      { id: 4, question: "Can you explain the Observer Pattern with RxJS and how it applies to Angular applications?", category: "RxJS" },
+      { id: 5, question: "What are different approaches to State Management in Angular? Compare local state, shared service, NgRx, and Angular Signals.", category: "Angular" },
+      { id: 6, question: "How do OOP concepts (Encapsulation, Abstraction, Inheritance, Polymorphism) show up in Angular service and component design?", category: "OOP" },
+
+      // Section 2: Practical Scenario-Based Questions
+      { id: 7, question: "Give a real use case of debouncing vs throttling in UI interactions.", category: "Performance" },
+      { id: 8, question: "Explain a real-world application of currying in frontend code.", category: "JavaScript" },
+      { id: 9, question: "Compare cookies and sessionStorage in terms of persistence, use cases, and security. Which would you use for authentication?", category: "Web Storage" },
+      { id: 10, question: "What is your approach to designing a new Angular component — from UX considerations to reusability to testing?", category: "Angular" }
+    ]
   }
+
 ];
 
 export const GITHUB_REPOSITORY: GithubRepository = {
