@@ -1,6 +1,6 @@
 # Learn with Bittu - Angular Interview Preparation Portal
 
-A comprehensive Angular-based learning platform featuring **80+ real interview questions** from actual MNC company interviews, organized into **6 comprehensive interview sets**.
+A comprehensive Angular-based learning platform featuring **100+ real interview questions** from actual MNC company interviews, organized into **8 comprehensive interview sets**.
 
 ## 📋 Complete Interview Questions Collection
 
@@ -162,6 +162,50 @@ A comprehensive Angular-based learning platform featuring **80+ real interview q
 #### JavaScript Coding Challenges
 13. Flatten an array: Input `[1,2,[3,4],5]` Output `[1,2,3,4,5]`
 14. Group by Property: Given an array of objects, group them by a specified property.
+
+---
+
+### 🎯 Set 7: Senior Angular Developer - Managerial Round (10 Questions)
+**Company**: MNC Company | **Date**: March 2025
+
+#### Software Design Concepts
+1. Explain SOLID principles in the context of Angular UI components. How would you keep components focused, testable, and extendable?
+2. What does Separation of Concerns mean in Angular projects? How do you organize logic, templates, and services cleanly?
+3. How does Angular use Dependency Injection and why is it important for clean, testable architecture?
+4. Can you explain the Observer Pattern with RxJS and how it applies to Angular applications?
+5. What are different approaches to State Management in Angular? Compare local state, shared service, NgRx, and Angular Signals.
+6. How do OOP concepts (Encapsulation, Abstraction, Inheritance, Polymorphism) show up in Angular service and component design?
+
+#### Practical Scenario-Based Questions
+7. Give a real use case of debouncing vs throttling in UI interactions.
+8. Explain a real-world application of currying in frontend code.
+9. Compare cookies and sessionStorage in terms of persistence, use cases, and security. Which would you use for authentication?
+10. What is your approach to designing a new Angular component — from UX considerations to reusability to testing?
+
+---
+
+### 🎯 Set 8: Senior Angular Developer – Technical Round (12 Questions)
+**Company**: MNC Company | **Date**: March 2025
+
+#### Angular Component Development
+1. Which component library have you created and worked with in your Angular projects?
+2. How would you build a countdown timer in Angular where a user enters minutes and seconds and starts the timer?
+
+#### JavaScript Closures & Scope
+3. What are closures in JavaScript?
+4. What is scope in JavaScript?
+5. What are the real-world benefits of using closures in frontend applications?
+
+#### JavaScript Event Loop & Asynchronous Programming
+6. Explain the JavaScript Event Loop and how it manages execution of tasks.
+7. How do setTimeout, setInterval, Promises, and normal functions execute differently in the event loop?
+8. What is a Promise in JavaScript?
+9. Explain async/await and how it simplifies asynchronous code.
+10. What are the benefits of using async/await over Promises?
+
+#### Performance & Event Handling
+11. What is debouncing? Can you write a debounce polyfill?
+12. Explain event bubbling and event capturing with an example.
 
 ---
 
