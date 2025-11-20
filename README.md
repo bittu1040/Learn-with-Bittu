@@ -1,11 +1,23 @@
-# Learn with Bittu - Angular Interview Preparation Portal 
+# Learn with Bittu - Angular Interview Preparation Portal
 
 A comprehensive Angular-based learning platform featuring **100+ real interview questions** from actual MNC company interviews, organized into **8 comprehensive interview sets**.
 
 ## 📋 Complete Interview Questions Collection
 
-### 🎯 Set 1: Angular Fundamentals - First Round Interview (20 Questions)
-**Company**: MNC Company | **Date**: 2024
+### Table of Contents
+- [Set 1: Angular Fundamentals - First Round Interview](#set-1-angular-fundamentals---first-round-interview)
+- [Set 2: Frontend Developer Interview - MNC Company](#set-2-frontend-developer-interview---mnc-company)
+- [Set 3: Angular Developer Interview - MNC Company](#set-3-angular-developer-interview---mnc-company)
+- [Set 4: Angular Developer Interview - MNC Company](#set-4-angular-developer-interview---mnc-company)
+- [Set 5: Senior Frontend Developer - MNC Company](#set-5-senior-frontend-developer---mnc-company)
+- [Set 6: Advanced Angular Developer - MNC Company](#set-6-advanced-angular-developer---mnc-company)
+- [Set 7: Senior Angular Developer - Managerial Round](#set-7-senior-angular-developer---managerial-round)
+- [Set 8: Senior Angular Developer – Technical Round](#set-8-senior-angular-developer--technical-round)
+
+---
+
+### Set 1: Angular Fundamentals - First Round Interview
+**Interview Set 1** | **20 Questions** | **Company**: MNC Company | **Date**: 2024
 
 #### Angular Core Concepts
 1. What is Angular and how is it different from AngularJS?
@@ -35,8 +47,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 2: Frontend Developer Interview - MNC Company (15 Questions)
-**Company**: MNC Company | **Date**: November 2024
+### Set 2: Frontend Developer Interview - MNC Company
+**Interview Set 2** | **15 Questions** | **Company**: MNC Company | **Date**: November 2024
 
 #### Angular Advanced Concepts
 1. What is ng-content and how does content projection work?
@@ -65,8 +77,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 3: Angular Developer Interview - MNC Company (10 Questions)
-**Company**: MNC Company | **Date**: January 2025
+### Set 3: Angular Developer Interview - MNC Company
+**Interview Set 3** | **10 Questions** | **Company**: MNC Company | **Date**: January 2025
 
 #### Angular Architecture & Performance
 1. Design a component with 3 tabs in angular — Product Details, Products, Sales Info. How will you handle large data in the Sales tab: pagination or infinite scroll?
@@ -88,8 +100,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 4: Angular Developer Interview - MNC Company (10 Questions)
-**Company**: MNC Company | **Date**: February 2025
+### Set 4: Angular Developer Interview - MNC Company
+**Interview Set 4** | **10 Questions** | **Company**: MNC Company | **Date**: February 2025
 
 #### Angular Core Concepts
 1. How does an Angular application bootstrap?
@@ -109,8 +121,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 5: Senior Frontend Developer - MNC Company (14 Questions)
-**Company**: MNC Company | **Date**: March 2025
+### Set 5: Senior Frontend Developer - MNC Company
+**Interview Set 5** | **14 Questions** | **Company**: MNC Company | **Date**: March 2025
 
 #### TypeScript & Advanced JavaScript
 1. What is the difference between JavaScript and TypeScript?
@@ -134,8 +146,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 6: Advanced Angular Developer - MNC Company (14 Questions)
-**Company**: MNC Company | **Date**: December 2024
+### Set 6: Advanced Angular Developer - MNC Company
+**Interview Set 6** | **14 Questions** | **Company**: MNC Company | **Date**: December 2024
 
 #### RxJS Advanced Concepts
 1. Explain the difference between switchMap, mergeMap, concatMap, and exhaustMap.
@@ -165,8 +177,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 7: Senior Angular Developer - Managerial Round (10 Questions)
-**Company**: MNC Company | **Date**: March 2025
+### Set 7: Senior Angular Developer - Managerial Round
+**Interview Set 7** | **10 Questions** | **Company**: MNC Company | **Date**: March 2025
 
 #### Software Design Concepts
 1. Explain SOLID principles in the context of Angular UI components. How would you keep components focused, testable, and extendable?
@@ -184,8 +196,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### 🎯 Set 8: Senior Angular Developer – Technical Round (12 Questions)
-**Company**: MNC Company | **Date**: March 2025
+### Set 8: Senior Angular Developer – Technical Round
+**Interview Set 8** | **12 Questions** | **Company**: MNC Company | **Date**: March 2025
 
 #### Angular Component Development
 1. Which component library have you created and worked with in your Angular projects?
