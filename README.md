@@ -4,6 +4,16 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ## 📋 Complete Interview Questions Collection
 
+<style>
+  h3:target {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 4px solid #ffc107;
+    margin-left: -10px;
+    padding-left: 15px;
+  }
+</style>
+
 ### Table of Contents
 - [Set 1: Angular Fundamentals - First Round Interview](#set-1-angular-fundamentals---first-round-interview)
 - [Set 2: Frontend Developer Interview - MNC Company](#set-2-frontend-developer-interview---mnc-company)
