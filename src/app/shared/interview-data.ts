@@ -211,7 +211,34 @@ export const INTERVIEW_SETS: InterviewSet[] = [
       { id: 9, question: "Compare cookies and sessionStorage in terms of persistence, use cases, and security. Which would you use for authentication?", category: "Web Storage" },
       { id: 10, question: "What is your approach to designing a new Angular component — from UX considerations to reusability to testing?", category: "Angular" }
     ]
-  }
+  },
+{
+  "id": 8,
+  "title": "Senior Angular Developer – Technical Round",
+  "company": "MNC Company",
+  "date": "March 2025",
+  "totalQuestions": 12,
+  "questions": [
+    { "id": 1, "question": "Which component library have you created and worked with in your Angular projects?", "category": "Angular" },
+
+    { "id": 2, "question": "How would you build a countdown timer in Angular where a user enters minutes and seconds and starts the timer?", "category": "Angular" },
+
+    { "id": 3, "question": "What are closures in JavaScript?", "category": "JavaScript" },
+    { "id": 4, "question": "What is scope in JavaScript?", "category": "JavaScript" },
+    { "id": 5, "question": "What are the real-world benefits of using closures in frontend applications?", "category": "JavaScript" },
+
+    { "id": 6, "question": "Explain the JavaScript Event Loop and how it manages execution of tasks.", "category": "JavaScript Internals" },
+    { "id": 7, "question": "How do setTimeout, setInterval, Promises, and normal functions execute differently in the event loop?", "category": "JavaScript Internals" },
+
+    { "id": 8, "question": "What is a Promise in JavaScript?", "category": "JavaScript" },
+    { "id": 9, "question": "Explain async/await and how it simplifies asynchronous code.", "category": "JavaScript" },
+    { "id": 10, "question": "What are the benefits of using async/await over Promises?", "category": "JavaScript" },
+
+    { "id": 11, "question": "What is debouncing? Can you write a debounce polyfill?", "category": "Performance" },
+
+    { "id": 12, "question": "Explain event bubbling and event capturing with an example.", "category": "JavaScript" }
+  ]
+}
 
 ];
 
