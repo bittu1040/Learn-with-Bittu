@@ -4,16 +4,6 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ## 📋 Complete Interview Questions Collection
 
-<style>
-  h3:target {
-    background-color: #fff3cd;
-    padding: 10px;
-    border-left: 4px solid #ffc107;
-    margin-left: -10px;
-    padding-left: 15px;
-  }
-</style>
-
 ### Table of Contents
 - [Set 1: Angular Fundamentals - First Round Interview](#set-1-angular-fundamentals---first-round-interview)
 - [Set 2: Frontend Developer Interview - MNC Company](#set-2-frontend-developer-interview---mnc-company)
@@ -26,8 +16,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 1: Angular Fundamentals - First Round Interview
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 1: Angular Fundamentals - First Round Interview
 **Interview Set 1** | **20 Questions** | **Company**: MNC Company | **Date**: 2024
+
+</td></tr></table>
 
 #### Angular Core Concepts
 1. What is Angular and how is it different from AngularJS?
@@ -57,8 +51,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 2: Frontend Developer Interview - MNC Company
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 2: Frontend Developer Interview - MNC Company
 **Interview Set 2** | **15 Questions** | **Company**: MNC Company | **Date**: November 2024
+
+</td></tr></table>
 
 #### Angular Advanced Concepts
 1. What is ng-content and how does content projection work?
@@ -87,8 +85,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 3: Angular Developer Interview - MNC Company
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 3: Angular Developer Interview - MNC Company
 **Interview Set 3** | **10 Questions** | **Company**: MNC Company | **Date**: January 2025
+
+</td></tr></table>
 
 #### Angular Architecture & Performance
 1. Design a component with 3 tabs in angular — Product Details, Products, Sales Info. How will you handle large data in the Sales tab: pagination or infinite scroll?
@@ -110,8 +112,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 4: Angular Developer Interview - MNC Company
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 4: Angular Developer Interview - MNC Company
 **Interview Set 4** | **10 Questions** | **Company**: MNC Company | **Date**: February 2025
+
+</td></tr></table>
 
 #### Angular Core Concepts
 1. How does an Angular application bootstrap?
@@ -131,8 +137,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 5: Senior Frontend Developer - MNC Company
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 5: Senior Frontend Developer - MNC Company
 **Interview Set 5** | **14 Questions** | **Company**: MNC Company | **Date**: March 2025
+
+</td></tr></table>
 
 #### TypeScript & Advanced JavaScript
 1. What is the difference between JavaScript and TypeScript?
@@ -156,8 +166,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 6: Advanced Angular Developer - MNC Company
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 6: Advanced Angular Developer - MNC Company
 **Interview Set 6** | **14 Questions** | **Company**: MNC Company | **Date**: December 2024
+
+</td></tr></table>
 
 #### RxJS Advanced Concepts
 1. Explain the difference between switchMap, mergeMap, concatMap, and exhaustMap.
@@ -187,8 +201,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 7: Senior Angular Developer - Managerial Round
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 7: Senior Angular Developer - Managerial Round
 **Interview Set 7** | **10 Questions** | **Company**: MNC Company | **Date**: March 2025
+
+</td></tr></table>
 
 #### Software Design Concepts
 1. Explain SOLID principles in the context of Angular UI components. How would you keep components focused, testable, and extendable?
@@ -206,8 +224,12 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 ---
 
-### Set 8: Senior Angular Developer – Technical Round
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 8: Senior Angular Developer – Technical Round
 **Interview Set 8** | **12 Questions** | **Company**: MNC Company | **Date**: March 2025
+
+</td></tr></table>
 
 #### Angular Component Development
 1. Which component library have you created and worked with in your Angular projects?
