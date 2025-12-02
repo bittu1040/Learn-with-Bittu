@@ -1,345 +1,347 @@
 <div class="container">
-    <div class="row mt-2 mb-3">
-        <div class="col-lg-6">
-            <div class="d-flex align-items-center mt-2">
-                <div>Topics</div>
-                <mat-icon>keyboard_arrow_right</mat-icon>
-                <div>Angular</div>
-            </div>
-        </div>
-        <div class="col-lg-6 mt-2">
-            <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery">
-        </div>
+  <div class="row mt-2 mb-3">
+    <div class="col-lg-6">
+      <div class="d-flex align-items-center mt-2">
+        <div>Topics</div>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <div>Angular</div>
+      </div>
     </div>
+    <div class="col-lg-6 mt-2">
+      <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery">
+    </div>
+  </div>
 
 
-    <div class="row mt-2 mb-3">
-        <div class="col">
-            <div class="d-flex flex-wrap gap-2">
-                <div *ngFor="let topic of filteredTopics" class="custom-box" (click)="navigateToAngularTopic(topic.id)">{{topic.name}}</div>
-            </div>
-        </div>
+  <div class="row mt-2 mb-3">
+    <div class="col">
+      <div class="d-flex flex-wrap gap-2">
+        @for (topic of filteredTopics; track topic) {
+          <div class="custom-box" (click)="navigateToAngularTopic(topic.id)">{{topic.name}}</div>
+        }
+      </div>
     </div>
+  </div>
 
-    <mat-divider></mat-divider>
+  <mat-divider></mat-divider>
 
-    <div class="row mt-3" id="angular-workflow">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-workflow' }">1. Explain the Angular workflow.</h2>
-            <p>The Angular workflow describes the process of creating, building, and deploying Angular applications.</p>
-            <p>It typically involves steps such as setting up the development environment, creating components and services, writing code, testing, and optimizing for production.</p>
-        </div>
+  <div class="row mt-3" id="angular-workflow">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-workflow' }">1. Explain the Angular workflow.</h2>
+      <p>The Angular workflow describes the process of creating, building, and deploying Angular applications.</p>
+      <p>It typically involves steps such as setting up the development environment, creating components and services, writing code, testing, and optimizing for production.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="lifecycle-hooks">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'lifecycle-hooks' }">2. List down all Life Cycle Hooks in Angular</h2>
-            <p>Angular provides 8 life cycle hooks. These are:</p>
-            <ul style="display: flex; flex-direction: column; gap: 4px;">
-                <li>ngOnChanges</li>
-                <li>ngOnInit</li>
-                <li>ngDoCheck</li>
-                <li>ngAfterContentInit</li>
-                <li>ngAfterContentChecked</li>
-                <li>ngAfterViewInit</li>
-                <li>ngAfterViewChecked</li>
-                <li>ngOnDestroy</li>
-            </ul>
-        </div>
+  <div class="row mt-3" id="lifecycle-hooks">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'lifecycle-hooks' }">2. List down all Life Cycle Hooks in Angular</h2>
+      <p>Angular provides 8 life cycle hooks. These are:</p>
+      <ul style="display: flex; flex-direction: column; gap: 4px;">
+        <li>ngOnChanges</li>
+        <li>ngOnInit</li>
+        <li>ngDoCheck</li>
+        <li>ngAfterContentInit</li>
+        <li>ngAfterContentChecked</li>
+        <li>ngAfterViewInit</li>
+        <li>ngAfterViewChecked</li>
+        <li>ngOnDestroy</li>
+      </ul>
     </div>
-    
-    <div class="row mt-3" id="component-communication">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'component-communication' }">3. Explain component communication in Angular.</h2>
-            <p>Component communication in Angular involves sharing data between Angular components.</p>
-            <p>There are several methods for component communication, including Input and Output properties, ViewChild and ContentChild decorators, and shared services.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="directives">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'directives' }">4. Explain the difference between ngIf and ngShow in Angular.</h2>
-            <p>ngIf and ngShow are both Angular directives used for conditionally displaying elements in the DOM.</p>
-            <ul style="display: flex; flex-direction: column; gap: 4px;">
-                <li><strong>ngIf:</strong> Removes or recreates the element in the DOM based on a condition. When the condition is false, the element is removed from the DOM. When the condition is true, the element is added to the DOM.</li>
-                <li><strong>ngShow:</strong> Hides or shows the element based on a condition using CSS display property. When the condition is false, the element is hidden by setting its display property to none. When the condition is true, the element is shown by setting its display property to its original value.</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="pipes">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'pipes' }">5. Explain Angular pipes.</h2>
-            <p>Angular pipes are used for data transformation within templates.</p>
-            <p>They allow developers to transform data before displaying it in the view. Angular provides several built-in pipes for common tasks such as formatting dates, numbers, and currency.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="injectable-and-singleton-services">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'injectable-and-singleton-services' }">6. Explain Injectable and Singleton Services in Angular.</h2>
-            <p>Injectable services in Angular are classes that are decorated with the Injectable() decorator.</p>
-            <p>Singleton services are services that are instantiated only once per application and are shared across the entire application.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="dependency-injection">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection' }">7. Explain Dependency Injection in Angular.</h2>
-            <p>Dependency Injection (DI) is a design pattern in which a class receives its dependencies from external sources rather than creating them itself.</p>
-            <p>In Angular, DI is used to provide instances of services to components, directives, pipes, and other services.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="host-listener-and-host-binding">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'host-listener-and-host-binding' }">8. Explain host listener and host binding in Angular.</h2>
-            <p>Host listener and host binding are Angular decorators used to listen to events and bind properties on the host element of a directive.</p>
-            <p>Host listener is used to listen to events such as mouse clicks, keyboard events, etc., while host binding is used to bind properties of the host element.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="one-way-and-two-way-data-binding">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'one-way-and-two-way-data-binding' }">9. Explain one-way and two-way data binding in Angular.</h2>
-            <p>One-way data binding refers to the flow of data from the component class to the template (view).</p>
-            <p>Two-way data binding refers to the synchronization of data between the component class and the template. Changes in the template update the component class and vice versa.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="route-auth-guards">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-auth-guards' }">10. Explain Route/Auth Guards in Angular.</h2>
-            <p>Route guards in Angular are used to control access to routes in an Angular application.</p>
-            <p>Auth guards specifically ensure that only authenticated users are allowed to access certain routes. They can be used to redirect unauthorized users to a login page or display a forbidden message.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="lazy-loading">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'lazy-loading' }">11. Explain Lazy Loading in Angular.</h2>
-            <p>Lazy loading is a technique in Angular where modules are loaded asynchronously, on-demand, rather than upfront when the application starts.</p>
-            <p>It helps improve the initial loading time of the application by only loading the necessary modules when they are required.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="template-reactive-forms-and-validations">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'template-reactive-forms-and-validations' }">12. Explain Template/Reactive Forms and Validations in Angular.</h2>
-            <p>Template-driven forms and reactive forms are two approaches for handling forms in Angular.</p>
-            <p>Template-driven forms rely on directives in the template, while reactive forms use reactive programming with FormControl, FormGroup, and FormBuilder classes.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="observable-and-promises">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'observable-and-promises' }">13. Explain Observable and Promises in Angular.</h2>
-            <p>Observable and Promises are both used for handling asynchronous operations in Angular.</p>
-            <p>Observables are streams of data that can be subscribed to, while Promises represent a single future value or error that will be resolved asynchronously.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="rxjs-operators">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'rxjs-operators' }">14. Explain RXJS Operators in Angular.</h2>
-            <p>RXJS Operators are functions used to manipulate the data emitted by Observables.</p>
-            <p>They allow developers to perform operations such as filtering, mapping, merging, and combining Observables to create new streams of data.</p>
-            <ul>Commonly used RxJS Operator
-                <li>map</li>
-                <li>switchMap</li>
-                <li>mergeMap and concatMap</li>
-                <li>exhaustMap</li>
-                <li>combineLatest</li>
-                <li>distinctUntilChanged</li>
-                <li>forkJoin</li>
-                <li>debounceTime</li>
-                <li>catchError</li>
-                <li>Tap</li>
-                <li>Take and Skip</li>
-                <li>TakeUntil</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="subject-and-behavior-subject">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'subject-and-behavior-subject' }">15. Explain Subject and Behavior Subject in Angular.</h2>
-            <p>Subject and Behavior Subject are types of Observables used for multicasting.</p>
-            <p>Subject is a special type of Observable that allows values to be multicast to multiple Observers, while Behavior Subject is a type of Subject that stores the latest value and emits it to new subscribers.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="http-interceptor">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'http-interceptor' }">16. Explain HTTP (Req/Res) Interceptor in Angular.</h2>
-            <p>HTTP Interceptors in Angular are middleware that intercept HTTP requests and responses.</p>
-            <p>They are used to modify or transform requests or responses globally in an Angular application.</p>
-        </div>
-    </div>
+  </div>
 
-    <div class="row mt-3" id="change-detection-and-onpush">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'change-detection-and-onpush' }">17. Explain Change Detection and OnPush in Angular.</h2>
-            <p>Change Detection in Angular is the process of detecting changes to the application state and updating the view accordingly.</p>
-            <p>OnPush is a change detection strategy in Angular that triggers change detection only when input properties of a component change or when an event is emitted from the component.</p>
-        </div>
+  <div class="row mt-3" id="component-communication">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'component-communication' }">3. Explain component communication in Angular.</h2>
+      <p>Component communication in Angular involves sharing data between Angular components.</p>
+      <p>There are several methods for component communication, including Input and Output properties, ViewChild and ContentChild decorators, and shared services.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="optimization-technique-in-angular">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'optimization-technique-in-angular' }">18. Optimization Techniques in Angular</h2>
-            <p>Optimization techniques are crucial for enhancing the performance and efficiency of Angular applications. Below are ten optimization techniques:</p>
-            <ol>
-                <li><strong>Lazy Loading:</strong> Lazy loading is a technique that loads only the required modules and their associated components when navigating to a specific route. This helps reduce the initial bundle size and improves loading times.</li>
-                <li><strong>Tree Shaking:</strong> Tree shaking is a process of eliminating dead code or unused modules from the final bundle. By removing unnecessary code, tree shaking reduces the bundle size and improves application performance.</li>
-                <li><strong>Minification:</strong> Minification is the process of reducing the size of JavaScript, CSS, and HTML files by removing unnecessary characters such as white spaces, comments, and line breaks. Smaller file sizes result in faster downloads and improved loading times.</li>
-                <li><strong>OnPush Change Detection:</strong> Using the OnPush change detection strategy in Angular components helps optimize change detection by triggering it only when the component's input properties change or when events are emitted. This reduces unnecessary change detection cycles and improves application performance.</li>
-                <li><strong>Optimized Asset Loading:</strong> Optimizing asset loading involves techniques such as bundling assets, using content delivery networks (CDNs), and leveraging browser caching. These optimizations reduce the time it takes to load assets such as images, fonts, and stylesheets, resulting in faster page rendering.</li>
-                <li><strong>Ahead-of-Time (AOT) Compilation:</strong> AOT compilation converts Angular HTML and TypeScript code into efficient JavaScript code during the build process. This reduces runtime compilation overhead and improves startup performance.</li>
-                <li><strong>Code Splitting:</strong> Code splitting involves breaking down the application code into smaller chunks and loading them asynchronously. This allows for faster initial page loads and improves resource utilization.</li>
-                <li><strong>Service Worker and Progressive Web App (PWA) Support:</strong> Implementing service workers and building Progressive Web Apps (PWAs) enable features like offline support, background syncing, and caching, which can significantly improve the user experience, especially on slower networks.</li>
-                <li><strong>Bundle Optimization:</strong> Techniques such as code minification, compression, and dead code elimination can further optimize the size of JavaScript bundles, reducing load times and improving overall performance.</li>
-                <li><strong>Optimizing Angular Modules:</strong> Organizing Angular modules efficiently, avoiding circular dependencies, and lazy loading modules where appropriate can streamline the application architecture and improve performance.</li>
-            </ol>
-            <p>By implementing these optimization techniques, Angular developers can create high-performing and efficient applications that deliver a superior user experience.</p>
-        </div>
+  <div class="row mt-3" id="directives">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'directives' }">4. Explain the difference between ngIf and ngShow in Angular.</h2>
+      <p>ngIf and ngShow are both Angular directives used for conditionally displaying elements in the DOM.</p>
+      <ul style="display: flex; flex-direction: column; gap: 4px;">
+        <li><strong>ngIf:</strong> Removes or recreates the element in the DOM based on a condition. When the condition is false, the element is removed from the DOM. When the condition is true, the element is added to the DOM.</li>
+        <li><strong>ngShow:</strong> Hides or shows the element based on a condition using CSS display property. When the condition is false, the element is hidden by setting its display property to none. When the condition is true, the element is shown by setting its display property to its original value.</li>
+      </ul>
     </div>
+  </div>
 
-    
-    <div class="row mt-3" id="dist-and-bundle">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dist-and-bundle' }">19. Explain dist and bundle in Angular.</h2>
-            <p>Dist and bundle refer to the distribution and bundling of Angular applications.</p>
-            <p>When an Angular application is built for production, it is compiled, minified, and bundled into one or more JavaScript files that are ready for deployment.</p>
-        </div>
+  <div class="row mt-3" id="pipes">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'pipes' }">5. Explain Angular pipes.</h2>
+      <p>Angular pipes are used for data transformation within templates.</p>
+      <p>They allow developers to transform data before displaying it in the view. Angular provides several built-in pipes for common tasks such as formatting dates, numbers, and currency.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="unit-testing-in-angular">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'unit-testing-in-angular' }">20. Unit Testing in Angular</h2>
-            <p>Unit testing in Angular involves testing individual units or components of an Angular application to ensure their functionality works as expected.</p>
-            <p>Angular provides tools and libraries such as Jasmine and Karma to facilitate unit testing.</p>
-        </div>
+  <div class="row mt-3" id="injectable-and-singleton-services">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'injectable-and-singleton-services' }">6. Explain Injectable and Singleton Services in Angular.</h2>
+      <p>Injectable services in Angular are classes that are decorated with the Injectable() decorator.</p>
+      <p>Singleton services are services that are instantiated only once per application and are shared across the entire application.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="shadow-dom">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'shadow-dom' }">21. Shadow dom</h2>
-            <p>About shadow dom</p>
-        </div>
+  <div class="row mt-3" id="dependency-injection">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection' }">7. Explain Dependency Injection in Angular.</h2>
+      <p>Dependency Injection (DI) is a design pattern in which a class receives its dependencies from external sources rather than creating them itself.</p>
+      <p>In Angular, DI is used to provide instances of services to components, directives, pipes, and other services.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="content-projection">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'content-projection' }">22. Content projection</h2>
-            <p>Content projection is a technique in Angular that allows you to create reusable components that can be reused across multiple views.</p>
-            <p>Single slot and multi slot content projection</p>
-        </div>
+  <div class="row mt-3" id="host-listener-and-host-binding">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'host-listener-and-host-binding' }">8. Explain host listener and host binding in Angular.</h2>
+      <p>Host listener and host binding are Angular decorators used to listen to events and bind properties on the host element of a directive.</p>
+      <p>Host listener is used to listen to events such as mouse clicks, keyboard events, etc., while host binding is used to bind properties of the host element.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="view-encapsulation">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'view-encapsulation' }">23. View encapsulation</h2>
-            <p>View encapsulation is a technique in Angular that allows you to encapsulate styles and templates within a component.</p>
-        </div>
+  <div class="row mt-3" id="one-way-and-two-way-data-binding">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'one-way-and-two-way-data-binding' }">9. Explain one-way and two-way data binding in Angular.</h2>
+      <p>One-way data binding refers to the flow of data from the component class to the template (view).</p>
+      <p>Two-way data binding refers to the synchronization of data between the component class and the template. Changes in the template update the component class and vice versa.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="ng-deep-and-ng-host">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'ng-deep-and-ng-host' }">24. ng-deep and ng-host</h2>
-            <p>ng-deep and ng-host are Angular decorators that allow you to apply styles and templates to the host element of a component.</p>
-        </div>
+  <div class="row mt-3" id="route-auth-guards">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-auth-guards' }">10. Explain Route/Auth Guards in Angular.</h2>
+      <p>Route guards in Angular are used to control access to routes in an Angular application.</p>
+      <p>Auth guards specifically ensure that only authenticated users are allowed to access certain routes. They can be used to redirect unauthorized users to a login page or display a forbidden message.</p>
     </div>
+  </div>
 
-    <div class="row mt-3" id="angular-signals">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-signals' }">25. Angular Signals (new reactivity model)</h2>
-            <p>Angular Signals introduce a fine-grained reactivity system, allowing you to declare reactive values that automatically update the UI when changed. Signals provide a more predictable and efficient way to manage state and trigger change detection, reducing the need for manual subscriptions. They are especially useful for building highly interactive and performant applications, and represent a modern approach to reactivity in Angular.</p>
-        </div>
+  <div class="row mt-3" id="lazy-loading">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'lazy-loading' }">11. Explain Lazy Loading in Angular.</h2>
+      <p>Lazy loading is a technique in Angular where modules are loaded asynchronously, on-demand, rather than upfront when the application starts.</p>
+      <p>It helps improve the initial loading time of the application by only loading the necessary modules when they are required.</p>
     </div>
-    <div class="row mt-3" id="standalone-components">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'standalone-components' }">26. Standalone Components</h2>
-            <p>Standalone Components allow you to create Angular components that are not tied to any NgModule, simplifying structure and enabling easier reuse and lazy loading. This feature helps reduce boilerplate, makes codebases more modular, and allows for faster development and better tree-shaking during builds.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="template-reactive-forms-and-validations">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'template-reactive-forms-and-validations' }">12. Explain Template/Reactive Forms and Validations in Angular.</h2>
+      <p>Template-driven forms and reactive forms are two approaches for handling forms in Angular.</p>
+      <p>Template-driven forms rely on directives in the template, while reactive forms use reactive programming with FormControl, FormGroup, and FormBuilder classes.</p>
     </div>
-    <div class="row mt-3" id="angular-universal">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-universal' }">27. Angular Universal (Server Side Rendering)</h2>
-            <p>Angular Universal enables server-side rendering (SSR) for Angular apps, improving SEO and initial load performance by rendering HTML on the server. SSR is especially important for public-facing sites that need to be indexed by search engines and for improving perceived performance on slow networks.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="observable-and-promises">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'observable-and-promises' }">13. Explain Observable and Promises in Angular.</h2>
+      <p>Observable and Promises are both used for handling asynchronous operations in Angular.</p>
+      <p>Observables are streams of data that can be subscribed to, while Promises represent a single future value or error that will be resolved asynchronously.</p>
     </div>
-    <div class="row mt-3" id="dynamic-component-loading">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dynamic-component-loading' }">28. Dynamic Component Loading</h2>
-            <p>Dynamic Component Loading lets you create and insert components at runtime, useful for modals, plugins, and highly dynamic UIs. This technique is essential for building applications where the UI needs to adapt to user input or external data, and for implementing plugin architectures.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="rxjs-operators">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'rxjs-operators' }">14. Explain RXJS Operators in Angular.</h2>
+      <p>RXJS Operators are functions used to manipulate the data emitted by Observables.</p>
+      <p>They allow developers to perform operations such as filtering, mapping, merging, and combining Observables to create new streams of data.</p>
+      <ul>Commonly used RxJS Operator
+        <li>map</li>
+        <li>switchMap</li>
+        <li>mergeMap and concatMap</li>
+        <li>exhaustMap</li>
+        <li>combineLatest</li>
+        <li>distinctUntilChanged</li>
+        <li>forkJoin</li>
+        <li>debounceTime</li>
+        <li>catchError</li>
+        <li>Tap</li>
+        <li>Take and Skip</li>
+        <li>TakeUntil</li>
+      </ul>
     </div>
-    <div class="row mt-3" id="angular-animations">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-animations' }">29. Angular Animations</h2>
-            <p>Angular Animations provide a robust API for creating complex UI transitions and effects, built on top of the Web Animations API. You can animate component entry/exit, state changes, and even route transitions, enhancing user experience and making applications feel more dynamic and responsive.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="subject-and-behavior-subject">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'subject-and-behavior-subject' }">15. Explain Subject and Behavior Subject in Angular.</h2>
+      <p>Subject and Behavior Subject are types of Observables used for multicasting.</p>
+      <p>Subject is a special type of Observable that allows values to be multicast to multiple Observers, while Behavior Subject is a type of Subject that stores the latest value and emits it to new subscribers.</p>
     </div>
-    <div class="row mt-3" id="internationalization">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'internationalization' }">30. Internationalization (i18n)</h2>
-            <p>Internationalization (i18n) in Angular helps you build applications that support multiple languages and regional formats using built-in tools and libraries. It covers translation of static and dynamic content, formatting of dates, numbers, and currencies, and adapting layouts for different locales, making your app accessible to a global audience.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="http-interceptor">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'http-interceptor' }">16. Explain HTTP (Req/Res) Interceptor in Angular.</h2>
+      <p>HTTP Interceptors in Angular are middleware that intercept HTTP requests and responses.</p>
+      <p>They are used to modify or transform requests or responses globally in an Angular application.</p>
     </div>
-    <div class="row mt-3" id="angular-material-cdk">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-material-cdk' }">31. Angular Material/CDK</h2>
-            <p>Angular Material is a UI component library following Material Design, and the CDK provides low-level utilities for building custom UI components. Using Material and CDK, you can quickly build accessible, responsive, and visually appealing interfaces, or create your own advanced UI features with the CDK's utilities.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="change-detection-and-onpush">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'change-detection-and-onpush' }">17. Explain Change Detection and OnPush in Angular.</h2>
+      <p>Change Detection in Angular is the process of detecting changes to the application state and updating the view accordingly.</p>
+      <p>OnPush is a change detection strategy in Angular that triggers change detection only when input properties of a component change or when an event is emitted from the component.</p>
     </div>
-    <div class="row mt-3" id="custom-validators">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'custom-validators' }">32. Custom Validators</h2>
-            <p>Custom Validators allow you to implement your own validation logic for Angular forms, supporting both template-driven and reactive approaches. They are useful for enforcing business rules, validating complex input, and providing user feedback beyond the built-in validators.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="optimization-technique-in-angular">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'optimization-technique-in-angular' }">18. Optimization Techniques in Angular</h2>
+      <p>Optimization techniques are crucial for enhancing the performance and efficiency of Angular applications. Below are ten optimization techniques:</p>
+      <ol>
+        <li><strong>Lazy Loading:</strong> Lazy loading is a technique that loads only the required modules and their associated components when navigating to a specific route. This helps reduce the initial bundle size and improves loading times.</li>
+        <li><strong>Tree Shaking:</strong> Tree shaking is a process of eliminating dead code or unused modules from the final bundle. By removing unnecessary code, tree shaking reduces the bundle size and improves application performance.</li>
+        <li><strong>Minification:</strong> Minification is the process of reducing the size of JavaScript, CSS, and HTML files by removing unnecessary characters such as white spaces, comments, and line breaks. Smaller file sizes result in faster downloads and improved loading times.</li>
+        <li><strong>OnPush Change Detection:</strong> Using the OnPush change detection strategy in Angular components helps optimize change detection by triggering it only when the component's input properties change or when events are emitted. This reduces unnecessary change detection cycles and improves application performance.</li>
+        <li><strong>Optimized Asset Loading:</strong> Optimizing asset loading involves techniques such as bundling assets, using content delivery networks (CDNs), and leveraging browser caching. These optimizations reduce the time it takes to load assets such as images, fonts, and stylesheets, resulting in faster page rendering.</li>
+        <li><strong>Ahead-of-Time (AOT) Compilation:</strong> AOT compilation converts Angular HTML and TypeScript code into efficient JavaScript code during the build process. This reduces runtime compilation overhead and improves startup performance.</li>
+        <li><strong>Code Splitting:</strong> Code splitting involves breaking down the application code into smaller chunks and loading them asynchronously. This allows for faster initial page loads and improves resource utilization.</li>
+        <li><strong>Service Worker and Progressive Web App (PWA) Support:</strong> Implementing service workers and building Progressive Web Apps (PWAs) enable features like offline support, background syncing, and caching, which can significantly improve the user experience, especially on slower networks.</li>
+        <li><strong>Bundle Optimization:</strong> Techniques such as code minification, compression, and dead code elimination can further optimize the size of JavaScript bundles, reducing load times and improving overall performance.</li>
+        <li><strong>Optimizing Angular Modules:</strong> Organizing Angular modules efficiently, avoiding circular dependencies, and lazy loading modules where appropriate can streamline the application architecture and improve performance.</li>
+      </ol>
+      <p>By implementing these optimization techniques, Angular developers can create high-performing and efficient applications that deliver a superior user experience.</p>
     </div>
-    <div class="row mt-3" id="dependency-injection-hierarchy">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection-hierarchy' }">33. Dependency Injection Hierarchy</h2>
-            <p>Dependency Injection Hierarchy describes how Angular provides and shares services at different levels (root, module, component), affecting their scope and lifetime. Understanding this hierarchy is crucial for optimizing service usage, avoiding memory leaks, and controlling the visibility of dependencies in large applications.</p>
-        </div>
+  </div>
+
+
+  <div class="row mt-3" id="dist-and-bundle">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dist-and-bundle' }">19. Explain dist and bundle in Angular.</h2>
+      <p>Dist and bundle refer to the distribution and bundling of Angular applications.</p>
+      <p>When an Angular application is built for production, it is compiled, minified, and bundled into one or more JavaScript files that are ready for deployment.</p>
     </div>
-    <div class="row mt-3" id="zonejs-ngzone">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'zonejs-ngzone' }">34. Zone.js and NgZone</h2>
-            <p>Zone.js is used by Angular to track async operations for change detection. NgZone allows you to control when change detection runs, helping with performance tuning. Advanced use of NgZone can help you optimize heavy computations, third-party integrations, and improve overall app responsiveness.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="unit-testing-in-angular">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'unit-testing-in-angular' }">20. Unit Testing in Angular</h2>
+      <p>Unit testing in Angular involves testing individual units or components of an Angular application to ensure their functionality works as expected.</p>
+      <p>Angular provides tools and libraries such as Jasmine and Karma to facilitate unit testing.</p>
     </div>
-    <div class="row mt-3" id="state-management">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'state-management' }">35. State Management (NgRx, Akita, NGXS)</h2>
-            <p>State Management libraries like NgRx, Akita, and NGXS help manage application state in a predictable, scalable way, especially for large or complex apps. They provide tools for handling global and local state, time-travel debugging, and enforcing unidirectional data flow, making it easier to reason about and maintain your application.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="shadow-dom">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'shadow-dom' }">21. Shadow dom</h2>
+      <p>About shadow dom</p>
     </div>
-    <div class="row mt-3" id="viewchild-contentchild">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'viewchild-contentchild' }">36. ViewChild, ContentChild, ViewChildren, ContentChildren</h2>
-            <p>These decorators let you access child components, directives, or DOM elements from a parent component, either in the view or projected content. They are essential for advanced component communication, dynamic content manipulation, and building reusable UI patterns.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="content-projection">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'content-projection' }">22. Content projection</h2>
+      <p>Content projection is a technique in Angular that allows you to create reusable components that can be reused across multiple views.</p>
+      <p>Single slot and multi slot content projection</p>
     </div>
-    <div class="row mt-3" id="route-reuse-strategy">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-reuse-strategy' }">37. Route Reuse Strategy</h2>
-            <p>Route Reuse Strategy allows you to control when Angular reuses or destroys route components, enabling caching and improved navigation performance. Custom strategies can be implemented to preserve component state, speed up navigation, and provide a smoother user experience.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="view-encapsulation">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'view-encapsulation' }">23. View encapsulation</h2>
+      <p>View encapsulation is a technique in Angular that allows you to encapsulate styles and templates within a component.</p>
     </div>
-    <div class="row mt-3" id="angular-security">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-security' }">38. Angular Security (XSS, CSRF, DomSanitizer)</h2>
-            <p>Angular Security covers best practices and built-in tools (like DomSanitizer) to protect your app from XSS, CSRF, and other web vulnerabilities. It is important to sanitize user input, use Angular's security APIs, and follow secure coding practices to keep your application safe.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="ng-deep-and-ng-host">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'ng-deep-and-ng-host' }">24. ng-deep and ng-host</h2>
+      <p>ng-deep and ng-host are Angular decorators that allow you to apply styles and templates to the host element of a component.</p>
     </div>
-    <div class="row mt-3" id="accessibility">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'accessibility' }">39.Accessibility (a11y) in Angular</h2>
-            <p>Accessibility (a11y) ensures your Angular app is usable by everyone, including people with disabilities, using ARIA attributes, keyboard navigation, and best practices. Building accessible apps is not only a legal requirement in many regions but also improves usability for all users.</p>
-        </div>
+  </div>
+
+  <div class="row mt-3" id="angular-signals">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-signals' }">25. Angular Signals (new reactivity model)</h2>
+      <p>Angular Signals introduce a fine-grained reactivity system, allowing you to declare reactive values that automatically update the UI when changed. Signals provide a more predictable and efficient way to manage state and trigger change detection, reducing the need for manual subscriptions. They are especially useful for building highly interactive and performant applications, and represent a modern approach to reactivity in Angular.</p>
     </div>
+  </div>
+  <div class="row mt-3" id="standalone-components">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'standalone-components' }">26. Standalone Components</h2>
+      <p>Standalone Components allow you to create Angular components that are not tied to any NgModule, simplifying structure and enabling easier reuse and lazy loading. This feature helps reduce boilerplate, makes codebases more modular, and allows for faster development and better tree-shaking during builds.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="angular-universal">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-universal' }">27. Angular Universal (Server Side Rendering)</h2>
+      <p>Angular Universal enables server-side rendering (SSR) for Angular apps, improving SEO and initial load performance by rendering HTML on the server. SSR is especially important for public-facing sites that need to be indexed by search engines and for improving perceived performance on slow networks.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="dynamic-component-loading">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dynamic-component-loading' }">28. Dynamic Component Loading</h2>
+      <p>Dynamic Component Loading lets you create and insert components at runtime, useful for modals, plugins, and highly dynamic UIs. This technique is essential for building applications where the UI needs to adapt to user input or external data, and for implementing plugin architectures.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="angular-animations">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-animations' }">29. Angular Animations</h2>
+      <p>Angular Animations provide a robust API for creating complex UI transitions and effects, built on top of the Web Animations API. You can animate component entry/exit, state changes, and even route transitions, enhancing user experience and making applications feel more dynamic and responsive.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="internationalization">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'internationalization' }">30. Internationalization (i18n)</h2>
+      <p>Internationalization (i18n) in Angular helps you build applications that support multiple languages and regional formats using built-in tools and libraries. It covers translation of static and dynamic content, formatting of dates, numbers, and currencies, and adapting layouts for different locales, making your app accessible to a global audience.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="angular-material-cdk">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-material-cdk' }">31. Angular Material/CDK</h2>
+      <p>Angular Material is a UI component library following Material Design, and the CDK provides low-level utilities for building custom UI components. Using Material and CDK, you can quickly build accessible, responsive, and visually appealing interfaces, or create your own advanced UI features with the CDK's utilities.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="custom-validators">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'custom-validators' }">32. Custom Validators</h2>
+      <p>Custom Validators allow you to implement your own validation logic for Angular forms, supporting both template-driven and reactive approaches. They are useful for enforcing business rules, validating complex input, and providing user feedback beyond the built-in validators.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="dependency-injection-hierarchy">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'dependency-injection-hierarchy' }">33. Dependency Injection Hierarchy</h2>
+      <p>Dependency Injection Hierarchy describes how Angular provides and shares services at different levels (root, module, component), affecting their scope and lifetime. Understanding this hierarchy is crucial for optimizing service usage, avoiding memory leaks, and controlling the visibility of dependencies in large applications.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="zonejs-ngzone">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'zonejs-ngzone' }">34. Zone.js and NgZone</h2>
+      <p>Zone.js is used by Angular to track async operations for change detection. NgZone allows you to control when change detection runs, helping with performance tuning. Advanced use of NgZone can help you optimize heavy computations, third-party integrations, and improve overall app responsiveness.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="state-management">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'state-management' }">35. State Management (NgRx, Akita, NGXS)</h2>
+      <p>State Management libraries like NgRx, Akita, and NGXS help manage application state in a predictable, scalable way, especially for large or complex apps. They provide tools for handling global and local state, time-travel debugging, and enforcing unidirectional data flow, making it easier to reason about and maintain your application.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="viewchild-contentchild">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'viewchild-contentchild' }">36. ViewChild, ContentChild, ViewChildren, ContentChildren</h2>
+      <p>These decorators let you access child components, directives, or DOM elements from a parent component, either in the view or projected content. They are essential for advanced component communication, dynamic content manipulation, and building reusable UI patterns.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="route-reuse-strategy">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'route-reuse-strategy' }">37. Route Reuse Strategy</h2>
+      <p>Route Reuse Strategy allows you to control when Angular reuses or destroys route components, enabling caching and improved navigation performance. Custom strategies can be implemented to preserve component state, speed up navigation, and provide a smoother user experience.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="angular-security">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'angular-security' }">38. Angular Security (XSS, CSRF, DomSanitizer)</h2>
+      <p>Angular Security covers best practices and built-in tools (like DomSanitizer) to protect your app from XSS, CSRF, and other web vulnerabilities. It is important to sanitize user input, use Angular's security APIs, and follow secure coding practices to keep your application safe.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="accessibility">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'accessibility' }">39.Accessibility (a11y) in Angular</h2>
+      <p>Accessibility (a11y) ensures your Angular app is usable by everyone, including people with disabilities, using ARIA attributes, keyboard navigation, and best practices. Building accessible apps is not only a legal requirement in many regions but also improves usability for all users.</p>
+    </div>
+  </div>
 
 </div>

@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { InterviewSet, INTERVIEW_SETS, GithubRepository, GITHUB_REPOSITORY } from '../../shared/interview-data';
+import { QuestionsTabComponent } from './questions-tab/questions-tab.component';
+import { InterviewSetsTabComponent } from './interview-sets-tab/interview-sets-tab.component';
+import { JavascriptCodingTabComponent } from './javascript-coding-tab/javascript-coding-tab.component';
+import { MediumArticlesTabComponent } from './medium-articles-tab/medium-articles-tab.component';
 
 @Component({
     selector: 'app-interview-preparation',
     templateUrl: './interview-preparation.component.html',
     styleUrls: ['./interview-preparation.component.scss'],
-    standalone: false
+    imports: [QuestionsTabComponent, InterviewSetsTabComponent, JavascriptCodingTabComponent, MediumArticlesTabComponent]
 })
 export class InterviewPreparationComponent implements OnInit {
   

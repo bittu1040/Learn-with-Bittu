@@ -1,41 +1,34 @@
-<div class="code-snippet-container">
+<div class="code-snippet-container" [class]="'theme-' + theme">
   <div class="code-header">
-    <button *ngIf="copyButton" (click)="copyToClipboard(codeSnippet)" class="copy-button">Copy</button>
+    @if (language) {
+      <span class="language-label">{{ language }}</span>
+    }
+    <div class="header-actions">
+      @if (copyButton) {
+        <button 
+          (click)="copyToClipboard(codeSnippet)" 
+          class="copy-button"
+          type="button"
+          aria-label="Copy code to clipboard">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="m5 15-1-1v-10c0-1 0-2 2-2h10l1 1"></path>
+          </svg>
+          Copy
+        </button>
+      }
+    </div>
   </div>
   <div class="code-body">
-    <pre class="code-snippet">{{ codeSnippet }}</pre>
+    <div class="code-content">
+      @if (showLineNumbers) {
+        <div class="line-numbers">
+          @for (line of codeLines; track $index) {
+            <span class="line-number">{{ $index + 1 }}</span>
+          }
+        </div>
+      }
+      <pre class="code-snippet"><code>{{ codeSnippet }}</code></pre>
+    </div>
   </div>
 </div>
-
-
-
-<!-- 
-
-    features:
-    1. Copy button
-    2. download snippet button
-    3. share snippet button
-    4. change background color and font color
-    
-
-    use like this in other component where you want to implement
-
-
-// html
-<app-code-snippet [codeSnippet]="closureCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
-
-// ts
-closureCodeSnippet: string = `
-   function makeCounter() {
-     let count = 0;
-       return function() {
-       count++;
-         return count;
-       };
-   }
-
-  copyButton:boolean= true;
-
-
-
- -->

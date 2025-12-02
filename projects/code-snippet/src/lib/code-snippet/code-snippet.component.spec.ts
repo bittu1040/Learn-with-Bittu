@@ -8,8 +8,8 @@ describe('CodeSnippetComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CodeSnippetComponent]
-    });
+    imports: [CodeSnippetComponent]
+});
     fixture = TestBed.createComponent(CodeSnippetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

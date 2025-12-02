@@ -30,7 +30,6 @@ describe('ContactComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    declarations: [ContactComponent],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -49,7 +48,7 @@ describe('ContactComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, ContactComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 });
     fixture = TestBed.createComponent(ContactComponent);

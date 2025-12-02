@@ -1,14 +1,20 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import { listOfQuestions } from './shared/topics';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { DataSharingService } from './shared/data-sharing.service';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIconButton, MatAnchor } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatSidenavContainer, MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
+import { MatExpansionPanel, MatExpansionPanelHeader } from '@angular/material/expansion';
+import { MatDivider, MatNavList, MatListItem } from '@angular/material/list';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    imports: [MatToolbar, MatIconButton, MatIcon, RouterLink, MatAnchor, MatSidenavContainer, MatSidenav, MatExpansionPanel, MatExpansionPanelHeader, MatDivider, MatNavList, MatListItem, MatSidenavContent, RouterOutlet]
 })
 export class AppComponent implements OnInit {
   title = 'first-vercal-angular-app';

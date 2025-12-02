@@ -26,9 +26,6 @@ import { MatTreeModule } from '@angular/material/tree';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [
-        AppComponent
-    ],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -47,7 +44,7 @@ describe('AppComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, AppComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 }).compileComponents();
   });

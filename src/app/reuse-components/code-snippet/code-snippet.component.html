@@ -1,6 +1,8 @@
 <div class="code-snippet-container">
   <div class="code-header">
-    <button *ngIf="copyButton" (click)="copyToClipboard(codeSnippet)" class="copy-button">Copy</button>
+    @if (copyButton) {
+      <button (click)="copyToClipboard(codeSnippet)" class="copy-button">Copy</button>
+    }
   </div>
   <div class="code-body">
     <pre class="code-snippet">{{ codeSnippet }}</pre>
@@ -9,8 +11,8 @@
 
 
 
-<!-- 
-    use like this in other component where you want to implement
+<!--
+use like this in other component where you want to implement
 
 
 // html
@@ -18,16 +20,16 @@
 
 // ts
 closureCodeSnippet: string = `
-   function makeCounter() {
-     let count = 0;
-       return function() {
-       count++;
-         return count;
-       };
-   }
+function makeCounter() {
+let count = 0;
+return function() {
+count++;
+return count;
+};
+}
 
-  copyButton:boolean= true;
+copyButton:boolean= true;
 
 
 
- -->
+-->

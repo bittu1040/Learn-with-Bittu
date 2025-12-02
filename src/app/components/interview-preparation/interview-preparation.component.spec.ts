@@ -26,14 +26,13 @@ describe('InterviewPreparationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InterviewPreparationComponent],
-      imports: [        FormsModule,
+    imports: [FormsModule,
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        MatIconModule,MatCardModule],
-      providers:[DataSharingService],
-    });
+        MatIconModule, MatCardModule, InterviewPreparationComponent],
+    providers: [DataSharingService],
+});
     fixture = TestBed.createComponent(InterviewPreparationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

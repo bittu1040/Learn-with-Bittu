@@ -3,5 +3,5 @@
  */
 
 
-export * from './lib/code-snippet.module';
+
 export * from './lib/code-snippet/code-snippet.component';

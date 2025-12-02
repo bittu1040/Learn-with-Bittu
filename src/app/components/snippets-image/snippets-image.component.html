@@ -1,22 +1,22 @@
-<!-- 
-                image file upload 
-                Search files
-                display all image files
-                image edit/update
- -->
+<!--
+image file upload
+Search files
+display all image files
+image edit/update
+-->
 
-<!-- 
- 
-                Create a form with start date, end date and time with basic validation. 
+<!--
 
-                input type Date and time
-                custom validator for date match (end date should be more than start date)
-                Date format matcher : validator (Date format should be in this format DD/MM/YYYY  )
+Create a form with start date, end date and time with basic validation.
 
-                Submit and get data in console 
-                { startDate:12/01/2024, endDate: 12/04/2024, time: 04:00 AM }
+input type Date and time
+custom validator for date match (end date should be more than start date)
+Date format matcher : validator (Date format should be in this format DD/MM/YYYY  )
 
- -->
+Submit and get data in console
+{ startDate:12/01/2024, endDate: 12/04/2024, time: 04:00 AM }
+
+-->
 
 
 <div class="container mt-4">
@@ -30,14 +30,20 @@
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Name</mat-label>
           <input matInput formControlName="fullName">
-          <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('required')">Name is required</mat-error>
-          <mat-error *ngIf="simpleForm1.controls['fullName'].hasError('pattern')">Only alphabets are allowed</mat-error>
+          @if (simpleForm1.controls['fullName'].hasError('required')) {
+            <mat-error>Name is required</mat-error>
+          }
+          @if (simpleForm1.controls['fullName'].hasError('pattern')) {
+            <mat-error>Only alphabets are allowed</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>City</mat-label>
           <input matInput formControlName="city">
-          <mat-error *ngIf="simpleForm1.controls['city'].hasError('required')">City is required</mat-error>
+          @if (simpleForm1.controls['city'].hasError('required')) {
+            <mat-error>City is required</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
@@ -46,7 +52,9 @@
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-          <mat-error *ngIf="simpleForm1.controls['DOB'].hasError('required')">DOB is required</mat-error>
+          @if (simpleForm1.controls['DOB'].hasError('required')) {
+            <mat-error>DOB is required</mat-error>
+          }
         </mat-form-field>
 
 
@@ -58,15 +66,21 @@
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Unique Id</mat-label>
           <input matInput formControlName="uniqueId">
-          <mat-error *ngIf="simpleForm1.controls['uniqueId'].hasError('required')">Unique ID is required</mat-error>
+          @if (simpleForm1.controls['uniqueId'].hasError('required')) {
+            <mat-error>Unique ID is required</mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="simpleFormInput" appearance="fill">
           <mat-label>Confirm Unique Id</mat-label>
           <input matInput formControlName="confirmUniqueId">
-          <mat-error *ngIf="simpleForm1.controls['confirmUniqueId'].hasError('required')">Unique ID is
+          @if (simpleForm1.controls['confirmUniqueId'].hasError('required')) {
+            <mat-error>Unique ID is
             required</mat-error>
-          <mat-error *ngIf="simpleForm1.hasError('uniqueIdMatch')">Unique ID does not match</mat-error>
+          }
+          @if (simpleForm1.hasError('uniqueIdMatch')) {
+            <mat-error>Unique ID does not match</mat-error>
+          }
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit" [disabled]="simpleForm1.invalid">Submit</button>
@@ -83,13 +97,17 @@
             <mat-label>City</mat-label>
             <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
             <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-              <mat-option *ngFor="let city of filteredCities | async" [value]="city">
-                {{ city }}
-              </mat-option>
-              <mat-option *ngIf="cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0"
-                [value]="'not-found'">
-                No matching cities found
-              </mat-option>
+              @for (city of filteredCities | async; track city) {
+                <mat-option [value]="city">
+                  {{ city }}
+                </mat-option>
+              }
+              @if (cityFormGroup.get('city')?.value && (filteredCities | async)?.length === 0) {
+                <mat-option
+                  [value]="'not-found'">
+                  No matching cities found
+                </mat-option>
+              }
             </mat-autocomplete>
           </mat-form-field>
         </form>
@@ -106,9 +124,11 @@
           <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
           <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #startDatePicker></mat-datepicker>
-          <mat-error *ngIf="dateAndTimeInputForm.controls['startDate'].hasError('required')">
-            Start date is required
-          </mat-error>
+          @if (dateAndTimeInputForm.controls['startDate'].hasError('required')) {
+            <mat-error>
+              Start date is required
+            </mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="dateFormInput" appearance="fill">
@@ -116,24 +136,30 @@
           <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
           <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
           <mat-datepicker #endDatePicker></mat-datepicker>
-          <mat-error *ngIf="dateAndTimeInputForm.controls['endDate'].hasError('required')">
-            End date is required
-          </mat-error>
-          <mat-error *ngIf="dateAndTimeInputForm.hasError('datesComparision')">
-            End date should be later than start date
-          </mat-error>
+          @if (dateAndTimeInputForm.controls['endDate'].hasError('required')) {
+            <mat-error>
+              End date is required
+            </mat-error>
+          }
+          @if (dateAndTimeInputForm.hasError('datesComparision')) {
+            <mat-error>
+              End date should be later than start date
+            </mat-error>
+          }
         </mat-form-field>
 
         <mat-form-field class="dateFormInput" appearance="fill">
           <mat-label>Time</mat-label>
           <input matInput type="time" formControlName="time">
-          <mat-error *ngIf="dateAndTimeInputForm.controls['time'].hasError('required')">
-            Time is required
-          </mat-error>
+          @if (dateAndTimeInputForm.controls['time'].hasError('required')) {
+            <mat-error>
+              Time is required
+            </mat-error>
+          }
         </mat-form-field>
 
         <button mat-raised-button color="primary" type="submit"
-          [disabled]="dateAndTimeInputForm.invalid">Submit</button>
+        [disabled]="dateAndTimeInputForm.invalid">Submit</button>
       </form>
 
     </div>
@@ -145,21 +171,22 @@
       <div class="row" style="height: calc(100vh - 383px); overflow: auto;">
         <div><input type="text" class="form-control mb-3" placeholder="Search Products" (input)="onInputChange($event)">
         </div>
-        <ng-container *ngIf="products?.length > 0; else noProducts">
-          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
-                <p class="card-text">Category: {{ product.category }}</p>
+        @if (products?.length > 0) {
+          @for (product of products; track product) {
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">{{ product.title | slice: 0:20 }}</h4>
+                  <p class="card-text">Category: {{ product.category }}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </ng-container>
-        <ng-template #noProducts>
+          }
+        } @else {
           <div class="col">
             <p>No products found.</p>
           </div>
-        </ng-template>
+        }
       </div>
     </div>
   </mat-card>
@@ -172,31 +199,31 @@
           <input type="text" class="form-control mb-3" placeholder="Search Text" (input)="filterTexts($event)">
         </div>
         <div #introductionToAngular id="introduction-to-angular">
-           <h3>Introduction to Angular</h3>
-            <ul>
-              <li>Angular is a platform and framework for building single-page client applications using HTML and
-                TypeScript.</li>
-              <li>It is developed and maintained by Google.</li>
-              <li>Angular provides a robust set of tools and features for building complex web applications, including
-                dependency injection, routing, and forms handling.</li>
-              <li>It uses a component-based architecture, allowing for reusable and modular code.</li>
-              <li>Angular has a strong ecosystem with extensive documentation, community support, and a wide range of
-                third-party libraries.</li>
-            </ul>
+          <h3>Introduction to Angular</h3>
+          <ul>
+            <li>Angular is a platform and framework for building single-page client applications using HTML and
+            TypeScript.</li>
+            <li>It is developed and maintained by Google.</li>
+            <li>Angular provides a robust set of tools and features for building complex web applications, including
+            dependency injection, routing, and forms handling.</li>
+            <li>It uses a component-based architecture, allowing for reusable and modular code.</li>
+            <li>Angular has a strong ecosystem with extensive documentation, community support, and a wide range of
+            third-party libraries.</li>
+          </ul>
         </div>
         <div #advancedFeaturesOfAngular id="advanced-features-of-angular">
           <h3> Advanced Features of Angular </h3>
-            <ul>
-              <li>Angular CLI is a powerful command-line tool that simplifies the development process by automating
-                tasks.</li>
-              <li>Angular supports reactive programming with RxJS, making it easier to manage asynchronous data streams.
-              </li>
-              <li>It includes a built-in HTTP client to interact with backend services and APIs.</li>
-              <li>Angular Universal allows for server-side rendering, improving SEO and performance for Angular
-                applications.</li>
-              <li>It also supports progressive web apps (PWAs), enabling offline capabilities and better user
-                experiences.</li>
-            </ul>
+          <ul>
+            <li>Angular CLI is a powerful command-line tool that simplifies the development process by automating
+            tasks.</li>
+            <li>Angular supports reactive programming with RxJS, making it easier to manage asynchronous data streams.
+            </li>
+            <li>It includes a built-in HTTP client to interact with backend services and APIs.</li>
+            <li>Angular Universal allows for server-side rendering, improving SEO and performance for Angular
+            applications.</li>
+            <li>It also supports progressive web apps (PWAs), enabling offline capabilities and better user
+            experiences.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -220,7 +247,7 @@
     <div class="row">
       <h2>8. Highlight data if modified in table </h2>
       <p> Create a table with column: name, city and age. create a edit form with name, city and age, what ever data is
-        modified should be highlighted and it should show previous data in tooltip</p>
+      modified should be highlighted and it should show previous data in tooltip</p>
     </div>
   </mat-card>
 
@@ -228,24 +255,26 @@
     <div class="row">
       <h2>9. Unit test example in Angular</h2>
       <p>Create one button and after clicking on button there should one API call and then response should be printed in
-        UI. We need to write unit test for this. </p>
+      UI. We need to write unit test for this. </p>
       <div> <button mat-raised-button color="primary" style="max-width: 120px;" (click)="fetchPost()">Fetch
-          Post</button>
-      </div>
-      <div *ngIf="post" class="row mt-4">
+      Post</button>
+    </div>
+    @if (post) {
+      <div class="row mt-4">
         <h2>Data from API</h2>
         <h3>Title: {{ post.title }}</h3>
         <p>Body: {{ post.body }}</p>
       </div>
-    </div>
-  </mat-card>
+    }
+  </div>
+</mat-card>
 
-  <mat-card class="mt-4 p-3">
-    <div class="row">
-      <h2>10. Content projection in angular (ng-content)</h2>
-      <p>Content projection allows you to insert, content from a parent component into a child component. This is done
-        using the ng-content directive</p>
-    </div>
-  </mat-card>
+<mat-card class="mt-4 p-3">
+  <div class="row">
+    <h2>10. Content projection in angular (ng-content)</h2>
+    <p>Content projection allows you to insert, content from a parent component into a child component. This is done
+    using the ng-content directive</p>
+  </div>
+</mat-card>
 
 </div>

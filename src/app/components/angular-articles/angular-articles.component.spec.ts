@@ -30,7 +30,6 @@ describe('AngularArticlesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    declarations: [AngularArticlesComponent],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -49,7 +48,7 @@ describe('AngularArticlesComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, AngularArticlesComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 });
     fixture = TestBed.createComponent(AngularArticlesComponent);

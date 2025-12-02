@@ -8,8 +8,8 @@ describe('JavascriptCodingTabComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [JavascriptCodingTabComponent]
-    });
+    imports: [JavascriptCodingTabComponent]
+});
     fixture = TestBed.createComponent(JavascriptCodingTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
