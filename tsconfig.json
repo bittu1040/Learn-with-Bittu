@@ -4,8 +4,12 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@shared/*": ["src/app/shared/*"],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
       "app/*": [
         "src/app/*"
       ],
@@ -24,7 +28,7 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",

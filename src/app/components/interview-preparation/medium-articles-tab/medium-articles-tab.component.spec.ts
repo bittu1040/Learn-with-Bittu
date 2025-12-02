@@ -8,8 +8,8 @@ describe('MediumArticlesTabComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MediumArticlesTabComponent]
-    });
+    imports: [MediumArticlesTabComponent]
+});
     fixture = TestBed.createComponent(MediumArticlesTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

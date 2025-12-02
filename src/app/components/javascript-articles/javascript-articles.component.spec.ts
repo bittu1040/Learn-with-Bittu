@@ -31,7 +31,7 @@ describe('JavascriptArticlesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    declarations: [JavascriptArticlesComponent, CodeSnippetComponent],
+    declarations: [CodeSnippetComponent],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -50,7 +50,7 @@ describe('JavascriptArticlesComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, JavascriptArticlesComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 });
     fixture = TestBed.createComponent(JavascriptArticlesComponent);

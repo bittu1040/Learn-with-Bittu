@@ -31,7 +31,6 @@ fdescribe('SnippetsImageComponent', () => {
   let service: DataSharingService;
   beforeEach(() => {
     TestBed.configureTestingModule({
-    declarations: [SnippetsImageComponent],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -50,7 +49,7 @@ fdescribe('SnippetsImageComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, SnippetsImageComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 });
     fixture = TestBed.createComponent(SnippetsImageComponent);

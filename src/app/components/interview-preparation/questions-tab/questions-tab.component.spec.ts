@@ -8,8 +8,8 @@ describe('QuestionsTabComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [QuestionsTabComponent]
-    });
+    imports: [QuestionsTabComponent]
+});
     fixture = TestBed.createComponent(QuestionsTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

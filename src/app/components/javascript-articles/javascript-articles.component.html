@@ -1,308 +1,310 @@
 <div class="container">
-    <div class="row mt-2 mb-3">
-        <div class="col-lg-6">
-            <div class="d-flex align-items-center mt-2">
-                <div>Topics</div>
-                <mat-icon>keyboard_arrow_right</mat-icon>
-                <div>JavaScript</div>
-            </div>
-        </div>
-        <div class="col-lg-6 mt-2">
-            <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery">
-        </div>
+  <div class="row mt-2 mb-3">
+    <div class="col-lg-6">
+      <div class="d-flex align-items-center mt-2">
+        <div>Topics</div>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <div>JavaScript</div>
+      </div>
     </div>
-    
-    
-    
-
-
-    <div class="row mt-2 mb-3">
-        <div class="col">
-            <div class="d-flex flex-wrap gap-2">
-                <div *ngFor="let topic of filteredTopics" class="custom-box" (click)="navigateToJSTopic(topic.id)">
-                    {{topic.name}}</div>
-            </div>
-        </div>
+    <div class="col-lg-6 mt-2">
+      <input type="text" class="form-control" placeholder="Search Topics" [(ngModel)]="searchQuery">
     </div>
+  </div>
 
 
 
-    <mat-divider></mat-divider>
 
-    <div class="row mt-3" id="variable-declarations">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'variable-declarations' }">1. Variable Declarations in JavaScript</h2>
-            <p>JavaScript has three types of variable declarations:</p>
-            <ul>
-                <li>var: Function-scoped, traditionally used.</li>
-                <li>let: Block-scoped, introduced in ES6.</li>
-                <li>const: Block-scoped constant, introduced in ES6.</li>
-            </ul>
-            <p>Example:</p>
-            <app-code-snippet [codeSnippet]="variableDeclarationSnippet" [copyButton]="copyButton"></app-code-snippet>
-        </div>
+
+  <div class="row mt-2 mb-3">
+    <div class="col">
+      <div class="d-flex flex-wrap gap-2">
+        @for (topic of filteredTopics; track topic) {
+          <div class="custom-box" (click)="navigateToJSTopic(topic.id)">
+          {{topic.name}}</div>
+        }
+      </div>
     </div>
-    
-
-    <div class="row mt-3" id="functions-and-scope">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'functions-and-scope' }">2. What are functions and scope?</h2>
-            <p>Explanation about functions and scope.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="closures">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'closures' }">3. What is a closure in JavaScript?</h2>
-            <p>A closure is a combination of a function and the lexical environment within which that function was
-                declared. This allows the function to retain access to variables from its parent scope even after the
-                parent function has finished executing.</p>
-
-            <app-code-snippet [codeSnippet]="closureCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
-
-        </div>
-    </div>
-
-    <div class="row mt-3" id="hoisting">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'hoisting' }" >4. What is hoisting?</h2>
-            <p>Explanation about hoisting.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="currying">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'currying' }">5. What is a currying in JavaScript?</h2>
-            <p>A currying is a function that takes a function as an argument and returns a new function. The new
-                function takes the arguments of the original function and returns the result.</p>
-                
-            <app-code-snippet [codeSnippet]="curryingCodeSnippet" [copyButton]="copyButton"></app-code-snippet>
-
-        </div>
-    </div>
-
-    <div class="row mt-3" id="comparison-operators">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'comparison-operators' }">6. Explain the difference between == and === operators in JavaScript.</h2>
-            <p>The == operator checks for equality, but it performs type coercion if the operands are of different
-                types. On the other hand, the === operator checks for equality without performing type coercion, meaning
-                both value and type must be the same for it to return true.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="array-methods">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'array-methods' }">7. List down some built-in array methods in JavaScript.</h2>
-            <p>JavaScript provides several built-in methods for manipulating arrays. Some of these methods include:</p>
-            <ul>
-                <li>push()</li>
-                <li>pop()</li>
-                <li>shift()</li>
-                <li>unshift()</li>
-                <li>splice()</li>
-                <li>slice()</li>
-                <li>concat()</li>
-                <li>forEach()</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="event-loop-callstack-microtask-macrotask">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'event-loop-callstack-microtask-macrotask' }">8. What is the event loop (callstack, microtask, macrotask)?</h2>
-            <p>Explanation about the event loop.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="prototypes-prototype-chain-prototypal-inheritance">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'prototypes-prototype-chain-prototypal-inheritance' }">9. What are prototypes, prototype chain, and prototypal inheritance?</h2>
-            <p>Explanation about prototypes, prototype chain, and prototypal inheritance.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="callback-in-javascript">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'callback-in-javascript' }">10. What is a callback in JavaScript?</h2>
-            <p>Explanation about callbacks in JavaScript.</p>
-        </div>
-    </div>
-    <div class="row mt-3" id="asynchronous-javascript-promises-async-await">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'asynchronous-javascript-promises-async-await' }">11. What is asynchronous JavaScript (Promises, async/await)?</h2>
-            <p>Explanation about asynchronous JavaScript using Promises and async/await.</p>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="promise-methods">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'promise-methods' }">12. Promise Methods ?</h2>
-            <p>Promise methods are fundamental to asynchronous JavaScript programming, providing a way to handle asynchronous operations and their results.</p>
-            <p><strong>Promise.resolve():</strong> This method returns a Promise object that is resolved with a given value. It is commonly used to convert non-Promise values into Promise objects, allowing consistent handling of asynchronous operations.</p>
-            <p><strong>Promise.reject():</strong> Conversely, Promise.reject() returns a Promise object that is rejected with a given reason (typically an Error object). It is useful for signaling that an asynchronous operation has failed or encountered an error condition.</p>
-            <p><strong>Promise.all():</strong> Promise.all() takes an iterable of Promises as input and returns a single Promise that resolves when all of the input Promises have resolved, or rejects if any of the input Promises reject. It is commonly used when you need to perform multiple asynchronous operations concurrently and wait for all of them to complete before proceeding.</p>
-            <p><strong>Promise.race():</strong> In contrast, Promise.race() takes an iterable of Promises and returns a Promise that resolves or rejects as soon as one of the input Promises resolves or rejects, with the value or reason from that Promise. It is useful for scenarios where you want to respond as soon as any one of multiple asynchronous operations completes.</p>
-            <p>Understanding and effectively using these Promise methods is crucial for writing robust and efficient asynchronous JavaScript code, enabling developers to handle asynchronous operations gracefully.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="call-apply-and-bind">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'call-apply-and-bind' }">13. What are call, apply, and bind?</h2>
-            <p>Explanation about call, apply, and bind methods in JavaScript.</p>
-        </div>
-    </div>
-    <div class="row mt-3" id="explain-this-in-javascript">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">14. Explain "this" in JavaScript.</h2>
-            <p>Explanation about the "this" keyword in JavaScript.</p>
-        </div>
-    </div>
-    <div class="row mt-3" id="document-object-model-dom">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'document-object-model-dom' }">15. What is the Document Object Model (DOM)?</h2>
-            <p>Explanation about the Document Object Model (DOM).</p>
-        </div>
-    </div>
-    <div class="row mt-3" id="template-literals-destructuring-spread-operator-rest-operator">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'template-literals-destructuring-spread-operator-rest-operator' }">16. What are template literals, destructuring, spread operator, and rest operator?</h2>
-            <p>Explanation about template literals, destructuring, spread operator, and rest operator.</p>
-            <app-code-snippet [codeSnippet]="RestAndDestructuringSnippet" [copyButton]="copyButton"></app-code-snippet>
-        </div>
-    </div>
-
-    <div class="row mt-3" id="ES6-feature">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'ES6-feature' }">17. ES6 new feature ?</h2>
-            <ol>
-                <li>Template literals</li>
-                <li>Destructuring</li>
-                <li>Arrow functions</li>
-                <li>let and const</li>
-                <li>Classes</li>
-                <li>Default parameters</li>
-                <li>Spread syntax</li>
-                <li>Rest parameters</li>
-                <li>Object shorthand</li>
-                <li>Array methods like map(), filter(), and reduce()</li>
-            </ol>
-        </div>
-    </div>
+  </div>
 
 
-    <div class="row mt-3" id="async-and-defer">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">18. async-and-defer ?</h2>
-            <p>The attributes `async` and `defer` are used in HTML script tags to control the loading and execution of external JavaScript files.</p>
-            <p><strong>async:</strong> When the `async` attribute is present, the script will be fetched asynchronously, meaning it will not block the parsing of the HTML document. The script will be executed as soon as it is downloaded, regardless of the order it appears in the document.</p>
-            <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
-            <p>Using `async` and `defer` attributes can help improve page loading performance by allowing scripts to be loaded in parallel with other resources without blocking rendering or delaying the document's interactive state.</p>
-        </div>
-    </div>
-    
-    <div class="row mt-3" id="event-delegation-and-event-propagation">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'event-delegation-and-event-propagation' }">19. Event Delegation and Event Propagation ?</h2>
-            <p>Event delegation and event propagation are related concepts in web development, but they address different aspects of handling events in the DOM.</p>
-            <p> <strong>Event Delegation:</strong> </p>
-            <p>Event delegation is a design pattern where single parent elements used to manage and handle events for multiple child elements.
-               In the event delegation, We add single event listener to the parent instead of all the child elements linked to it.</p>
-            <p>This approach is useful for managing events on dynamic or large sets of elements efficiently.</p>
 
-            <p><strong>Event Propagation:</strong> </p>
-            <p> Event propagation refers to the flow of events through the Document Object Modal (DOM).
-                Event propagation has two phases — capturing phase (downward) and bubbling phase (upward).</p>
-        </div>
+  <mat-divider></mat-divider>
+
+  <div class="row mt-3" id="variable-declarations">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'variable-declarations' }">1. Variable Declarations in JavaScript</h2>
+      <p>JavaScript has three types of variable declarations:</p>
+      <ul>
+        <li>var: Function-scoped, traditionally used.</li>
+        <li>let: Block-scoped, introduced in ES6.</li>
+        <li>const: Block-scoped constant, introduced in ES6.</li>
+      </ul>
+      <p>Example:</p>
+      <lib-code-snippet [codeSnippet]="variableDeclarationSnippet" [copyButton]="copyButton"></lib-code-snippet>
     </div>
-    
+  </div>
 
 
-    <div class="row mt-3" id="debounce-and-throttle">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'debounce-and-throttle' }">20. Debounce and Throttle ?</h2>
-            <p>The techniques of 'debounce' and 'throttle' are used in web development to control the frequency of execution of a function, typically used in event handling scenarios.</p>
-            <p><strong>Debounce:</strong> When using debounce, the execution of a function is delayed until after a certain amount of time has passed since the last invocation of the function. This is particularly useful when dealing with events such as user input, where you want to wait for a pause before triggering an action to avoid excessive calls, such as search suggestions in a search bar.</p>
-            <p><strong>Throttle:</strong> Throttle, on the other hand, limits the rate at which a function can be called. It ensures that the function is executed at most once per specified time interval. This is beneficial for scenarios like scroll events, where you want to ensure that a function is not called too frequently, preventing performance issues.</p>
-            <p>Implementing debounce and throttle techniques can optimize performance and improve the user experience by controlling the frequency of function execution, especially in situations with high event triggers.</p>
-        </div>
+  <div class="row mt-3" id="functions-and-scope">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'functions-and-scope' }">2. What are functions and scope?</h2>
+      <p>Explanation about functions and scope.</p>
     </div>
-    
+  </div>
 
-    <div class="row mt-3" id="oops-in-javascript">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">21. OOPS in JavaScript</h2>
-            <p>4 Pillar of OOPS in JavaScript</p>
-            <ol>
-                <li>Encapsulation</li>
-                <li>Inheritance</li>
-                <li>Polymorphism</li>
-                <li>Abstraction</li>
-            </ol>
-        </div>
-    </div>
+  <div class="row mt-3" id="closures">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'closures' }">3. What is a closure in JavaScript?</h2>
+      <p>A closure is a combination of a function and the lexical environment within which that function was
+        declared. This allows the function to retain access to variables from its parent scope even after the
+      parent function has finished executing.</p>
 
-    <div class="row mt-3" id="design-pattern-in-javscript">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">22. Design Pattern in JavaScript</h2>
-            <p>List down commonly used design-pattern-in-javscript.</p>
-            <ol>
-               <li> Constructor pattern</li>
-               <li> Factory pattern</li>
-               <li> Module pattern</li>
-               <li> Observer pattern</li>
-               <li> Prototype pattern</li>
-               <li> Proxy pattern</li>
-               <li> Singleton pattern</li>
-            </ol>
-        </div>
-    </div>
+      <lib-code-snippet [codeSnippet]="closureCodeSnippet" [copyButton]="copyButton"></lib-code-snippet>
 
-    <div class="row mt-3" id="deep-copy-shallow-copy">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'deep-copy-shallow-copy' }"> 23. Deep Copy and Shallow Copy in JavaScript</h2>
-            <p>Deep copy and shallow copy are essential concepts in JavaScript, particularly when dealing with nested data structures like arrays of objects or objects containing other objects.</p>
-            <b>Shallow Copy </b>
-            <p>A shallow copy creates a new object but only copies references to the nested structures. This means that modifications made to the nested structures in the copied object will also affect the original object, and vice versa.</p>
-            <app-code-snippet [codeSnippet]="shallowCopySnippet" [copyButton]="copyButton"></app-code-snippet>
-            <p>In this example, modifying <code>arr2</code> affects <code>arr1</code> as well.</p>
-            
-            <b>Deep Copy</b>
-            <p>A deep copy, on the other hand, creates a new object with its own values, completely independent of the original object, including all nested structures. Changes made to the copied object will not affect the original object, and vice versa.</p>
-            <app-code-snippet [codeSnippet]="deepCopySnippet" [copyButton]="copyButton"></app-code-snippet>
-            <p>In this example, modifying <code>studentsCopy</code> does not affect <code>students</code>.</p>
-            <p>Understanding the difference between deep copy and shallow copy is crucial for managing data effectively in JavaScript applications.</p>
-        </div>
     </div>
+  </div>
 
-    <div class="row mt-3" id="webpack">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic': activeTopicId === 'webpack' }">25. Webpack Basics</h2>
-            <p>Webpack is a popular module bundler for JavaScript applications, widely used in modern web development workflows. It provides a powerful set of features for managing and optimizing assets, including JavaScript files, CSS stylesheets, images, and more.</p>
-        </div>
+  <div class="row mt-3" id="hoisting">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'hoisting' }" >4. What is hoisting?</h2>
+      <p>Explanation about hoisting.</p>
     </div>
-    
-    
+  </div>
 
-    <div class="row mt-3" id="frequently-asked-questions">
-        <div class="col">
-            <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">24. frequently-asked-questions for frontend developers?</h2>
-            <p>frequently-asked-questions for frontend developers and need to know topics</p>
-            <ol>
-                <li>Pure and impure pipe/function</li>
-                <li>Mutability and immutability</li>
-                <li>CORS</li>
-                <li>Web Performance Optimization</li>
-                <li>Responsive Web Design</li>
-                <li>What is microfrontend</li>
-                <li>Explain PWA and SPA</li>
-                <li>Pre-processors - SCSS or LESS</li>
-                <li>JWT</li>
-                <li>localStorage/sessionStorage</li>
-                <li>How to debug your frontend application</li>
-                <li>Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)</li>
-            </ol>
-        </div>
+  <div class="row mt-3" id="currying">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'currying' }">5. What is a currying in JavaScript?</h2>
+      <p>A currying is a function that takes a function as an argument and returns a new function. The new
+      function takes the arguments of the original function and returns the result.</p>
+
+      <lib-code-snippet [codeSnippet]="curryingCodeSnippet" [copyButton]="copyButton"></lib-code-snippet>
+
     </div>
+  </div>
+
+  <div class="row mt-3" id="comparison-operators">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'comparison-operators' }">6. Explain the difference between == and === operators in JavaScript.</h2>
+      <p>The == operator checks for equality, but it performs type coercion if the operands are of different
+        types. On the other hand, the === operator checks for equality without performing type coercion, meaning
+      both value and type must be the same for it to return true.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="array-methods">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'array-methods' }">7. List down some built-in array methods in JavaScript.</h2>
+      <p>JavaScript provides several built-in methods for manipulating arrays. Some of these methods include:</p>
+      <ul>
+        <li>push()</li>
+        <li>pop()</li>
+        <li>shift()</li>
+        <li>unshift()</li>
+        <li>splice()</li>
+        <li>slice()</li>
+        <li>concat()</li>
+        <li>forEach()</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="event-loop-callstack-microtask-macrotask">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'event-loop-callstack-microtask-macrotask' }">8. What is the event loop (callstack, microtask, macrotask)?</h2>
+      <p>Explanation about the event loop.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="prototypes-prototype-chain-prototypal-inheritance">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'prototypes-prototype-chain-prototypal-inheritance' }">9. What are prototypes, prototype chain, and prototypal inheritance?</h2>
+      <p>Explanation about prototypes, prototype chain, and prototypal inheritance.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="callback-in-javascript">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'callback-in-javascript' }">10. What is a callback in JavaScript?</h2>
+      <p>Explanation about callbacks in JavaScript.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="asynchronous-javascript-promises-async-await">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'asynchronous-javascript-promises-async-await' }">11. What is asynchronous JavaScript (Promises, async/await)?</h2>
+      <p>Explanation about asynchronous JavaScript using Promises and async/await.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="promise-methods">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'promise-methods' }">12. Promise Methods ?</h2>
+      <p>Promise methods are fundamental to asynchronous JavaScript programming, providing a way to handle asynchronous operations and their results.</p>
+      <p><strong>Promise.resolve():</strong> This method returns a Promise object that is resolved with a given value. It is commonly used to convert non-Promise values into Promise objects, allowing consistent handling of asynchronous operations.</p>
+      <p><strong>Promise.reject():</strong> Conversely, Promise.reject() returns a Promise object that is rejected with a given reason (typically an Error object). It is useful for signaling that an asynchronous operation has failed or encountered an error condition.</p>
+      <p><strong>Promise.all():</strong> Promise.all() takes an iterable of Promises as input and returns a single Promise that resolves when all of the input Promises have resolved, or rejects if any of the input Promises reject. It is commonly used when you need to perform multiple asynchronous operations concurrently and wait for all of them to complete before proceeding.</p>
+      <p><strong>Promise.race():</strong> In contrast, Promise.race() takes an iterable of Promises and returns a Promise that resolves or rejects as soon as one of the input Promises resolves or rejects, with the value or reason from that Promise. It is useful for scenarios where you want to respond as soon as any one of multiple asynchronous operations completes.</p>
+      <p>Understanding and effectively using these Promise methods is crucial for writing robust and efficient asynchronous JavaScript code, enabling developers to handle asynchronous operations gracefully.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="call-apply-and-bind">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'call-apply-and-bind' }">13. What are call, apply, and bind?</h2>
+      <p>Explanation about call, apply, and bind methods in JavaScript.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="explain-this-in-javascript">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'explain-this-in-javascript' }">14. Explain "this" in JavaScript.</h2>
+      <p>Explanation about the "this" keyword in JavaScript.</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="document-object-model-dom">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'document-object-model-dom' }">15. What is the Document Object Model (DOM)?</h2>
+      <p>Explanation about the Document Object Model (DOM).</p>
+    </div>
+  </div>
+  <div class="row mt-3" id="template-literals-destructuring-spread-operator-rest-operator">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'template-literals-destructuring-spread-operator-rest-operator' }">16. What are template literals, destructuring, spread operator, and rest operator?</h2>
+      <p>Explanation about template literals, destructuring, spread operator, and rest operator.</p>
+      <lib-code-snippet [codeSnippet]="RestAndDestructuringSnippet" [copyButton]="copyButton" theme="dark"></lib-code-snippet>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="ES6-feature">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'ES6-feature' }">17. ES6 new feature ?</h2>
+      <ol>
+        <li>Template literals</li>
+        <li>Destructuring</li>
+        <li>Arrow functions</li>
+        <li>let and const</li>
+        <li>Classes</li>
+        <li>Default parameters</li>
+        <li>Spread syntax</li>
+        <li>Rest parameters</li>
+        <li>Object shorthand</li>
+        <li>Array methods like map(), filter(), and reduce()</li>
+      </ol>
+    </div>
+  </div>
+
+
+  <div class="row mt-3" id="async-and-defer">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'async-and-defer' }">18. async-and-defer ?</h2>
+      <p>The attributes `async` and `defer` are used in HTML script tags to control the loading and execution of external JavaScript files.</p>
+      <p><strong>async:</strong> When the `async` attribute is present, the script will be fetched asynchronously, meaning it will not block the parsing of the HTML document. The script will be executed as soon as it is downloaded, regardless of the order it appears in the document.</p>
+      <p><strong>defer:</strong> The `defer` attribute, similar to `async`, also allows the script to be fetched asynchronously. However, scripts with the `defer` attribute will only be executed after the HTML document has been fully parsed. Scripts with `defer` maintain their order of execution as they appear in the document.</p>
+      <p>Using `async` and `defer` attributes can help improve page loading performance by allowing scripts to be loaded in parallel with other resources without blocking rendering or delaying the document's interactive state.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="event-delegation-and-event-propagation">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'event-delegation-and-event-propagation' }">19. Event Delegation and Event Propagation ?</h2>
+      <p>Event delegation and event propagation are related concepts in web development, but they address different aspects of handling events in the DOM.</p>
+      <p> <strong>Event Delegation:</strong> </p>
+      <p>Event delegation is a design pattern where single parent elements used to manage and handle events for multiple child elements.
+      In the event delegation, We add single event listener to the parent instead of all the child elements linked to it.</p>
+      <p>This approach is useful for managing events on dynamic or large sets of elements efficiently.</p>
+
+      <p><strong>Event Propagation:</strong> </p>
+      <p> Event propagation refers to the flow of events through the Document Object Modal (DOM).
+      Event propagation has two phases — capturing phase (downward) and bubbling phase (upward).</p>
+    </div>
+  </div>
+
+
+
+  <div class="row mt-3" id="debounce-and-throttle">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'debounce-and-throttle' }">20. Debounce and Throttle ?</h2>
+      <p>The techniques of 'debounce' and 'throttle' are used in web development to control the frequency of execution of a function, typically used in event handling scenarios.</p>
+      <p><strong>Debounce:</strong> When using debounce, the execution of a function is delayed until after a certain amount of time has passed since the last invocation of the function. This is particularly useful when dealing with events such as user input, where you want to wait for a pause before triggering an action to avoid excessive calls, such as search suggestions in a search bar.</p>
+      <p><strong>Throttle:</strong> Throttle, on the other hand, limits the rate at which a function can be called. It ensures that the function is executed at most once per specified time interval. This is beneficial for scenarios like scroll events, where you want to ensure that a function is not called too frequently, preventing performance issues.</p>
+      <p>Implementing debounce and throttle techniques can optimize performance and improve the user experience by controlling the frequency of function execution, especially in situations with high event triggers.</p>
+    </div>
+  </div>
+
+
+  <div class="row mt-3" id="oops-in-javascript">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'oops-in-javascript' }">21. OOPS in JavaScript</h2>
+      <p>4 Pillar of OOPS in JavaScript</p>
+      <ol>
+        <li>Encapsulation</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+        <li>Abstraction</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="design-pattern-in-javscript">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'design-pattern-in-javscript' }">22. Design Pattern in JavaScript</h2>
+      <p>List down commonly used design-pattern-in-javscript.</p>
+      <ol>
+        <li> Constructor pattern</li>
+        <li> Factory pattern</li>
+        <li> Module pattern</li>
+        <li> Observer pattern</li>
+        <li> Prototype pattern</li>
+        <li> Proxy pattern</li>
+        <li> Singleton pattern</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="deep-copy-shallow-copy">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'deep-copy-shallow-copy' }"> 23. Deep Copy and Shallow Copy in JavaScript</h2>
+      <p>Deep copy and shallow copy are essential concepts in JavaScript, particularly when dealing with nested data structures like arrays of objects or objects containing other objects.</p>
+      <b>Shallow Copy </b>
+      <p>A shallow copy creates a new object but only copies references to the nested structures. This means that modifications made to the nested structures in the copied object will also affect the original object, and vice versa.</p>
+      <lib-code-snippet [codeSnippet]="shallowCopySnippet" [copyButton]="copyButton"></lib-code-snippet>
+      <p>In this example, modifying <code>arr2</code> affects <code>arr1</code> as well.</p>
+
+      <b>Deep Copy</b>
+      <p>A deep copy, on the other hand, creates a new object with its own values, completely independent of the original object, including all nested structures. Changes made to the copied object will not affect the original object, and vice versa.</p>
+      <lib-code-snippet [codeSnippet]="deepCopySnippet" [copyButton]="copyButton"></lib-code-snippet>
+      <p>In this example, modifying <code>studentsCopy</code> does not affect <code>students</code>.</p>
+      <p>Understanding the difference between deep copy and shallow copy is crucial for managing data effectively in JavaScript applications.</p>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="webpack">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'webpack' }">25. Webpack Basics</h2>
+      <p>Webpack is a popular module bundler for JavaScript applications, widely used in modern web development workflows. It provides a powerful set of features for managing and optimizing assets, including JavaScript files, CSS stylesheets, images, and more.</p>
+    </div>
+  </div>
+
+
+
+  <div class="row mt-3" id="frequently-asked-questions">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic':activeTopicId === 'frequently-asked-questions' }">24. frequently-asked-questions for frontend developers?</h2>
+      <p>frequently-asked-questions for frontend developers and need to know topics</p>
+      <ol>
+        <li>Pure and impure pipe/function</li>
+        <li>Mutability and immutability</li>
+        <li>CORS</li>
+        <li>Web Performance Optimization</li>
+        <li>Responsive Web Design</li>
+        <li>What is microfrontend</li>
+        <li>Explain PWA and SPA</li>
+        <li>Pre-processors - SCSS or LESS</li>
+        <li>JWT</li>
+        <li>localStorage/sessionStorage</li>
+        <li>How to debug your frontend application</li>
+        <li>Understand different use cases of the Promises with respect to API handling (retry API, combine 2-3 API)</li>
+      </ol>
+    </div>
+  </div>
 
 </div>

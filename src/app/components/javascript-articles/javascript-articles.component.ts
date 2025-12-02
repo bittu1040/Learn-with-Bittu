@@ -3,11 +3,16 @@ import { Router } from '@angular/router';
 import { RestAndDestructuringSnippet, closureCodeSnippet, curryingCodeSnippet, deepCopySnippet, shallowCopySnippet, variableDeclarationSnippet } from '@app/shared/code-snippets';
 import { DataSharingService } from '@shared/data-sharing.service';
 import { listOfQuestions } from '@app/shared/topics';
+import { MatIcon } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatDivider } from '@angular/material/list';
+import { NgClass } from '@angular/common';
+import { CodeSnippetComponent } from 'angular-code-snippet';
 @Component({
     selector: 'app-javascript-articles',
     templateUrl: './javascript-articles.component.html',
     styleUrls: ['./javascript-articles.component.scss'],
-    standalone: false
+    imports: [MatIcon, FormsModule, MatDivider, NgClass, CodeSnippetComponent]
 })
 export class JavascriptArticlesComponent implements OnInit {
 

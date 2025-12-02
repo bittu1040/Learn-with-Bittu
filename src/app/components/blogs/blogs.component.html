@@ -12,18 +12,22 @@
   </div>
 
   <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let article of filteredArticles">
-      <mat-card *ngIf="selectedCategory === 'all' || article.category === selectedCategory">
-        <a href="{{ article.articleLink }}" target="_blank">
-          <img mat-card-image class="article-image" src="{{ article.imageURL }}" alt="Article Image">
-        </a>
-        <mat-card-content>
-          <p>{{ article.description }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a href="{{ article.articleLink }}" target="_blank" mat-button>Read More</a>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+    @for (article of filteredArticles; track article) {
+      <div class="col-md-4 mb-4">
+        @if (selectedCategory === 'all' || article.category === selectedCategory) {
+          <mat-card>
+            <a href="{{ article.articleLink }}" target="_blank">
+              <img mat-card-image class="article-image" src="{{ article.imageURL }}" alt="Article Image">
+            </a>
+            <mat-card-content>
+              <p>{{ article.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a href="{{ article.articleLink }}" target="_blank" mat-button>Read More</a>
+            </mat-card-actions>
+          </mat-card>
+        }
+      </div>
+    }
   </div>
 </div>

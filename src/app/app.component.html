@@ -24,7 +24,9 @@
       </mat-expansion-panel-header>
       <div class="panel-content">
         <ul>
-          <li *ngFor="let data of JSTopics" (click)="navigateToJSTopic(data.id)">{{data.name}}</li>
+          @for (data of JSTopics; track data) {
+            <li (click)="navigateToJSTopic(data.id)">{{data.name}}</li>
+          }
         </ul>
       </div>
     </mat-expansion-panel>
@@ -35,7 +37,9 @@
       </mat-expansion-panel-header>
       <div class="panel-content">
         <ul>
-          <li *ngFor="let data of AngularTopics" (click)="navigateToAngularTopic(data.id)">{{data.name}}</li>
+          @for (data of AngularTopics; track data) {
+            <li (click)="navigateToAngularTopic(data.id)">{{data.name}}</li>
+          }
         </ul>
       </div>
     </mat-expansion-panel>
@@ -59,58 +63,55 @@
         <button class="custom-button">About me</button>
       </mat-list-item>
 
-      
+
 
       <!-- <mat-list-item routerLink="/snippets-image">
-        <button class="custom-button" id="contact-button">Snippets</button>
-      </mat-list-item> -->
+      <button class="custom-button" id="contact-button">Snippets</button>
+    </mat-list-item> -->
 
-      <!-- <mat-list-item routerLink="/snippets-image">
-        <button class="custom-button" id="contact-button">Angular Table</button>
-      </mat-list-item> -->
+    <!-- <mat-list-item routerLink="/snippets-image">
+    <button class="custom-button" id="contact-button">Angular Table</button>
+  </mat-list-item> -->
 
-      <mat-list-item routerLink="/contact">
-        <button class="custom-button" id="contact-button">Contact</button>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-
-
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+  <mat-list-item routerLink="/contact">
+    <button class="custom-button" id="contact-button">Contact</button>
+  </mat-list-item>
+</mat-nav-list>
+</mat-sidenav>
+<mat-sidenav-content>
 
 
-    <footer class="footer">
-      <div class="copyright">
-        &copy; 2023 Bittu Kumar.
-        <div style="margin-left: 8px;">
-          <a href="https://github.com/bittu1040" target="_blank" class="btn btn btn-outline-light">
-            <i class="fa-brands fa-github"></i></a>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+
+  <footer class="footer">
+    <div class="copyright">
+      &copy; 2023 Bittu Kumar.
+      <div style="margin-left: 8px;">
+        <a href="https://github.com/bittu1040" target="_blank" class="btn btn btn-outline-light">
+          <i class="fa-brands fa-github"></i></a>
           <a href="https://medium.com/@bittukumar-web" target="_blank" class="btn btn btn-outline-light"
             style="margin-left: 0.5rem;"><i class="fa-brands fa-medium"></i></a>
-          <a href="https://www.linkedin.com/in/bittukumar-web/" target="_blank" class="btn btn btn-outline-light"
-            style="margin-left: 0.5rem;margin-right: 0.5rem;"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </footer>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+            <a href="https://www.linkedin.com/in/bittukumar-web/" target="_blank" class="btn btn btn-outline-light"
+              style="margin-left: 0.5rem;margin-right: 0.5rem;"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </footer>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 
 
-<!-- 
-Features to be implemented
-1. Go to top or go to bottom directly while scrolling article section
-2. Download PDF of topic list with learn with bittu printed in background
-3. Add contact form functionality
-4. Add github profile image in right corner of article whoever has written it
-5. Create link of each topics/article
-6. 
--->
-
-
-
+    <!--
+    Features to be implemented
+    1. Go to top or go to bottom directly while scrolling article section
+    2. Download PDF of topic list with learn with bittu printed in background
+    3. Add contact form functionality
+    4. Add github profile image in right corner of article whoever has written it
+    5. Create link of each topics/article
+    6.
+    -->
 
 
 
@@ -162,34 +163,37 @@ Features to be implemented
 
 
 
-<!--
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-       <img src="" alt="logo">
-       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-   </mat-toolbar-row>
- </mat-toolbar>
 
 
- <mat-sidenav-container>
-    <mat-sidenav style="width: 15%" #sidenav [opened]="true" [mode]="'side'"> 
-       <mat-nav-list>
-         <a mat-list-item [routerLink]="'/provideLink'" routerLinkActive="active-list-item">
-           Nav1
-         </a>
-         <a mat-list-item [routerLink]="'/provideLink'" routerLinkActive="active-list-item">
-           Nav2
-         </a>
-       </mat-nav-list>
-    </mat-sidenav>
-     <mat-sidenav-content>
+
+    <!--
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <img src="" alt="logo">
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
+    <mat-sidenav-container>
+      <mat-sidenav style="width: 15%" #sidenav [opened]="true" [mode]="'side'">
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/provideLink'" routerLinkActive="active-list-item">
+            Nav1
+          </a>
+          <a mat-list-item [routerLink]="'/provideLink'" routerLinkActive="active-list-item">
+            Nav2
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
         <div style="height: 90vh">
-           <router-outlet></router-outlet>
+          <router-outlet></router-outlet>
         </div>
-     </mat-sidenav-content>
- </mat-sidenav-container>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 
- <mat-toolbar color="primary">
-    <mat-toolbar-row></mat-toolbar-row>
-  </mat-toolbar>
--->
+    <mat-toolbar color="primary">
+      <mat-toolbar-row></mat-toolbar-row>
+    </mat-toolbar>
+    -->

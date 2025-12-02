@@ -1,101 +1,111 @@
 <!-- List View -->
-<div *ngIf="currentView === 'list'">
+@if (currentView === 'list') {
+  <div>
     <div class="row">
-        <div class="col-12 mb-4">
-            <div class="alert alert-info">
-                <i class="fas fa-info-circle me-2"></i>
-                <strong>Real Interview Experience:</strong> These are actual question sets from my
-                recent interviews at various tech companies.
-            </div>
+      <div class="col-12 mb-4">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle me-2"></i>
+          <strong>Real Interview Experience:</strong> These are actual question sets from my
+          recent interviews at various tech companies.
         </div>
-
-        <div class="col-lg-6 col-xl-4 mb-4" *ngFor="let set of interviewSets; let i = index">
-            <mat-card class="h-100 interview-set-card-simple">
-                <mat-card-content class="p-4">
-                    <div class="text-center mb-3">
-                        <div class="set-icon-simple mb-2">
-                            <i class="fas fa-clipboard-list"></i>
-                        </div>
-                        <h5 class="card-title-simple mb-2">Interview Question Set {{i + 1}}</h5>
-                    </div>
-
-                    <div class="set-info mb-3">
-                        <div class="info-item">
-                            <i class="fas fa-question-circle me-2"></i>
-                            <span>{{set.totalQuestions}} Questions</span>
-                        </div>
-                        <div class="info-item" *ngIf="set.company">
-                            <i class="fas fa-building me-2"></i>
-                            <span>{{set.company}}</span>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-outline-primary w-100" (click)="onViewInterviewSet(set)">
-                        <i class="fas fa-eye me-2"></i>
-                        View Questions
-                    </button>
-                </mat-card-content>
-            </mat-card>
+      </div>
+      @for (set of interviewSets; track set; let i = $index) {
+        <div class="col-lg-6 col-xl-4 mb-4">
+          <mat-card class="h-100 interview-set-card-simple">
+            <mat-card-content class="p-4">
+              <div class="text-center mb-3">
+                <div class="set-icon-simple mb-2">
+                  <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h5 class="card-title-simple mb-2">Interview Question Set {{i + 1}}</h5>
+              </div>
+              <div class="set-info mb-3">
+                <div class="info-item">
+                  <i class="fas fa-question-circle me-2"></i>
+                  <span>{{set.totalQuestions}} Questions</span>
+                </div>
+                @if (set.company) {
+                  <div class="info-item">
+                    <i class="fas fa-building me-2"></i>
+                    <span>{{set.company}}</span>
+                  </div>
+                }
+              </div>
+              <button class="btn btn-outline-primary w-100" (click)="onViewInterviewSet(set)">
+                <i class="fas fa-eye me-2"></i>
+                View Questions
+              </button>
+            </mat-card-content>
+          </mat-card>
         </div>
+      }
     </div>
-</div>
+  </div>
+}
 
 <!-- Detail View -->
-<div *ngIf="currentView === 'detail' && selectedInterviewSet">
+@if (currentView === 'detail' && selectedInterviewSet) {
+  <div>
     <div class="row">
-        <div class="col-12 mb-4 mt-4">
-            <button class="btn btn-outline-secondary mb-3" (click)="onBackToList()">
-                <i class="fas fa-arrow-left me-2"></i>Back to Interview Sets
-            </button>
-
-            <mat-card class="p-4">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h3 class="text-primary mb-0">{{selectedInterviewSet.title}}</h3>
-                            <span
-                                class="badge bg-primary fs-6">{{selectedInterviewSet.totalQuestions}}
-                                Questions</span>
-                        </div>
-
-                        <div class="row mb-4"
-                            *ngIf="selectedInterviewSet.company || selectedInterviewSet.date">
-                            <div class="col-md-6" *ngIf="selectedInterviewSet.company">
-                                <p class="text-muted mb-1">
-                                    <i class="fas fa-building me-2"></i>
-                                    <strong>Company:</strong> {{selectedInterviewSet.company}}
-                                </p>
-                            </div>
-                            <div class="col-md-6" *ngIf="selectedInterviewSet.date">
-                                <p class="text-muted mb-1">
-                                    <i class="fas fa-calendar me-2"></i>
-                                    <strong>Date:</strong> {{selectedInterviewSet.date}}
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Questions List -->
-                        <div
-                            *ngIf="selectedInterviewSet.questions && selectedInterviewSet.questions.length > 0; else noQuestions">
-                            <h5 class="mb-3">Questions:</h5>
-                            <div class="question-list">
-                                <div *ngFor="let question of selectedInterviewSet.questions"
-                                    class="question-item mb-3 p-3 border rounded">
-                                    <p class="mb-0">{{question.question}}</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <ng-template #noQuestions>
-                            <div class="alert alert-warning">
-                                <i class="fas fa-exclamation-triangle me-2"></i>
-                                <strong>Coming Soon!</strong> Detailed questions for this set will
-                                be added soon.
-                            </div>
-                        </ng-template>
+      <div class="col-12 mb-4 mt-4">
+        <button class="btn btn-outline-secondary mb-3" (click)="onBackToList()">
+          <i class="fas fa-arrow-left me-2"></i>Back to Interview Sets
+        </button>
+        <mat-card class="p-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="text-primary mb-0">{{selectedInterviewSet.title}}</h3>
+                <span
+                  class="badge bg-primary fs-6">{{selectedInterviewSet.totalQuestions}}
+                Questions</span>
+              </div>
+              @if (selectedInterviewSet.company || selectedInterviewSet.date) {
+                <div class="row mb-4"
+                  >
+                  @if (selectedInterviewSet.company) {
+                    <div class="col-md-6">
+                      <p class="text-muted mb-1">
+                        <i class="fas fa-building me-2"></i>
+                        <strong>Company:</strong> {{selectedInterviewSet.company}}
+                      </p>
                     </div>
+                  }
+                  @if (selectedInterviewSet.date) {
+                    <div class="col-md-6">
+                      <p class="text-muted mb-1">
+                        <i class="fas fa-calendar me-2"></i>
+                        <strong>Date:</strong> {{selectedInterviewSet.date}}
+                      </p>
+                    </div>
+                  }
                 </div>
-            </mat-card>
-        </div>
+              }
+              <!-- Questions List -->
+              @if (selectedInterviewSet.questions && selectedInterviewSet.questions.length > 0) {
+                <div
+                  >
+                  <h5 class="mb-3">Questions:</h5>
+                  <div class="question-list">
+                    @for (question of selectedInterviewSet.questions; track question) {
+                      <div
+                        class="question-item mb-3 p-3 border rounded">
+                        <p class="mb-0">{{question.question}}</p>
+                      </div>
+                    }
+                  </div>
+                </div>
+              } @else {
+                <div class="alert alert-warning">
+                  <i class="fas fa-exclamation-triangle me-2"></i>
+                  <strong>Coming Soon!</strong> Detailed questions for this set will
+                  be added soon.
+                </div>
+              }
+            </div>
+          </div>
+        </mat-card>
+      </div>
     </div>
-</div>
+  </div>
+}

@@ -8,8 +8,8 @@ describe('InterviewSetsTabComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InterviewSetsTabComponent]
-    });
+    imports: [InterviewSetsTabComponent]
+});
     fixture = TestBed.createComponent(InterviewSetsTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

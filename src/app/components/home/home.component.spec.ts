@@ -30,7 +30,6 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    declarations: [HomeComponent],
     imports: [RouterTestingModule, MatToolbarModule, MatIconModule, MatSlideToggleModule,
         MatCardModule,
         MatButtonModule,
@@ -49,7 +48,7 @@ describe('HomeComponent', () => {
         MatTreeModule,
         MatTableModule,
         MatAutocompleteModule,
-        MatSelectModule, MatSidenavModule, BrowserAnimationsModule],
+        MatSelectModule, MatSidenavModule, BrowserAnimationsModule, HomeComponent],
     providers: [DataSharingService, provideHttpClient(withInterceptorsFromDi())]
 });
     fixture = TestBed.createComponent(HomeComponent);

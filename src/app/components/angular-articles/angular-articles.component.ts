@@ -2,12 +2,16 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { listOfQuestions } from '../../shared/topics';
 import { Router } from '@angular/router';
 import { DataSharingService } from 'app/shared/data-sharing.service';
+import { MatIcon } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatDivider } from '@angular/material/list';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-angular-articles',
     templateUrl: './angular-articles.component.html',
     styleUrls: ['./angular-articles.component.scss'],
-    standalone: false
+    imports: [MatIcon, FormsModule, MatDivider, NgClass]
 })
 export class AngularArticlesComponent implements OnInit {
 

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { blogList } from 'app/shared/blogs';
+import { FormsModule } from '@angular/forms';
+import { MatCard, MatCardImage, MatCardContent, MatCardActions } from '@angular/material/card';
+import { MatAnchor } from '@angular/material/button';
 
 @Component({
     selector: 'app-blogs',
     templateUrl: './blogs.component.html',
     styleUrls: ['./blogs.component.scss'],
-    standalone: false
+    imports: [FormsModule, MatCard, MatCardImage, MatCardContent, MatCardActions, MatAnchor]
 })
 export class BlogsComponent implements OnInit {
 

@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { InterviewSet } from '../../../shared/interview-data';
+import { MatCard, MatCardContent } from '@angular/material/card';
 
 @Component({
     selector: 'app-interview-sets-tab',
     templateUrl: './interview-sets-tab.component.html',
     styleUrls: ['./interview-sets-tab.component.scss'],
-    standalone: false
+    imports: [MatCard, MatCardContent]
 })
 export class InterviewSetsTabComponent implements OnInit {
   @Input() interviewSets: InterviewSet[] = [];
