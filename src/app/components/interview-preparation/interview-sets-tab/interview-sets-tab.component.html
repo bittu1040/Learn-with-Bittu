@@ -9,7 +9,37 @@
           recent interviews at various tech companies.
         </div>
       </div>
-      @for (set of interviewSets; track set; let i = $index) {
+
+      <!-- Search Section -->
+      <div class="col-12 mb-4">
+        <div class="search-container">
+          <div class="input-group search-input-group">
+            <span class="input-group-text">
+              <i class="fas fa-search"></i>
+            </span>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Search questions by keyword or category..."
+              [(ngModel)]="searchText"
+              (input)="onSearchChange(searchText)"
+            />
+            @if (searchText) {
+              <button class="btn btn-outline-secondary" type="button" (click)="clearSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            }
+          </div>
+          @if (searchText && filteredSets.length === 0) {
+            <div class="alert alert-warning mt-3 mb-0">
+              <i class="fas fa-exclamation-circle me-2"></i>
+              No questions found for "<strong>{{ searchText }}</strong>"
+            </div>
+          }
+        </div>
+      </div>
+
+      @for (set of filteredSets; track set; let i = $index) {
         <div class="col-lg-6 col-xl-4 mb-4">
           <mat-card class="h-100 interview-set-card-simple">
             <mat-card-content class="p-4">
@@ -18,6 +48,12 @@
                   <i class="fas fa-clipboard-list"></i>
                 </div>
                 <h5 class="card-title-simple mb-2">Interview Question Set {{i + 1}}</h5>
+                @if (searchText && set.matchCount) {
+                  <span class="badge bg-success match-badge">
+                    <i class="fas fa-check-circle me-1"></i>
+                    {{ set.matchCount }} match{{ set.matchCount > 1 ? 'es' : '' }}
+                  </span>
+                }
               </div>
               <div class="set-info mb-3">
                 <div class="info-item">
@@ -31,6 +67,23 @@
                   </div>
                 }
               </div>
+
+              <!-- Show matched questions preview -->
+              @if (searchText && set.matchedQuestions && set.matchedQuestions.length > 0) {
+                <div class="matched-questions-preview mb-3">
+                  <small class="text-muted d-block mb-2"><strong>Matched Questions:</strong></small>
+                  @for (question of set.matchedQuestions.slice(0, 2); track question.id) {
+                    <div class="matched-question-item">
+                      <i class="fas fa-angle-right me-1"></i>
+                      <small [innerHTML]="highlightText(question.question, searchText)"></small>
+                    </div>
+                  }
+                  @if (set.matchedQuestions.length > 2) {
+                    <small class="text-muted">+ {{ set.matchedQuestions.length - 2 }} more...</small>
+                  }
+                </div>
+              }
+
               <button class="btn btn-outline-primary w-100" (click)="onViewInterviewSet(set)">
                 <i class="fas fa-eye me-2"></i>
                 View Questions
@@ -90,7 +143,10 @@
                     @for (question of selectedInterviewSet.questions; track question) {
                       <div
                         class="question-item mb-3 p-3 border rounded">
-                        <p class="mb-0">{{question.question}}</p>
+                        <p class="mb-0" [innerHTML]="searchText ? highlightText(question.question, searchText) : question.question"></p>
+                        @if (question.category) {
+                          <small class="badge bg-secondary mt-2">{{ question.category }}</small>
+                        }
                       </div>
                     }
                   </div>
