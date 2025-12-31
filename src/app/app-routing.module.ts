@@ -10,7 +10,7 @@ import { InterviewPreparationComponent } from './components/interview-preparatio
 import { BlogsComponent } from './components/blogs/blogs.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/javascript-articles', pathMatch: 'full' },
+  { path: '', redirectTo: '/interview-preparation', pathMatch: 'full' },
   {path: 'aboutme', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'javascript-articles', component: JavascriptArticlesComponent},
