@@ -98,6 +98,13 @@
       font-size: 1rem;
       line-height: 1.6;
       color: #2c3e50;
+      
+      ::ng-deep mark {
+        background-color: #fff3cd;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -115,4 +122,132 @@
   border-left: 4px solid #17a2b8;
   background-color: #d1ecf1;
   border-color: #bee5eb;
+}
+
+// Search Container Styles
+.search-container {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  
+  .search-input-group {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    
+    .input-group-text {
+      background: white;
+      border: none;
+      color: #6c757d;
+      padding: 0.75rem 1rem;
+    }
+    
+    .form-control {
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: transparent;
+      }
+    }
+    
+    .btn-outline-secondary {
+      border: none;
+      background: white;
+      color: #6c757d;
+      padding: 0.75rem 1rem;
+      
+      &:hover {
+        background: #f8f9fa;
+        color: #dc3545;
+      }
+    }
+  }
+  
+  .search-mode-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    height: 100%;
+    
+    .form-check-input {
+      width: 3rem;
+      height: 1.5rem;
+      cursor: pointer;
+      
+      &:checked {
+        background-color: #28a745;
+        border-color: #28a745;
+      }
+    }
+    
+    .form-check-label {
+      margin-left: 0.5rem;
+      font-weight: 500;
+      color: #495057;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Match Badge
+.match-badge {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+// Matched Questions Preview
+.matched-questions-preview {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-height: 120px;
+  overflow-y: auto;
+  
+  .matched-question-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    i {
+      color: #007bff;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    
+    small {
+      line-height: 1.4;
+      color: #495057;
+      
+      ::ng-deep mark {
+        background-color: #ffc107;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Highlight Style
+::ng-deep mark {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: #856404;
 }
