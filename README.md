@@ -13,6 +13,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 - [Set 6: Advanced Angular Developer - MNC Company](#set-6-advanced-angular-developer---mnc-company)
 - [Set 7: Senior Angular Developer - Managerial Round](#set-7-senior-angular-developer---managerial-round)
 - [Set 8: Senior Angular Developer – Technical Round](#set-8-senior-angular-developer--technical-round)
+- [Set 9: Senior Angular Developer – Technical Round](#set-9-senior-angular-developer--technical-round-1)
+
 
 ---
 
@@ -250,6 +252,58 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 #### Performance & Event Handling
 11. What is debouncing? Can you write a debounce polyfill?
 12. Explain event bubbling and event capturing with an example.
+
+---
+
+
+<table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+### 🎯 Set 9: Angular Developer Interview – Round 1
+**Interview Set 9** | **22 Questions** | **Level**: Junior–Mid | **Date**: 2025
+
+</td></tr></table>
+
+#### Angular Core, Components & Templates
+1. How does Dependency Injection work in Angular?
+2. What is a singleton service and how does Angular ensure a service is singleton?
+3. What is `providedIn` and what are its different scopes?
+4. What is the difference between services provided in a module vs `providedIn: 'root'`?
+5. What is the difference between `@ViewChild` and `@ViewChildren`?
+6. How does `ng-content` work in Angular?
+7. What is content projection and when would you use it?
+
+#### Forms, Directives, Pipes & RxJS
+8. What is `ControlValueAccessor`?
+9. In which real-world scenarios would you implement a custom `ControlValueAccessor`?
+10. What is a custom directive and when do you need one?
+11. How do `@HostBinding` and `@HostListener` work?
+12. Can you explain how to create a custom pipe?
+13. How would you create a custom pipe for phone number formatting?
+14. What is the difference between a Promise and an Observable?
+15. What is a `Subject` and how is it different from an Observable?
+16. Why is `takeUntil` used and what problem does it solve?
+17. What is the difference between `switchMap` and `exhaustMap`?
+18. In which scenarios would you use `exhaustMap` instead of `switchMap`?
+
+#### JavaScript Fundamentals
+19. How does the JavaScript event loop work?
+20. What is the difference between microtasks and macrotasks?
+21. What are closures and why are they useful?
+22. What will be the output of the following code and why?
+
+```js
+console.log('start');
+
+setTimeout(() => {
+  console.log('timeout');
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('promise');
+});
+
+console.log('end');
+```
 
 ---
 
