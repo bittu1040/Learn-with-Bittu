@@ -20,14 +20,14 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs mb-4" id="interviewTabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="questions-tab" data-bs-toggle="tab" data-bs-target="#questions"
+                    <button class="nav-link" id="questions-tab" data-bs-toggle="tab" data-bs-target="#questions"
                         type="button" role="tab" (click)="onTabChange()">
                         <i class="fas fa-question-circle me-2"></i>
                         Interview Questions
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="sets-tab" data-bs-toggle="tab" data-bs-target="#sets" type="button"
+                    <button class="nav-link active" id="sets-tab" data-bs-toggle="tab" data-bs-target="#sets" type="button"
                         role="tab" (click)="onTabChange()">
                         <i class="fas fa-layer-group me-2"></i>
                         My Angular Interview Sets
@@ -53,12 +53,12 @@
             <div class="tab-content" id="interviewTabsContent">
 
                 <!-- Questions Tab -->
-                <div class="tab-pane fade show active" id="questions" role="tabpanel">
+                <div class="tab-pane fade" id="questions" role="tabpanel">
                     <app-questions-tab></app-questions-tab>
                 </div>
 
                 <!-- My Interview Sets Tab -->
-                <div class="tab-pane fade" id="sets" role="tabpanel">
+                <div class="tab-pane fade show active" id="sets" role="tabpanel">
                     <app-interview-sets-tab 
                         [interviewSets]="interviewSets"
                         [currentView]="currentView"
