@@ -13,12 +13,14 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 - [Set 6: Advanced Angular Developer - MNC Company](#set-6-advanced-angular-developer---mnc-company)
 - [Set 7: Senior Angular Developer - Managerial Round](#set-7-senior-angular-developer---managerial-round)
 - [Set 8: Senior Angular Developer – Technical Round](#set-8-senior-angular-developer--technical-round)
-- [Set 9: Senior Angular Developer – Technical Round](#set-9-senior-angular-developer--technical-round-1)
+- [Set 9: Angular Developer Interview – Round 1](#set-9-angular-developer-interview--round-1)
 
 
 ---
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+<a name="set-1-angular-fundamentals---first-round-interview"></a>
 
 ### 🎯 Set 1: Angular Fundamentals - First Round Interview
 **Interview Set 1** | **20 Questions** | **Company**: MNC Company | **Date**: 2024
@@ -55,6 +57,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
 
+<a name="set-2-frontend-developer-interview---mnc-company"></a>
+
 ### 🎯 Set 2: Frontend Developer Interview - MNC Company
 **Interview Set 2** | **15 Questions** | **Company**: MNC Company | **Date**: November 2024
 
@@ -89,6 +93,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
 
+<a name="set-3-angular-developer-interview---mnc-company"></a>
+
 ### 🎯 Set 3: Angular Developer Interview - MNC Company
 **Interview Set 3** | **10 Questions** | **Company**: MNC Company | **Date**: January 2025
 
@@ -116,6 +122,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
 
+<a name="set-4-angular-developer-interview---mnc-company"></a>
+
 ### 🎯 Set 4: Angular Developer Interview - MNC Company
 **Interview Set 4** | **10 Questions** | **Company**: MNC Company | **Date**: February 2025
 
@@ -140,6 +148,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 ---
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+<a name="set-5-senior-frontend-developer---mnc-company"></a>
 
 ### 🎯 Set 5: Senior Frontend Developer - MNC Company
 **Interview Set 5** | **14 Questions** | **Company**: MNC Company | **Date**: March 2025
@@ -169,6 +179,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 ---
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+<a name="set-6-advanced-angular-developer---mnc-company"></a>
 
 ### 🎯 Set 6: Advanced Angular Developer - MNC Company
 **Interview Set 6** | **14 Questions** | **Company**: MNC Company | **Date**: December 2024
@@ -205,6 +217,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
 
+<a name="set-7-senior-angular-developer---managerial-round"></a>
+
 ### 🎯 Set 7: Senior Angular Developer - Managerial Round
 **Interview Set 7** | **10 Questions** | **Company**: MNC Company | **Date**: March 2025
 
@@ -227,6 +241,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 ---
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+<a name="set-8-senior-angular-developer--technical-round"></a>
 
 ### 🎯 Set 8: Senior Angular Developer – Technical Round
 **Interview Set 8** | **12 Questions** | **Company**: MNC Company | **Date**: March 2025
@@ -257,6 +273,8 @@ A comprehensive Angular-based learning platform featuring **100+ real interview 
 
 
 <table><tr><td style="background-color: #FFFF00; padding: 10px; border-radius: 5px;">
+
+<a name="set-9-angular-developer-interview--round-1"></a>
 
 ### 🎯 Set 9: Angular Developer Interview – Round 1
 **Interview Set 9** | **22 Questions** | **Level**: Junior–Mid | **Date**: 2025

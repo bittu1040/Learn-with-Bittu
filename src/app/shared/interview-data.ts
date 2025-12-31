@@ -238,6 +238,42 @@ export const INTERVIEW_SETS: InterviewSet[] = [
 
       { "id": 12, "question": "Explain event bubbling and event capturing with an example.", "category": "JavaScript" }
     ]
+  },
+  {
+    id: 9,
+    title: "Angular Developer Interview Round 1",
+    company: "MNC Company",
+    date: "2025",
+    totalQuestions: 22,
+    questions: [
+      // Angular Core, Components & Templates
+      { id: 1, question: "How does Dependency Injection work in Angular?", category: "Angular" },
+      { id: 2, question: "What is a singleton service and how does Angular ensure a service is singleton?", category: "Angular" },
+      { id: 3, question: "What is `providedIn` and what are its different scopes?", category: "Angular" },
+      { id: 4, question: "What is the difference between services provided in a module vs `providedIn: 'root'`?", category: "Angular" },
+      { id: 5, question: "What is the difference between `@ViewChild` and `@ViewChildren`?", category: "Angular" },
+      { id: 6, question: "How does `ng-content` work in Angular?", category: "Angular" },
+      { id: 7, question: "What is content projection and when would you use it?", category: "Angular" },
+
+      // Forms, Directives, Pipes & RxJS
+      { id: 8, question: "What is `ControlValueAccessor`?", category: "Angular Forms" },
+      { id: 9, question: "In which real-world scenarios would you implement a custom `ControlValueAccessor`?", category: "Angular Forms" },
+      { id: 10, question: "What is a custom directive and when do you need one?", category: "Angular" },
+      { id: 11, question: "How do `@HostBinding` and `@HostListener` work?", category: "Angular" },
+      { id: 12, question: "Can you explain how to create a custom pipe?", category: "Angular" },
+      { id: 13, question: "How would you create a custom pipe for phone number formatting?", category: "Angular" },
+      { id: 14, question: "What is the difference between a Promise and an Observable?", category: "RxJS" },
+      { id: 15, question: "What is a `Subject` and how is it different from an Observable?", category: "RxJS" },
+      { id: 16, question: "Why is `takeUntil` used and what problem does it solve?", category: "RxJS" },
+      { id: 17, question: "What is the difference between `switchMap` and `exhaustMap`?", category: "RxJS" },
+      { id: 18, question: "In which scenarios would you use `exhaustMap` instead of `switchMap`?", category: "RxJS" },
+
+      // JavaScript Fundamentals
+      { id: 19, question: "How does the JavaScript event loop work?", category: "JavaScript" },
+      { id: 20, question: "What is the difference between microtasks and macrotasks?", category: "JavaScript" },
+      { id: 21, question: "What are closures and why are they useful?", category: "JavaScript" },
+      { id: 22, question: "What will be the output of the following code and why? console.log('start'); setTimeout(() => { console.log('timeout'); }, 0); Promise.resolve().then(() => { console.log('promise'); }); console.log('end');", category: "JavaScript" }
+    ]
   }
 
 ];
