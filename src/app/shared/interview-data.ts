@@ -115,7 +115,7 @@ export const INTERVIEW_SETS: InterviewSet[] = [
     title: "Angular Developer Interview - MNC Company",
     company: "MNC Company",
     date: "February 2025",
-    totalQuestions: 10,
+    totalQuestions: 11,
     questions: [
       // Section 1: Angular Core Concepts
       { id: 1, question: "How does an Angular application bootstrap?", category: "Angular" },
@@ -123,15 +123,16 @@ export const INTERVIEW_SETS: InterviewSet[] = [
       { id: 3, question: "How do we share one method of one component into another component, using ViewChild?", category: "Angular" },
       { id: 4, question: "How do pipes work in Angular?", category: "Angular" },
       { id: 5, question: "How does lazy loading work in Angular?", category: "Angular" },
+      { id: 6, question: "How does trackBy in ngFor helps imporving the performance ?", category: "Angular" },
       
       // Section 2: JavaScript Fundamentals
-      { id: 6, question: "What is hoisting in JavaScript?", category: "JavaScript" },
-      { id: 7, question: "What is the difference between let and var?", category: "JavaScript" },
-      { id: 8, question: "What is a closure in JavaScript?", category: "JavaScript" },
-      { id: 9, question: "What is memoization?", category: "JavaScript" },
+      { id: 7, question: "What is hoisting in JavaScript?", category: "JavaScript" },
+      { id: 8, question: "What is the difference between let and var?", category: "JavaScript" },
+      { id: 9, question: "What is a closure in JavaScript?", category: "JavaScript" },
+      { id: 10, question: "What is memoization?", category: "JavaScript" },
       
       // Coding Section: Array Processing Algorithm
-      { id: 10, question: "Given an array of string arrays, pick the smallest string from each subarray, then return those strings sorted by length.", category: "Algorithms" }
+      { id: 11, question: "Given an array of string arrays, pick the smallest string from each subarray, then return those strings sorted by length.", category: "Algorithms" }
     ]
   },
   {
