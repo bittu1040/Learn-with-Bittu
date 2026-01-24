@@ -69,6 +69,7 @@ export const listOfQuestions: InterviewTopic[] = [
   { id: 'http-interceptor', name: 'HTTP (Req/Res) Interceptor', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'control-value-accessor', name: 'Control value accessor', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'optimization-technique-in-angular', name: 'Optimization technique in Angular', category: 'angular', difficulty: 'medium', showDescription: false},
+  { id: 'design-pattern-in-angular', name: 'Design pattern in Angular', category: 'angular', difficulty: 'medium', showDescription: false},
   { id: 'change-detection-and-onpush', name: 'Change Detection and OnPush', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'dist-and-bundle', name: 'dist and bundle', category: 'angular', difficulty: 'medium', showDescription: false },
   { id: 'unit-testing-in-angular', name: 'Unit Testing', category: 'angular', difficulty: 'medium', showDescription: false },
