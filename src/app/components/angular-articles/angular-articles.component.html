@@ -207,6 +207,22 @@
     </div>
   </div>
 
+  
+
+  <div class="row mt-3" id="design-pattern-in-angular">
+    <div class="col">
+      <h2 [ngClass]="{ 'active-topic': activeTopicId === 'design-pattern-in-angular' }">19. Commonly used design pattern in Angular.</h2>
+      <p>Angular uses multiple design patterns to build scalable, testable, and maintainable applications:</p>
+      <ol> 
+        <li><strong>Dependency Injection: </strong> Instead of creating objects manually, Angular injects dependencies automatically. (constructor(private userService: UserService) {})  </li>
+        <li><strong>Singleton: </strong> Only one instance of a service exists across the application, Services provided in root.</li>
+        <li><strong>Observer pattern: </strong> One object emits data, others subscribe and react to changes. RxJS observable</li>
+        <li><strong>Smart/Dumb component pattern: </strong> Smart Component → handles data & logic and Dumb Component → handles UI only</li>
+        <li><strong>Facade Pattern: </strong> A simple interface hides complex logic behind it. Component talks to a service instead of multiple APIs directly. </li>
+      </ol>
+    </div>
+  </div>
+
 
   <div class="row mt-3" id="dist-and-bundle">
     <div class="col">
