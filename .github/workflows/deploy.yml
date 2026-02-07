@@ -34,5 +34,5 @@ jobs:
       - name: Deploy to VPS
         run: |
           rsync -avz --delete \
-          dist/learn-with-bittu/browser/ \
+          dist/Learn-with-Bittu/browser/ \
           ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/learn-with-bittu/
