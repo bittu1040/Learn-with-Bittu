@@ -34,5 +34,5 @@ jobs:
       - name: Deploy
         run: |
           rsync -az --delete \
-          dist/first-vercal-angular-app/ \
-          ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/learn-with-bittu/
+          dist/first-vercal-angular-app/browser/ \
+          ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/Learn-with-Bittu/browser/
