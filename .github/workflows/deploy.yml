@@ -31,8 +31,9 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy
+      - name: Deploy Angular build
         run: |
           rsync -az --delete \
+          --rsync-path="mkdir -p /var/www/Learn-with-Bittu/browser && rsync" \
           dist/first-vercal-angular-app/browser/ \
           ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/Learn-with-Bittu/browser/
