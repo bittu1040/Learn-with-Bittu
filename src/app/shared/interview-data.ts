@@ -218,7 +218,7 @@ export const INTERVIEW_SETS: InterviewSet[] = [
     "title": "Senior Angular Developer – Technical Round",
     "company": "MNC Company",
     "date": "March 2025",
-    "totalQuestions": 12,
+    "totalQuestions": 17,
     "questions": [
       { id: 1, question: "Which component library have you created and worked with in your Angular projects?", category: "Angular" },
 
@@ -241,6 +241,8 @@ export const INTERVIEW_SETS: InterviewSet[] = [
       { id: 13, question: "What is webpack and how does it create bundles ?", category: "core"},
       { id: 14, question: "What is tree shaking and how does it decide what to remove? " , category: "core" }, 
       { id: 15, question: "What is critical rendering path ? " , category: "core" }, 
+{ id: 16, question: "What is hot and cold Observable ? " , category: "angular" },
+{ id: 17, question: "What is unicast and multicast Observable ? " , category: "angular" },
     ]
   },
   {
