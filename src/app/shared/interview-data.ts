@@ -206,11 +206,14 @@ export const INTERVIEW_SETS: InterviewSet[] = [
       { id: 5, question: "What are different approaches to State Management in Angular? Compare local state, shared service, NgRx, and Angular Signals.", category: "Angular" },
       { id: 6, question: "How do OOP concepts (Encapsulation, Abstraction, Inheritance, Polymorphism) show up in Angular service and component design?", category: "OOP" },
 
+{ id: 7, question: "What do you choose, composition over inheritance or inheritance over composition?", category: "OOP" },
+
+
       // Section 2: Practical Scenario-Based Questions
-      { id: 7, question: "Give a real use case of debouncing vs throttling in UI interactions.", category: "Performance" },
-      { id: 8, question: "Explain a real-world application of currying in frontend code.", category: "JavaScript" },
-      { id: 9, question: "Compare cookies and sessionStorage in terms of persistence, use cases, and security. Which would you use for authentication?", category: "Web Storage" },
-      { id: 10, question: "What is your approach to designing a new Angular component — from UX considerations to reusability to testing?", category: "Angular" }
+      { id: 8, question: "Give a real use case of debouncing vs throttling in UI interactions.", category: "Performance" },
+      { id: 9, question: "Explain a real-world application of currying in frontend code.", category: "JavaScript" },
+      { id: 10, question: "Compare cookies and sessionStorage in terms of persistence, use cases, and security. Which would you use for authentication?", category: "Web Storage" },
+      { id: 11, question: "What is your approach to designing a new Angular component — from UX considerations to reusability to testing?", category: "Angular" }
     ]
   },
   {
